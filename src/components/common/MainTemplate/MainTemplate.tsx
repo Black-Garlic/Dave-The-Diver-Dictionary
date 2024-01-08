@@ -1,6 +1,6 @@
 import { Breadcrumb, Layout } from "antd";
-import Header from "./Header.tsx";
-import Footer from "./Footer.tsx";
+import Header from "@components/common/MainTemplate/Header.tsx";
+import Footer from "@components/common/MainTemplate/Footer.tsx";
 
 const MainTemplate = () => {
   return (
