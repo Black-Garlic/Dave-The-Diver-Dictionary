@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^5.12.8",
+    "prettier": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -24,5 +26,9 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/Black-Garlic/Dave-The-Diver-Dictionary.git",
+  "author": "Black-Garlic <hn1226@naver.com>",
+  "license": "MIT"
 }
