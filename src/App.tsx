@@ -1,12 +1,7 @@
-import "./App.css";
-import { Button } from "antd";
+import MainTemplate from "./components/common/MainTemplate/MainTemplate.tsx";
 
 function App() {
-  return (
-    <div className="App">
-      <Button type="primary">Button</Button>
-    </div>
-  );
+  return <MainTemplate />;
 }
 
 export default App;
