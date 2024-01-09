@@ -1,11 +1,14 @@
 import { Button, Space, Table, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { Fish } from "@typings/Fish.ts";
-import { FISH } from "@constants/Fish.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
 
-const FishListTable = () => {
+interface Props {
+  fishList: Fish[];
+}
+
+const FishListTable = ({ fishList }: Props) => {
   const columns: ColumnsType<Fish> = [
     {
       key: "rank",
@@ -64,7 +67,7 @@ const FishListTable = () => {
     },
   ];
 
-  return <Table columns={columns} dataSource={FISH} pagination={false} />;
+  return <Table columns={columns} dataSource={fishList} pagination={false} />;
 };
 
 export default FishListTable;

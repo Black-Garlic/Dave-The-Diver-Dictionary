@@ -1,25 +1,76 @@
 import { Col, Flex, Row, Select, Tag } from "antd";
 import { RANK_OPTION } from "@constants/Rank.ts";
 import Search from "antd/es/input/Search";
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { REGION_OPTION } from "@constants/Region.ts";
 import { TIME_OPTION } from "@constants/Time.ts";
-import { Option } from "@typings/Option.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
+import { Fish } from "@typings/Fish.ts";
+import { FISH } from "@constants/Fish.ts";
 
-const FishListFilter = () => {
-  const [rank, setRank] = useState<Option[]>([]);
-  const [region, setRegion] = useState<Option[]>([]);
-  const [time, setTime] = useState<Option[]>([]);
+interface Props {
+  setFishList: Dispatch<SetStateAction<Fish[]>>;
+}
+
+const FishListFilter = ({ setFishList }: Props) => {
+  const [rank, setRank] = useState<string[]>([]);
+  const [region, setRegion] = useState<string[]>([]);
+  const [time, setTime] = useState<string[]>([]);
   const [keyword, setKeyword] = useState<string>("");
 
+  const filterRank = (fishList: Fish[], rank: string[]): Fish[] => {
+    if (rank.length > 0) {
+      return fishList.filter((fish) =>
+        rank.some((rankOption) => rankOption === fish.rank),
+      );
+    } else {
+      return fishList;
+    }
+  };
+
+  const filterRegion = (fishList: Fish[], region: string[]): Fish[] => {
+    if (region.length > 0) {
+      return fishList.filter((fish) =>
+        region.some((regionOption) => regionOption === fish.region),
+      );
+    } else {
+      return fishList;
+    }
+  };
+
+  const filterTime = (fishList: Fish[], time: string[]): Fish[] => {
+    if (time.length > 0) {
+      return fishList.filter((fish) =>
+        time.some((timeOption) => timeOption === fish.time),
+      );
+    } else {
+      return fishList;
+    }
+  };
+
+  const filterKeyword = (fishList: Fish[], keyword: string): Fish[] => {
+    if (keyword !== "") {
+      return fishList.filter(
+        (fish) =>
+          fish.name.includes(keyword) ||
+          fish.region.includes(keyword) ||
+          fish.time.includes(keyword) ||
+          fish.dishList.some((dish) => dish.name.includes(keyword)),
+      );
+    } else {
+      return fishList;
+    }
+  };
+
   useEffect(() => {
-    console.log("Rank", rank);
-    console.log("Region", region);
-    console.log("Time", time);
-    console.log("Keyword", keyword);
-  }, [keyword, rank, region, time]);
+    const fishFilterRankList = filterRank(FISH, rank);
+    const fishFilterRegionList = filterRegion(fishFilterRankList, region);
+    const fishFilterTimeList = filterTime(fishFilterRegionList, time);
+    const fishFilterKeywordList = filterKeyword(fishFilterTimeList, keyword);
+
+    setFishList(fishFilterKeywordList);
+  }, [keyword, rank, region, setFishList, time]);
 
   return (
     <Row style={{ marginBottom: "10px" }}>
