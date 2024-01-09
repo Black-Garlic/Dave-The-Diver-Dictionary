@@ -14,7 +14,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "흰동가리 초밥",
+      },
+      {
+        id: "",
+        name: "열대어 마늘구이",
       },
     ],
   },
@@ -40,7 +44,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "지중해카디널피쉬 초밥",
       },
     ],
   },
@@ -53,7 +57,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "금강바리 초밥",
       },
     ],
   },
@@ -66,7 +70,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "안개나비고기 초밥",
+      },
+      {
+        id: "",
+        name: "열대어 마늘구이",
       },
     ],
   },
@@ -79,7 +87,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "옐로우탱 초밥",
       },
     ],
   },
@@ -92,7 +100,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "사르파살파 초밥",
       },
     ],
   },
@@ -105,7 +113,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "원반제비활치 튀김",
+      },
+      {
+        id: "",
+        name: "활치 오야코동",
       },
     ],
   },
@@ -118,7 +130,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "블루탱 초밥",
+      },
+      {
+        id: "",
+        name: "열대어 마늘구이",
       },
     ],
   },
@@ -131,7 +147,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "무지개놀래기 초밥",
+      },
+      {
+        id: "",
+        name: "놀래기 커리",
       },
     ],
   },
@@ -144,7 +164,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "배주름쥐치 초밥",
       },
     ],
   },
@@ -157,7 +177,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "빨판매가리 초밥",
+      },
+      {
+        id: "",
+        name: "빨판매가리 감태국",
       },
     ],
   },
@@ -170,7 +194,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "황등어 초밥",
+      },
+      {
+        id: "",
+        name: "황등어 간장조림",
       },
     ],
   },
@@ -196,7 +224,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "깃털제비활치 초밥",
+      },
+      {
+        id: "",
+        name: "활치 오야코동",
       },
     ],
   },
@@ -209,7 +241,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "지중해비늘돔 초밥",
+      },
+      {
+        id: "",
+        name: "비늘돔 흑식초 조림",
       },
     ],
   },
@@ -222,7 +258,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "붉은이빨쥐치 초밥",
+      },
+      {
+        id: "",
+        name: "붉은이빨쥐치 소금구이",
       },
     ],
   },
@@ -235,7 +275,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "블랙스내퍼 초밥",
       },
     ],
   },
@@ -248,7 +288,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "버팔로피쉬 초밥",
+      },
+      {
+        id: "",
+        name: "버팔로피쉬 커리",
       },
     ],
   },
@@ -261,7 +305,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "해파리 무침",
+      },
+      {
+        id: "",
+        name: "배럴해파리 군함 초밥",
       },
     ],
   },
@@ -274,7 +322,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "달걀프라이해파리 군함 초밥",
+      },
+      {
+        id: "",
+        name: "해파리 무침",
       },
     ],
   },
@@ -287,7 +339,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "백기흉상어 머리 통구이",
+      },
+      {
+        id: "",
+        name: "백기흉상어 초밥",
       },
     ],
   },
@@ -300,7 +356,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "복어 완자탕",
+      },
+      {
+        id: "",
+        name: "복어 특초밥",
+      },
+      {
+        id: "",
+        name: "복어 니코고리",
       },
     ],
   },
@@ -313,7 +377,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "쏠배감펭 초밥",
+      },
+      {
+        id: "",
+        name: "쏠배감펭 튀김",
       },
     ],
   },
@@ -326,7 +394,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "화려한 특초밥 세트",
+      },
+      {
+        id: "",
+        name: "타이탄트리거피쉬 초밥",
       },
     ],
   },
@@ -339,7 +411,27 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "참다랑어 대뱃살 초밥",
+      },
+      {
+        id: "",
+        name: "히알로네마 참치회",
+      },
+      {
+        id: "",
+        name: "참다랑어 중뱃살 초밥",
+      },
+      {
+        id: "",
+        name: "핫페퍼튜나",
+      },
+      {
+        id: "",
+        name: "참다랑어 붉은살 초밥",
+      },
+      {
+        id: "",
+        name: "마구로동",
       },
     ],
   },
@@ -352,7 +444,27 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "황다랑어 대뱃살 초밥",
+      },
+      {
+        id: "",
+        name: "히알로네마 참치회",
+      },
+      {
+        id: "",
+        name: "황다랑어 중뱃살 초밥",
+      },
+      {
+        id: "",
+        name: "황다랑어 스테이크",
+      },
+      {
+        id: "",
+        name: "황다랑어 붉은살 초밥",
+      },
+      {
+        id: "",
+        name: "하와이안 포케",
       },
     ],
   },
@@ -365,7 +477,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "라마엔젤피쉬 초밥",
       },
     ],
   },
@@ -378,7 +490,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "혹돔 초밥",
+      },
+      {
+        id: "",
+        name: "트러플 혹돔 조림",
       },
     ],
   },
@@ -404,7 +520,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "노랑가오리 초밥",
+      },
+      {
+        id: "",
+        name: "가오리포",
       },
     ],
   },
@@ -417,7 +537,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "마블전기가오리 초밥",
+      },
+      {
+        id: "",
+        name: "가오리포",
       },
     ],
   },
@@ -430,7 +554,23 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "흰다리자숙새우 초밥",
+      },
+      {
+        id: "",
+        name: "멘보샤",
+      },
+      {
+        id: "",
+        name: "새우튀김 특초밥",
+      },
+      {
+        id: "",
+        name: "흰다리자숙새우 튀김",
+      },
+      {
+        id: "",
+        name: "가지 새우완자 튀김",
       },
     ],
   },
@@ -443,7 +583,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "쏠종개 초밥",
+      },
+      {
+        id: "",
+        name: "쏠종개 파이",
       },
     ],
   },
@@ -456,7 +600,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "보라성게 초밥",
+      },
+      {
+        id: "",
+        name: "보라성게 덮밥",
+      },
+      {
+        id: "",
+        name: "트러블 돛새치 타르타르",
       },
     ],
   },
@@ -469,7 +621,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "청상아리 초밥",
       },
     ],
   },
@@ -482,7 +634,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "청새치 초밥",
+      },
+      {
+        id: "",
+        name: "청새치 된장구이",
       },
     ],
   },
@@ -495,7 +651,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "환도상어 초밥",
       },
     ],
   },
@@ -508,7 +664,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "랍스터 플래터",
+      },
+      {
+        id: "",
+        name: "미국바닷가재 초밥",
       },
     ],
   },
@@ -521,7 +681,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "유럽바닷가재 초밥",
       },
     ],
   },
@@ -535,7 +695,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "블루헤드타일피쉬 초밥",
       },
     ],
   },
@@ -548,7 +708,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "다홍빛 생선 롤",
+      },
+      {
+        id: "",
+        name: "무당씬벵이 초밥",
       },
     ],
   },
@@ -561,7 +725,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "페인티드콤버 초밥",
+      },
+      {
+        id: "",
+        name: "콤버 샌드위치",
       },
     ],
   },
@@ -574,7 +742,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "새가라지 초밥",
+      },
+      {
+        id: "",
+        name: "새가라지 된장구이",
       },
     ],
   },
@@ -587,7 +759,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "노랑촉수 초밥",
+      },
+      {
+        id: "",
+        name: "노랑촉수 다시마 말이",
       },
     ],
   },
@@ -600,7 +776,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "풀가라지 초밥",
+      },
+      {
+        id: "",
+        name: "풀가라지 핫도그",
       },
     ],
   },
@@ -613,7 +793,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "청줄바리 초밥",
+      },
+      {
+        id: "",
+        name: "화려한 특초밥 세트",
       },
     ],
   },
@@ -626,7 +810,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "전갱이 샌드",
+      },
+      {
+        id: "",
+        name: "줄전갱이 초밥",
       },
     ],
   },
@@ -639,7 +827,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "무늬바리 초밥",
+      },
+      {
+        id: "",
+        name: "화려한 특초밥 세트",
+      },
+      {
+        id: "",
+        name: "바다포도 무늬바리 회덮밥",
       },
     ],
   },
@@ -652,7 +848,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "갈쥐치 초밥",
       },
     ],
   },
@@ -665,7 +861,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "대서양보니토 커리",
+      },
+      {
+        id: "",
+        name: "대서양보니토 초밥",
       },
     ],
   },
@@ -678,7 +878,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "흑점줄전갱이 초밥",
+      },
+      {
+        id: "",
+        name: "다시마 흑점줄전갱이 오차즈케",
+      },
+      {
+        id: "",
+        name: "전갱이 난반즈케",
       },
     ],
   },
@@ -691,7 +899,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "갑오징어 초밥",
+      },
+      {
+        id: "",
+        name: "갑오징어 어니언링",
+      },
+      {
+        id: "",
+        name: "삼색오징어구이",
       },
     ],
   },
@@ -704,7 +920,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "머구리농어 초밥",
+      },
+      {
+        id: "",
+        name: "머구리농어 스테이크",
       },
     ],
   },
@@ -717,7 +937,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "대서양고등어 초밥",
+      },
+      {
+        id: "",
+        name: "훈제 대서양고등어 스크램블",
       },
     ],
   },
@@ -730,7 +954,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "무명갈전갱이 초밥",
+      },
+      {
+        id: "",
+        name: "전갱이 샌드",
       },
     ],
   },
@@ -743,7 +971,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "바다포도 해파리 초밥",
+      },
+      {
+        id: "",
+        name: "흰점박이해파리 군함 초밥",
       },
     ],
   },
@@ -756,7 +988,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "뱀상어 초밥",
       },
     ],
   },
@@ -782,7 +1014,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "큰꼬치고기 초밥",
+      },
+      {
+        id: "",
+        name: "큰꼬치고기 카나페",
       },
     ],
   },
@@ -795,7 +1031,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "동갈삼치 초밥",
+      },
+      {
+        id: "",
+        name: "동갈삼치 아란치니",
       },
     ],
   },
@@ -808,7 +1048,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "톱상어 초밥",
       },
     ],
   },
@@ -821,7 +1061,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "대서양아귀 초밥",
+      },
+      {
+        id: "",
+        name: "히알로네마 아귀찜",
       },
     ],
   },
@@ -834,7 +1078,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "갈라파고스붉은게살 초밥",
+      },
+      {
+        id: "",
+        name: "갈라파고스붉은게 볶음밥",
       },
     ],
   },
@@ -847,7 +1095,19 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "블랙타이거생새우 초밥",
+      },
+      {
+        id: "",
+        name: "멘보샤",
+      },
+      {
+        id: "",
+        name: "새우튀김 특초밥",
+      },
+      {
+        id: "",
+        name: "가지 새우완자 튀김",
       },
     ],
   },
@@ -860,7 +1120,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "귀상어 초밥",
       },
     ],
   },
@@ -873,7 +1133,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "돛새치 초밥",
+      },
+      {
+        id: "",
+        name: "돛새치 해초조름",
+      },
+      {
+        id: "",
+        name: "트러플 돛새치 타르타르",
       },
     ],
   },
@@ -886,7 +1154,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "캘리포니아닭새우 초밥",
       },
     ],
   },
@@ -899,7 +1167,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "랍스터 플래터",
+      },
+      {
+        id: "",
+        name: "비단닭새우 초밥",
       },
     ],
   },
@@ -913,7 +1185,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "앵무조개 초밥",
       },
     ],
   },
@@ -926,7 +1198,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "귀신고기 초밥",
+      },
+      {
+        id: "",
+        name: "하바네로 귀신고기 튀김",
       },
     ],
   },
@@ -939,7 +1215,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "주름상어 초밥",
+      },
+      {
+        id: "",
+        name: "트러블 상어 샌드",
       },
     ],
   },
@@ -952,7 +1232,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "푸렁통구멍 탕수어",
+      },
+      {
+        id: "",
+        name: "푸렁통구멍 초밥",
       },
     ],
   },
@@ -965,7 +1249,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "코은상어 초밥",
+      },
+      {
+        id: "",
+        name: "다홍빛 생선 롤",
       },
     ],
   },
@@ -978,7 +1266,19 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "키다리게 초밥",
+      },
+      {
+        id: "",
+        name: "키다리게 덮밥",
+      },
+      {
+        id: "",
+        name: "키다리게 오이 초밥",
+      },
+      {
+        id: "",
+        name: "키다리게 커리",
       },
     ],
   },
@@ -991,7 +1291,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "메가마우스 초밥",
+      },
+      {
+        id: "",
+        name: "트러플 상어 샌드",
       },
     ],
   },
@@ -1004,7 +1308,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "쿠키커터상어 초밥",
+      },
+      {
+        id: "",
+        name: "심해어 덴뿌라",
       },
     ],
   },
@@ -1017,7 +1325,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "클리오네 초밥",
       },
     ],
   },
@@ -1030,7 +1338,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "점씬벵이 초밥",
+      },
+      {
+        id: "",
+        name: "점씬벵이 오이 군함 초밥",
       },
     ],
   },
@@ -1043,7 +1355,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "분홍꼼치 초밥",
+      },
+      {
+        id: "",
+        name: "토마토 꼼치 볶음",
       },
     ],
   },
@@ -1056,7 +1372,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "벤텐어 초밥",
       },
     ],
   },
@@ -1069,7 +1385,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "불뚝복 초밥",
       },
     ],
   },
@@ -1082,7 +1398,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "감투빗해파리 초밥",
       },
     ],
   },
@@ -1095,7 +1411,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "붉은배빗해파리 초밥",
       },
     ],
   },
@@ -1108,7 +1424,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "다홍빛 생선 롤",
+      },
+      {
+        id: "",
+        name: "금눈돔 초밥",
       },
     ],
   },
@@ -1121,7 +1441,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "하바네로 가재 볶음",
+      },
+      {
+        id: "",
+        name: "네점발빨간새우 초밥",
       },
     ],
   },
@@ -1134,7 +1458,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "동부바위바닷가재 초밥",
+      },
+      {
+        id: "",
+        name: "동부바위바닷가재 계란찜",
       },
     ],
   },
@@ -1148,7 +1476,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "방사쏠배감펭 초밥",
+      },
+      {
+        id: "",
+        name: "달빛 블래더랙 롤",
       },
     ],
   },
@@ -1161,7 +1493,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "롱스파인다람쥐고기 초밥",
+      },
+      {
+        id: "",
+        name: "달빛 블래더랙 롤",
       },
     ],
   },
@@ -1174,7 +1510,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "복어 완자탕",
+      },
+      {
+        id: "",
+        name: "가시복 껍질 초무침",
       },
     ],
   },
@@ -1187,7 +1527,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "상자해파리 군함 초밥",
       },
     ],
   },
@@ -1200,7 +1540,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "곰치 초밥",
+      },
+      {
+        id: "",
+        name: "곰치 커리",
       },
     ],
   },
@@ -1213,7 +1557,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "흑기흉상어 초밥",
+      },
+      {
+        id: "",
+        name: "상어 가라아게",
       },
     ],
   },
@@ -1226,7 +1574,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "무태상어 초밥",
+      },
+      {
+        id: "",
+        name: "상어 가라아게",
       },
     ],
   },
@@ -1239,7 +1591,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "지브라상어 초밥",
       },
     ],
   },
@@ -1252,7 +1604,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "훔볼트 먹믈 파스타",
+      },
+      {
+        id: "",
+        name: "흰보리새우 초밥",
+      },
+      {
+        id: "",
+        name: "흰보리새우 덮밥",
       },
     ],
   },
@@ -1265,7 +1625,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "가시발새우 초밥",
       },
     ],
   },
@@ -1278,7 +1638,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "블루랍스터 초밥",
+      },
+      {
+        id: "",
+        name: "트러플 블루랍스터 꼬리회",
       },
     ],
   },
@@ -1291,7 +1655,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "검정핀꼬치고기 초밥",
+      },
+      {
+        id: "",
+        name: "달빛 블래더랙 롤",
       },
     ],
   },
@@ -1304,7 +1672,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "화살오징어 초밥",
       },
     ],
   },
@@ -1317,7 +1685,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "훔볼트오징어 초밥",
+      },
+      {
+        id: "",
+        name: "훔볼트 먹물 파스타",
       },
     ],
   },
@@ -1330,7 +1702,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "데빌스콜피온피쉬 초밥",
       },
     ],
   },
@@ -1343,7 +1715,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "부채새우 초밥",
       },
     ],
   },
@@ -1356,7 +1728,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "크리스탈랍스터 초밥",
+      },
+      {
+        id: "",
+        name: "크리스탈랍스터 롤",
       },
     ],
   },
@@ -1370,7 +1746,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "공작오징어 초밥",
+      },
+      {
+        id: "",
+        name: "공작오징어 리피에니",
+      },
+      {
+        id: "",
+        name: "삼색오징어구이",
       },
     ],
   },
@@ -1383,7 +1767,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "덤보문어 초밥",
+      },
+      {
+        id: "",
+        name: "덤보 타코야끼",
       },
     ],
   },
@@ -1396,7 +1784,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "배럴아이 초밥",
+      },
+      {
+        id: "",
+        name: "심해어 덴뿌라",
       },
     ],
   },
@@ -1409,7 +1801,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "블롭피쉬 초밥",
+      },
+      {
+        id: "",
+        name: "블롭피쉬 춘권",
       },
     ],
   },
@@ -1422,7 +1818,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "흡혈오징어 초밥",
+      },
+      {
+        id: "",
+        name: "심해어 덴뿌라",
+      },
+      {
+        id: "",
+        name: "삼색오징어구이",
       },
     ],
   },
@@ -1435,7 +1839,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "펠리칸장어 초밥",
+      },
+      {
+        id: "",
+        name: "펠리칸장어 젤리",
       },
     ],
   },
@@ -1449,7 +1857,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "극지대구 초밥",
+      },
+      {
+        id: "",
+        name: "극지대구 리조토",
       },
     ],
   },
@@ -1462,7 +1874,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "남극꼼치 초밥",
+      },
+      {
+        id: "",
+        name: "토마토 꼼치 볶음",
       },
     ],
   },
@@ -1475,7 +1891,15 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "남극문어 초밥",
+      },
+      {
+        id: "",
+        name: "남극문어 카르파초",
+      },
+      {
+        id: "",
+        name: "트러플 남극문어 구이",
       },
     ],
   },
@@ -1488,7 +1912,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "그린란드상어 초밥",
       },
     ],
   },
@@ -1501,7 +1925,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "북극등가시치 초밥",
       },
     ],
   },
@@ -1514,7 +1938,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "비악상어 초밥",
+      },
+      {
+        id: "",
+        name: "비악상어 조림",
       },
     ],
   },
@@ -1527,7 +1955,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "아이스피쉬 초밥",
+      },
+      {
+        id: "",
+        name: "아이스피쉬 커리",
       },
     ],
   },
@@ -1540,7 +1972,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "열빙어 초밥",
+      },
+      {
+        id: "",
+        name: "열빙어 구이",
       },
     ],
   },
@@ -1553,7 +1989,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "일각고래 초밥",
+      },
+      {
+        id: "",
+        name: "일각고래 미소된장국",
       },
     ],
   },
@@ -1566,7 +2006,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "해덕대구 초밥",
+      },
+      {
+        id: "",
+        name: "해덕대구 아쿠아파짜",
       },
     ],
   },
@@ -1579,7 +2023,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "땅가오리 초밥",
+      },
+      {
+        id: "",
+        name: "가오리포",
       },
     ],
   },
@@ -1592,7 +2040,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "북극 망원경 물고기 초밥",
       },
     ],
   },
@@ -1605,7 +2053,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "알래스카 명태 초밥",
       },
     ],
   },
@@ -1618,7 +2066,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "럼프피쉬 초밥",
       },
     ],
   },
@@ -1631,7 +2079,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "들창코가시장어 초밥",
+      },
+      {
+        id: "",
+        name: "하바네로 장어 구이",
       },
     ],
   },
@@ -1644,7 +2096,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "간장 게장",
+      },
+      {
+        id: "",
+        name: "황색왕게 초밥",
       },
     ],
   },
@@ -1657,20 +2113,28 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "간장 게장",
+      },
+      {
+        id: "",
+        name: "대게 초밥",
       },
     ],
   },
   {
     id: "",
-    name: "대게",
+    name: "털게",
     rank: RANK.NINE,
     region: REGION.GLACIER_ZONE,
     time: TIME.DAY,
     dishList: [
       {
         id: "",
-        name: "",
+        name: "털게 초밥",
+      },
+      {
+        id: "",
+        name: "간장 게장",
       },
     ],
   },
@@ -1684,7 +2148,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "왑티아 필덴시스 초무침",
+      },
+      {
+        id: "",
+        name: "왑티아 초밥",
       },
     ],
   },
@@ -1697,7 +2165,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "피카이아 초밥",
+      },
+      {
+        id: "",
+        name: "피카이아 라멘",
       },
     ],
   },
@@ -1710,7 +2182,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "알레니프테루스 초밥",
       },
     ],
   },
@@ -1723,7 +2195,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "칭멘도스 초밥",
       },
     ],
   },
@@ -1736,7 +2208,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "팔카투스 초밥",
+      },
+      {
+        id: "",
+        name: "팔카투스 된장국",
       },
     ],
   },
@@ -1749,7 +2225,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "드레파나스피스 초밥",
       },
     ],
   },
@@ -1762,7 +2238,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "둔클레오스테우스 초밥",
       },
     ],
   },
@@ -1775,7 +2251,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "메갈로그랍투스 초밥",
       },
     ],
   },
@@ -1788,7 +2264,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "제나칸투스 초밥",
       },
     ],
   },
@@ -1801,7 +2277,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "돌로카리스인겐스 초밥",
       },
     ],
   },
@@ -1814,7 +2290,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "랍스터 플래터",
+      },
+      {
+        id: "",
+        name: "토큐미아카탈렙시스 초밥",
       },
     ],
   },
@@ -1828,7 +2308,19 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "해마 꼬치구이",
+      },
+      {
+        id: "",
+        name: "해마 우동",
+      },
+      {
+        id: "",
+        name: "해마 튀김",
+      },
+      {
+        id: "",
+        name: "해마해초 샐러드",
       },
     ],
   },
@@ -1841,7 +2333,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "해룡 주먹밥",
       },
     ],
   },
