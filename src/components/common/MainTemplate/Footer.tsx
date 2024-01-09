@@ -3,7 +3,8 @@ import { Layout } from "antd";
 const Footer = () => {
   return (
     <Layout.Footer style={{ textAlign: "center" }}>
-      Ant Design ©{new Date().getFullYear()} Created by Ant UED
+      ©{new Date().getFullYear()} Created by BlackGarlic /
+      blackgarlic.yoon@gmail.com
     </Layout.Footer>
   );
 };
