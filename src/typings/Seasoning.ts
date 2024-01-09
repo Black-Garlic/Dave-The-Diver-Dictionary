@@ -1,10 +1,10 @@
-import { INGREDIENT_SOURCE } from "@constants/Ingredient.ts";
 import { SimpleDish } from "@typings/Fish.ts";
+import { SEASONING_SOURCE } from "@constants/Seasoning.ts";
 import { Rank } from "@typings/Rank.ts";
 
-export interface Ingredient extends Rank {
+export interface Seasoning extends Rank {
   id: string;
   name: string;
-  source: INGREDIENT_SOURCE;
+  source: SEASONING_SOURCE;
   dishList: SimpleDish[];
 }

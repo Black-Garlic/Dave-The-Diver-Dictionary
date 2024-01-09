@@ -1,11 +1,10 @@
-import { RANK } from "@constants/Rank.ts";
 import { REGION } from "@constants/Region.ts";
 import { TIME } from "@constants/Time.ts";
+import { Rank } from "@typings/Rank.ts";
 
-export interface Fish {
+export interface Fish extends Rank {
   id: string;
   name: string;
-  rank: RANK;
   region: REGION;
   time: TIME;
   dishList: SimpleDish[];
