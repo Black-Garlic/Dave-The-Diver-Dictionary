@@ -7,7 +7,7 @@ import { TIME_OPTION } from "@constants/Time.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
 import { Fish } from "@typings/Fish.ts";
-import { FISH } from "@constants/Fish.ts";
+import { FISH_LIST } from "@constants/Fish.ts";
 
 interface Props {
   setFishList: Dispatch<SetStateAction<Fish[]>>;
@@ -64,7 +64,7 @@ const FishListFilter = ({ setFishList }: Props) => {
   };
 
   useEffect(() => {
-    const fishFilterRankList = filterRank(FISH, rank);
+    const fishFilterRankList = filterRank(FISH_LIST, rank);
     const fishFilterRegionList = filterRegion(fishFilterRankList, region);
     const fishFilterTimeList = filterTime(fishFilterRegionList, time);
     const fishFilterKeywordList = filterKeyword(fishFilterTimeList, keyword);

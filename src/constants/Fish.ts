@@ -3,7 +3,7 @@ import { REGION } from "@constants/Region.ts";
 import { TIME } from "@constants/Time.ts";
 import { RANK } from "@constants/Rank.ts";
 
-export const FISH: Fish[] = [
+export const FISH_LIST: Fish[] = [
   // 블루홀 초입
   {
     id: "",
