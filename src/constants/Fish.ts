@@ -31,7 +31,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "콤버 초밥",
+      },
+      {
+        id: "",
+        name: "콤버 샌드위치",
       },
     ],
   },
@@ -211,7 +215,11 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "오네이트놀래기 초밥",
+      },
+      {
+        id: "",
+        name: "놀래기 커리",
       },
     ],
   },
@@ -507,7 +515,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "",
+        name: "황제엔젤피쉬 초밥",
       },
     ],
   },
@@ -989,19 +997,6 @@ export const FISH_LIST: Fish[] = [
       {
         id: "",
         name: "뱀상어 초밥",
-      },
-    ],
-  },
-  {
-    id: "",
-    name: "",
-    rank: RANK.TWO,
-    region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
-    time: TIME.DAY,
-    dishList: [
-      {
-        id: "",
-        name: "",
       },
     ],
   },
