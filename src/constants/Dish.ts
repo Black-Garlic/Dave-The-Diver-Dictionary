@@ -204,7 +204,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Black and_White_Snapper_Sushi",
+    id: "Black_And_White_Snapper_Sushi",
     name: "블랙스내퍼 초밥",
     maxCost: 33,
     maxScore: 150,
@@ -488,6 +488,26 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
+    id: "American_Lobster_Sushi",
+    name: "미국바닷가재 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "미국바닷가재", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "European_Lobster_Sushi",
+    name: "유렵바닷가재 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "유렵바닷가재", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
     id: "Bluehead_Tilefish_Sushi",
     name: "블루헤드타일피쉬 초밥",
     maxCost: 55,
@@ -746,6 +766,46 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
+    id: "California_Spiny_Lobster_Sushi",
+    name: "캘리포니아닭새우 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "캘리포니아닭새우", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Tropical_Rock_Lobster_Sushi",
+    name: "비단닭새우 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "비단닭새우", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Clearfin_Lionfish_Sushi",
+    name: "방사쏠배감펭 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "방사쏠배감펭", name: "", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Longspine_Squirrelfish_Sushi",
+    name: "롱스파인 다람쥐고기 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "롱스파인 다람쥐고기", name: "", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
     id: "White_Shrimp_Sushi",
     name: "흰보리새우 초밥",
     maxCost: 196,
@@ -753,6 +813,46 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
     recipeList: [
       { id: "", name: "흰보리새우", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Red_Banded_Lobster_Sushi",
+    name: "가시발새우 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "가시발새우", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Blue_Lobster_Sushi",
+    name: "블루랍스터 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "블루랍스터", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Blackfin_Barracuda_Sushi",
+    name: "검정핀꼬치고기 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "검정핀꼬치고기", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Spear_Squid_Sushi",
+    name: "화살오징어 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "화살오징어", type: RECIPE_TYPE.FISH, count: 1 },
     ],
   },
   {
@@ -773,6 +873,26 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
     recipeList: [
       { id: "", name: "데빌스콜피온피쉬", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Fan_Lobster_Sushi",
+    name: "부채새우 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "부채새우", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Crystal_Lobster_Sushi",
+    name: "크리스탈랍스터 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "크리스탈랍스터", type: RECIPE_TYPE.FISH, count: 1 },
     ],
   },
   {
@@ -928,6 +1048,26 @@ export const DISH_LIST: Dish[] = [
     maxScore: 270,
     maxCount: 1,
     recipeList: [{ id: "", name: "금눈돔", type: RECIPE_TYPE.FISH, count: 1 }],
+  },
+  {
+    id: "Norway_Lobster_Sushi",
+    name: "네점발빨간새우 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "네점발빨간새우", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Eastern_Rock_Lobster_Sushi",
+    name: "동부바위바닷가재 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "동부바위바닷가재", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
   },
   {
     id: "Peacock_Squid_Sushi",
@@ -1138,6 +1278,32 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
+    id: "Golden_King_Crab_Sushi",
+    name: "황색왕게 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "황색왕게", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Snow_Crab_Sushi",
+    name: "대게 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [{ id: "", name: "대게", type: RECIPE_TYPE.FISH, count: 1 }],
+  },
+  {
+    id: "Horsehair_Crab_Sushi",
+    name: "털게 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [{ id: "", name: "털게", type: RECIPE_TYPE.FISH, count: 1 }],
+  },
+  {
     id: "Waptia_Sushi",
     name: "왑티아 초밥",
     maxCost: 381,
@@ -1230,6 +1396,26 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
     recipeList: [
       { id: "", name: "제나칸투스 살점", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Dollocaris_Ingens_Sushi",
+    name: "돌로카리스인겐스 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "돌로카리스인겐스", type: RECIPE_TYPE.FISH, count: 1 },
+    ],
+  },
+  {
+    id: "Tokummia_Katalepsis_Sushi",
+    name: "토큐미아카탈렙시스 초밥",
+    maxCost: 0,
+    maxScore: 0,
+    maxCount: 1,
+    recipeList: [
+      { id: "", name: "토큐미아카탈렙시스", type: RECIPE_TYPE.FISH, count: 1 },
     ],
   },
   {

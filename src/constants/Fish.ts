@@ -2293,6 +2293,19 @@ export const FISH_LIST: Fish[] = [
       },
     ],
   },
+  {
+    id: "Anomalocaris",
+    name: "아노말로칼리스",
+    rank: RANK.NINE,
+    region: REGION.HYDROTHERMAL_VENTS,
+    time: TIME.DAY,
+    dishList: [
+      {
+        id: "",
+        name: "아노말로칼리스 새끼 초밥터",
+      },
+    ],
+  },
   // 기타
   {
     id: "Seahorse",
