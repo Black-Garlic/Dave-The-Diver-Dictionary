@@ -3,12 +3,12 @@ import type { ColumnsType } from "antd/es/table";
 import { Fish } from "@typings/Fish.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
+import { useRecoilValue } from "recoil";
+import { fishListState } from "@services/Fish/FishState.ts";
 
-interface Props {
-  fishList: Fish[];
-}
+const FishListTable = () => {
+  const fishRecoilList = useRecoilValue(fishListState);
 
-const FishListTable = ({ fishList }: Props) => {
   const columns: ColumnsType<Fish> = [
     {
       key: "rank",
@@ -67,7 +67,9 @@ const FishListTable = ({ fishList }: Props) => {
     },
   ];
 
-  return <Table columns={columns} dataSource={fishList} pagination={false} />;
+  return (
+    <Table columns={columns} dataSource={fishRecoilList} pagination={false} />
+  );
 };
 
 export default FishListTable;

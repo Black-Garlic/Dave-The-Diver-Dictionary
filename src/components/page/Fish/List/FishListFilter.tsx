@@ -1,7 +1,7 @@
 import { Col, Flex, Row, Select, Tag } from "antd";
 import { RANK_OPTION } from "@constants/Rank.ts";
 import Search from "antd/es/input/Search";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { REGION_OPTION } from "@constants/Region.ts";
 import { TIME_OPTION } from "@constants/Time.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
@@ -13,12 +13,12 @@ import {
   FISH_SORT_OPTION,
   SORT_DIRECTION,
 } from "@constants/Sort.ts";
+import { useSetRecoilState } from "recoil";
+import { fishListState } from "@services/Fish/FishState.ts";
 
-interface Props {
-  setFishList: Dispatch<SetStateAction<Fish[]>>;
-}
+const FishListFilter = () => {
+  const setFishList = useSetRecoilState(fishListState);
 
-const FishListFilter = ({ setFishList }: Props) => {
   const [sort, setSort] = useState<string>(FISH_SORT_OPTION[0].value);
   const [rank, setRank] = useState<string[]>([]);
   const [region, setRegion] = useState<string[]>([]);
@@ -28,21 +28,23 @@ const FishListFilter = ({ setFishList }: Props) => {
   const sortFish = (fishList: Fish[], sort: string) => {
     const [sortType, sortDirection] = sort.split("-");
 
+    const sortFishList: Fish[] = [...fishList];
+
     if (sortType === FISH_SORT.RANK) {
       if (sortDirection === SORT_DIRECTION.ASC) {
-        fishList.sort((a, b) => a.rank - b.rank);
+        sortFishList.sort((a, b) => a.rank - b.rank);
       } else if (sortDirection === SORT_DIRECTION.DESC) {
-        fishList.sort((a, b) => b.rank - a.rank);
+        sortFishList.sort((a, b) => b.rank - a.rank);
       }
     } else if (sortType === FISH_SORT.NAME) {
       if (sortDirection === SORT_DIRECTION.ASC) {
-        fishList.sort((a, b) => a.name.localeCompare(b.name));
+        sortFishList.sort((a, b) => a.name.localeCompare(b.name));
       } else if (sortDirection === SORT_DIRECTION.DESC) {
-        fishList.sort((a, b) => b.name.localeCompare(a.name));
+        sortFishList.sort((a, b) => b.name.localeCompare(a.name));
       }
     }
 
-    return fishList;
+    return sortFishList;
   };
 
   const filterRank = (fishList: Fish[], rank: string[]): Fish[] => {
@@ -91,21 +93,17 @@ const FishListFilter = ({ setFishList }: Props) => {
 
   useEffect(() => {
     const fishSortList = sortFish(FISH_LIST, sort);
-
     const fishFilterRankList = filterRank(fishSortList, rank);
     const fishFilterRegionList = filterRegion(fishFilterRankList, region);
     const fishFilterTimeList = filterTime(fishFilterRegionList, time);
     const fishFilterKeywordList = filterKeyword(fishFilterTimeList, keyword);
 
-    console.log(fishSortList);
-    console.log(fishFilterKeywordList);
-
     setFishList(fishFilterKeywordList);
   }, [keyword, rank, region, setFishList, sort, time]);
 
   return (
-    <Row style={{ marginBottom: "10px" }}>
-      <Col flex={"auto"}>
+    <Row>
+      <Col flex={"auto"} style={{ margin: "10px 0px" }}>
         <Flex gap={"middle"}>
           <Select
             allowClear
@@ -166,7 +164,7 @@ const FishListFilter = ({ setFishList }: Props) => {
         </Flex>
       </Col>
 
-      <Col flex={"none"}>
+      <Col flex={"none"} style={{ margin: "10px 0px" }}>
         <Search
           placeholder="검색"
           allowClear
