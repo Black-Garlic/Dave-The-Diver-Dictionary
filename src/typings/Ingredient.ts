@@ -1,6 +1,6 @@
 import { INGREDIENT_SOURCE } from "@constants/Ingredient.ts";
-import { SimpleDish } from "@typings/Fish.ts";
 import { Rank } from "@typings/Rank.ts";
+import { SimpleDish } from "@typings/Dish.ts";
 
 export interface Ingredient extends Rank {
   id: string;
