@@ -7,6 +7,8 @@ import { Fish } from "@typings/Fish.ts";
 const FishListPage = () => {
   const [fishList, setFishList] = useState<Fish[]>(FISH_LIST);
 
+  console.log(fishList);
+
   return (
     <>
       <FishListFilter setFishList={setFishList} />

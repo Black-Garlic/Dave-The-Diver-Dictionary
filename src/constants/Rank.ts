@@ -1,53 +1,53 @@
 import { Option } from "@typings/Option.ts";
 
 export enum RANK {
-  ONE = "1",
-  TWO = "2",
-  THREE = "3",
-  FOUR = "4",
-  FIVE = "5",
-  SIX = "6",
-  SEVEN = "7",
-  EIGHT = "8",
-  NINE = "9",
-  MAX = "99",
+  ONE = 1,
+  TWO = 2,
+  THREE = 3,
+  FOUR = 4,
+  FIVE = 5,
+  SIX = 6,
+  SEVEN = 7,
+  EIGHT = 8,
+  NINE = 9,
+  MAX = 99,
 }
 
 export const RANK_OPTION: Option[] = [
   {
-    label: RANK.ONE,
-    value: RANK.ONE,
+    label: RANK.ONE.toString(),
+    value: RANK.ONE.toString(),
   },
   {
-    label: RANK.TWO,
-    value: RANK.TWO,
+    label: RANK.TWO.toString(),
+    value: RANK.TWO.toString(),
   },
   {
-    label: RANK.THREE,
-    value: RANK.THREE,
+    label: RANK.THREE.toString(),
+    value: RANK.THREE.toString(),
   },
   {
-    label: RANK.FOUR,
-    value: RANK.FOUR,
+    label: RANK.FOUR.toString(),
+    value: RANK.FOUR.toString(),
   },
   {
-    label: RANK.FIVE,
-    value: RANK.FIVE,
+    label: RANK.FIVE.toString(),
+    value: RANK.FIVE.toString(),
   },
   {
-    label: RANK.SIX,
-    value: RANK.SIX,
+    label: RANK.SIX.toString(),
+    value: RANK.SIX.toString(),
   },
   {
-    label: RANK.SEVEN,
-    value: RANK.SEVEN,
+    label: RANK.SEVEN.toString(),
+    value: RANK.SEVEN.toString(),
   },
   {
-    label: RANK.EIGHT,
-    value: RANK.EIGHT,
+    label: RANK.EIGHT.toString(),
+    value: RANK.EIGHT.toString(),
   },
   {
-    label: RANK.NINE,
-    value: RANK.NINE,
+    label: RANK.NINE.toString(),
+    value: RANK.NINE.toString(),
   },
 ];
