@@ -1,10 +1,11 @@
 import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
-import FishListPage from "@pages/Fish/FishListPage.tsx";
+import { RouterProvider } from "react-router-dom";
+import { router } from "@store/router.tsx";
 
 function App() {
   return (
     <MainTemplate>
-      <FishListPage />
+      <RouterProvider router={router} />
     </MainTemplate>
   );
 }
