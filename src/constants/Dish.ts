@@ -58,7 +58,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "콤버", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Cardinal Fish Sushi",
+    id: "Cardinal_Fish_Sushi",
     name: "지중해카디널피쉬 초밥",
     maxCost: 11,
     maxScore: 100,
@@ -68,7 +68,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Sea Goldie Sushi",
+    id: "Sea_Goldie_Sushi",
     name: "금강바리",
     maxCost: 11,
     maxScore: 130,
@@ -78,7 +78,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Pyramid Butterflyfish Sushi",
+    id: "Pyramid_Butterflyfish_Sushi",
     name: "안개나비고기 초밥",
     maxCost: 14,
     maxScore: 100,
@@ -88,7 +88,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Yellow Tang Sushi",
+    id: "Yellow_Tang_Sushi",
     name: "옐로우탱 초밥",
     maxCost: 14,
     maxScore: 100,
@@ -98,7 +98,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Blackspot Seabream Sushi",
+    id: "Blackspot_Seabream_Sushi",
     name: "사르파살파 초밥",
     maxCost: 18,
     maxScore: 110,
@@ -108,7 +108,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Orbicular Batfish Fry",
+    id: "Orbicular_Batfish_Fry",
     name: "원반제비활치 튀김",
     maxCost: 18,
     maxScore: 110,
@@ -118,7 +118,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Blue Tang Sushi",
+    id: "Blue_Tang_Sushi",
     name: "블루탱 초밥",
     maxCost: 22,
     maxScore: 110,
@@ -126,7 +126,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "블루탱", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Rainbow Wrasse Sushi",
+    id: "Rainbow_Wrasse_Sushi",
     name: "무지개놀래기 초밥",
     maxCost: 22,
     maxScore: 130,
@@ -136,7 +136,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Lagoon Triggerfish Sushi",
+    id: "Lagoon_Triggerfish_Sushi",
     name: "배주름쥐치 초밥",
     maxCost: 22,
     maxScore: 130,
@@ -146,7 +146,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Small Spotted Dart Sushi",
+    id: "Small_Spotted_Dart_Sushi",
     name: "빨판매가리 초밥",
     maxCost: 29,
     maxScore: 120,
@@ -156,7 +156,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Yellowback Fusilier Sushi",
+    id: "Yellowback_Fusilier_Sushi",
     name: "황등어 초밥",
     maxCost: 25,
     maxScore: 120,
@@ -164,7 +164,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "황등어", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Ornate Wrasse Sushi",
+    id: "Ornate_Wrasse_Sushi",
     name: "오네이트놀래기 초밥",
     maxCost: 29,
     maxScore: 130,
@@ -174,7 +174,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Longfin Batfish Sushi",
+    id: "Longfin_Batfish_Sushi",
     name: "깃털제비활치 초밥",
     maxCost: 37,
     maxScore: 130,
@@ -184,7 +184,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Mediterranean Parrotfish Sushi",
+    id: "Mediterranean_Parrotfish_Sushi",
     name: "지중해비늘돔 초밥",
     maxCost: 37,
     maxScore: 140,
@@ -194,7 +194,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Redtooth Triggerfish Sushi",
+    id: "Redtooth_Triggerfish_Sushi",
     name: "붉은이빨쥐치 초밥",
     maxCost: 33,
     maxScore: 150,
@@ -204,7 +204,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Black and White Snapper Sushi",
+    id: "Black and_White_Snapper_Sushi",
     name: "블랙스내퍼 초밥",
     maxCost: 33,
     maxScore: 150,
@@ -214,7 +214,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Green Humphead Parrotfish Sushi",
+    id: "Green_Humphead_Parrotfish_Sushi",
     name: "버팔로피쉬 초밥",
     maxCost: 59,
     maxScore: 230,
@@ -224,7 +224,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Barrel Jellyfish Sushi",
+    id: "Barrel_Jellyfish_Sushi",
     name: "배럴해파리 군함 초밥",
     maxCost: 37,
     maxScore: 160,
@@ -234,7 +234,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Fried Egg Jellyfish Sushi",
+    id: "Fried_Egg_Jellyfish_Sushi",
     name: "달걀프라이해파리 군함 초밥",
     maxCost: 29,
     maxScore: 160,
@@ -244,7 +244,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Whitetip Reefshark Sushi",
+    id: "Whitetip_Reefshark_Sushi",
     name: "백기흉상어 초밥",
     maxCost: 88,
     maxScore: 270,
@@ -254,7 +254,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Moray Eel Sushi",
+    id: "Moray_Eel_Sushi",
     name: "곰치 초밥",
     maxCost: 185,
     maxScore: 250,
@@ -262,7 +262,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "곰치", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Red Lionfish Sushi",
+    id: "Red_Lionfish_Sushi",
     name: "쏠배감펭 초밥",
     maxCost: 37,
     maxScore: 200,
@@ -272,7 +272,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Titan Triggerfish Sushi",
+    id: "Titan_Triggerfish_Sushi",
     name: "타이탄트리거피쉬 초밥",
     maxCost: 55,
     maxScore: 200,
@@ -282,7 +282,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Blacktip Reefshark Sushi",
+    id: "Blacktip_Reefshark_Sushi",
     name: "흑기흉상어 초밥",
     maxCost: 222,
     maxScore: 270,
@@ -292,7 +292,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Copper Shark Sushi",
+    id: "Copper_Shark_Sushi",
     name: "무태상어 초밥",
     maxCost: 240,
     maxScore: 280,
@@ -302,7 +302,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Box Jellyfish Sushi",
+    id: "Box_Jellyfish_Sushi",
     name: "상자해파리 군함 초밥",
     maxCost: 203,
     maxScore: 270,
@@ -312,7 +312,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Bluefin Tuna Akami Sushi",
+    id: "Bluefin_Tuna_Akami_Sushi",
     name: "참다랑어 붉은살 초밥",
     maxCost: 296,
     maxScore: 240,
@@ -322,7 +322,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Bluefin Tuna Chutoro Sushi",
+    id: "Bluefin_Tuna_Chutoro_Sushi",
     name: "참다랑어 중뱃살 초밥",
     maxCost: 351,
     maxScore: 241,
@@ -332,7 +332,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Bluefin Tuna Otoro Sushi",
+    id: "Bluefin_Tuna_Otoro_Sushi",
     name: "참다랑어 대뱃살 초밥",
     maxCost: 499,
     maxScore: 330,
@@ -342,7 +342,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Yellowfin Tuna Akami Sushi",
+    id: "Yellowfin_Tuna_Akami_Sushi",
     name: "황다랑어 붉은살 초밥",
     maxCost: 270,
     maxScore: 235,
@@ -352,7 +352,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Yellowfin Tuna Chutoro Sushi",
+    id: "Yellowfin_Tuna_Chutoro_Sushi",
     name: "황다랑어 중뱃살 초밥",
     maxCost: 333,
     maxScore: 238,
@@ -362,7 +362,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Yellowfin Tuna Otoro Sushi",
+    id: "Yellowfin_Tuna_Otoro_Sushi",
     name: "황다랑어 대뱃살 초밥",
     maxCost: 462,
     maxScore: 315,
@@ -372,7 +372,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Flame Angelfish Sushi",
+    id: "Flame_Angelfish_Sushi",
     name: "라마엔젤피쉬 초밥",
     maxCost: 18,
     maxScore: 150,
@@ -382,7 +382,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Sheepshead Sushi",
+    id: "Sheepshead_Sushi",
     name: "혹돔 초밥",
     maxCost: 55,
     maxScore: 240,
@@ -390,7 +390,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "혹돔", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Emperor Angelfish Sushi",
+    id: "Emperor_Angelfish_Sushi",
     name: "황제엔젤피쉬 초밥",
     maxCost: 37,
     maxScore: 150,
@@ -400,7 +400,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Stingray Sushi",
+    id: "Stingray_Sushi",
     name: "노랑가오리 초밥",
     maxCost: 92,
     maxScore: 260,
@@ -410,7 +410,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Marbled Electric Ray Sushi",
+    id: "Marbled_Electric_Ray_Sushi",
     name: "마블전기가오리 초밥",
     maxCost: 333,
     maxScore: 300,
@@ -420,7 +420,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Cooked Whiteleg Shrimp Sushi",
+    id: "Cooked_Whiteleg_Shrimp_Sushi",
     name: "흰다리자숙새우 초밥",
     maxCost: 129,
     maxScore: 220,
@@ -430,7 +430,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Striped Catfish Sushi",
+    id: "Striped_Catfish_Sushi",
     name: "쏠종개 초밥",
     maxCost: 18,
     maxScore: 260,
@@ -438,7 +438,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "쏠종개", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Purple Sea Urchin Sushi",
+    id: "Purple_Sea_Urchin_Sushi",
     name: "보라성게 초밥",
     maxCost: 222,
     maxScore: 270,
@@ -448,7 +448,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Shortfin Mako Sushi",
+    id: "Shortfin_Mako_Sushi",
     name: "청상아리 초밥",
     maxCost: 388,
     maxScore: 360,
@@ -458,7 +458,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Zebra Shark Sushi",
+    id: "Zebra_Shark_Sushi",
     name: "지브라상어 초밥",
     maxCost: 399,
     maxScore: 360,
@@ -468,7 +468,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Marlin Sushi",
+    id: "Marlin_Sushi",
     name: "청새치 초밥",
     maxCost: 341,
     maxScore: 370,
@@ -478,7 +478,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Thresher Shark Sushi",
+    id: "Thresher_Shark_Sushi",
     name: "환도상어 초밥",
     maxCost: 588,
     maxScore: 390,
@@ -488,7 +488,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Bluehead Tilefish Sushi",
+    id: "Bluehead_Tilefish_Sushi",
     name: "블루헤드타일피쉬 초밥",
     maxCost: 55,
     maxScore: 140,
@@ -498,7 +498,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Clown Frogfish Sushi",
+    id: "Clown_Frogfish_Sushi",
     name: "무당씬벵이 초밥",
     maxCost: 55,
     maxScore: 150,
@@ -508,7 +508,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Painted Comber Sushi",
+    id: "Painted_Comber_Sushi",
     name: "페인티드콤버 초밥",
     maxCost: 32,
     maxScore: 140,
@@ -518,7 +518,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Bigeye Scad Sushi",
+    id: "Bigeye_Scad_Sushi",
     name: "새가라지 초밥",
     maxCost: 62,
     maxScore: 140,
@@ -528,7 +528,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Striped Red Mullet Sushi",
+    id: "Striped_Red_Mullet_Sushi",
     name: "노랑촉수 초밥",
     maxCost: 59,
     maxScore: 140,
@@ -538,7 +538,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Mackerel Scad Sushi",
+    id: "Mackerel_Scad_Sushi",
     name: "풀가라지 초밥",
     maxCost: 55,
     maxScore: 150,
@@ -548,7 +548,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Harleqiun Hind Sushi",
+    id: "Harleqiun_Hind_Sushi",
     name: "청줄바리 초밥",
     maxCost: 66,
     maxScore: 180,
@@ -558,7 +558,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Bigeye Trevally Sushi",
+    id: "Bigeye_Trevally_Sushi",
     name: "줄전갱이 초밥",
     maxCost: 70,
     maxScore: 170,
@@ -568,7 +568,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Coral Trout Sushi",
+    id: "Coral_Trout_Sushi",
     name: "무늬바리 초밥",
     maxCost: 66,
     maxScore: 170,
@@ -578,7 +578,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Grey Triggerfish Sushi",
+    id: "Grey_Triggerfish_Sushi",
     name: "갈쥐치 초밥",
     maxCost: 62,
     maxScore: 170,
@@ -586,7 +586,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "갈쥐치", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Atlantic Bonito Sushi",
+    id: "Atlantic_Bonito_Sushi",
     name: "대서양보니토 초밥",
     maxCost: 77,
     maxScore: 180,
@@ -596,7 +596,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "White Trevally Sushi",
+    id: "White_Trevally_Sushi",
     name: "흑점줄전갱이 초밥",
     maxCost: 81,
     maxScore: 190,
@@ -606,7 +606,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Cuttlefish Sushi",
+    id: "Cuttlefish_Sushi",
     name: "갑오징어 초밥",
     maxCost: 74,
     maxScore: 200,
@@ -616,7 +616,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Dusky Grouper Sushi",
+    id: "Dusky_Grouper_Sushi",
     name: "머구리농어 초밥",
     maxCost: 81,
     maxScore: 200,
@@ -626,7 +626,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Atlantic Mackerel Sushi",
+    id: "Atlantic_Mackerel_Sushi",
     name: "대서양고등어 초밥",
     maxCost: 77,
     maxScore: 190,
@@ -636,7 +636,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Giant Trevally Sushi",
+    id: "Giant_Trevally_Sushi",
     name: "무명갈전갱이 초밥",
     maxCost: 111,
     maxScore: 250,
@@ -646,7 +646,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Giant Trevally Sushi",
+    id: "Giant_Trevally_Sushi",
     name: "흰점박이해파리 군함 초밥",
     maxCost: 66,
     maxScore: 180,
@@ -656,7 +656,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Tiger Shark Sushi",
+    id: "Tiger_Shark_Sushi",
     name: "뱀상어 초밥",
     maxCost: 185,
     maxScore: 290,
@@ -666,7 +666,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Great Barracuda Sushi",
+    id: "Great_Barracuda_Sushi",
     name: "큰꼬치고기 초밥",
     maxCost: 74,
     maxScore: 220,
@@ -676,7 +676,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Narrow_Barred Spanish Mackerel Sushi",
+    id: "Narrow_Barred_Spanish_Mackerel_Sushi",
     name: "동갈삼치 초밥",
     maxCost: 74,
     maxScore: 190,
@@ -686,7 +686,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Longnose Sawshark Sushi",
+    id: "Longnose_Sawshark_Sushi",
     name: "톱상어 초밥",
     maxCost: 129,
     maxScore: 290,
@@ -696,7 +696,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Atlantic Anglerfish Sushi",
+    id: "Atlantic_Anglerfish_Sushi",
     name: "대서양아귀 초밥",
     maxCost: 76,
     maxScore: 240,
@@ -706,7 +706,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Sally Lightfoot Crab Sushi",
+    id: "Sally_Lightfoot_Crab_Sushi",
     name: "갈라파고스붉은게살 초밥",
     maxCost: 185,
     maxScore: 320,
@@ -716,7 +716,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Raw Black Tiger Shrimp Sushi",
+    id: "Raw_Black_Tiger_Shrimp_Sushi",
     name: "블랙타이거생새우 초밥",
     maxCost: 185,
     maxScore: 240,
@@ -726,7 +726,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Sailfish Sushi",
+    id: "Sailfish_Sushi",
     name: "돛새치 초밥",
     maxCost: 336,
     maxScore: 400,
@@ -736,7 +736,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Smooth Hammerhead Sushi",
+    id: "Smooth_Hammerhead_Sushi",
     name: "귀상어 초밥",
     maxCost: 521,
     maxScore: 390,
@@ -746,7 +746,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "White Shrimp Sushi",
+    id: "White_Shrimp_Sushi",
     name: "흰보리새우 초밥",
     maxCost: 196,
     maxScore: 280,
@@ -756,7 +756,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Humboldt Squid Sushi",
+    id: "Humboldt_Squid_Sushi",
     name: "훔볼트오징어 초밥",
     maxCost: 536,
     maxScore: 350,
@@ -766,7 +766,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Devil Scorpion Fish Sushi",
+    id: "Devil_Scorpion_Fish_Sushi",
     name: "데빌스콜피온피쉬 초밥",
     maxCost: 499,
     maxScore: 350,
@@ -776,7 +776,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Chambered Nautilus Sushi",
+    id: "Chambered_Nautilus_Sushi",
     name: "앵무조개 초밥",
     maxCost: 129,
     maxScore: 220,
@@ -786,7 +786,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Fangtooth Sushi",
+    id: "Fangtooth_Sushi",
     name: "귀신고기 초밥",
     maxCost: 166,
     maxScore: 260,
@@ -796,7 +796,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Frilled Shark Sushi",
+    id: "Frilled_Shark_Sushi",
     name: "주름상어 초밥",
     maxCost: 314,
     maxScore: 280,
@@ -806,7 +806,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Bluespotted Stargazer Sushi",
+    id: "Bluespotted_Stargazer_Sushi",
     name: "푸렁통구멍 초밥",
     maxCost: 199,
     maxScore: 280,
@@ -816,7 +816,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Rhinochimaeridae Sushi",
+    id: "Rhinochimaeridae_Sushi",
     name: "코은상어 초밥",
     maxCost: 333,
     maxScore: 290,
@@ -826,7 +826,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Spider Crab Sushi",
+    id: "Spider_Crab_Sushi",
     name: "키다리게 초밥",
     maxCost: 185,
     maxScore: 290,
@@ -836,7 +836,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Megamouth Shark Sushi",
+    id: "Megamouth_Shark_Sushi",
     name: "메가마우스상어 초밥",
     maxCost: 351,
     maxScore: 300,
@@ -846,7 +846,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Cookiecutter Shark Sushi",
+    id: "Cookiecutter_Shark_Sushi",
     name: "쿠키커터상어 초밥",
     maxCost: 277,
     maxScore: 270,
@@ -856,7 +856,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Clione Sushi",
+    id: "Clione_Sushi",
     name: "클리오네 초밥",
     maxCost: 129,
     maxScore: 220,
@@ -866,7 +866,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Sea Toad Sushi",
+    id: "Sea_Toad_Sushi",
     name: "점씬벵이 초밥",
     maxCost: 203,
     maxScore: 230,
@@ -876,7 +876,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Salmon Snailfish Sushi",
+    id: "Salmon_Snailfish_Sushi",
     name: "분홍꼼치 초밥",
     maxCost: 222,
     maxScore: 230,
@@ -886,7 +886,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Pacific Fanfish Sushi",
+    id: "Pacific_Fanfish_Sushi",
     name: "벤텐어 초밥",
     maxCost: 240,
     maxScore: 240,
@@ -894,7 +894,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "벤텐어", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Threetooth Puffer Sushi",
+    id: "Threetooth_Puffer_Sushi",
     name: "불뚝복 초밥",
     maxCost: 259,
     maxScore: 250,
@@ -902,7 +902,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "불뚝복", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Comb Jelly Sushi",
+    id: "Comb_Jelly_Sushi",
     name: "감투빗해파리 초밥",
     maxCost: 166,
     maxScore: 250,
@@ -912,7 +912,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Blood-belly Comb Jelly Sushi",
+    id: "Blood-belly_Comb_Jelly_Sushi",
     name: "붉은배빗해파리 초밥",
     maxCost: 185,
     maxScore: 250,
@@ -922,7 +922,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Red Bream Sushi",
+    id: "Red_Bream_Sushi",
     name: "금눈돔 초밥",
     maxCost: 129,
     maxScore: 270,
@@ -930,7 +930,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "금눈돔", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Peacock Squid Sushi",
+    id: "Peacock_Squid_Sushi",
     name: "공작오징어 초밥",
     maxCost: 277,
     maxScore: 290,
@@ -940,7 +940,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Dumbo Octopus Sushi",
+    id: "Dumbo_Octopus_Sushi",
     name: "덤보문어 초밥",
     maxCost: 296,
     maxScore: 330,
@@ -950,7 +950,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Barreleye Sushi",
+    id: "Barreleye_Sushi",
     name: "배럴아이 초밥",
     maxCost: 259,
     maxScore: 280,
@@ -960,7 +960,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Blob Fish Sushi",
+    id: "Blob_Fish_Sushi",
     name: "블롭피쉬 초밥",
     maxCost: 444,
     maxScore: 310,
@@ -970,7 +970,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Vampire Squid Sushi",
+    id: "Vampire_Squid_Sushi",
     name: "흡혈오징어",
     maxCost: 425,
     maxScore: 340,
@@ -980,7 +980,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Pelican Eel Sushi",
+    id: "Pelican_Eel_Sushi",
     name: "펠리칸장어 초밥",
     maxCost: 666,
     maxScore: 360,
@@ -990,7 +990,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Arctic Cod Sushi",
+    id: "Arctic_Cod_Sushi",
     name: "극지대구 초밥",
     maxCost: 351,
     maxScore: 340,
@@ -1000,7 +1000,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Gelatinous Snailfish Sushi",
+    id: "Gelatinous_Snailfish_Sushi",
     name: "남극꼼치 초밥",
     maxCost: 314,
     maxScore: 330,
@@ -1010,7 +1010,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Antarctic Octopus Sushi",
+    id: "Antarctic_Octopus_Sushi",
     name: "남극문어 초밥",
     maxCost: 444,
     maxScore: 360,
@@ -1020,7 +1020,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Greenland Shark Sushi",
+    id: "Greenland_Shark_Sushi",
     name: "그린란드상어 초밥",
     maxCost: 592,
     maxScore: 370,
@@ -1030,7 +1030,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Polar Eelpout Sushi",
+    id: "Polar_Eelpout_Sushi",
     name: "북극등가시치 초밥",
     maxCost: 333,
     maxScore: 320,
@@ -1040,7 +1040,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Porbeagle Shark Sushi",
+    id: "Porbeagle_Shark_Sushi",
     name: "비악상어 초밥",
     maxCost: 610,
     maxScore: 380,
@@ -1050,7 +1050,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Ice Fish Sushi",
+    id: "Ice_Fish_Sushi",
     name: "아이스피쉬 초밥",
     maxCost: 351,
     maxScore: 320,
@@ -1060,7 +1060,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Capelin Sushi",
+    id: "Capelin_Sushi",
     name: "열빙어 초밥",
     maxCost: 166,
     maxScore: 330,
@@ -1068,7 +1068,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "열빙어", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Narwhal Sushi",
+    id: "Narwhal_Sushi",
     name: "일각고래 초밥",
     maxCost: 518,
     maxScore: 400,
@@ -1078,7 +1078,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Haddock Sushi",
+    id: "Haddock_Sushi",
     name: "해덕대구 초밥",
     maxCost: 407,
     maxScore: 340,
@@ -1088,7 +1088,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Starry Skate Sushi",
+    id: "Starry_Skate_Sushi",
     name: "땅가오리 초밥",
     maxCost: 481,
     maxScore: 360,
@@ -1098,7 +1098,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Arctic Telescope Fish Sushi",
+    id: "Arctic_Telescope_Fish_Sushi",
     name: "북극 망원경 물고기 초밥",
     maxCost: 444,
     maxScore: 350,
@@ -1108,7 +1108,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Alaska Pollock Sushi",
+    id: "Alaska_Pollock_Sushi",
     name: "알래스카 명태 초밥",
     maxCost: 499,
     maxScore: 380,
@@ -1118,7 +1118,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Lumpfish Sushi",
+    id: "Lumpfish_Sushi",
     name: "럼프피쉬 초밥",
     maxCost: 444,
     maxScore: 370,
@@ -1128,7 +1128,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Snub_nosed Spiny Eel Sushi",
+    id: "Snub_nosed_Spiny_Eel_Sushi",
     name: "들창코가시장어 초밥",
     maxCost: 666,
     maxScore: 390,
@@ -1138,7 +1138,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Waptia Sushi",
+    id: "Waptia_Sushi",
     name: "왑티아 초밥",
     maxCost: 381,
     maxScore: 400,
@@ -1148,7 +1148,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Pikaia Sushi",
+    id: "Pikaia_Sushi",
     name: "피카이아 초밥",
     maxCost: 425,
     maxScore: 360,
@@ -1158,7 +1158,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Allenypterus Sushi",
+    id: "Allenypterus_Sushi",
     name: "알레니프테루스 초밥",
     maxCost: 462,
     maxScore: 360,
@@ -1168,7 +1168,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Qingmendous Sushi",
+    id: "Qingmendous_Sushi",
     name: "칭멘도스 초밥",
     maxCost: 444,
     maxScore: 310,
@@ -1178,7 +1178,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Falcatus Sushi",
+    id: "Falcatus_Sushi",
     name: "팔카투스 초밥",
     maxCost: 481,
     maxScore: 380,
@@ -1188,7 +1188,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Drepanaspis Sushi",
+    id: "Drepanaspis_Sushi",
     name: "드레파나스피스 초밥",
     maxCost: 555,
     maxScore: 400,
@@ -1198,7 +1198,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Dunkleosteus Sushi",
+    id: "Dunkleosteus_Sushi",
     name: "둔클레오스테우스 초밥",
     maxCost: 629,
     maxScore: 420,
@@ -1213,7 +1213,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Megalograptus Sushi",
+    id: "Megalograptus_Sushi",
     name: "메갈로그랍투스 초밥",
     maxCost: 518,
     maxScore: 400,
@@ -1223,7 +1223,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Xenacanthus Sushi",
+    id: "Xenacanthus_Sushi",
     name: "제나칸투스 초밥",
     maxCost: 592,
     maxScore: 430,
@@ -1233,7 +1233,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Young Anomalocaris Sushi",
+    id: "Young_Anomalocaris_Sushi",
     name: "아노말로칼리스 새끼 초밥",
     maxCost: 224,
     maxScore: 125,
@@ -1243,7 +1243,7 @@ export const DISH_LIST: Dish[] = [
     ],
   },
   {
-    id: "Seahorse Sewers",
+    id: "Seahorse_Sewers",
     name: "해마 꼬치구이",
     maxCost: 111,
     maxScore: 220,
@@ -1251,7 +1251,7 @@ export const DISH_LIST: Dish[] = [
     recipeList: [{ id: "", name: "해마", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    id: "Seadragon Onigiri",
+    id: "Seadragon_Onigiri",
     name: "해룡 주먹밥",
     maxCost: 388,
     maxScore: 470,
