@@ -6,7 +6,7 @@ import { RANK } from "@constants/Rank.ts";
 export const FISH_LIST: Fish[] = [
   // 블루홀 초입
   {
-    id: "",
+    id: "Clownfish",
     name: "흰동가리",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -23,7 +23,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Comber",
     name: "콤버",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -40,7 +40,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Cardinal_Fish",
     name: "지중해카디널피쉬",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -53,7 +53,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Sea_Goldie",
     name: "금강바리",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -66,7 +66,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Pyramid_Butterflyfish",
     name: "안개나비고기",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -83,7 +83,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Yellow_Tang",
     name: "옐로우탱",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -96,7 +96,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Salema_Porgy",
     name: "사르파살파",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -109,7 +109,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Orbicular_Batfish",
     name: "원반제비활치",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -126,7 +126,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Blue_Tang",
     name: "블루탱",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -143,7 +143,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Rainbow_Wrasse",
     name: "무지개놀래기",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -160,7 +160,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Lagoon_Triggerfish",
     name: "배주름쥐치",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -173,7 +173,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Small_Spotted_Dart",
     name: "빨판매가리",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -190,7 +190,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Yellowback_Fusilier",
     name: "황등어",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -207,7 +207,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Ornate_Wrasse",
     name: "오네이트놀래기",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -224,7 +224,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Longfin_Batfish",
     name: "깃털제비활치",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -241,7 +241,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Mediterranean_Parrotfish",
     name: "지중해비늘돔",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -258,7 +258,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Redtooth_Triggerfish",
     name: "붉은이빨쥐치",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -275,7 +275,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Black_And_White_Snapper",
     name: "블랙스내퍼",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -288,7 +288,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Green_Humphead_Parrotfish",
     name: "버팔로피쉬",
     rank: RANK.THREE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -305,7 +305,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Barrel_Jellyfish",
     name: "배럴해파리",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -322,7 +322,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Fried_Egg_Jellyfish",
     name: "달걀프라이해파리",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -339,7 +339,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Whitetip_Reefshark",
     name: "백기흉상어",
     rank: RANK.FOUR,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -356,7 +356,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Starry_Puffer",
     name: "꺼끌복",
     rank: RANK.THREE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -377,7 +377,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Red_Lionfish",
     name: "쏠배감펭",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -394,7 +394,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Titan_Triggerfish",
     name: "타이탄트리거피쉬",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -411,7 +411,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Bluefin_Tuna",
     name: "참다랑어",
     rank: RANK.SEVEN,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -444,7 +444,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Yellowfin_Tuna",
     name: "황다랑어",
     rank: RANK.SEVEN,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -477,7 +477,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Flame_Angelfish",
     name: "라마엔젤피쉬",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -490,7 +490,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Sheepshead",
     name: "혹돔",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -507,7 +507,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Emperor_Angelfish",
     name: "황제엔젤피쉬",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -520,7 +520,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Stingray",
     name: "노랑가오리",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -537,7 +537,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Marbled_Electric_Ray",
     name: "마블전기가오리",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -554,7 +554,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Whiteleg_Shrimp",
     name: "흰다리새우",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -583,7 +583,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Striped_Catfish",
     name: "쏠종개",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -600,7 +600,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Purple_Sea_Urchin",
     name: "보라성게",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -621,7 +621,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Shortfin_Mako",
     name: "청상아리",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -634,7 +634,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Marlin",
     name: "청새치",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -651,7 +651,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Thresher_Shark",
     name: "환도상어",
     rank: RANK.NINE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -664,7 +664,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "American_Lobster",
     name: "미국바닷가재",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -681,7 +681,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "European_Lobster",
     name: "유렵바닷가재",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -695,7 +695,7 @@ export const FISH_LIST: Fish[] = [
   },
   // 블루홀 중간 수역
   {
-    id: "",
+    id: "Bluehead_Tilefish",
     name: "블루헤드타일피쉬",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -708,7 +708,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Clown_Frogfish",
     name: "무당씬벵이",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -725,7 +725,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Painted_Comber",
     name: "페인티드콤버",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -742,7 +742,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Bigeye_Scad",
     name: "새가라지",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -759,7 +759,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Striped_Red_Mullet",
     name: "노랑촉수",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -776,7 +776,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Mackerel_Scad",
     name: "풀가라지",
     rank: RANK.ONE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -793,7 +793,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Harleqiun_Hind",
     name: "청줄바리",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -810,7 +810,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Bigeye_Trevally",
     name: "줄전갱이",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -827,7 +827,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Coral_Trout",
     name: "무늬바리",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -848,7 +848,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Grey_Triggerfish",
     name: "갈쥐치",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -861,7 +861,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Atlantic_Bonito",
     name: "대서양보니토",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -878,7 +878,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "White_Trevally",
     name: "흑점줄전갱이",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -899,7 +899,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Cuttlefish",
     name: "갑오징어",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -920,7 +920,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Dusky_Grouper",
     name: "머구리농어",
     rank: RANK.THREE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -937,7 +937,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Atlantic_Mackerel",
     name: "대서양고등어",
     rank: RANK.THREE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -954,7 +954,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Giant_Trevally",
     name: "무명갈전갱이",
     rank: RANK.FOUR,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -971,7 +971,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "White_Spotted_Jellyfish",
     name: "흰점박이해파리",
     rank: RANK.TWO,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -988,7 +988,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Tiger_Shark",
     name: "뱀상어",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1001,7 +1001,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Great_Barracuda",
     name: "큰꼬치고기",
     rank: RANK.THREE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1018,7 +1018,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Narrow_Barred_Spanish_Mackerel",
     name: "동갈삼치",
     rank: RANK.THREE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1035,7 +1035,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Longnose_Sawshark",
     name: "톱상어",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1048,7 +1048,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Atlantic_Anglerfish",
     name: "대서양아귀",
     rank: RANK.FOUR,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1065,7 +1065,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Sally_Lightfoot_Crab",
     name: "갈라파고스붉은게",
     rank: RANK.SEVEN,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1082,7 +1082,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Black_Tiger_Shrimp",
     name: "블랙타이거새우",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1107,7 +1107,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Smooth_Hammerhead",
     name: "귀상어",
     rank: RANK.NINE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1120,7 +1120,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Sailfish",
     name: "돛새치",
     rank: RANK.NINE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1141,7 +1141,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "California_Spiny_Lobster",
     name: "캘리포니아닭새우",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1154,7 +1154,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Tropical_Rock_Lobster",
     name: "비단닭새우",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1172,7 +1172,7 @@ export const FISH_LIST: Fish[] = [
   },
   // 블루홀 심해
   {
-    id: "",
+    id: "Chambered_Nautilus",
     name: "앵무조개",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1185,7 +1185,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Fangtooth",
     name: "귀신고기",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1202,7 +1202,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Frilled_Shark",
     name: "주름상어",
     rank: RANK.SEVEN,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1219,7 +1219,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Bluespotted_Stargazer",
     name: "푸렁통구멍",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1236,7 +1236,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Rhinochimaeridae",
     name: "코은상어",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1253,7 +1253,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Spider_Crab",
     name: "키다리게",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1278,7 +1278,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Megamouth_Shark",
     name: "메가마우스상어",
     rank: RANK.SEVEN,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1295,7 +1295,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Cookiecutter_Shark",
     name: "쿠키커터상어",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1312,7 +1312,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Clione",
     name: "클리오네",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1325,7 +1325,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Sea_Toad",
     name: "점씬벵이",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1342,7 +1342,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Salmon_Snailfish",
     name: "분홍꼼치",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1359,7 +1359,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Pacific_Fanfish",
     name: "벤텐어",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1372,7 +1372,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Threethooth_Puffer",
     name: "불뚝복",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1385,7 +1385,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Comb_Jelly",
     name: "감투빗해파리",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1398,7 +1398,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Blood_Belly_Comb_Jellyfish",
     name: "붉은배빗해파리",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1411,7 +1411,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Red_Bream",
     name: "금눈돔",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1428,7 +1428,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Norway_Lobster",
     name: "네점발빨간새우",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1445,7 +1445,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Eastern_Rock_Lobster",
     name: "동부바위바닷가재",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_DEPTH,
@@ -1463,7 +1463,7 @@ export const FISH_LIST: Fish[] = [
   },
   // 야행성
   {
-    id: "",
+    id: "Clearfin_Lionfish",
     name: "방사쏠배감펭",
     rank: RANK.FOUR,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1480,7 +1480,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Longspine_Squirrelfish",
     name: "롱스파인 다람쥐고기",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1488,7 +1488,7 @@ export const FISH_LIST: Fish[] = [
     dishList: [
       {
         id: "",
-        name: "롱스파인다람쥐고기 초밥",
+        name: "롱스파인 다람쥐고기 초밥",
       },
       {
         id: "",
@@ -1497,7 +1497,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Longspine_Porcupinefish",
     name: "가시복",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1514,7 +1514,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Box_Jellyfish",
     name: "상자해파리",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1527,7 +1527,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Moray_Eel",
     name: "곰치",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1544,7 +1544,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Blacktip_Reefshark",
     name: "흑기흉상어",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1561,7 +1561,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Copper_Shark",
     name: "무태상어",
     rank: RANK.SIX,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1578,7 +1578,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Zebra_Shark",
     name: "지브라상어",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1591,7 +1591,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "White_Shrimp",
     name: "흰보리새우",
     rank: RANK.SEVEN,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1612,7 +1612,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Red_Banded_Lobster",
     name: "가시발새우",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1625,7 +1625,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Blue_Lobster",
     name: "블루랍스터",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_SHALLOWS,
@@ -1642,7 +1642,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Blackfin_Barracuda",
     name: "검정핀꼬치고기",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1659,7 +1659,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Spear_Squid",
     name: "화살오징어",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1672,7 +1672,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Humboldt_Squid",
     name: "훔볼트오징어",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1689,7 +1689,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Devil_Scorpion_Fish",
     name: "데빌스콜피온피쉬",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1702,7 +1702,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Fan_Lobster",
     name: "부채새우",
     rank: RANK.FIVE,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1715,7 +1715,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Crystal_Lobster",
     name: "크리스탈랍스터",
     rank: RANK.EIGHT,
     region: REGION.BLUE_HOLE_MEDIUM_DEPTH,
@@ -1733,7 +1733,7 @@ export const FISH_LIST: Fish[] = [
   },
   // 빙하 통로
   {
-    id: "",
+    id: "Peacock_Squid",
     name: "공작오징어",
     rank: RANK.SEVEN,
     region: REGION.GLACIER_PASSAGE,
@@ -1754,7 +1754,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Dumbo_Octopus",
     name: "덤보문어",
     rank: RANK.SEVEN,
     region: REGION.GLACIER_PASSAGE,
@@ -1771,7 +1771,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Barreleye",
     name: "배럴아이",
     rank: RANK.SEVEN,
     region: REGION.GLACIER_PASSAGE,
@@ -1788,7 +1788,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Blob_Fish",
     name: "블롭피쉬",
     rank: RANK.SEVEN,
     region: REGION.GLACIER_PASSAGE,
@@ -1805,7 +1805,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Vampire_Squid",
     name: "흡혈오징어",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_PASSAGE,
@@ -1826,7 +1826,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Pelican_Eel",
     name: "펠리칸장어",
     rank: RANK.NINE,
     region: REGION.GLACIER_PASSAGE,
@@ -1844,7 +1844,7 @@ export const FISH_LIST: Fish[] = [
   },
   // 빙하 지역
   {
-    id: "",
+    id: "Arctic_Cod",
     name: "극지대구",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -1861,7 +1861,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Gelatinous_Snailfish",
     name: "남극꼼치",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -1878,7 +1878,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Antarctic_Octopus",
     name: "남극문어",
     rank: RANK.NINE,
     region: REGION.GLACIER_ZONE,
@@ -1899,7 +1899,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Greenland_Shark",
     name: "그린란드상어",
     rank: RANK.NINE,
     region: REGION.GLACIER_ZONE,
@@ -1912,7 +1912,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Polar_Eelpout",
     name: "북극등가시치",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -1925,7 +1925,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Porbeagle_Shark",
     name: "비악상어",
     rank: RANK.NINE,
     region: REGION.GLACIER_ZONE,
@@ -1942,7 +1942,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Ice_Fish",
     name: "아이스피쉬",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -1959,7 +1959,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Capelin",
     name: "열빙어",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -1976,7 +1976,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Narwhal",
     name: "일각고래",
     rank: RANK.NINE,
     region: REGION.GLACIER_ZONE,
@@ -1993,7 +1993,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Haddock",
     name: "해덕대구",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -2010,7 +2010,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Starry_Skate",
     name: "땅가오리",
     rank: RANK.NINE,
     region: REGION.GLACIER_ZONE,
@@ -2027,7 +2027,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Arctic_Telescope_Fish",
     name: "북극 망원경 물고기",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -2040,7 +2040,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Alaska_Pollock",
     name: "알래스카 명태",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -2053,7 +2053,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Lumpfish",
     name: "럼프피쉬",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -2066,7 +2066,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Snub_Nosed_Spiny_Eel",
     name: "들창코가시장어",
     rank: RANK.NINE,
     region: REGION.GLACIER_ZONE,
@@ -2083,7 +2083,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Golden_King_Crab",
     name: "황색왕게",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -2100,7 +2100,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Snow_Crab",
     name: "대게",
     rank: RANK.EIGHT,
     region: REGION.GLACIER_ZONE,
@@ -2117,7 +2117,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Horsehair_Crab",
     name: "털게",
     rank: RANK.NINE,
     region: REGION.GLACIER_ZONE,
@@ -2135,7 +2135,7 @@ export const FISH_LIST: Fish[] = [
   },
   // 열수 분출구
   {
-    id: "",
+    id: "Waptia_Fieldensis",
     name: "왑티아 필덴시스",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2152,7 +2152,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Pikaia",
     name: "피카이아",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2169,7 +2169,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Allenypterus",
     name: "알레니프테루스",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2182,7 +2182,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Qingmendous",
     name: "칭멘도스",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2195,7 +2195,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Falcatus",
     name: "팔카투스",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2212,7 +2212,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Drepanaspis",
     name: "드레파나스피스",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2225,7 +2225,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Dunkleosteus",
     name: "둔클레오스테우스",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2238,7 +2238,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Megalograptus",
     name: "메갈로그랍투스",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2251,7 +2251,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Xenacanthus",
     name: "제나칸투스",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2264,7 +2264,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Dollocaris_Ingens",
     name: "돌로카리스인겐스",
     rank: RANK.EIGHT,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2277,7 +2277,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Tokummia_Katalepsis",
     name: "토큐미아카탈렙시스",
     rank: RANK.NINE,
     region: REGION.HYDROTHERMAL_VENTS,
@@ -2295,7 +2295,7 @@ export const FISH_LIST: Fish[] = [
   },
   // 기타
   {
-    id: "",
+    id: "Seahorse",
     name: "해마",
     rank: RANK.FOUR,
     region: REGION.ETC,
@@ -2320,7 +2320,7 @@ export const FISH_LIST: Fish[] = [
     ],
   },
   {
-    id: "",
+    id: "Seadragon",
     name: "해룡",
     rank: RANK.EIGHT,
     region: REGION.ETC,
