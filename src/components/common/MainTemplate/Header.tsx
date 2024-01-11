@@ -1,21 +1,24 @@
 import { Layout, Menu } from "antd";
+import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
+import { MENU } from "@constants/Menu.ts";
 
 const Header = () => {
-  const menu = [
-    { key: "fish", label: "해산물" },
-    { key: "sub", label: "부재료" },
-    { key: "seasoning", label: "조미료" },
-    { key: "dish", label: "요리" },
-  ];
+  const navigate = useNavigate();
+
+  const handleClick = useCallback(({ key }: { key: string }) => {
+    navigate("/" + key);
+  }, []);
 
   return (
     <Layout.Header style={{ display: "flex", alignItems: "center" }}>
       <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={["2"]}
-        items={menu}
+        defaultSelectedKeys={["fish"]}
+        items={MENU}
         style={{ flex: 1, minWidth: 0 }}
+        onClick={handleClick}
       />
     </Layout.Header>
   );

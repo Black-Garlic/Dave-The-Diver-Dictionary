@@ -1,4 +1,4 @@
 export interface Menu {
-  name: string;
-  path: string;
+  key: string;
+  label: string;
 }
