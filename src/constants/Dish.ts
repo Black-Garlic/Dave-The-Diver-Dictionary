@@ -25,10 +25,14 @@ export enum UNLOCK_TYPE {
 }
 
 export enum PARTY {
+  JELLY_FISH = "해파리 파티",
   TUNA = "참치 요트 파티",
-  BLUE_FIN = "청새치 파티",
+  MARLIN = "청새치 파티",
+  STORM_SHARK = "스톰 샤크 파티",
   CUCUMBER = "오이 파티",
   CURRY = "카레 파티",
+  SHRIMP = "새우 파티",
+  LOBSTER = "랍스터 파티",
 }
 
 export enum RECIPE_TYPE {
@@ -178,6 +182,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 37,
     maxScore: 160,
     maxCount: 1,
+    party: [PARTY.JELLY_FISH],
   },
   {
     id: "Fried_Egg_Jellyfish_Sushi",
@@ -185,6 +190,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 29,
     maxScore: 160,
     maxCount: 1,
+    party: [PARTY.JELLY_FISH],
   },
   {
     id: "Whitetip_Reefshark_Sushi",
@@ -192,6 +198,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 88,
     maxScore: 270,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Moray_Eel_Sushi",
@@ -220,6 +227,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 222,
     maxScore: 270,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Copper_Shark_Sushi",
@@ -227,6 +235,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 240,
     maxScore: 280,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Box_Jellyfish_Sushi",
@@ -234,6 +243,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 203,
     maxScore: 270,
     maxCount: 1,
+    party: [PARTY.JELLY_FISH],
   },
   {
     id: "Bluefin_Tuna_Akami_Sushi",
@@ -241,6 +251,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 296,
     maxScore: 240,
     maxCount: 1,
+    party: [PARTY.TUNA],
   },
   {
     id: "Bluefin_Tuna_Chutoro_Sushi",
@@ -248,6 +259,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 351,
     maxScore: 241,
     maxCount: 1,
+    party: [PARTY.TUNA],
   },
   {
     id: "Bluefin_Tuna_Otoro_Sushi",
@@ -255,6 +267,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 499,
     maxScore: 330,
     maxCount: 1,
+    party: [PARTY.TUNA],
   },
   {
     id: "Yellowfin_Tuna_Akami_Sushi",
@@ -262,6 +275,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 270,
     maxScore: 235,
     maxCount: 1,
+    party: [PARTY.TUNA],
   },
   {
     id: "Yellowfin_Tuna_Chutoro_Sushi",
@@ -269,6 +283,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 333,
     maxScore: 238,
     maxCount: 1,
+    party: [PARTY.TUNA],
   },
   {
     id: "Yellowfin_Tuna_Otoro_Sushi",
@@ -276,6 +291,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 462,
     maxScore: 315,
     maxCount: 1,
+    party: [PARTY.TUNA],
   },
   {
     id: "Flame_Angelfish_Sushi",
@@ -318,6 +334,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 129,
     maxScore: 220,
     maxCount: 1,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Striped_Catfish_Sushi",
@@ -339,6 +356,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 388,
     maxScore: 360,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Zebra_Shark_Sushi",
@@ -346,6 +364,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 399,
     maxScore: 360,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Marlin_Sushi",
@@ -353,6 +372,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 341,
     maxScore: 370,
     maxCount: 1,
+    party: [PARTY.MARLIN],
   },
   {
     id: "Thresher_Shark_Sushi",
@@ -360,6 +380,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 588,
     maxScore: 390,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "American_Lobster_Sushi",
@@ -367,6 +388,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "European_Lobster_Sushi",
@@ -374,6 +396,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Bluehead_Tilefish_Sushi",
@@ -493,6 +516,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 66,
     maxScore: 180,
     maxCount: 1,
+    party: [PARTY.JELLY_FISH],
   },
   {
     id: "Tiger_Shark_Sushi",
@@ -500,6 +524,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 185,
     maxScore: 290,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Great_Barracuda_Sushi",
@@ -521,6 +546,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 129,
     maxScore: 290,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Atlantic_Anglerfish_Sushi",
@@ -542,6 +568,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 185,
     maxScore: 240,
     maxCount: 1,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Smooth_Hammerhead_Sushi",
@@ -549,6 +576,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 521,
     maxScore: 390,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Sailfish_Sushi",
@@ -556,6 +584,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 336,
     maxScore: 400,
     maxCount: 1,
+    party: [PARTY.MARLIN],
   },
   {
     id: "California_Spiny_Lobster_Sushi",
@@ -591,6 +620,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 196,
     maxScore: 280,
     maxCount: 1,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Red_Banded_Lobster_Sushi",
@@ -598,6 +628,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Blue_Lobster_Sushi",
@@ -605,6 +636,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Blackfin_Barracuda_Sushi",
@@ -640,6 +672,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Crystal_Lobster_Sushi",
@@ -647,6 +680,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Chambered_Nautilus_Sushi",
@@ -668,6 +702,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 314,
     maxScore: 280,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Bluespotted_Stargazer_Sushi",
@@ -682,6 +717,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 333,
     maxScore: 290,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Spider_Crab_Sushi",
@@ -696,6 +732,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 351,
     maxScore: 300,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Cookiecutter_Shark_Sushi",
@@ -703,6 +740,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 277,
     maxScore: 270,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Clione_Sushi",
@@ -745,6 +783,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 166,
     maxScore: 250,
     maxCount: 1,
+    party: [PARTY.JELLY_FISH],
   },
   {
     id: "Blood_belly_Comb_Jelly_Sushi",
@@ -752,6 +791,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 185,
     maxScore: 250,
     maxCount: 1,
+    party: [PARTY.JELLY_FISH],
   },
   {
     id: "Red_Bream_Sushi",
@@ -766,6 +806,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Eastern_Rock_Lobster_Sushi",
@@ -773,6 +814,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Peacock_Squid_Sushi",
@@ -843,6 +885,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 592,
     maxScore: 370,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Polar_Eelpout_Sushi",
@@ -857,6 +900,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 610,
     maxScore: 380,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Ice_Fish_Sushi",
@@ -948,6 +992,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 381,
     maxScore: 400,
     maxCount: 1,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Pikaia_Sushi",
@@ -976,6 +1021,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 481,
     maxScore: 380,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Drepanaspis_Sushi",
@@ -990,6 +1036,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 629,
     maxScore: 420,
     maxCount: 1,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Megalograptus_Sushi",
@@ -1049,6 +1096,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 150,
     maxCount: 7,
     flame: 3,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Falcatus_Soybean_Paste_Soup",
@@ -1058,6 +1106,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 382,
     maxCount: 7,
     flame: 15,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Pikaia_Ramen",
@@ -1085,6 +1134,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 265,
     maxCount: 1,
     flame: 15,
+    party: [PARTY.TUNA],
   },
   // VIP 요리
   {
@@ -1094,6 +1144,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 832,
     maxScore: 280,
     maxCount: 1,
+    party: [PARTY.JELLY_FISH],
   },
   {
     id: "Tropical_Fish_Sushi_Set",
@@ -1171,6 +1222,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 305,
     maxCount: 10,
     flame: 7,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Fried_Tomato_And_Snailfish",
@@ -1188,6 +1240,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1461,
     maxScore: 320,
     maxCount: 7,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Plotosid_Pie",
@@ -1232,6 +1285,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1554,
     maxScore: 375,
     maxCount: 10,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Narrow_Barred_Spanish_Mackerel_Arancini",
@@ -1323,6 +1377,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 273,
     maxCount: 6,
     flame: 3,
+    party: [PARTY.CURRY],
   },
   {
     id: "Striped_Red_Mullet_Tangle_Roll",
@@ -1404,6 +1459,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 389,
     maxCount: 7,
     flame: 12,
+    party: [PARTY.CURRY],
   },
   {
     id: "Humphead_Parrotfish_Curry",
@@ -1413,6 +1469,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 347,
     maxCount: 6,
     flame: 12,
+    party: [PARTY.CURRY],
   },
   {
     id: "Great_Barracuda_Canape",
@@ -1459,6 +1516,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 400,
     maxCount: 9,
     flame: 5,
+    party: [PARTY.TUNA],
   },
   {
     id: "Hawaiian_Poke",
@@ -1468,6 +1526,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 348,
     maxCount: 9,
     flame: 5,
+    party: [PARTY.TUNA],
   },
   {
     id: "Yellowfin_Tuna_Steak",
@@ -1477,6 +1536,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 332,
     maxCount: 9,
     flame: 5,
+    party: [PARTY.TUNA],
   },
   {
     id: "Marlin_And_Soybean_Paste_Roast",
@@ -1486,6 +1546,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 272,
     maxCount: 9,
     flame: 5,
+    party: [PARTY.MARLIN],
   },
   {
     id: "Boiled_Sailfish_And_Seaweed",
@@ -1495,6 +1556,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 300,
     maxCount: 9,
     flame: 5,
+    party: [PARTY.MARLIN],
   },
   {
     id: "Pickled_Vegetables",
@@ -1503,6 +1565,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1169,
     maxScore: 364,
     maxCount: 3,
+    party: [PARTY.CUCUMBER],
   },
   {
     id: "Deep_Fried_Vegetables",
@@ -1511,6 +1574,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1154,
     maxScore: 396,
     maxCount: 3,
+    party: [PARTY.CUCUMBER],
   },
   {
     id: "Skewered_Cucumber",
@@ -1519,6 +1583,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1184,
     maxScore: 340,
     maxCount: 1,
+    party: [PARTY.CUCUMBER],
   },
   {
     id: "Sea_Toad_And_Cucumber_Gunkan_Sushi",
@@ -1528,6 +1593,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 367,
     maxCount: 1,
     flame: 5,
+    party: [PARTY.CUCUMBER],
   },
   {
     id: "Great_Spider_Crab_And_Cucumber_Sushi",
@@ -1537,6 +1603,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 385,
     maxCount: 1,
     flame: 5,
+    party: [PARTY.CUCUMBER],
   },
   {
     id: "Trevally_Sandwich",
@@ -1546,6 +1613,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 260,
     maxCount: 7,
     flame: 5,
+    party: [PARTY.CUCUMBER],
   },
   {
     id: "Seasoned_Waptia_Fieldensis",
@@ -1555,6 +1623,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 0,
     maxCount: 1,
     flame: 15,
+    party: [PARTY.CUCUMBER, PARTY.SHRIMP],
   },
   {
     id: "Stir_Fried_Habanero_Lobster",
@@ -1563,6 +1632,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1443,
     maxScore: 320,
     maxCount: 6,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Steamed_Eastern_Rock_Lobster_And_Egg",
@@ -1571,6 +1641,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1406,
     maxScore: 455,
     maxCount: 7,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Crystal_Lobster_Roll",
@@ -1579,6 +1650,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1369,
     maxScore: 305,
     maxCount: 9,
+    party: [PARTY.LOBSTER],
   },
   // 직원 요리
   {
@@ -1598,6 +1670,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 317,
     maxCount: 1,
     flame: 8,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Boiled_And_Deep_Fried_White_Shrimp",
@@ -1607,6 +1680,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 330,
     maxCount: 10,
     flame: 8,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Smallspotted_Dart_Kajime_Soup",
@@ -1634,6 +1708,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 345,
     maxCount: 7,
     flame: 12,
+    party: [PARTY.CURRY],
   },
   {
     id: "Rice_With_Purple_Sea_Urchin_Sushi",
@@ -1670,6 +1745,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 317,
     maxCount: 9,
     flame: 15,
+    party: [PARTY.CURRY],
   },
   {
     id: "Boiled_Porbeagle_Shark",
@@ -1679,6 +1755,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 332,
     maxCount: 7,
     flame: 15,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Fried_Onion_Cuttlefish",
@@ -1733,6 +1810,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 285,
     maxCount: 9,
     flame: 15,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Dusky_Grouper_Steak",
@@ -1760,6 +1838,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 460,
     maxCount: 7,
     flame: 15,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Shark_Karaage",
@@ -1769,6 +1848,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 380,
     maxCount: 9,
     flame: 15,
+    party: [PARTY.STORM_SHARK],
   },
   {
     id: "Wrasse_Curry",
@@ -1778,6 +1858,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 330,
     maxCount: 6,
     flame: 15,
+    party: [PARTY.CURRY],
   },
   {
     id: "Seasoned_Jellyfish",
@@ -1787,6 +1868,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 298,
     maxCount: 6,
     flame: 15,
+    party: [PARTY.JELLY_FISH],
   },
   {
     id: "Great_Spider_Crab_Curry",
@@ -1796,6 +1878,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 290,
     maxCount: 9,
     flame: 15,
+    party: [PARTY.CURRY],
   },
   {
     id: "Dried_Stingray",
@@ -1823,6 +1906,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 400,
     maxCount: 9,
     flame: 15,
+    party: [PARTY.SHRIMP],
   },
   {
     id: "Roasted_Tropical_Fish_And_Garlic",
@@ -1874,6 +1958,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1609,
     maxScore: 375,
     maxCount: 6,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Pufferfish_Dumpling_Soup",
@@ -1890,6 +1975,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1609,
     maxScore: 505,
     maxCount: 6,
+    party: [PARTY.LOBSTER],
   },
   {
     id: "Secret_2",
@@ -1922,5 +2008,6 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    party: [PARTY.LOBSTER],
   },
 ];

@@ -1,4 +1,4 @@
-import { UNLOCK_TYPE } from "@constants/Dish.ts";
+import { PARTY, UNLOCK_TYPE } from "@constants/Dish.ts";
 
 export interface Dish {
   id: string;
@@ -8,6 +8,7 @@ export interface Dish {
   maxScore: number;
   maxCount: number;
   flame?: number;
+  party?: PARTY[];
 }
 
 export interface SimpleDish {
