@@ -6,3 +6,7 @@ export const fishListState = atom({
   key: "fishList",
   default: getFishWithDishList(FISH_LIST),
 });
+
+export const fishDetailState = atom({
+  key: "fishDetail",
+});

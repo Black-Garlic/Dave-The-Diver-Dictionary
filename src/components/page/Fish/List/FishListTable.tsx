@@ -5,8 +5,12 @@ import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
 import { useRecoilValue } from "recoil";
 import { fishListState } from "@services/Fish/FishState.ts";
+import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
+import { FISH_DETAIL_ROUTE } from "@constants/Route.ts";
 
 const FishListTable = () => {
+  const navigate = useNavigate();
   const fishRecoilList = useRecoilValue(fishListState);
 
   const columns: ColumnsType<FishWithDish> = [
@@ -67,8 +71,22 @@ const FishListTable = () => {
     },
   ];
 
+  const handleClickRow = useCallback(
+    (fishWithDish: FishWithDish) => {
+      navigate(FISH_DETAIL_ROUTE.path.replace(":id", fishWithDish.id));
+    },
+    [navigate],
+  );
+
   return (
-    <Table columns={columns} dataSource={fishRecoilList} pagination={false} />
+    <Table
+      columns={columns}
+      dataSource={fishRecoilList}
+      pagination={false}
+      onRow={(fishWithDish) => ({
+        onClick: () => handleClickRow(fishWithDish),
+      })}
+    />
   );
 };
 
