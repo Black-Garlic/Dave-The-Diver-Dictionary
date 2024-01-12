@@ -1049,7 +1049,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Falcatus Soybean Paste Soup",
+    id: "Falcatus_Soybean_Paste_Soup",
     name: "팔카투스 된장국",
     unlock: UNLOCK_TYPE.ENTER_HYDROTHERMAL_VENTS,
     maxCost: 1554,
@@ -1057,7 +1057,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Pikaia Ramen",
+    id: "Pikaia_Ramen",
     name: "피카이아 라멘",
     unlock: UNLOCK_TYPE.ENTER_HYDROTHERMAL_VENTS,
     maxCost: 1554,
@@ -1081,7 +1081,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Seagrapes Jellyfish Sushi",
+    id: "Seagrapes_Jellyfish_Sushi",
     name: "바다포도 해파리 초밥",
     unlock: UNLOCK_TYPE.VIP_VINCENT,
     maxCost: 832,
@@ -1089,7 +1089,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Tropical Fish Sushi Set",
+    id: "Tropical_Fish_Sushi_Set",
     name: "화려한 특초밥 세트",
     unlock: UNLOCK_TYPE.VIP_MICHAEL_BANG,
     maxCost: 1387,
@@ -1097,7 +1097,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Vegetable Sushi",
+    id: "Vegetable_Sushi",
     name: "채소 초밥",
     unlock: UNLOCK_TYPE.VIP_SAMMY,
     maxCost: 1387,
@@ -1113,7 +1113,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Boiled_Asian_Sheepshead_Wrasse And Truffle",
+    id: "Boiled_Asian_Sheepshead_Wrasse_And_Truffle",
     name: "트러플 혹돔 조림",
     unlock: UNLOCK_TYPE.VIP_DJANGO,
     maxCost: 1661,
@@ -1129,7 +1129,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Fried Rice With Galapagos Red Crab",
+    id: "Fried_Rice_With_Galapagos_Red_Crab",
     name: "갈라파고스붉은게 볶음밥",
     unlock: UNLOCK_TYPE.CHALLENGE_WANG_PANG,
     maxCost: 1424,
@@ -1137,7 +1137,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 10,
   },
   {
-    id: "Blobfish Spring Roll",
+    id: "Blobfish_Spring_Roll",
     name: "블롭피쉬 춘권",
     unlock: UNLOCK_TYPE.CHALLENGE_WANG_PANG,
     maxCost: 1387,
@@ -1145,7 +1145,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 10,
   },
   {
-    id: "Tomato Egg Soup",
+    id: "Tomato_Egg_Soup",
     name: "토마토 계란탕",
     unlock: UNLOCK_TYPE.CHALLENGE_WANG_PANG,
     maxCost: 1406,
@@ -1153,7 +1153,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 12,
   },
   {
-    id: "Mianbao Xia",
+    id: "Mianbao_Xia",
     name: "멘보샤",
     unlock: UNLOCK_TYPE.CHALLENGE_WANG_PANG,
     maxCost: 1387,
@@ -1161,7 +1161,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 10,
   },
   {
-    id: "Fried Tomato And Snailfish",
+    id: "Fried_Tomato_And_Snailfish",
     name: "토마토 꼼치 볶음",
     unlock: UNLOCK_TYPE.CHALLENGE_WANG_PANG,
     maxCost: 1443,
@@ -1169,7 +1169,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Deep Fish Tempura",
+    id: "Deep_Fish_Tempura",
     name: "심해어 덴뿌라",
     unlock: UNLOCK_TYPE.CHALLENGE_ALEX,
     maxCost: 1461,
@@ -1177,7 +1177,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Plotosid Pie",
+    id: "Plotosid_Pie",
     name: "쏠종개 파이",
     unlock: UNLOCK_TYPE.CHALLENGE_ALEX,
     maxCost: 1424,
@@ -1185,7 +1185,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Pelican Eel Jelly",
+    id: "Pelican_Eel_Jelly",
     name: "펠리칸장어 젤리",
     unlock: UNLOCK_TYPE.CHALLENGE_ALEX,
     maxCost: 1380,
@@ -1193,7 +1193,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Smoked Atlantic Mackerel Scramble",
+    id: "Smoked_Atlantic_Mackerel_Scramble",
     name: "훈제 대서양고등어 스크램블",
     unlock: UNLOCK_TYPE.CHALLENGE_ALEX,
     maxCost: 1431,
@@ -1201,7 +1201,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Comber Sandwich",
+    id: "Comber_Sandwich",
     name: "콤버 샌드위치",
     unlock: UNLOCK_TYPE.CHALLENGE_ALEX,
     maxCost: 1443,
@@ -1209,7 +1209,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Humboldt Ink Pasta",
+    id: "Humboldt_Ink_Pasta",
     name: "훔볼트 먹물 파스타",
     unlock: UNLOCK_TYPE.CHALLENGE_PASTRO,
     maxCost: 1554,
@@ -1217,7 +1217,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 10,
   },
   {
-    id: "Narrow_Barred Spanish Mackerel Arancini",
+    id: "Narrow_Barred_Spanish_Mackerel_Arancini",
     name: "동갈삼치 아란치니",
     unlock: UNLOCK_TYPE.CHALLENGE_PASTRO,
     maxCost: 1443,
@@ -1225,7 +1225,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Antarctic Octopus Carpaccio",
+    id: "Antarctic_Octopus_Carpaccio",
     name: "남극문어 카르파초",
     unlock: UNLOCK_TYPE.CHALLENGE_PASTRO,
     maxCost: 1498,
@@ -1233,7 +1233,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Arctic Cod Risotto",
+    id: "Arctic_Cod_Risotto",
     name: "극지대구 리조토",
     unlock: UNLOCK_TYPE.CHALLENGE_PASTRO,
     maxCost: 1509,
@@ -1241,7 +1241,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Peacock Squid Ripieni",
+    id: "Peacock_Squid_Ripieni",
     name: "공작오징어 리피에니",
     unlock: UNLOCK_TYPE.CHALLENGE_PASTRO,
     maxCost: 1517,
@@ -1249,7 +1249,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Haddock Acqua Pazza",
+    id: "Haddock_Acqua_Pazza",
     name: "해덕대구 아쿠아파짜",
     unlock: UNLOCK_TYPE.CHALLENGE_PASTRO,
     maxCost: 1498,
@@ -1257,7 +1257,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Boiled Yellowback Fusilier",
+    id: "Boiled_Yellowback_Fusilier",
     name: "황등어 간장조림",
     unlock: UNLOCK_TYPE.COOK_STAR_BRONZE,
     maxCost: 185,
@@ -1265,7 +1265,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Salt_Grilled Redtoothed Triggerfish",
+    id: "Salt_Grilled_Redtoothed_Triggerfish",
     name: "붉은이빨쥐치 소금구이",
     unlock: UNLOCK_TYPE.COOK_STAR_BRONZE,
     maxCost: 177,
@@ -1273,7 +1273,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Agar Tokoroten",
+    id: "Agar_Tokoroten",
     name: "도코로텐",
     unlock: UNLOCK_TYPE.COOK_STAR_BRONZE,
     maxCost: 188,
@@ -1281,7 +1281,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Seasoned Kajime",
+    id: "Seasoned_Kajime",
     name: "감태 초무침",
     unlock: UNLOCK_TYPE.COOK_STAR_BRONZE,
     maxCost: 185,
@@ -1289,7 +1289,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Moray Eel Curry",
+    id: "Moray_Eel_Curry",
     name: "곰치 커리",
     unlock: UNLOCK_TYPE.COOK_STAR_SILVER,
     maxCost: 351,
@@ -1297,7 +1297,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Striped Red Mullet Tangle Roll",
+    id: "Striped_Red_Mullet_Tangle_Roll",
     name: "노랑촉수 다시마 말이",
     unlock: UNLOCK_TYPE.COOK_STAR_SILVER,
     maxCost: 296,
@@ -1305,7 +1305,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "White Trevally Kombu Ochazuke",
+    id: "White_Trevally_Kombu_Ochazuke",
     name: "다시마 흑점줄전갱이 오차즈케",
     unlock: UNLOCK_TYPE.COOK_STAR_SILVER,
     maxCost: 344,
@@ -1313,7 +1313,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Stellate Puffer Special Sushi",
+    id: "Stellate_Puffer_Special_Sushi",
     name: "복어 특초밥",
     unlock: UNLOCK_TYPE.COOK_STAR_GOLD,
     maxCost: 814,
@@ -1321,7 +1321,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Seagrapes Special Sushi",
+    id: "Seagrapes_Special_Sushi",
     name: "바다포도 특초밥",
     unlock: UNLOCK_TYPE.COOK_STAR_GOLD,
     maxCost: 740,
@@ -1329,7 +1329,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Trout Sea Grapes Ricebowl",
+    id: "Trout_Sea_Grapes_Ricebowl",
     name: "바다포도 무늬바리 회덮밥",
     unlock: UNLOCK_TYPE.COOK_STAR_GOLD,
     maxCost: 647,
@@ -1337,7 +1337,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Big_Eyed Scad and Soybean Paste Roast",
+    id: "Big_Eyed_Scad_And_Soybean_Paste_Roast",
     name: "새가라지 된장구이",
     unlock: UNLOCK_TYPE.COOK_STAR_GOLD,
     maxCost: 684,
@@ -1345,7 +1345,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Seahorse Udon",
+    id: "Seahorse_Udon",
     name: "해마 우동",
     unlock: UNLOCK_TYPE.COOK_STAR_PLATINUM,
     maxCost: 1387,
@@ -1353,7 +1353,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 4,
   },
   {
-    id: "Black Vinegar Braised Parrotfish",
+    id: "Black_Vinegar_Braised_Parrotfish",
     name: "비늘돔 흑식초 조림",
     unlock: UNLOCK_TYPE.COOK_STAR_PLATINUM,
     maxCost: 1424,
@@ -1361,7 +1361,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Atlantic Bonito Curry",
+    id: "Atlantic_Bonito_Curry",
     name: "대서양보니토 커리",
     unlock: UNLOCK_TYPE.COOK_STAR_PLATINUM,
     maxCost: 1406,
@@ -1369,7 +1369,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Humphead Parrotfish Curry",
+    id: "Humphead_Parrotfish_Curry",
     name: "버팔로피쉬 커리",
     unlock: UNLOCK_TYPE.COOK_STAR_PLATINUM,
     maxCost: 1387,
@@ -1377,7 +1377,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Great Barracuda Canape",
+    id: "Great_Barracuda_Canape",
     name: "큰꼬치고기 카나페",
     unlock: UNLOCK_TYPE.COOK_STAR_DIA,
     maxCost: 1572,
@@ -1385,7 +1385,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Nasu Dengaku",
+    id: "Nasu_Dengaku",
     name: "나스 덴가쿠",
     unlock: UNLOCK_TYPE.COOK_STAR_DIA,
     maxCost: 1535,
@@ -1393,7 +1393,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 4,
   },
   {
-    id: "Dumbo Takoyaki",
+    id: "Dumbo_Takoyaki",
     name: "덤보 타코야끼",
     unlock: UNLOCK_TYPE.COOK_STAR_DIA,
     maxCost: 1554,
@@ -1401,7 +1401,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Rice With Great Spider Crab Meat",
+    id: "Rice_With_Great_Spider_Crab_Meat",
     name: "키다리게 덮밥 ",
     unlock: UNLOCK_TYPE.COOK_STAR_DIA,
     maxCost: 1517,
@@ -1409,7 +1409,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Bluefin Tuna Rice Bowl",
+    id: "Bluefin_Tuna_Rice_Bowl",
     name: "마구로동",
     unlock: UNLOCK_TYPE.PARTY_TUNA,
     maxCost: 1332,
@@ -1417,7 +1417,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Hawaiian Poke",
+    id: "Hawaiian_Poke",
     name: "하와이안 포케",
     unlock: UNLOCK_TYPE.PARTY_TUNA,
     maxCost: 980,
@@ -1425,7 +1425,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Yellowfin Tuna Steak",
+    id: "Yellowfin_Tuna_Steak",
     name: "황다랑어 스테이크",
     unlock: UNLOCK_TYPE.PARTY_TUNA,
     maxCost: 1128,
@@ -1449,7 +1449,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Pickled Vegetables",
+    id: "Pickled_Vegetables",
     name: "채소절임",
     unlock: UNLOCK_TYPE.PARTY_CUCUMBER,
     maxCost: 1169,
@@ -1457,7 +1457,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 3,
   },
   {
-    id: "Deep_Fried Vegetables",
+    id: "Deep_Fried_Vegetables",
     name: "채소튀김",
     unlock: UNLOCK_TYPE.PARTY_CUCUMBER,
     maxCost: 1154,
@@ -1465,7 +1465,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 3,
   },
   {
-    id: "Skewered Cucumber",
+    id: "Skewered_Cucumber",
     name: "오이꼬치",
     unlock: UNLOCK_TYPE.PARTY_CUCUMBER,
     maxCost: 1184,
@@ -1473,7 +1473,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Sea Toad and Cucumber Gunkan Sushi",
+    id: "Sea_Toad_And_Cucumber_Gunkan_Sushi",
     name: "점씬벵이 오이 군함 초밥",
     unlock: UNLOCK_TYPE.PARTY_CUCUMBER,
     maxCost: 1184,
@@ -1481,7 +1481,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Great Spider Crab and Cucumber Sushi",
+    id: "Great_Spider_Crab_And_Cucumber_Sushi",
     name: "키다리게 오이 초밥",
     unlock: UNLOCK_TYPE.PARTY_CUCUMBER,
     maxCost: 1198,
@@ -1489,7 +1489,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Trevally Sandwich",
+    id: "Trevally_Sandwich",
     name: "전갱이 샌드",
     unlock: UNLOCK_TYPE.PARTY_CUCUMBER,
     maxCost: 1154,
@@ -1497,7 +1497,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Seasoned_Waptia_fieldensis",
+    id: "Seasoned_Waptia_Fieldensis",
     name: "왑티아 필덴시스 초무침",
     unlock: UNLOCK_TYPE.PARTY_CUCUMBER,
     maxCost: 0,
@@ -1529,7 +1529,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Stellate Puffer Nicogori",
+    id: "Stellate_Puffer_Nicogori",
     name: "복어 니코고리",
     unlock: "직원 Lv.5 달성",
     maxCost: 666,
@@ -1537,7 +1537,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Special Fried Shrimp Sushi",
+    id: "Special_Fried_Shrimp_Sushi",
     name: "새우튀김 특초밥",
     unlock: "드레 Lv.5 달성",
     maxCost: 1406,
@@ -1545,7 +1545,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 1,
   },
   {
-    id: "Boiled and Deep_Fried White Shrimp",
+    id: "Boiled_And_Deep_Fried_White_Shrimp",
     name: "흰다리자숙새우 튀김",
     unlock: "랩터 Lv.5 달성",
     maxCost: 832,
@@ -1553,7 +1553,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 10,
   },
   {
-    id: "Smallspotted Dart Kajime Soup",
+    id: "Smallspotted_Dart_Kajime_Soup",
     name: "빨판매가리 감태국",
     unlock: "마키 Lv.5 달성",
     maxCost: 555,
@@ -1561,7 +1561,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Fried Seahorses",
+    id: "Fried_Seahorses",
     name: "해마 튀김",
     unlock: "코카니지 Lv.5 달성",
     maxCost: 814,
@@ -1569,7 +1569,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 4,
   },
   {
-    id: "Roasted Capelin",
+    id: "Roasted_Capelin",
     name: "열빙어 구이",
     unlock: "드레 Lv.10 달성",
     maxCost: 1443,
@@ -1577,7 +1577,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Rice with Purple Sea Urchin Sushi",
+    id: "Rice with_Purple_Sea_Urchin_Sushi",
     name: "보라성게 덮밥",
     unlock: "랩터 Lv.10 달성",
     maxCost: 1424,
@@ -1593,7 +1593,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 4,
   },
   {
-    id: "Narwhal Miso Soup",
+    id: "Narwhal_Miso_Soup",
     name: "일각고래 미소된장국",
     unlock: "다비나 Lv.15 달성",
     maxCost: 1480,
@@ -1601,7 +1601,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 12,
   },
   {
-    id: "Ice Fish Curry",
+    id: "Ice_Fish_Curry",
     name: "아이스피쉬 커리",
     unlock: "드레 Lv.15 달성",
     maxCost: 1480,
@@ -1609,7 +1609,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Boiled Porbeagle Shark",
+    id: "Boiled_Porbeagle_Shark",
     name: "비악상어 조림",
     unlock: "라울 Lv.15 달성",
     maxCost: 1480,
@@ -1617,7 +1617,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Fried Onion Cuttlefish",
+    id: "Fried_Onion_Cuttlefish",
     name: "갑오징어 어니언링",
     unlock: "랩터 Lv.15 달성",
     maxCost: 1480,
@@ -1625,7 +1625,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Three_Colored Squid Roast",
+    id: "Three_Colored_Squid_Roast",
     name: "삼색오징어구이",
     unlock: "리우 Lv.15 달성",
     maxCost: 1480,
@@ -1633,7 +1633,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 12,
   },
   {
-    id: "Latok Omelet",
+    id: "Latok_Omelet",
     name: "바다포도 계란덮밥",
     unlock: "마사요시 Lv.15 달성",
     maxCost: 1480,
@@ -1641,7 +1641,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Trevally Nanbanzuke",
+    id: "Trevally_Nanbanzuke",
     name: "전갱이 난반즈케",
     unlock: "마키 Lv.15 달성",
     maxCost: 1480,
@@ -1649,7 +1649,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Batfish Ricebowl",
+    id: "Batfish_Ricebowl",
     name: "활치 오야코동",
     unlock: "미첼 Lv.15 달성",
     maxCost: 1480,
@@ -1657,7 +1657,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Crimson Fish Roll",
+    id: "Crimson_Fish_Roll",
     name: "다홍빛 생선 롤",
     unlock: "빌리 Lv.15 달성",
     maxCost: 1480,
@@ -1665,7 +1665,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Dusky Grouper Steak",
+    id: "Dusky_Grouper_Steak",
     name: "머구리농어 스테이크",
     unlock: "엘 니뇨 Lv.15 달성",
     maxCost: 1480,
@@ -1673,7 +1673,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Seahorse Salad",
+    id: "Seahorse_Salad",
     name: "해마해초 샐러드",
     unlock: "요네 Lv.15 달성",
     maxCost: 1480,
@@ -1681,7 +1681,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Deep_Fried Eggplant Shrimp Meatballs",
+    id: "Deep_Fried_Eggplant_Shrimp_Meatballs",
     name: "가지 새우완자 튀김",
     unlock: "유스케 Lv.15 달성",
     maxCost: 1480,
@@ -1689,7 +1689,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Shark Karaage",
+    id: "Shark_Karaage",
     name: "상어 가라아게",
     unlock: "이츠키 Lv.15 달성",
     maxCost: 1480,
@@ -1697,7 +1697,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Wrasse Curry",
+    id: "Wrasse_Curry",
     name: "놀래기 커리",
     unlock: "잔디 Lv.15 달성",
     maxCost: 1480,
@@ -1705,7 +1705,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Seasoned Jellyfish",
+    id: "Seasoned_Jellyfish",
     name: "해파리 무침",
     unlock: "제임스 Lv.15 달성",
     maxCost: 1480,
@@ -1713,7 +1713,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Great Spider Crab Curry",
+    id: "Great_Spider_Crab_Curry",
     name: "키다리게 커리",
     unlock: "찰리 Lv.15 달성",
     maxCost: 1480,
@@ -1721,7 +1721,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Dried Stingray",
+    id: "Dried_Stingray",
     name: "가오리포",
     unlock: "카롤리나 Lv.15 달성",
     maxCost: 1480,
@@ -1729,7 +1729,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 12,
   },
   {
-    id: "Mackerel Scad Hotdog",
+    id: "Mackerel_Scad_Hotdog",
     name: "풀가라지 핫도그",
     unlock: "코카니지 Lv.15 달성",
     maxCost: 1480,
@@ -1737,7 +1737,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 6,
   },
   {
-    id: "Rice With White Shrimp Meat",
+    id: "Rice_With_White_Shrimp_Meat",
     name: "흰보리새우 덮밥",
     unlock: "쿄코 Lv.15 달성",
     maxCost: 1480,
@@ -1745,7 +1745,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Roasted Tropical Fish And Garlic",
+    id: "Roasted_Tropical_Fish_And_Garlic",
     name: "열대어 마늘구이",
     unlock: "토호쿠 Lv.15 달성",
     maxCost: 1480,
@@ -1753,7 +1753,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 9,
   },
   {
-    id: "Seaweed Rolled Omelet",
+    id: "Seaweed_Rolled_Omelet",
     name: "해초 계란말이",
     unlock: "파이 Lv.15 달성",
     maxCost: 1480,
