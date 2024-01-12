@@ -33,7 +33,7 @@ export enum PARTY {
 
 export enum RECIPE_TYPE {
   FISH = "FISH",
-  INGREDIENT = "INGREDIENT",
+  PLANT = "PLANT",
   SEASONING = "SEASONING",
 }
 
@@ -1040,6 +1040,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 470,
     maxCount: 1,
   },
+  // 메인 퀘스트 요리
   {
     id: "Whole_Roasted_Shark_Head",
     name: "백기흉상어 머리 통구이",
@@ -1080,6 +1081,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 265,
     maxCount: 1,
   },
+  // VIP 요리
   {
     id: "Seagrapes_Jellyfish_Sushi",
     name: "바다포도 해파리 초밥",
@@ -1120,6 +1122,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 280,
     maxCount: 2,
   },
+  // 챌린지 더 쉐프 요리
   {
     id: "Sweet_And_Sour_Stargazer",
     name: "푸렁통구멍 탕수어",
@@ -1256,6 +1259,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 400,
     maxCount: 9,
   },
+  // 쿡스타 요리
   {
     id: "Boiled_Yellowback_Fusilier",
     name: "황등어 간장조림",
@@ -1408,6 +1412,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 330,
     maxCount: 7,
   },
+  // 파티 요리
   {
     id: "Bluefin_Tuna_Rice_Bowl",
     name: "마구로동",
@@ -1528,6 +1533,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 305,
     maxCount: 9,
   },
+  // 직원 요리
   {
     id: "Stellate_Puffer_Nicogori",
     name: "복어 니코고리",
@@ -1577,7 +1583,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 7,
   },
   {
-    id: "Rice with_Purple_Sea_Urchin_Sushi",
+    id: "Rice_With_Purple_Sea_Urchin_Sushi",
     name: "보라성게 덮밥",
     unlock: "랩터 Lv.10 달성",
     maxCost: 1424,
@@ -1585,7 +1591,7 @@ export const DISH_LIST: Dish[] = [
     maxCount: 4,
   },
   {
-    id: "Deep_Fried Luna Lionfish",
+    id: "Deep_Fried_Luna_Lionfish",
     name: "쏠배감펭 튀김",
     unlock: "코카니지 Lv.10 달성",
     maxCost: 1443,
@@ -1760,6 +1766,7 @@ export const DISH_LIST: Dish[] = [
     maxScore: 300,
     maxCount: 9,
   },
+  // 비밀 레시피 요리
   {
     id: "Fried_Habanero_FangTooth",
     name: "하바네로 귀신고기 튀김",

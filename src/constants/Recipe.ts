@@ -595,11 +595,840 @@ export const RECIPE_LIST: DishRecipe[] = [
     recipe: [{ id: "Seadragon", type: RECIPE_TYPE.FISH, count: 1 }],
   },
   {
-    dishId: "",
+    dishId: "Whole_Roasted_Shark_Head",
     recipe: [
-      { id: "", type: RECIPE_TYPE.FISH, count: 1 },
-      { id: "", type: RECIPE_TYPE.INGREDIENT, count: 1 },
-      { id: "", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Whitetip_Reefshark", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Falcatus_Soybean_Paste_Soup",
+    recipe: [
+      { id: "Falcatus", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Seaweed", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Buckbean", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Miso", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Pikaia_Ramen",
+    recipe: [
+      { id: "Pikaia", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Grade_A_Egg", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Southern_Bull_Kelp", type: RECIPE_TYPE.PLANT, count: 3 },
+    ],
+  },
+  {
+    dishId: "Steamed_Hyalonema_Angler_Fish",
+    recipe: [
+      { id: "Atlantic_Anglerfish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Hyalonema", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Hyalonema_Tuna_Sashimi",
+    recipe: [
+      { id: "Bluefin_Tuna", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Yellowfin_Tuna", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Hyalonema", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Seagrapes_Jellyfish_Sushi",
+    recipe: [
+      { id: "White_Spotted_Jellyfish", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Sea_Grape", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Salt", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Tropical_Fish_Sushi_Set",
+    recipe: [
+      { id: "Titan_Triggerfish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Harleqiun_Hind", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Coral_Trout", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 3 },
+    ],
+  },
+  {
+    dishId: "Vegetable_Sushi",
+    recipe: [
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Carrot", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Eggplant", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Hotpeppertuna",
+    recipe: [
+      { id: "Bluefin_Tuna", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Habanero", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Sea_Grape", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Sesame_Seed", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Boiled_Asian_Sheepshead_Wrasse_And_Truffle",
+    recipe: [
+      { id: "Sheepshead", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Kelp", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Truffle", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Sweet_And_Sour_Stargazer",
+    recipe: [
+      { id: "Bluespotted_Stargazer", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Fried_Rice_With_Galapagos_Red_Crab",
+    recipe: [
+      { id: "Sally_Lightfoot_Crab", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Grade_A_Egg", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Black_Pepper", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Blobfish_Spring_Roll",
+    recipe: [
+      { id: "Blob_Fish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Mayonnaise", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Sesame_Seed", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Tomato_Egg_Soup",
+    recipe: [
+      { id: "Grade_A_Egg", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Cherry_Tomato", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Black_Pepper", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Mianbao_Xia",
+    recipe: [
+      { id: "Black_Tiger_Shrimp", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Whiteleg_Shrimp", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Fried_Tomato_And_Snailfish",
+    recipe: [
+      { id: "Gelatinous_Snailfish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Salmon_Snailfish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Bean", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Cherry_Tomato", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Deep_Fish_Tempura",
+    recipe: [
+      { id: "Cookiecutter_Shark", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Vampire_Squid", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Barreleye", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Kelp", type: RECIPE_TYPE.PLANT, count: 3 },
+    ],
+  },
+  {
+    dishId: "Plotosid_Pie",
+    recipe: [
+      { id: "Striped_Catfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Onion", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Bean", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Pelican_Eel_Jelly",
+    recipe: [
+      { id: "Pelican_Eel", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Black_Vinegar", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Agar", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Smoked_Atlantic_Mackerel_Scramble",
+    recipe: [
+      { id: "Atlantic_Mackerel", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Comber_Sandwich",
+    recipe: [
+      { id: "Comber", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Painted_Comber", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Humboldt_Ink_Pasta",
+    recipe: [
+      { id: "Humboldt_Squid", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "White_Shrimp", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Garlic", type: RECIPE_TYPE.PLANT, count: 3 },
+    ],
+  },
+  {
+    dishId: "Narrow_Barred_Spanish_Mackerel_Arancini",
+    recipe: [
+      {
+        id: "Narrow_Barred_Spanish_Mackerel",
+        type: RECIPE_TYPE.FISH,
+        count: 5,
+      },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Garlic", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Antarctic_Octopus_Carpaccio",
+    recipe: [
+      { id: "Antarctic_Octopus", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Onion", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Arctic_Cod_Risotto",
+    recipe: [
+      { id: "Arctic_Cod", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Cherry_Tomato", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Garlic", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Peacock_Squid_Ripieni",
+    recipe: [
+      { id: "Peacock_Squid", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Garlic", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Black_Pepper", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Haddock_Acqua_Pazza",
+    recipe: [
+      { id: "Haddock", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Cherry_Tomato", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Carrot", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Boiled_Yellowback_Fusilier",
+    recipe: [
+      { id: "Yellowback_Fusilier", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Salt_Grilled_Redtoothed_Triggerfish",
+    recipe: [
+      { id: "Redtooth_Triggerfish", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Salt", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Agar_Tokoroten",
+    recipe: [
+      { id: "Agar", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Seasoned_Kajime",
+    recipe: [
+      { id: "Kajime", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Black_Vinegar", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Moray_Eel_Curry",
+    recipe: [
+      { id: "Moray_Eel", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Turmeric", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Striped_Red_Mullet_Tangle_Roll",
+    recipe: [
+      { id: "Striped_Red_Mullet", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Kelp", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "White_Trevally_Kombu_Ochazuke",
+    recipe: [
+      { id: "White_Trevally", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Kelp", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Stellate_Puffer_Special_Sushi",
+    recipe: [
+      { id: "Starry_Puffer", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Seagrapes_Special_Sushi",
+    recipe: [
+      { id: "Sea_Grape", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Trout_Sea_Grapes_Ricebowl",
+    recipe: [
+      { id: "Coral_Trout", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Sea_Grape", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Big_Eyed_Scad_And_Soybean_Paste_Roast",
+    recipe: [
+      { id: "Bigeye_Scad", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Miso", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Sesame_Seed", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Seahorse_Udon",
+    recipe: [
+      { id: "Seahorse", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Miso", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Black_Vinegar_Braised_Parrotfish",
+    recipe: [
+      { id: "Mediterranean_Parrotfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Carrot", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Black_Vinegar", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Atlantic_Bonito_Curry",
+    recipe: [
+      { id: "Atlantic_Bonito", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Carrot", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Curry_Block", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Humphead_Parrotfish_Curry",
+    recipe: [
+      { id: "Green_Humphead_Parrotfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Onion", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Turmeric", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Great_Barracuda_Canape",
+    recipe: [
+      { id: "Great_Barracuda", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Cherry_Tomato", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Onion", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Mayonnaise", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Nasu_Dengaku",
+    recipe: [
+      { id: "Eggplant", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Garlic", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Miso", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Dumbo_Takoyaki",
+    recipe: [
+      { id: "Dumbo_Octopus", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Mayonnaise", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Rice_With_Great_Spider_Crab_Meat",
+    recipe: [
+      { id: "Spider_Crab", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Bean", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Bluefin_Tuna_Rice_Bowl",
+    recipe: [
+      { id: "Bluefin_Tuna", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Sesame_Seed", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Hawaiian_Poke",
+    recipe: [
+      { id: "Yellowfin_Tuna", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Mayonnaise", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Sesame_Seed", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Yellowfin_Tuna_Steak",
+    recipe: [
+      { id: "Yellowfin_Tuna", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Cherry_Tomato", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Marlin_And_Soybean_Paste_Roast",
+    recipe: [
+      { id: "Marlin", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Garlic", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Miso", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Boiled_Sailfish_And_Seaweed",
+    recipe: [
+      { id: "Sailfish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Southern_Bull_Kelp", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Kajime", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Pickled_Vegetables",
+    recipe: [
+      { id: "Cucumber", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Eggplant", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Carrot", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Black_Vinegar", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Deep_Fried_Vegetables",
+    recipe: [
+      { id: "Cucumber", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Onion", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Carrot", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Skewered_Cucumber",
+    recipe: [{ id: "Cucumber", type: RECIPE_TYPE.PLANT, count: 3 }],
+  },
+  {
+    dishId: "Sea_Toad_And_Cucumber_Gunkan_Sushi",
+    recipe: [
+      { id: "Sea_Toad", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Cucumber", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Great_Spider_Crab_And_Cucumber_Sushi",
+    recipe: [
+      { id: "Spider_Crab", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Cucumber", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Trevally_Sandwich",
+    recipe: [
+      { id: "Giant_Trevally", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Bigeye_Trevally", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Cucumber", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Seasoned_Waptia_Fieldensis",
+    recipe: [
+      { id: "Waptia_Fieldensis", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Cucumber", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Black_Coral", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Black_Vinegar", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Stir_Fried_Habanero_Lobster",
+    recipe: [
+      { id: "Norway_Lobster", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Habanero", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Steamed_Eastern_Rock_Lobster_And_Egg",
+    recipe: [
+      { id: "Eastern_Rock_Lobster", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Kelp", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Crystal_Lobster_Roll",
+    recipe: [
+      { id: "Crystal_Lobster", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Bladderwrack", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Stellate_Puffer_Nicogori",
+    recipe: [
+      { id: "Starry_Puffer", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Agar", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Special_Fried_Shrimp_Sushi",
+    recipe: [
+      { id: "Black_Tiger_Shrimp", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Whiteleg_Shrimp", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Boiled_And_Deep_Fried_White_Shrimp",
+    recipe: [
+      { id: "Whiteleg_Shrimp", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Mayonnaise", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Smallspotted_Dart_Kajime_Soup",
+    recipe: [
+      { id: "Small_Spotted_Dart", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Kajime", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Fried_Seahorses",
+    recipe: [
+      { id: "Seahorse", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Black_Vinegar", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Roasted_Capelin",
+    recipe: [
+      { id: "Capelin", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Black_Coral", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Turmeric", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Rice_With_Purple_Sea_Urchin_Sushi",
+    recipe: [
+      { id: "Purple_Sea_Urchin", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Sesame_Seed", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Deep_Fried_Luna_Lionfish",
+    recipe: [
+      { id: "Red_Lionfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Black_Pepper", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Narwhal_Miso_Soup",
+    recipe: [
+      { id: "Narwhal", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Carrot", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Buckbean", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Miso", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Ice_Fish_Curry",
+    recipe: [
+      { id: "Ice_Fish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Bean", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Curry_Block", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Boiled_Porbeagle_Shark",
+    recipe: [
+      { id: "Porbeagle_Shark", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Black_Vinegar", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Black_Pepper", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Fried_Onion_Cuttlefish",
+    recipe: [
+      { id: "Cuttlefish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Onion", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Salt", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Three_Colored_Squid_Roast",
+    recipe: [
+      { id: "Peacock_Squid", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Vampire_Squid", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Cuttlefish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Salt", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Latok_Omelet",
+    recipe: [
+      { id: "Grade_A_Egg", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Sea_Grape", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Trevally_Nanbanzuke",
+    recipe: [
+      { id: "White_Trevally", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Onion", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Batfish_Ricebowl",
+    recipe: [
+      { id: "Longfin_Batfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Orbicular_Batfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Crimson_Fish_Roll",
+    recipe: [
+      { id: "Clown_Frogfish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Red_Bream", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Rhinochimaeridae", type: RECIPE_TYPE.FISH, count: 3 },
+    ],
+  },
+  {
+    dishId: "Dusky_Grouper_Steak",
+    recipe: [
+      { id: "Dusky_Grouper", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Cherry_Tomato", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Salt", type: RECIPE_TYPE.SEASONING, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Seahorse_Salad",
+    recipe: [
+      { id: "Seahorse", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Cherry_Tomato", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Sea_Grape", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Deep_Fried_Eggplant_Shrimp_Meatballs",
+    recipe: [
+      { id: "Black_Tiger_Shrimp", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Whiteleg_Shrimp", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Eggplant", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Shark_Karaage",
+    recipe: [
+      { id: "Blacktip_Reefshark", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Copper_Shark", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Wrasse_Curry",
+    recipe: [
+      { id: "Rainbow_Wrasse", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Ornate_Wrasse", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Bean", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Curry_Block", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Seasoned_Jellyfish",
+    recipe: [
+      { id: "Barrel_Jellyfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Fried_Egg_Jellyfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Garlic", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Black_Coral", type: RECIPE_TYPE.PLANT, count: 2 },
+    ],
+  },
+  {
+    dishId: "Great_Spider_Crab_Curry",
+    recipe: [
+      { id: "Spider_Crab", type: RECIPE_TYPE.FISH, count: 1 },
+      { id: "Grade_A_Egg", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Curry_Block", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Dried_Stingray",
+    recipe: [
+      { id: "Starry_Skate", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Stingray", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Marbled_Electric_Ray", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Salt", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Mackerel_Scad_Hotdog",
+    recipe: [
+      { id: "Mackerel_Scad", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Wheat", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Mayonnaise", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Rice_With_White_Shrimp_Meat",
+    recipe: [
+      { id: "White_Shrimp", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Rice", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Roasted_Tropical_Fish_And_Garlic",
+    recipe: [
+      { id: "Clownfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Pyramid_Butterflyfish", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Blue_Tang", type: RECIPE_TYPE.FISH, count: 5 },
+      { id: "Garlic", type: RECIPE_TYPE.PLANT, count: 3 },
+    ],
+  },
+  {
+    dishId: "Seaweed_Rolled_Omelet",
+    recipe: [
+      { id: "Grade_A_Egg", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Seaweed", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Kelp", type: RECIPE_TYPE.PLANT, count: 3 },
+    ],
+  },
+  {
+    dishId: "Fried_Habanero_FangTooth",
+    recipe: [
+      { id: "Fangtooth", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Habanero", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Bladderwrack", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Olive_Oil", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Moonlight_Bladderwrack_Roll",
+    recipe: [
+      { id: "Longspine_Squirrelfish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Clearfin_Lionfish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Blackfin_Barracuda", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Bladderwrack", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Secret_1",
+    recipe: [
+      { id: "Snub_Nosed_Spiny_Eel", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Habanero", type: RECIPE_TYPE.PLANT, count: 2 },
+      { id: "Kajime", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Lobster_Platter",
+    recipe: [
+      { id: "American_Lobster", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Tropical_Rock_Lobster", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Tokummia_Katalepsis", type: RECIPE_TYPE.FISH, count: 2 },
+    ],
+  },
+  {
+    dishId: "Pufferfish_Dumpling_Soup",
+    recipe: [
+      { id: "Longspine_Porcupinefish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Starry_Puffer", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Egg", type: RECIPE_TYPE.PLANT, count: 1 },
+      { id: "Bladderwrack", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Soy_Sauce_Marinated_Crab",
+    recipe: [
+      { id: "Golden_King_Crab", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Snow_Crab", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Horsehair_Crab", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Soy_Sauce", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Secret_2",
+    recipe: [
+      { id: "Sailfish", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Purple_Sea_Urchin", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Truffle", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Secret_3",
+    recipe: [
+      { id: "Frilled_Shark", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Megamouth_Shark", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Truffle", type: RECIPE_TYPE.SEASONING, count: 1 },
+    ],
+  },
+  {
+    dishId: "Secret_4",
+    recipe: [
+      { id: "Antarctic_Octopus", type: RECIPE_TYPE.FISH, count: 3 },
+      { id: "Kajime", type: RECIPE_TYPE.PLANT, count: 3 },
+      { id: "Truffle", type: RECIPE_TYPE.PLANT, count: 1 },
+    ],
+  },
+  {
+    dishId: "Secret_5",
+    recipe: [
+      { id: "Blue_Lobster", type: RECIPE_TYPE.FISH, count: 2 },
+      { id: "Truffle", type: RECIPE_TYPE.SEASONING, count: 1 },
     ],
   },
 ];
