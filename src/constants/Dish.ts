@@ -1048,6 +1048,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 196,
     maxScore: 150,
     maxCount: 7,
+    flame: 3,
   },
   {
     id: "Falcatus_Soybean_Paste_Soup",
@@ -1056,6 +1057,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1554,
     maxScore: 382,
     maxCount: 7,
+    flame: 15,
   },
   {
     id: "Pikaia_Ramen",
@@ -1064,6 +1066,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1554,
     maxScore: 360,
     maxCount: 10,
+    flame: 15,
   },
   {
     id: "Steamed_Hyalonema_Angler_Fish",
@@ -1072,6 +1075,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1650,
     maxScore: 248,
     maxCount: 1,
+    flame: 15,
   },
   {
     id: "Hyalonema_Tuna_Sashimi",
@@ -1080,6 +1084,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1683,
     maxScore: 265,
     maxCount: 1,
+    flame: 15,
   },
   // VIP 요리
   {
@@ -1138,6 +1143,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1424,
     maxScore: 305,
     maxCount: 10,
+    flame: 7,
   },
   {
     id: "Blobfish_Spring_Roll",
@@ -1146,6 +1152,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1387,
     maxScore: 322,
     maxCount: 10,
+    flame: 7,
   },
   {
     id: "Tomato_Egg_Soup",
@@ -1154,6 +1161,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1406,
     maxScore: 309,
     maxCount: 12,
+    flame: 7,
   },
   {
     id: "Mianbao_Xia",
@@ -1162,6 +1170,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1387,
     maxScore: 305,
     maxCount: 10,
+    flame: 7,
   },
   {
     id: "Fried_Tomato_And_Snailfish",
@@ -1170,6 +1179,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1443,
     maxScore: 335,
     maxCount: 1,
+    flame: 7,
   },
   {
     id: "Deep_Fish_Tempura",
@@ -1186,6 +1196,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1424,
     maxScore: 420,
     maxCount: 7,
+    flame: 7,
   },
   {
     id: "Pelican_Eel_Jelly",
@@ -1194,6 +1205,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1380,
     maxScore: 439,
     maxCount: 9,
+    flame: 7,
   },
   {
     id: "Smoked_Atlantic_Mackerel_Scramble",
@@ -1202,6 +1214,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1431,
     maxScore: 460,
     maxCount: 6,
+    flame: 7,
   },
   {
     id: "Comber_Sandwich",
@@ -1210,6 +1223,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1443,
     maxScore: 420,
     maxCount: 6,
+    flame: 7,
   },
   {
     id: "Humboldt_Ink_Pasta",
@@ -1226,6 +1240,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1443,
     maxScore: 364,
     maxCount: 7,
+    flame: 7,
   },
   {
     id: "Antarctic_Octopus_Carpaccio",
@@ -1234,6 +1249,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1498,
     maxScore: 408,
     maxCount: 7,
+    flame: 7,
   },
   {
     id: "Arctic_Cod_Risotto",
@@ -1242,6 +1258,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1509,
     maxScore: 377,
     maxCount: 9,
+    flame: 7,
   },
   {
     id: "Peacock_Squid_Ripieni",
@@ -1250,6 +1267,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1517,
     maxScore: 360,
     maxCount: 7,
+    flame: 7,
   },
   {
     id: "Haddock_Acqua_Pazza",
@@ -1258,6 +1276,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1498,
     maxScore: 400,
     maxCount: 9,
+    flame: 7,
   },
   // 쿡스타 요리
   {
@@ -1267,6 +1286,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 185,
     maxScore: 255,
     maxCount: 7,
+    flame: 3,
   },
   {
     id: "Salt_Grilled_Redtoothed_Triggerfish",
@@ -1275,6 +1295,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 177,
     maxScore: 241,
     maxCount: 6,
+    flame: 3,
   },
   {
     id: "Agar_Tokoroten",
@@ -1283,6 +1304,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 188,
     maxScore: 266,
     maxCount: 7,
+    flame: 3,
   },
   {
     id: "Seasoned_Kajime",
@@ -1291,6 +1313,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 185,
     maxScore: 245,
     maxCount: 6,
+    flame: 3,
   },
   {
     id: "Moray_Eel_Curry",
@@ -1299,6 +1322,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 351,
     maxScore: 273,
     maxCount: 6,
+    flame: 3,
   },
   {
     id: "Striped_Red_Mullet_Tangle_Roll",
@@ -1307,6 +1331,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 296,
     maxScore: 270,
     maxCount: 7,
+    flame: 6,
   },
   {
     id: "White_Trevally_Kombu_Ochazuke",
@@ -1315,6 +1340,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 344,
     maxScore: 266,
     maxCount: 7,
+    flame: 6,
   },
   {
     id: "Stellate_Puffer_Special_Sushi",
@@ -1323,6 +1349,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 814,
     maxScore: 340,
     maxCount: 1,
+    flame: 6,
   },
   {
     id: "Seagrapes_Special_Sushi",
@@ -1331,6 +1358,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 740,
     maxScore: 390,
     maxCount: 1,
+    flame: 6,
   },
   {
     id: "Trout_Sea_Grapes_Ricebowl",
@@ -1339,6 +1367,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 647,
     maxScore: 290,
     maxCount: 7,
+    flame: 9,
   },
   {
     id: "Big_Eyed_Scad_And_Soybean_Paste_Roast",
@@ -1347,6 +1376,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 684,
     maxScore: 348,
     maxCount: 7,
+    flame: 9,
   },
   {
     id: "Seahorse_Udon",
@@ -1355,6 +1385,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1387,
     maxScore: 353,
     maxCount: 4,
+    flame: 9,
   },
   {
     id: "Black_Vinegar_Braised_Parrotfish",
@@ -1363,6 +1394,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1424,
     maxScore: 406,
     maxCount: 6,
+    flame: 9,
   },
   {
     id: "Atlantic_Bonito_Curry",
@@ -1371,6 +1403,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1406,
     maxScore: 389,
     maxCount: 7,
+    flame: 12,
   },
   {
     id: "Humphead_Parrotfish_Curry",
@@ -1379,6 +1412,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1387,
     maxScore: 347,
     maxCount: 6,
+    flame: 12,
   },
   {
     id: "Great_Barracuda_Canape",
@@ -1387,6 +1421,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1572,
     maxScore: 372,
     maxCount: 6,
+    flame: 12,
   },
   {
     id: "Nasu_Dengaku",
@@ -1395,6 +1430,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1535,
     maxScore: 317,
     maxCount: 4,
+    flame: 12,
   },
   {
     id: "Dumbo_Takoyaki",
@@ -1403,6 +1439,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1554,
     maxScore: 390,
     maxCount: 9,
+    flame: 15,
   },
   {
     id: "Rice_With_Great_Spider_Crab_Meat",
@@ -1411,6 +1448,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1517,
     maxScore: 330,
     maxCount: 7,
+    flame: 12,
   },
   // 파티 요리
   {
@@ -1420,6 +1458,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1332,
     maxScore: 400,
     maxCount: 9,
+    flame: 5,
   },
   {
     id: "Hawaiian_Poke",
@@ -1428,6 +1467,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 980,
     maxScore: 348,
     maxCount: 9,
+    flame: 5,
   },
   {
     id: "Yellowfin_Tuna_Steak",
@@ -1436,6 +1476,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1128,
     maxScore: 332,
     maxCount: 9,
+    flame: 5,
   },
   {
     id: "Marlin_And_Soybean_Paste_Roast",
@@ -1444,6 +1485,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1406,
     maxScore: 272,
     maxCount: 9,
+    flame: 5,
   },
   {
     id: "Boiled_Sailfish_And_Seaweed",
@@ -1452,6 +1494,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1572,
     maxScore: 300,
     maxCount: 9,
+    flame: 5,
   },
   {
     id: "Pickled_Vegetables",
@@ -1484,6 +1527,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1184,
     maxScore: 367,
     maxCount: 1,
+    flame: 5,
   },
   {
     id: "Great_Spider_Crab_And_Cucumber_Sushi",
@@ -1492,6 +1536,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1198,
     maxScore: 385,
     maxCount: 1,
+    flame: 5,
   },
   {
     id: "Trevally_Sandwich",
@@ -1500,6 +1545,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1154,
     maxScore: 260,
     maxCount: 7,
+    flame: 5,
   },
   {
     id: "Seasoned_Waptia_Fieldensis",
@@ -1508,6 +1554,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,
+    flame: 15,
   },
   {
     id: "Stir_Fried_Habanero_Lobster",
@@ -1541,6 +1588,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 666,
     maxScore: 381,
     maxCount: 7,
+    flame: 8,
   },
   {
     id: "Special_Fried_Shrimp_Sushi",
@@ -1549,6 +1597,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1406,
     maxScore: 317,
     maxCount: 1,
+    flame: 8,
   },
   {
     id: "Boiled_And_Deep_Fried_White_Shrimp",
@@ -1557,6 +1606,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 832,
     maxScore: 330,
     maxCount: 10,
+    flame: 8,
   },
   {
     id: "Smallspotted_Dart_Kajime_Soup",
@@ -1565,6 +1615,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 555,
     maxScore: 367,
     maxCount: 7,
+    flame: 8,
   },
   {
     id: "Fried_Seahorses",
@@ -1573,6 +1624,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 814,
     maxScore: 362,
     maxCount: 4,
+    flame: 8,
   },
   {
     id: "Roasted_Capelin",
@@ -1581,6 +1633,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1443,
     maxScore: 345,
     maxCount: 7,
+    flame: 12,
   },
   {
     id: "Rice_With_Purple_Sea_Urchin_Sushi",
@@ -1589,6 +1642,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1424,
     maxScore: 320,
     maxCount: 4,
+    flame: 12,
   },
   {
     id: "Deep_Fried_Luna_Lionfish",
@@ -1597,6 +1651,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1443,
     maxScore: 366,
     maxCount: 4,
+    flame: 12,
   },
   {
     id: "Narwhal_Miso_Soup",
@@ -1605,6 +1660,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 420,
     maxCount: 12,
+    flame: 15,
   },
   {
     id: "Ice_Fish_Curry",
@@ -1613,6 +1669,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 317,
     maxCount: 9,
+    flame: 15,
   },
   {
     id: "Boiled_Porbeagle_Shark",
@@ -1621,6 +1678,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 332,
     maxCount: 7,
+    flame: 15,
   },
   {
     id: "Fried_Onion_Cuttlefish",
@@ -1629,6 +1687,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 360,
     maxCount: 7,
+    flame: 15,
   },
   {
     id: "Three_Colored_Squid_Roast",
@@ -1637,6 +1696,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 335,
     maxCount: 12,
+    flame: 15,
   },
   {
     id: "Latok_Omelet",
@@ -1645,6 +1705,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 260,
     maxCount: 9,
+    flame: 15,
   },
   {
     id: "Trevally_Nanbanzuke",
@@ -1653,6 +1714,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 343,
     maxCount: 7,
+    flame: 15,
   },
   {
     id: "Batfish_Ricebowl",
@@ -1661,6 +1723,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 447,
     maxCount: 7,
+    flame: 15,
   },
   {
     id: "Crimson_Fish_Roll",
@@ -1669,6 +1732,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 285,
     maxCount: 9,
+    flame: 15,
   },
   {
     id: "Dusky_Grouper_Steak",
@@ -1677,6 +1741,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 328,
     maxCount: 7,
+    flame: 15,
   },
   {
     id: "Seahorse_Salad",
@@ -1685,6 +1750,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 295,
     maxCount: 6,
+    flame: 15,
   },
   {
     id: "Deep_Fried_Eggplant_Shrimp_Meatballs",
@@ -1693,6 +1759,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 460,
     maxCount: 7,
+    flame: 15,
   },
   {
     id: "Shark_Karaage",
@@ -1701,6 +1768,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 380,
     maxCount: 9,
+    flame: 15,
   },
   {
     id: "Wrasse_Curry",
@@ -1709,6 +1777,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 330,
     maxCount: 6,
+    flame: 15,
   },
   {
     id: "Seasoned_Jellyfish",
@@ -1717,6 +1786,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 298,
     maxCount: 6,
+    flame: 15,
   },
   {
     id: "Great_Spider_Crab_Curry",
@@ -1725,6 +1795,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 290,
     maxCount: 9,
+    flame: 15,
   },
   {
     id: "Dried_Stingray",
@@ -1733,6 +1804,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 225,
     maxCount: 12,
+    flame: 15,
   },
   {
     id: "Mackerel_Scad_Hotdog",
@@ -1741,6 +1813,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 340,
     maxCount: 6,
+    flame: 15,
   },
   {
     id: "Rice_With_White_Shrimp_Meat",
@@ -1749,6 +1822,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 400,
     maxCount: 9,
+    flame: 15,
   },
   {
     id: "Roasted_Tropical_Fish_And_Garlic",
@@ -1757,6 +1831,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 236,
     maxCount: 9,
+    flame: 15,
   },
   {
     id: "Seaweed_Rolled_Omelet",
@@ -1765,6 +1840,7 @@ export const DISH_LIST: Dish[] = [
     maxCost: 1480,
     maxScore: 300,
     maxCount: 9,
+    flame: 15,
   },
   // 비밀 레시피 요리
   {

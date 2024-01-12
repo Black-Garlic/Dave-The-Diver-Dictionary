@@ -7,6 +7,7 @@ export interface Dish {
   maxCost: number;
   maxScore: number;
   maxCount: number;
+  flame?: number;
 }
 
 export interface SimpleDish {
