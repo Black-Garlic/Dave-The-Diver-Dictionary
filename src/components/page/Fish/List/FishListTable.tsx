@@ -1,6 +1,6 @@
 import { Button, Space, Table, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
-import { Fish } from "@typings/Fish.ts";
+import { FishWithDish } from "@typings/Fish.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
 import { useRecoilValue } from "recoil";
@@ -9,7 +9,7 @@ import { fishListState } from "@services/Fish/FishState.ts";
 const FishListTable = () => {
   const fishRecoilList = useRecoilValue(fishListState);
 
-  const columns: ColumnsType<Fish> = [
+  const columns: ColumnsType<FishWithDish> = [
     {
       key: "rank",
       title: "랭크",

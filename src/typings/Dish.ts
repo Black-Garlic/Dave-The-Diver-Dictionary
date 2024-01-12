@@ -10,8 +10,3 @@ export interface Dish {
   flame?: number;
   party?: PARTY[];
 }
-
-export interface SimpleDish {
-  id: string;
-  name: string;
-}

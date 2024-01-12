@@ -6,7 +6,7 @@ import { REGION_OPTION } from "@constants/Region.ts";
 import { TIME_OPTION } from "@constants/Time.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
-import { Fish } from "@typings/Fish.ts";
+import { FishWithDish } from "@typings/Fish.ts";
 import { FISH_LIST } from "@constants/Fish.ts";
 import {
   FISH_SORT,
@@ -15,6 +15,7 @@ import {
 } from "@constants/Sort.ts";
 import { useSetRecoilState } from "recoil";
 import { fishListState } from "@services/Fish/FishState.ts";
+import { getFishWithDishList } from "@libs/recipeUtil.ts";
 
 const FishListFilter = () => {
   const setFishList = useSetRecoilState(fishListState);
@@ -25,10 +26,10 @@ const FishListFilter = () => {
   const [time, setTime] = useState<string[]>([]);
   const [keyword, setKeyword] = useState<string>("");
 
-  const sortFish = (fishList: Fish[], sort: string) => {
+  const sortFish = (fishList: FishWithDish[], sort: string): FishWithDish[] => {
     const [sortType, sortDirection] = sort.split("-");
 
-    const sortFishList: Fish[] = [...fishList];
+    const sortFishList: FishWithDish[] = [...fishList];
 
     if (sortType === FISH_SORT.RANK) {
       if (sortDirection === SORT_DIRECTION.ASC) {
@@ -47,7 +48,10 @@ const FishListFilter = () => {
     return sortFishList;
   };
 
-  const filterRank = (fishList: Fish[], rank: string[]): Fish[] => {
+  const filterRank = (
+    fishList: FishWithDish[],
+    rank: string[],
+  ): FishWithDish[] => {
     if (rank.length > 0) {
       return fishList.filter((fish) =>
         rank.some((rankOption) => rankOption === fish.rank.toString()),
@@ -57,7 +61,10 @@ const FishListFilter = () => {
     }
   };
 
-  const filterRegion = (fishList: Fish[], region: string[]): Fish[] => {
+  const filterRegion = (
+    fishList: FishWithDish[],
+    region: string[],
+  ): FishWithDish[] => {
     if (region.length > 0) {
       return fishList.filter((fish) =>
         region.some((regionOption) => regionOption === fish.region),
@@ -67,7 +74,10 @@ const FishListFilter = () => {
     }
   };
 
-  const filterTime = (fishList: Fish[], time: string[]): Fish[] => {
+  const filterTime = (
+    fishList: FishWithDish[],
+    time: string[],
+  ): FishWithDish[] => {
     if (time.length > 0) {
       return fishList.filter((fish) =>
         time.some((timeOption) => timeOption === fish.time),
@@ -77,7 +87,10 @@ const FishListFilter = () => {
     }
   };
 
-  const filterKeyword = (fishList: Fish[], keyword: string): Fish[] => {
+  const filterKeyword = (
+    fishList: FishWithDish[],
+    keyword: string,
+  ): FishWithDish[] => {
     if (keyword !== "") {
       return fishList.filter(
         (fish) =>
@@ -92,7 +105,8 @@ const FishListFilter = () => {
   };
 
   useEffect(() => {
-    const fishSortList = sortFish(FISH_LIST, sort);
+    const fishWithDishList = getFishWithDishList(FISH_LIST);
+    const fishSortList = sortFish(fishWithDishList, sort);
     const fishFilterRankList = filterRank(fishSortList, rank);
     const fishFilterRegionList = filterRegion(fishFilterRankList, region);
     const fishFilterTimeList = filterTime(fishFilterRegionList, time);
