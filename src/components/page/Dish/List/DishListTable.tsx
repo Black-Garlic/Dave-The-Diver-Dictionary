@@ -1,12 +1,17 @@
 import { ColumnsType } from "antd/es/table";
 import { Dish } from "@typings/Dish.ts";
 import { Space, Table } from "antd";
+import { useCallback } from "react";
+import { DISH_DETAIL_ROUTE } from "@constants/Route.ts";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   dishList?: Dish[];
 }
 
 const DishListTable = ({ dishList }: Props) => {
+  const navigate = useNavigate();
+
   const columns: ColumnsType<Dish> = [
     {
       key: "name",
@@ -61,14 +66,21 @@ const DishListTable = ({ dishList }: Props) => {
     },
   ];
 
+  const handleClickRow = useCallback(
+    (dish: Dish) => {
+      navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.id));
+    },
+    [navigate],
+  );
+
   return (
     <Table
       columns={columns}
       dataSource={dishList}
       pagination={false}
-      // onRow={(fishWithDish) => ({
-      //   onClick: () => handleClickRow(fishWithDish),
-      // })}
+      onRow={(dish) => ({
+        onClick: () => handleClickRow(dish),
+      })}
     />
   );
 };
