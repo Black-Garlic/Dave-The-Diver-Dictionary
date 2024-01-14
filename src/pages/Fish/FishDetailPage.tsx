@@ -7,13 +7,14 @@ import { FISH_LIST } from "@constants/Fish.ts";
 import { getFishWithDish } from "@libs/recipeUtil.ts";
 import { Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
+import { DishWithLevel } from "@typings/Dish.ts";
+import { getDishLevelCookie, getDishWithLevelList } from "@libs/dishUtil.ts";
 
 const FishDetailPage = () => {
   const params = useParams();
 
-  console.log(params);
-
   const [fish, setFish] = useState<FishWithDish>();
+  const [dishList, setDishList] = useState<DishWithLevel[]>([]);
 
   useEffect(() => {
     const fishList: Fish[] = FISH_LIST.filter((fish) => fish.id === params.id);
@@ -22,7 +23,12 @@ const FishDetailPage = () => {
       const fishWithDishList: FishWithDish = getFishWithDish(fishList[0]);
 
       setFish(fishWithDishList);
+      setDishList(
+        getDishWithLevelList(fishWithDishList.dishList, getDishLevelCookie()),
+      );
     }
+
+    getDishLevelCookie();
   }, [params]);
 
   return (
@@ -31,7 +37,7 @@ const FishDetailPage = () => {
 
       <Divider />
 
-      <DishListTable dishList={fish?.dishList} />
+      <DishListTable dishList={dishList} setDishList={setDishList} />
     </MainTemplate>
   );
 };
