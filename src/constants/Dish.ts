@@ -1,4 +1,5 @@
 import { Dish } from "@typings/Dish.ts";
+import { Option } from "@typings/Option.ts";
 
 export enum UNLOCK_TYPE {
   YOSHIE_VISIT = "요시에 방문",
@@ -34,6 +35,17 @@ export enum PARTY {
   SHRIMP = "새우 파티",
   LOBSTER = "랍스터 파티",
 }
+
+export const PARTY_OPTION: Option[] = [
+  { label: PARTY.JELLY_FISH, value: PARTY.JELLY_FISH },
+  { label: PARTY.TUNA, value: PARTY.TUNA },
+  { label: PARTY.MARLIN, value: PARTY.MARLIN },
+  { label: PARTY.STORM_SHARK, value: PARTY.STORM_SHARK },
+  { label: PARTY.CUCUMBER, value: PARTY.CUCUMBER },
+  { label: PARTY.CURRY, value: PARTY.CURRY },
+  { label: PARTY.SHRIMP, value: PARTY.SHRIMP },
+  { label: PARTY.LOBSTER, value: PARTY.LOBSTER },
+];
 
 export enum RECIPE_TYPE {
   FISH = "FISH",

@@ -16,3 +16,30 @@ export const FISH_SORT_OPTION: Option[] = [
   { label: "이름 오름차순", value: `${FISH_SORT.NAME}-${SORT_DIRECTION.ASC}` },
   { label: "이름 내림차순", value: `${FISH_SORT.NAME}-${SORT_DIRECTION.DESC}` },
 ];
+
+export enum DISH_SORT {
+  NAME = "NAME",
+  COST = "PRICE",
+  SCORE = "SCORE",
+  COUNT = "COUNT",
+}
+
+export const DISH_SORT_OPTION: Option[] = [
+  { label: "이름 오름차순", value: `${DISH_SORT.NAME}-${SORT_DIRECTION.ASC}` },
+  { label: "이름 내림차순", value: `${DISH_SORT.NAME}-${SORT_DIRECTION.DESC}` },
+  { label: "가격 오름차순", value: `${DISH_SORT.COST}-${SORT_DIRECTION.ASC}` },
+  { label: "가격 내림차순", value: `${DISH_SORT.COST}-${SORT_DIRECTION.DESC}` },
+  {
+    label: "맛점수 오름차순",
+    value: `${DISH_SORT.SCORE}-${SORT_DIRECTION.ASC}`,
+  },
+  {
+    label: "맛점수 내림차순",
+    value: `${DISH_SORT.SCORE}-${SORT_DIRECTION.DESC}`,
+  },
+  { label: "접시 오름차순", value: `${DISH_SORT.COUNT}-${SORT_DIRECTION.ASC}` },
+  {
+    label: "접시 내림차순",
+    value: `${DISH_SORT.COUNT}-${SORT_DIRECTION.DESC}`,
+  },
+];

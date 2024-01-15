@@ -1,6 +1,7 @@
-import { Dish, Level } from "@typings/Dish.ts";
+import { Dish, DishWithLevel, Level } from "@typings/Dish.ts";
 import { LEVEL } from "@constants/Level.ts";
 import { Cookies } from "react-cookie";
+import { PARTY } from "@constants/Dish.ts";
 
 export const getDishLevelCookie = (): Level[] => {
   const Cookie = new Cookies();
@@ -38,7 +39,10 @@ export const setDishLevelCookie = (id: string, selectedLevel: LEVEL) => {
   return newLevelList;
 };
 
-export const getDishWithLevelList = (dishList: Dish[], levelList: Level[]) => {
+export const getDishWithLevelList = (
+  dishList: Dish[],
+  levelList: Level[],
+): DishWithLevel[] => {
   return dishList.map((dish) => getDishWithLevel(dish, levelList));
 };
 
@@ -52,4 +56,40 @@ export const getDishWithLevel = (dish: Dish, levelList: Level[]) => {
   });
 
   return { ...dish, level: dishLevel };
+};
+
+export const getPartyColor = (party: string): string => {
+  if (party === PARTY.JELLY_FISH) {
+    return "BlueViolet";
+  }
+
+  if (party === PARTY.TUNA) {
+    return "DodgerBlue";
+  }
+
+  if (party === PARTY.MARLIN) {
+    return "DarkBlue";
+  }
+
+  if (party === PARTY.STORM_SHARK) {
+    return "Black";
+  }
+
+  if (party === PARTY.CUCUMBER) {
+    return "ForestGreen";
+  }
+
+  if (party === PARTY.CURRY) {
+    return "GoldenRod";
+  }
+
+  if (party === PARTY.SHRIMP) {
+    return "LightSalmon";
+  }
+
+  if (party === PARTY.LOBSTER) {
+    return "OrangeRed";
+  }
+
+  return "";
 };
