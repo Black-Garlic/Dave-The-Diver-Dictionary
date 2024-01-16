@@ -1,6 +1,13 @@
 import { DishRecipe } from "@typings/Recipe.ts";
 import { RECIPE_TYPE } from "@constants/Dish.ts";
 
+export const RECIPE_LEVEL_UP = {
+  1: [0, 3, 4, 6, 10, 15, 22, 34, 51, 76],
+  2: [0, 4, 6, 10, 15, 22, 34, 51, 76, 115],
+  3: [0, 6, 9, 13, 20, 30, 45, 68, 102, 153],
+  5: [0, 9, 13, 20, 30, 45, 68, 102, 153, 230],
+};
+
 export const RECIPE_LIST: DishRecipe[] = [
   {
     dishId: "Clownfish_Sushi",
