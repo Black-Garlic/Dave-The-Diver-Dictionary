@@ -4,7 +4,7 @@ import { LEVEL } from "@constants/Level.ts";
 export const LEVEL_DUMMY: Level[] = [
   {
     id: "Clownfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Comber_Sushi",

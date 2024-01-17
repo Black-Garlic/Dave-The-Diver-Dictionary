@@ -2,6 +2,7 @@ import { Dish, DishWithLevel, Level } from "@typings/Dish.ts";
 import { LEVEL } from "@constants/Level.ts";
 import { Cookies } from "react-cookie";
 import { PARTY } from "@constants/Dish.ts";
+import { LEVEL_DUMMY } from "@constants/Dummy.ts";
 
 export const getDishLevelCookie = (): Level[] => {
   const Cookie = new Cookies();
@@ -10,7 +11,7 @@ export const getDishLevelCookie = (): Level[] => {
   if (dishLevelCookie) {
     return dishLevelCookie;
   } else {
-    const defaultCookie: Level[] = [];
+    const defaultCookie: Level[] = LEVEL_DUMMY;
     Cookie.set("dishLevel", defaultCookie);
 
     return defaultCookie;
