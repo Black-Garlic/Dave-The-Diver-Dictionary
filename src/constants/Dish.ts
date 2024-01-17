@@ -404,7 +404,7 @@ export const DISH_LIST: Dish[] = [
   },
   {
     id: "European_Lobster_Sushi",
-    name: "유렵바닷가재 초밥",
+    name: "유럽바닷가재 초밥",
     maxCost: 0,
     maxScore: 0,
     maxCount: 1,

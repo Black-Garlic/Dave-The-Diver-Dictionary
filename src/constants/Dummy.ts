@@ -48,7 +48,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Small_Spotted_Dart_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Yellowback_Fusilier_Sushi",
@@ -72,67 +72,67 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Black_And_White_Snapper_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.FIVE,
   },
   {
     id: "Green_Humphead_Parrotfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Barrel_Jellyfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Fried_Egg_Jellyfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Whitetip_Reefshark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Moray_Eel_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Red_Lionfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Titan_Triggerfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Blacktip_Reefshark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Copper_Shark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Box_Jellyfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Bluefin_Tuna_Akami_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Bluefin_Tuna_Chutoro_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Bluefin_Tuna_Otoro_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Yellowfin_Tuna_Akami_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Yellowfin_Tuna_Chutoro_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Yellowfin_Tuna_Otoro_Sushi",
@@ -144,7 +144,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Sheepshead_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.SEVEN,
   },
   {
     id: "Emperor_Angelfish_Sushi",
@@ -152,39 +152,39 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Stingray_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Marbled_Electric_Ray_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Cooked_Whiteleg_Shrimp_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Striped_Catfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Purple_Sea_Urchin_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Shortfin_Mako_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Zebra_Shark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Marlin_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Thresher_Shark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "American_Lobster_Sushi",
@@ -192,7 +192,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "European_Lobster_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Bluehead_Tilefish_Sushi",
@@ -200,7 +200,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Clown_Frogfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Painted_Comber_Sushi",
@@ -220,7 +220,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Harleqiun_Hind_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Bigeye_Trevally_Sushi",
@@ -228,15 +228,15 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Coral_Trout_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Grey_Triggerfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Atlantic_Bonito_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "White_Trevally_Sushi",
@@ -244,39 +244,39 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Cuttlefish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Dusky_Grouper_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Atlantic_Mackerel_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Giant_Trevally_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.SEVEN,
   },
   {
     id: "White_Spotted_Jellyfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Tiger_Shark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Great_Barracuda_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.SEVEN,
   },
   {
     id: "Narrow_Barred_Spanish_Mackerel_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.FIVE,
   },
   {
     id: "Longnose_Sawshark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Atlantic_Anglerfish_Sushi",
@@ -284,23 +284,23 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Sally_Lightfoot_Crab_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Raw_Black_Tiger_Shrimp_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Smooth_Hammerhead_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Sailfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "California_Spiny_Lobster_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Tropical_Rock_Lobster_Sushi",
@@ -308,11 +308,11 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Clearfin_Lionfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Longspine_Squirrelfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "White_Shrimp_Sushi",
@@ -320,31 +320,31 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Red_Banded_Lobster_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Blue_Lobster_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Blackfin_Barracuda_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Spear_Squid_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Humboldt_Squid_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Devil_Scorpion_Fish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Fan_Lobster_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Crystal_Lobster_Sushi",
@@ -352,23 +352,23 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Chambered_Nautilus_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Fangtooth_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Frilled_Shark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Bluespotted_Stargazer_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Rhinochimaeridae_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Spider_Crab_Sushi",
@@ -376,15 +376,15 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Megamouth_Shark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Cookiecutter_Shark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.FIVE,
   },
   {
     id: "Clione_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Sea_Toad_Sushi",
@@ -396,7 +396,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Pacific_Fanfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Threetooth_Puffer_Sushi",
@@ -404,11 +404,11 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Comb_Jelly_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Blood_belly_Comb_Jelly_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Red_Bream_Sushi",
@@ -424,87 +424,87 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Peacock_Squid_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Dumbo_Octopus_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Barreleye_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Blob_Fish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Vampire_Squid_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Pelican_Eel_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Arctic_Cod_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Gelatinous_Snailfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Antarctic_Octopus_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Greenland_Shark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Polar_Eelpout_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Porbeagle_Shark_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Ice_Fish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Capelin_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Narwhal_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Haddock_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Starry_Skate_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Arctic_Telescope_Fish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Alaska_Pollock_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Lumpfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Snub_Nosed_Spiny_Eel_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.SIX,
   },
   {
     id: "Golden_King_Crab_Sushi",
@@ -516,51 +516,51 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Horsehair_Crab_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Waptia_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Pikaia_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Allenypterus_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Qingmendous_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Falcatus_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Drepanaspis_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Dunkleosteus_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Megalograptus_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Xenacanthus_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Dollocaris_Ingens_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Tokummia_Katalepsis_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.SEVEN,
   },
   {
     id: "Young_Anomalocaris_Sushi",
@@ -568,15 +568,15 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Seahorse_Sewers",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Seadragon_Onigiri",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Whole_Roasted_Shark_Head",
-    level: LEVEL.ONE,
+    level: LEVEL.SIX,
   },
   {
     id: "Falcatus_Soybean_Paste_Soup",
@@ -596,11 +596,11 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Seagrapes_Jellyfish_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.SEVEN,
   },
   {
     id: "Tropical_Fish_Sushi_Set",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Vegetable_Sushi",
@@ -640,7 +640,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Deep_Fish_Tempura",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Plotosid_Pie",
@@ -660,7 +660,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Humboldt_Ink_Pasta",
-    level: LEVEL.ONE,
+    level: LEVEL.SIX,
   },
   {
     id: "Narrow_Barred_Spanish_Mackerel_Arancini",
@@ -700,7 +700,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Moray_Eel_Curry",
-    level: LEVEL.ONE,
+    level: LEVEL.FOUR,
   },
   {
     id: "Striped_Red_Mullet_Tangle_Roll",
@@ -712,7 +712,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Stellate_Puffer_Special_Sushi",
-    level: LEVEL.ONE,
+    level: LEVEL.FOUR,
   },
   {
     id: "Seagrapes_Special_Sushi",
@@ -736,7 +736,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Atlantic_Bonito_Curry",
-    level: LEVEL.ONE,
+    level: LEVEL.SIX,
   },
   {
     id: "Humphead_Parrotfish_Curry",
@@ -752,7 +752,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Dumbo_Takoyaki",
-    level: LEVEL.ONE,
+    level: LEVEL.SIX,
   },
   {
     id: "Rice_With_Great_Spider_Crab_Meat",
@@ -776,7 +776,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Boiled_Sailfish_And_Seaweed",
-    level: LEVEL.ONE,
+    level: LEVEL.NINE,
   },
   {
     id: "Pickled_Vegetables",
@@ -800,15 +800,15 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Trevally_Sandwich",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Seasoned_Waptia_Fieldensis",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Stir_Fried_Habanero_Lobster",
-    level: LEVEL.ONE,
+    level: LEVEL.SEVEN,
   },
   {
     id: "Steamed_Eastern_Rock_Lobster_And_Egg",
@@ -816,7 +816,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Crystal_Lobster_Roll",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Stellate_Puffer_Nicogori",
@@ -860,7 +860,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Boiled_Porbeagle_Shark",
-    level: LEVEL.ONE,
+    level: LEVEL.SIX,
   },
   {
     id: "Fried_Onion_Cuttlefish",
@@ -884,7 +884,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Crimson_Fish_Roll",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Dusky_Grouper_Steak",
@@ -908,11 +908,11 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Seasoned_Jellyfish",
-    level: LEVEL.ONE,
+    level: LEVEL.SIX,
   },
   {
     id: "Great_Spider_Crab_Curry",
-    level: LEVEL.ONE,
+    level: LEVEL.SEVEN,
   },
   {
     id: "Dried_Stingray",
@@ -924,7 +924,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Rice_With_White_Shrimp_Meat",
-    level: LEVEL.ONE,
+    level: LEVEL.TEN,
   },
   {
     id: "Roasted_Tropical_Fish_And_Garlic",
@@ -948,15 +948,15 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Lobster_Platter",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Pufferfish_Dumpling_Soup",
-    level: LEVEL.ONE,
+    level: LEVEL.FOUR,
   },
   {
     id: "Soy_Sauce_Marinated_Crab",
-    level: LEVEL.ONE,
+    level: LEVEL.EIGHT,
   },
   {
     id: "Secret_2",
