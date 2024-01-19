@@ -1,20 +1,21 @@
 import { Button, Space, Table, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
-import { FishWithDish } from "@typings/Fish.ts";
+import { FishWithDishLevel } from "@typings/Fish.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
 import { useRecoilValue } from "recoil";
-import { fishListState } from "@services/Fish/FishState.ts";
+import { fishWithDishLevelListState } from "@services/Fish/FishState.ts";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 import { DISH_DETAIL_ROUTE, FISH_DETAIL_ROUTE } from "@constants/Route.ts";
 import { Dish } from "@typings/Dish.ts";
+import { LEVEL_LABEL } from "@constants/Level.ts";
 
 const FishListTable = () => {
   const navigate = useNavigate();
-  const fishRecoilList = useRecoilValue(fishListState);
+  const fishList = useRecoilValue(fishWithDishLevelListState);
 
-  const columns: ColumnsType<FishWithDish> = [
+  const columns: ColumnsType<FishWithDishLevel> = [
     {
       key: "rank",
       title: "랭크",
@@ -90,10 +91,12 @@ const FishListTable = () => {
           {dishList.map((dish) => (
             <Space.Compact key={dish.id} style={{ width: "100%" }}>
               <Button
-                style={{ width: "100%", textAlign: "start" }}
+                style={{ width: "100%", textAlign: "start", display: "flex" }}
                 onClick={() => handleClickDish(dish)}
               >
-                {dish.name}
+                <div style={{ flex: "1" }}>{dish.name}</div>
+
+                <div>{LEVEL_LABEL[dish.level - 1]}</div>
               </Button>
             </Space.Compact>
           ))}
@@ -103,7 +106,7 @@ const FishListTable = () => {
   ];
 
   const handleClickRow = useCallback(
-    (fishWithDish: FishWithDish) => {
+    (fishWithDish: FishWithDishLevel) => {
       navigate(FISH_DETAIL_ROUTE.path.replace(":id", fishWithDish.id));
     },
     [navigate],
@@ -116,9 +119,7 @@ const FishListTable = () => {
     [navigate],
   );
 
-  return (
-    <Table columns={columns} dataSource={fishRecoilList} pagination={false} />
-  );
+  return <Table columns={columns} dataSource={fishList} pagination={false} />;
 };
 
 export default FishListTable;

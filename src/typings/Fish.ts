@@ -1,7 +1,7 @@
 import { REGION } from "@constants/Region.ts";
 import { TIME } from "@constants/Time.ts";
 import { Rank } from "@typings/Rank.ts";
-import { Dish } from "@typings/Dish.ts";
+import { Dish, DishWithLevel } from "@typings/Dish.ts";
 
 export interface Fish extends Rank {
   id: string;
@@ -13,4 +13,8 @@ export interface Fish extends Rank {
 
 export interface FishWithDish extends Fish {
   dishList: Dish[];
+}
+
+export interface FishWithDishLevel extends Fish {
+  dishList: DishWithLevel[];
 }
