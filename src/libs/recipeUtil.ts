@@ -6,11 +6,11 @@ import { LEVEL } from "@constants/Level.ts";
 import { DishRecipe } from "@typings/Recipe.ts";
 
 export const getDish = (id: string, recipeType: RECIPE_TYPE): Dish[] => {
-  const dishRecipeList = RECIPE_LIST.filter((dishRecipe) => {
-    return dishRecipe.recipe.some(
+  const dishRecipeList = RECIPE_LIST.filter((dishRecipe) =>
+    dishRecipe.recipe.some(
       (recipe) => recipe.id === id && recipe.type === recipeType,
-    );
-  });
+    ),
+  );
 
   return DISH_LIST.filter((dish) =>
     dishRecipeList.some((dishRecipe) => dishRecipe.dishId === dish.id),

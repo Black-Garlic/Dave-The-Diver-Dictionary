@@ -7,7 +7,8 @@ import { useRecoilValue } from "recoil";
 import { fishListState } from "@services/Fish/FishState.ts";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
-import { FISH_DETAIL_ROUTE } from "@constants/Route.ts";
+import { DISH_DETAIL_ROUTE, FISH_DETAIL_ROUTE } from "@constants/Route.ts";
+import { Dish } from "@typings/Dish.ts";
 
 const FishListTable = () => {
   const navigate = useNavigate();
@@ -20,12 +21,18 @@ const FishListTable = () => {
       dataIndex: "rank",
       align: "center",
       width: 100,
+      onCell: (fishWithDish) => ({
+        onClick: () => handleClickRow(fishWithDish),
+      }),
     },
     {
       key: "name",
       title: "이름",
       dataIndex: "name",
       align: "center",
+      onCell: (fishWithDish) => ({
+        onClick: () => handleClickRow(fishWithDish),
+      }),
     },
     {
       key: "region",
@@ -33,6 +40,9 @@ const FishListTable = () => {
       dataIndex: "region",
       align: "center",
       width: 150,
+      onCell: (fishWithDish) => ({
+        onClick: () => handleClickRow(fishWithDish),
+      }),
       render: (_, { region }, index) => (
         <Tag color={getRegionColor(region)} key={`${region}-${index}`}>
           {region}
@@ -45,6 +55,24 @@ const FishListTable = () => {
       dataIndex: "time",
       align: "center",
       width: 150,
+      onCell: (fishWithDish) => ({
+        onClick: () => handleClickRow(fishWithDish),
+      }),
+      render: (_, { time }, index) => (
+        <Tag color={getTimeColor(time)} key={`${time}-${index}`}>
+          {time}
+        </Tag>
+      ),
+    },
+    {
+      key: "time",
+      title: "필요 재료",
+      dataIndex: "time",
+      align: "center",
+      width: 150,
+      onCell: (fishWithDish) => ({
+        onClick: () => handleClickRow(fishWithDish),
+      }),
       render: (_, { time }, index) => (
         <Tag color={getTimeColor(time)} key={`${time}-${index}`}>
           {time}
@@ -53,15 +81,18 @@ const FishListTable = () => {
     },
     {
       key: "dish",
-      title: "음식",
+      title: "요리",
       dataIndex: "dish",
       align: "center",
-      width: 500,
+      width: 350,
       render: (_, { dishList }) => (
         <Space direction={"vertical"} style={{ width: "100%" }}>
           {dishList.map((dish) => (
             <Space.Compact key={dish.id} style={{ width: "100%" }}>
-              <Button style={{ width: "100%", textAlign: "start" }}>
+              <Button
+                style={{ width: "100%", textAlign: "start" }}
+                onClick={() => handleClickDish(dish)}
+              >
                 {dish.name}
               </Button>
             </Space.Compact>
@@ -78,15 +109,15 @@ const FishListTable = () => {
     [navigate],
   );
 
+  const handleClickDish = useCallback(
+    (dish: Dish) => {
+      navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.id));
+    },
+    [navigate],
+  );
+
   return (
-    <Table
-      columns={columns}
-      dataSource={fishRecoilList}
-      pagination={false}
-      onRow={(fishWithDish) => ({
-        onClick: () => handleClickRow(fishWithDish),
-      })}
-    />
+    <Table columns={columns} dataSource={fishRecoilList} pagination={false} />
   );
 };
 
