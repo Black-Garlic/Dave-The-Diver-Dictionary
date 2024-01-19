@@ -10,6 +10,7 @@ import { useCallback } from "react";
 import { DISH_DETAIL_ROUTE, FISH_DETAIL_ROUTE } from "@constants/Route.ts";
 import { Dish } from "@typings/Dish.ts";
 import { LEVEL_LABEL } from "@constants/Level.ts";
+import { getRecipeCountSum } from "@libs/recipeUtil.ts";
 
 const FishListTable = () => {
   const navigate = useNavigate();
@@ -74,11 +75,18 @@ const FishListTable = () => {
       onCell: (fishWithDish) => ({
         onClick: () => handleClickRow(fishWithDish),
       }),
-      render: (_, { time }, index) => (
-        <Tag color={getTimeColor(time)} key={`${time}-${index}`}>
-          {time}
-        </Tag>
-      ),
+      render: (_, { id, dishList }, index) => {
+        const fishNeedCount = getRecipeCountSum(id, dishList);
+
+        return (
+          <Tag
+            key={`${id}-${index}`}
+            color={fishNeedCount === 0 ? "black" : ""}
+          >
+            {fishNeedCount}
+          </Tag>
+        );
+      },
     },
     {
       key: "dish",

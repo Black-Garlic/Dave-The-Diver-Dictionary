@@ -65,6 +65,32 @@ export const getDishRecipe = (dishId: string): DishRecipe | undefined => {
   return RECIPE_LIST.find((recipe) => recipe.dishId === dishId);
 };
 
+export const getRecipeCountSum = (
+  id: string,
+  dishWithLevelList: DishWithLevel[],
+): number => {
+  return dishWithLevelList
+    .map((dish) => getRecipeCount(id, dish))
+    .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+};
+
+export const getRecipeCount = (id: string, dish: DishWithLevel): number => {
+  const dishRecipe = getDishRecipe(dish.id);
+
+  if (dishRecipe) {
+    let recipeCount = 0;
+
+    dishRecipe.recipe.forEach((recipe) => {
+      if (recipe.id === id) {
+        recipeCount = recipe.count;
+      }
+    });
+
+    return getRemainCount(recipeCount, dish.level);
+  } else {
+    return 0;
+  }
+};
 export const getRemainCount = (count: number, level: LEVEL): number => {
   const recipeLevelUpList = getRecipeLevelUpList(count);
 

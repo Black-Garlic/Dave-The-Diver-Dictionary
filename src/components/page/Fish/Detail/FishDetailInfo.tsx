@@ -1,7 +1,7 @@
 import { Card } from "antd";
 import { FishWithDish } from "@typings/Fish.ts";
-import { useCallback, useEffect, useState } from "react";
-import { getDishRecipe, getRemainCount } from "@libs/recipeUtil.ts";
+import { useEffect, useState } from "react";
+import { getRecipeCountSum } from "@libs/recipeUtil.ts";
 import { DishWithLevel } from "@typings/Dish.ts";
 
 const gridStyle: React.CSSProperties = {
@@ -22,34 +22,11 @@ interface Props {
 const FishDetailInfo = ({ fish, dishList }: Props) => {
   const [fishNeedCount, setFishNeedCount] = useState<number>(0);
 
-  const getFishRecipeCount = useCallback(
-    (dish: DishWithLevel): number => {
-      const dishRecipe = getDishRecipe(dish.id);
-
-      if (dishRecipe) {
-        let recipeCount = 0;
-
-        dishRecipe.recipe.forEach((recipe) => {
-          if (recipe.id === fish?.id) {
-            recipeCount = recipe.count;
-          }
-        });
-
-        return getRemainCount(recipeCount, dish.level);
-      } else {
-        return 0;
-      }
-    },
-    [fish?.id],
-  );
-
   useEffect(() => {
-    const fishNeedCount = dishList
-      .map((dish) => getFishRecipeCount(dish))
-      .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    if (!fish) return;
 
-    setFishNeedCount(fishNeedCount);
-  }, [dishList, getFishRecipeCount]);
+    setFishNeedCount(getRecipeCountSum(fish.id, dishList));
+  }, [dishList, fish]);
 
   if (!fish) return null;
 
