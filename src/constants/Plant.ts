@@ -1,5 +1,6 @@
 import { Plant } from "@typings/Plant.ts";
 import { RANK } from "@constants/Rank.ts";
+import { Option } from "@typings/Option.ts";
 
 export enum PLANT_SOURCE {
   FARM = "텃밭",
@@ -10,6 +11,22 @@ export enum PLANT_SOURCE {
   GLACIAL = "빙하 지역",
   GLACIAL_SEAWEED = "빙하 해초 동굴",
 }
+
+export const PLANT_SOURCE_OPTION: Option[] = [
+  { label: PLANT_SOURCE.FARM, value: PLANT_SOURCE.FARM },
+  { label: PLANT_SOURCE.BLUE_HOLE, value: PLANT_SOURCE.BLUE_HOLE },
+  {
+    label: PLANT_SOURCE.BLUE_HOLE_SHALLOWS,
+    value: PLANT_SOURCE.BLUE_HOLE_SHALLOWS,
+  },
+  {
+    label: PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH,
+    value: PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH,
+  },
+  { label: PLANT_SOURCE.CAVE, value: PLANT_SOURCE.CAVE },
+  { label: PLANT_SOURCE.GLACIAL, value: PLANT_SOURCE.GLACIAL },
+  { label: PLANT_SOURCE.GLACIAL_SEAWEED, value: PLANT_SOURCE.GLACIAL_SEAWEED },
+];
 
 export const PLANT_LIST: Plant[] = [
   {

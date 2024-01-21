@@ -5,6 +5,7 @@ import { Fish, FishWithDish, FishWithDishLevel } from "@typings/Fish.ts";
 import { LEVEL } from "@constants/Level.ts";
 import { DishRecipe } from "@typings/Recipe.ts";
 import { getDishLevelCookie, getDishWithLevelList } from "@libs/dishUtil.ts";
+import { Plant, PlantWithDishLevel } from "@typings/Plant.ts";
 
 export const getDish = (id: string, recipeType: RECIPE_TYPE): Dish[] => {
   const dishRecipeList = RECIPE_LIST.filter((dishRecipe) =>
@@ -58,6 +59,19 @@ export const getFishWithDishLevel = (fish: Fish): FishWithDishLevel => {
   return {
     ...fish,
     dishList: getDishWithLevelListById(fish.id, RECIPE_TYPE.FISH),
+  };
+};
+
+export const getPlantWithDishLevelList = (
+  plantList: Plant[],
+): PlantWithDishLevel[] => {
+  return plantList.map((plant) => getPlantWithDishLevel(plant));
+};
+
+export const getPlantWithDishLevel = (plant: Plant): PlantWithDishLevel => {
+  return {
+    ...plant,
+    dishList: getDishWithLevelListById(plant.id, RECIPE_TYPE.PLANT),
   };
 };
 
