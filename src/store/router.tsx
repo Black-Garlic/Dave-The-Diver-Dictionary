@@ -6,12 +6,14 @@ import {
   FISH_DETAIL_ROUTE,
   FISH_LIST_ROUTE,
   HOME_ROUTE,
+  PLANT_DETAIL_ROUTE,
   PLANT_LIST_ROUTE,
 } from "@constants/Route.ts";
 
 const FishListPage = loadable(() => import("@pages/Fish/FishListPage"));
 const FishDetailPage = loadable(() => import("@pages/Fish/FishDetailPage"));
 const PlantListPage = loadable(() => import("@pages/Plant/PlantListPage"));
+const PlantDetailPage = loadable(() => import("@pages/Plant/PlantDetailPage"));
 const DishListPage = loadable(() => import("@pages/Dish/DistListPage"));
 const DishDetailPage = loadable(() => import("@pages/Dish/DishDetailPage"));
 
@@ -23,6 +25,7 @@ export const routerConfig = [
   { path: FISH_LIST_ROUTE.path, element: <FishListPage /> },
   { path: FISH_DETAIL_ROUTE.path, element: <FishDetailPage /> },
   { path: PLANT_LIST_ROUTE.path, element: <PlantListPage /> },
+  { path: PLANT_DETAIL_ROUTE.path, element: <PlantDetailPage /> },
   { path: DISH_LIST_ROUTE.path, element: <DishListPage /> },
   { path: DISH_DETAIL_ROUTE.path, element: <DishDetailPage /> },
 ];
