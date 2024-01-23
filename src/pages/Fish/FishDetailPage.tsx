@@ -2,38 +2,36 @@ import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
 import FishDetailInfo from "@components/page/Fish/Detail/FishDetailInfo.tsx";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
-import { Fish, FishWithDish } from "@typings/Fish.ts";
+import { Fish, FishWithDishLevel } from "@typings/Fish.ts";
 import { FISH_LIST } from "@constants/Fish.ts";
-import { getFishWithDish } from "@libs/recipeUtil.ts";
+import { getFishWithDishLevel } from "@libs/recipeUtil.ts";
 import { Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
 import { DishWithLevel } from "@typings/Dish.ts";
-import { getDishLevelCookie, getDishWithLevelList } from "@libs/dishUtil.ts";
 
 const FishDetailPage = () => {
   const params = useParams();
 
-  const [fish, setFish] = useState<FishWithDish>();
+  const [fish, setFish] = useState<FishWithDishLevel>();
   const [dishList, setDishList] = useState<DishWithLevel[]>([]);
 
   useEffect(() => {
-    const fishList: Fish[] = FISH_LIST.filter((fish) => fish.id === params.id);
+    const targetFish: Fish | undefined = FISH_LIST.find(
+      (fish) => fish.id === params.id,
+    );
 
-    if (fishList.length > 0) {
-      const fishWithDishList: FishWithDish = getFishWithDish(fishList[0]);
+    if (targetFish) {
+      const fishWithDishLevel: FishWithDishLevel =
+        getFishWithDishLevel(targetFish);
 
-      setFish(fishWithDishList);
-      setDishList(
-        getDishWithLevelList(fishWithDishList.dishList, getDishLevelCookie()),
-      );
+      setFish(fishWithDishLevel);
+      setDishList(fishWithDishLevel.dishList);
     }
-
-    getDishLevelCookie();
   }, [params]);
 
   return (
     <MainTemplate>
-      {fish && <FishDetailInfo fish={fish} dishList={dishList} />}
+      {fish && <FishDetailInfo fish={fish} />}
 
       <Divider />
 

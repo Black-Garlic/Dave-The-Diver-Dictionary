@@ -1,8 +1,7 @@
 import { Card } from "antd";
-import { FishWithDish } from "@typings/Fish.ts";
+import { FishWithDishLevel } from "@typings/Fish.ts";
 import { useEffect, useState } from "react";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
-import { DishWithLevel } from "@typings/Dish.ts";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -15,16 +14,15 @@ const titleStyle: React.CSSProperties = {
 };
 
 interface Props {
-  fish: FishWithDish;
-  dishList: DishWithLevel[];
+  fish: FishWithDishLevel;
 }
 
-const FishDetailInfo = ({ fish, dishList }: Props) => {
+const FishDetailInfo = ({ fish }: Props) => {
   const [fishNeedCount, setFishNeedCount] = useState<number>(0);
 
   useEffect(() => {
-    setFishNeedCount(getRecipeCountSum(fish.id, dishList));
-  }, [dishList, fish]);
+    setFishNeedCount(getRecipeCountSum(fish.id, fish.dishList));
+  }, [fish]);
 
   return (
     <Card>
