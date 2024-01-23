@@ -21,8 +21,8 @@ const PlantListTable = () => {
       title: "이름",
       dataIndex: "name",
       align: "center",
-      onCell: (fishWithDish) => ({
-        onClick: () => handleClickRow(fishWithDish),
+      onCell: (plantWithDishLevel) => ({
+        onClick: () => handleClickRow(plantWithDishLevel),
       }),
     },
     {
@@ -31,8 +31,8 @@ const PlantListTable = () => {
       dataIndex: "source",
       align: "center",
       width: 150,
-      onCell: (fishWithDish) => ({
-        onClick: () => handleClickRow(fishWithDish),
+      onCell: (plantWithDishLevel) => ({
+        onClick: () => handleClickRow(plantWithDishLevel),
       }),
       render: (_, { source }, index) => (
         <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
@@ -46,8 +46,8 @@ const PlantListTable = () => {
       dataIndex: "time",
       align: "center",
       width: 150,
-      onCell: (fishWithDish) => ({
-        onClick: () => handleClickRow(fishWithDish),
+      onCell: (plantWithDishLevel) => ({
+        onClick: () => handleClickRow(plantWithDishLevel),
       }),
       render: (_, { id, dishList }, index) => {
         const plantNeedCount = getRecipeCountSum(id, dishList);
