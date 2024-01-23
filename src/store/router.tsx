@@ -8,6 +8,7 @@ import {
   HOME_ROUTE,
   PLANT_DETAIL_ROUTE,
   PLANT_LIST_ROUTE,
+  SEASONING_DETAIL_ROUTE,
   SEASONING_LIST_ROUTE,
 } from "@constants/Route.ts";
 
@@ -19,6 +20,9 @@ const PlantDetailPage = loadable(() => import("@pages/Plant/PlantDetailPage"));
 
 const SeasoningListPage = loadable(
   () => import("@pages/Seasoning/SeasoningListPage"),
+);
+const SeasoningDetailPage = loadable(
+  () => import("@pages/Seasoning/SeasoningDetailPage"),
 );
 
 const DishListPage = loadable(() => import("@pages/Dish/DistListPage"));
@@ -34,6 +38,7 @@ export const routerConfig = [
   { path: PLANT_LIST_ROUTE.path, element: <PlantListPage /> },
   { path: PLANT_DETAIL_ROUTE.path, element: <PlantDetailPage /> },
   { path: SEASONING_LIST_ROUTE.path, element: <SeasoningListPage /> },
+  { path: SEASONING_DETAIL_ROUTE.path, element: <SeasoningDetailPage /> },
   { path: DISH_LIST_ROUTE.path, element: <DishListPage /> },
   { path: DISH_DETAIL_ROUTE.path, element: <DishDetailPage /> },
 ];
