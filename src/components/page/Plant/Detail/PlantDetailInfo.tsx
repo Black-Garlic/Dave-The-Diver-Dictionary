@@ -14,19 +14,15 @@ const titleStyle: React.CSSProperties = {
 };
 
 interface Props {
-  plant?: PlantWithDishLevel;
+  plant: PlantWithDishLevel;
 }
 
 const PlantDetailInfo = ({ plant }: Props) => {
   const [plantNeedCount, setPlantNeedCount] = useState<number>(0);
 
   useEffect(() => {
-    if (!plant) return;
-
     setPlantNeedCount(getRecipeCountSum(plant.id, plant.dishList));
   }, [plant]);
-
-  if (!plant) return null;
 
   return (
     <Card>

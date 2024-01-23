@@ -33,7 +33,7 @@ const FishDetailPage = () => {
 
   return (
     <MainTemplate>
-      <FishDetailInfo fish={fish} dishList={dishList} />
+      {fish && <FishDetailInfo fish={fish} dishList={dishList} />}
 
       <Divider />
 

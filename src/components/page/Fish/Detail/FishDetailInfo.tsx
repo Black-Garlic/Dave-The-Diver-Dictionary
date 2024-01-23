@@ -15,7 +15,7 @@ const titleStyle: React.CSSProperties = {
 };
 
 interface Props {
-  fish?: FishWithDish;
+  fish: FishWithDish;
   dishList: DishWithLevel[];
 }
 
@@ -23,12 +23,8 @@ const FishDetailInfo = ({ fish, dishList }: Props) => {
   const [fishNeedCount, setFishNeedCount] = useState<number>(0);
 
   useEffect(() => {
-    if (!fish) return;
-
     setFishNeedCount(getRecipeCountSum(fish.id, dishList));
   }, [dishList, fish]);
-
-  if (!fish) return null;
 
   return (
     <Card>

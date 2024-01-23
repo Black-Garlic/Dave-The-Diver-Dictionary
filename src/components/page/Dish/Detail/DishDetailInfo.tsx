@@ -12,12 +12,10 @@ const titleStyle: React.CSSProperties = {
 };
 
 interface Props {
-  dish?: DishWithLevel;
+  dish: DishWithLevel;
 }
 
 const DishDetailInfo = ({ dish }: Props) => {
-  if (!dish) return null;
-
   return (
     <Card>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>

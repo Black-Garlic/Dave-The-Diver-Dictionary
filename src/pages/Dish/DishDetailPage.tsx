@@ -22,11 +22,7 @@ const DishDetailPage = () => {
     }
   }, [dishList, params.id]);
 
-  return (
-    <MainTemplate>
-      <DishDetailInfo dish={dish} />
-    </MainTemplate>
-  );
+  return <MainTemplate>{dish && <DishDetailInfo dish={dish} />}</MainTemplate>;
 };
 
 export default DishDetailPage;
