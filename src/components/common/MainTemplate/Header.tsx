@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     if (location.pathname) {
-      const menu = MENU.find((menu) => menu.path.includes(location.pathname));
+      const menu = MENU.find((menu) => location.pathname.includes(menu.path));
 
       if (menu) {
         setSelectedMenu(menu.key);
