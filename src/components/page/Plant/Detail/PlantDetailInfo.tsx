@@ -1,7 +1,8 @@
-import { PlantWithDishLevel } from "@typings/Plant.ts";
 import { useEffect, useState } from "react";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
 import { Card } from "antd";
+import { useRecoilValue } from "recoil";
+import { plantDetailState } from "@services/Plant/PlantState.ts";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -13,16 +14,17 @@ const titleStyle: React.CSSProperties = {
   color: "#FFF",
 };
 
-interface Props {
-  plant: PlantWithDishLevel;
-}
-
-const PlantDetailInfo = ({ plant }: Props) => {
+const PlantDetailInfo = () => {
+  const plantDetail = useRecoilValue(plantDetailState);
   const [plantNeedCount, setPlantNeedCount] = useState<number>(0);
 
   useEffect(() => {
-    setPlantNeedCount(getRecipeCountSum(plant.id, plant.dishList));
-  }, [plant]);
+    if (plantDetail) {
+      setPlantNeedCount(
+        getRecipeCountSum(plantDetail.id, plantDetail.dishList),
+      );
+    }
+  }, [plantDetail]);
 
   return (
     <Card>
@@ -30,13 +32,13 @@ const PlantDetailInfo = ({ plant }: Props) => {
         이름
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {plant.name}
+        {plantDetail?.name}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         원산지
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {plant.source}
+        {plantDetail?.source}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>

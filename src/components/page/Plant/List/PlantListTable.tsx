@@ -9,11 +9,11 @@ import { getRecipeCountSum } from "@libs/recipeUtil.ts";
 import { Dish } from "@typings/Dish.ts";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 import { useRecoilValue } from "recoil";
-import { plantWithDishLevelListState } from "@services/Plant/PlantState.ts";
+import { plantFilterListState } from "@services/Plant/PlantState.ts";
 
 const PlantListTable = () => {
   const navigate = useNavigate();
-  const plantList = useRecoilValue(plantWithDishLevelListState);
+  const plantFilterList = useRecoilValue(plantFilterListState);
 
   const columns: ColumnsType<PlantWithDishLevel> = [
     {
@@ -101,7 +101,9 @@ const PlantListTable = () => {
     [navigate],
   );
 
-  return <Table columns={columns} dataSource={plantList} pagination={false} />;
+  return (
+    <Table columns={columns} dataSource={plantFilterList} pagination={false} />
+  );
 };
 
 export default PlantListTable;

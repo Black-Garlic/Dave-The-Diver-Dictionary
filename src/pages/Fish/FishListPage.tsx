@@ -7,13 +7,14 @@ import { fishDefaultListState } from "@services/Fish/FishState.ts";
 import { useEffect } from "react";
 import { FISH_LIST } from "@constants/Fish.ts";
 import { getFishWithDishLevelList } from "@libs/fishUtil.ts";
+import { FishWithDishLevel } from "@typings/Fish.ts";
 
 const FishListPage = () => {
   const levelList = useRecoilValue(levelListState);
   const setFishDefaultList = useSetRecoilState(fishDefaultListState);
 
   useEffect(() => {
-    const fishWithDishLevelList = getFishWithDishLevelList(
+    const fishWithDishLevelList: FishWithDishLevel[] = getFishWithDishLevelList(
       FISH_LIST,
       levelList,
     );

@@ -1,8 +1,17 @@
 import { atom } from "recoil";
-import { getPlantWithDishLevelList } from "@libs/recipeUtil.ts";
-import { PLANT_LIST } from "@constants/Plant.ts";
+import { PlantWithDishLevel } from "@typings/Plant.ts";
 
-export const plantWithDishLevelListState = atom({
-  key: "plantWithDishLevelList",
-  default: getPlantWithDishLevelList(PLANT_LIST),
+export const plantDefaultListState = atom<PlantWithDishLevel[]>({
+  key: "plantDefaultListState",
+  default: [],
+});
+
+export const plantFilterListState = atom<PlantWithDishLevel[]>({
+  key: "plantFilterListState",
+  default: [],
+});
+
+export const plantDetailState = atom<PlantWithDishLevel>({
+  key: "plantDetailState",
+  default: undefined,
 });

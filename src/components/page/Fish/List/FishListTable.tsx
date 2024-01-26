@@ -14,8 +14,7 @@ import { fishFilterListState } from "@services/Fish/FishState.ts";
 
 const FishListTable = () => {
   const navigate = useNavigate();
-  const fishFilterList: FishWithDishLevel[] =
-    useRecoilValue(fishFilterListState) || [];
+  const fishFilterList = useRecoilValue(fishFilterListState);
 
   const columns: ColumnsType<FishWithDishLevel> = [
     {

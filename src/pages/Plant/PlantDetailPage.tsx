@@ -1,19 +1,23 @@
 import { useParams } from "react-router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Plant, PlantWithDishLevel } from "@typings/Plant.ts";
 import { PLANT_LIST } from "@constants/Plant.ts";
-import { getPlantWithDishLevel } from "@libs/recipeUtil.ts";
 import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
 import { Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
-import { DishWithLevel } from "@typings/Dish.ts";
 import PlantDetailInfo from "@components/page/Plant/Detail/PlantDetailInfo.tsx";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { levelListState } from "@services/Level/LevelState.ts";
+import { plantDetailState } from "@services/Plant/PlantState.ts";
+import { dishFilterListState } from "@services/Dish/DishState.ts";
+import { getPlantWithDishLevel } from "@libs/plantUtil.ts";
 
 const PlantDetailPage = () => {
   const params = useParams();
 
-  const [plant, setPlant] = useState<PlantWithDishLevel>();
-  const [dishList, setDishList] = useState<DishWithLevel[]>([]);
+  const levelList = useRecoilValue(levelListState);
+  const setPlantDetailState = useSetRecoilState(plantDetailState);
+  const setDishFilterListState = useSetRecoilState(dishFilterListState);
 
   useEffect(() => {
     const targetPlant: Plant | undefined = PLANT_LIST.find(
@@ -21,21 +25,23 @@ const PlantDetailPage = () => {
     );
 
     if (targetPlant) {
-      const plantWithDishLevel: PlantWithDishLevel =
-        getPlantWithDishLevel(targetPlant);
+      const plantWithDishLevel: PlantWithDishLevel = getPlantWithDishLevel(
+        targetPlant,
+        levelList,
+      );
 
-      setPlant(plantWithDishLevel);
-      setDishList(plantWithDishLevel.dishList);
+      setPlantDetailState(plantWithDishLevel);
+      setDishFilterListState(plantWithDishLevel.dishList);
     }
-  }, [params.id]);
+  }, [levelList, params.id, setDishFilterListState, setPlantDetailState]);
 
   return (
     <MainTemplate>
-      {plant && <PlantDetailInfo plant={plant} />}
+      <PlantDetailInfo />
 
       <Divider />
 
-      <DishListTable dishList={dishList} setDishList={setDishList} />
+      <DishListTable />
     </MainTemplate>
   );
 };

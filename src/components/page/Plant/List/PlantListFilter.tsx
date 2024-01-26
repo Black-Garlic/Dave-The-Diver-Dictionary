@@ -1,15 +1,18 @@
-import { useSetRecoilState } from "recoil";
-import { plantWithDishLevelListState } from "@services/Plant/PlantState.ts";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import {
+  plantDefaultListState,
+  plantFilterListState,
+} from "@services/Plant/PlantState.ts";
 import { useEffect, useState } from "react";
 import { PlantWithDishLevel } from "@typings/Plant.ts";
-import { getPlantWithDishLevelList } from "@libs/recipeUtil.ts";
-import { PLANT_LIST, PLANT_SOURCE_OPTION } from "@constants/Plant.ts";
+import { PLANT_SOURCE_OPTION } from "@constants/Plant.ts";
 import { Col, Flex, Row, Select, Tag } from "antd";
 import Search from "antd/es/input/Search";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 
 const PlantListFilter = () => {
-  const setPlantList = useSetRecoilState(plantWithDishLevelListState);
+  const plantDefaultList = useRecoilValue(plantDefaultListState);
+  const setPlantFilterList = useSetRecoilState(plantFilterListState);
 
   const [source, setSource] = useState<string[]>([]);
   const [keyword, setKeyword] = useState<string>("");
@@ -44,15 +47,14 @@ const PlantListFilter = () => {
   };
 
   useEffect(() => {
-    const plantWithDishList = getPlantWithDishLevelList(PLANT_LIST);
-    const plantFilterSourceList = filterSource(plantWithDishList, source);
+    const plantFilterSourceList = filterSource(plantDefaultList, source);
     const plantFilterKeywordList = filterKeyword(
       plantFilterSourceList,
       keyword,
     );
 
-    setPlantList(plantFilterKeywordList);
-  }, [keyword, setPlantList, source]);
+    setPlantFilterList(plantFilterKeywordList);
+  }, [keyword, plantDefaultList, setPlantFilterList, source]);
 
   return (
     <Row>

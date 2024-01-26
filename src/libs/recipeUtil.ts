@@ -4,7 +4,6 @@ import { RECIPE_LEVEL_UP, RECIPE_LIST } from "@constants/Recipe.ts";
 import { LEVEL } from "@constants/Level.ts";
 import { DishRecipe } from "@typings/Recipe.ts";
 import { getDishLevelCookie, getDishWithLevelList } from "@libs/dishUtil.ts";
-import { Plant, PlantWithDishLevel } from "@typings/Plant.ts";
 import { Seasoning, SeasoningWithDishLevel } from "@typings/Seasoning.ts";
 
 export const getDish = (id: string, recipeType: RECIPE_TYPE): Dish[] => {
@@ -39,19 +38,6 @@ export const getDishWithLevelListById = (
   }
 
   return getDishWithLevelList(dishList, levelList);
-};
-
-export const getPlantWithDishLevelList = (
-  plantList: Plant[],
-): PlantWithDishLevel[] => {
-  return plantList.map((plant) => getPlantWithDishLevel(plant));
-};
-
-export const getPlantWithDishLevel = (plant: Plant): PlantWithDishLevel => {
-  return {
-    ...plant,
-    dishList: getDishWithLevelListById(plant.id, RECIPE_TYPE.PLANT),
-  };
 };
 
 export const getSeasoningWithDishLevelList = (
