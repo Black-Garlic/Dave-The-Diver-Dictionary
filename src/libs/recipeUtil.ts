@@ -2,8 +2,14 @@ import { Dish, DishWithLevel, Level } from "@typings/Dish.ts";
 import { DISH_LIST, RECIPE_TYPE } from "@constants/Dish.ts";
 import { RECIPE_LEVEL_UP, RECIPE_LIST } from "@constants/Recipe.ts";
 import { LEVEL } from "@constants/Level.ts";
-import { DishRecipe } from "@typings/Recipe.ts";
+import { DishRecipe, Recipe, RecipeInfo } from "@typings/Recipe.ts";
 import { getDishLevelCookie, getDishWithLevelList } from "@libs/dishUtil.ts";
+import { FISH_LIST } from "@constants/Fish.ts";
+import { PLANT_LIST } from "@constants/Plant.ts";
+import { SEASONING_LIST } from "@constants/Seasoning.ts";
+import { Fish } from "@typings/Fish.ts";
+import { Plant } from "@typings/Plant.ts";
+import { Seasoning } from "@typings/Seasoning.ts";
 
 export const getDish = (id: string, recipeType: RECIPE_TYPE): Dish[] => {
   const dishRecipeList = RECIPE_LIST.filter((dishRecipe) =>
@@ -39,10 +45,6 @@ export const getDishWithLevelListById = (
   return getDishWithLevelList(dishList, levelList);
 };
 
-export const getDishRecipe = (dishId: string): DishRecipe | undefined => {
-  return RECIPE_LIST.find((recipe) => recipe.dishId === dishId);
-};
-
 export const getRecipeCountSum = (
   id: string,
   dishWithLevelList: DishWithLevel[],
@@ -69,12 +71,58 @@ export const getRecipeCount = (id: string, dish: DishWithLevel): number => {
     return 0;
   }
 };
+
+export const getDishRecipe = (dishId: string): DishRecipe | undefined => {
+  return RECIPE_LIST.find((recipe) => recipe.dishId === dishId);
+};
+
 export const getRemainCount = (count: number, level: LEVEL): number => {
   const recipeLevelUpList = getRecipeLevelUpList(count);
 
   return recipeLevelUpList
     .filter((_, index) => index >= level)
     .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+};
+
+export const getRecipeInfoList = (recipeList: Recipe[]): RecipeInfo[] => {
+  const recipeInfoList: (Fish | Plant | Seasoning | undefined)[] =
+    recipeList.map((recipe) => getRecipeInfo(recipe));
+
+  const recipeInfoListExceptUndefined: RecipeInfo[] = [];
+
+  recipeInfoList.forEach((recipeInfo) => {
+    if (recipeInfo) {
+      const targetRecipe = recipeList.find(
+        (recipe) => recipe.id === recipeInfo.id,
+      );
+
+      if (targetRecipe) {
+        recipeInfoListExceptUndefined.push({
+          ...targetRecipe,
+          rank: recipeInfo.rank,
+          name: recipeInfo.name,
+        });
+      }
+    }
+  });
+
+  return recipeInfoListExceptUndefined;
+};
+
+export const getRecipeInfo = (
+  recipe: Recipe,
+): Fish | Plant | Seasoning | undefined => {
+  if (recipe.type === RECIPE_TYPE.FISH) {
+    return FISH_LIST.find((fish) => fish.id === recipe.id);
+  }
+
+  if (recipe.type === RECIPE_TYPE.PLANT) {
+    return PLANT_LIST.find((plant) => plant.id === recipe.id);
+  }
+
+  if (recipe.type === RECIPE_TYPE.SEASONING) {
+    return SEASONING_LIST.find((seasoning) => seasoning.id === recipe.id);
+  }
 };
 
 export const getRecipeLevelUpList = (count: number): number[] => {

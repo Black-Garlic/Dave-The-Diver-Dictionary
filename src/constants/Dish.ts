@@ -48,9 +48,9 @@ export const PARTY_OPTION: Option[] = [
 ];
 
 export enum RECIPE_TYPE {
-  FISH = "FISH",
-  PLANT = "PLANT",
-  SEASONING = "SEASONING",
+  FISH = "해산물",
+  PLANT = "부재료",
+  SEASONING = "조미료",
 }
 
 export const DISH_LIST: Dish[] = [
