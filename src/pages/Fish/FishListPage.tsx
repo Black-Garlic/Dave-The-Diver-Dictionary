@@ -5,8 +5,8 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { levelListState } from "@services/Level/LevelState.ts";
 import { fishDefaultListState } from "@services/Fish/FishState.ts";
 import { useEffect } from "react";
-import { getFishWithDishLevelList } from "@libs/recipeUtil.ts";
 import { FISH_LIST } from "@constants/Fish.ts";
+import { getFishWithDishLevelList } from "@libs/fishUtil.ts";
 
 const FishListPage = () => {
   const levelList = useRecoilValue(levelListState);

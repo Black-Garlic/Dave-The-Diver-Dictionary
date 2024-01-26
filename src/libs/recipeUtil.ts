@@ -1,7 +1,6 @@
 import { Dish, DishWithLevel, Level } from "@typings/Dish.ts";
 import { DISH_LIST, RECIPE_TYPE } from "@constants/Dish.ts";
 import { RECIPE_LEVEL_UP, RECIPE_LIST } from "@constants/Recipe.ts";
-import { Fish, FishWithDish, FishWithDishLevel } from "@typings/Fish.ts";
 import { LEVEL } from "@constants/Level.ts";
 import { DishRecipe } from "@typings/Recipe.ts";
 import { getDishLevelCookie, getDishWithLevelList } from "@libs/dishUtil.ts";
@@ -55,45 +54,6 @@ export const getDishWithLevelListById = (
   const levelList: Level[] = getDishLevelCookie();
 
   return getDishWithLevelList(dishList, levelList);
-};
-
-export const getFishWithDishList = (fishList: Fish[]): FishWithDish[] => {
-  return fishList.map((fish) => getFishWithDish(fish));
-};
-
-export const getFishWithDish = (fish: Fish): FishWithDish => {
-  return {
-    ...fish,
-    dishList: getDish(fish.id, RECIPE_TYPE.FISH),
-  };
-};
-
-export const getFishWithDishLevelList = (
-  fishList: Fish[],
-  levelList: Level[],
-): FishWithDishLevel[] => {
-  return fishList.map((fish) => getFishWithDishLevelArray(fish, levelList));
-};
-
-export const getFishWithDishLevelArray = (
-  fish: Fish,
-  levelList: Level[],
-): FishWithDishLevel => {
-  return {
-    ...fish,
-    dishList: getDishWithLevelListByIdAndLevelList(
-      fish.id,
-      RECIPE_TYPE.FISH,
-      levelList,
-    ),
-  };
-};
-
-export const getFishWithDishLevel = (fish: Fish): FishWithDishLevel => {
-  return {
-    ...fish,
-    dishList: getDishWithLevelListById(fish.id, RECIPE_TYPE.FISH),
-  };
 };
 
 export const getPlantWithDishLevelList = (
