@@ -1,5 +1,6 @@
 import { Card } from "antd";
-import { DishWithLevel } from "@typings/Dish.ts";
+import { useRecoilValue } from "recoil";
+import { dishDetailState } from "@services/Dish/DishState.ts";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -11,18 +12,16 @@ const titleStyle: React.CSSProperties = {
   color: "#FFF",
 };
 
-interface Props {
-  dish: DishWithLevel;
-}
+const DishDetailInfo = () => {
+  const dishDetail = useRecoilValue(dishDetailState);
 
-const DishDetailInfo = ({ dish }: Props) => {
   return (
     <Card>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         이름
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dish.name}
+        {dishDetail?.name}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         랭크
@@ -35,39 +34,39 @@ const DishDetailInfo = ({ dish }: Props) => {
         가격
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dish.maxCost}
+        {dishDetail?.maxCost}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         맛점수
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dish.maxScore}
+        {dishDetail?.maxScore}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         그릇
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dish.maxCount}
+        {dishDetail?.maxCount}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         불꽃
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dish.flame}
+        {dishDetail?.flame}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         파티
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dish.party?.map((party) => <>{party}</>)}
+        {dishDetail?.party?.map((party) => <>{party}</>)}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         레벨
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dish.level}
+        {dishDetail?.level}
       </Card.Grid>
     </Card>
   );

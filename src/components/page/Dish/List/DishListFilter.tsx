@@ -6,7 +6,7 @@ import {
 } from "@constants/Sort.ts";
 import Search from "antd/es/input/Search";
 import { useSetRecoilState } from "recoil";
-import { dishListState } from "@services/Dish/DishState.ts";
+import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { useEffect, useState } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import {
@@ -17,7 +17,7 @@ import {
 import { DISH_LIST, PARTY, PARTY_OPTION } from "@constants/Dish.ts";
 
 const DishListFilter = () => {
-  const setDishList = useSetRecoilState(dishListState);
+  const setDishFilterList = useSetRecoilState(dishFilterListState);
 
   const [sort, setSort] = useState<string>(DISH_SORT_OPTION[0].value);
   const [party, setParty] = useState<string[]>([]);
@@ -93,8 +93,8 @@ const DishListFilter = () => {
     const dishFilterPartyList = filterParty(dishSortList, party);
     const dishFilterKeywordList = filterKeyword(dishFilterPartyList, keyword);
 
-    setDishList(dishFilterKeywordList);
-  }, [keyword, party, setDishList, sort]);
+    setDishFilterList(dishFilterKeywordList);
+  }, [keyword, party, setDishFilterList, sort]);
 
   return (
     <Row>
