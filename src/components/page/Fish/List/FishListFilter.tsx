@@ -7,18 +7,20 @@ import { TIME_OPTION } from "@constants/Time.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
 import { FishWithDishLevel } from "@typings/Fish.ts";
-import { FISH_LIST } from "@constants/Fish.ts";
 import {
   FISH_SORT,
   FISH_SORT_OPTION,
   SORT_DIRECTION,
 } from "@constants/Sort.ts";
-import { useSetRecoilState } from "recoil";
-import { fishWithDishLevelListState } from "@services/Fish/FishState.ts";
-import { getFishWithDishLevelList } from "@libs/recipeUtil.ts";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import {
+  fishDefaultListState,
+  fishFilterListState,
+} from "@services/Fish/FishState.ts";
 
 const FishListFilter = () => {
-  const setFishList = useSetRecoilState(fishWithDishLevelListState);
+  const fishDefaultList = useRecoilValue(fishDefaultListState);
+  const setFishFilterList = useSetRecoilState(fishFilterListState);
 
   const [sort, setSort] = useState<string>(FISH_SORT_OPTION[0].value);
   const [rank, setRank] = useState<string[]>([]);
@@ -108,15 +110,14 @@ const FishListFilter = () => {
   };
 
   useEffect(() => {
-    const fishWithDishList = getFishWithDishLevelList(FISH_LIST);
-    const fishSortList = sortFish(fishWithDishList, sort);
+    const fishSortList = sortFish(fishDefaultList, sort);
     const fishFilterRankList = filterRank(fishSortList, rank);
     const fishFilterRegionList = filterRegion(fishFilterRankList, region);
     const fishFilterTimeList = filterTime(fishFilterRegionList, time);
     const fishFilterKeywordList = filterKeyword(fishFilterTimeList, keyword);
 
-    setFishList(fishFilterKeywordList);
-  }, [keyword, rank, region, setFishList, sort, time]);
+    setFishFilterList(fishFilterKeywordList);
+  }, [fishDefaultList, keyword, rank, region, setFishFilterList, sort, time]);
 
   return (
     <Row>

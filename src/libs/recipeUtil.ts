@@ -20,6 +20,24 @@ export const getDish = (id: string, recipeType: RECIPE_TYPE): Dish[] => {
   );
 };
 
+export const getDishWithLevelListByIdAndLevelList = (
+  id: string,
+  recipeType: RECIPE_TYPE,
+  levelList: Level[],
+): DishWithLevel[] => {
+  const dishRecipeList = RECIPE_LIST.filter((dishRecipe) =>
+    dishRecipe.recipe.some(
+      (recipe) => recipe.id === id && recipe.type === recipeType,
+    ),
+  );
+
+  const dishList: Dish[] = DISH_LIST.filter((dish) =>
+    dishRecipeList.some((dishRecipe) => dishRecipe.dishId === dish.id),
+  );
+
+  return getDishWithLevelList(dishList, levelList);
+};
+
 export const getDishWithLevelListById = (
   id: string,
   recipeType: RECIPE_TYPE,
@@ -52,8 +70,23 @@ export const getFishWithDish = (fish: Fish): FishWithDish => {
 
 export const getFishWithDishLevelList = (
   fishList: Fish[],
+  levelList: Level[],
 ): FishWithDishLevel[] => {
-  return fishList.map((fish) => getFishWithDishLevel(fish));
+  return fishList.map((fish) => getFishWithDishLevelArray(fish, levelList));
+};
+
+export const getFishWithDishLevelArray = (
+  fish: Fish,
+  levelList: Level[],
+): FishWithDishLevel => {
+  return {
+    ...fish,
+    dishList: getDishWithLevelListByIdAndLevelList(
+      fish.id,
+      RECIPE_TYPE.FISH,
+      levelList,
+    ),
+  };
 };
 
 export const getFishWithDishLevel = (fish: Fish): FishWithDishLevel => {

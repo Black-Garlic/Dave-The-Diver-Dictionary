@@ -1,20 +1,17 @@
 import { atom } from "recoil";
-import {
-  getFishWithDishLevelList,
-  getFishWithDishList,
-} from "@libs/recipeUtil.ts";
-import { FISH_LIST } from "@constants/Fish.ts";
+import { FishWithDishLevel } from "@typings/Fish.ts";
 
-export const fishListState = atom({
-  key: "fishList",
-  default: getFishWithDishList(FISH_LIST),
+export const fishDefaultListState = atom<FishWithDishLevel[]>({
+  key: "fishDefaultListState",
+  default: [],
 });
 
-export const fishWithDishLevelListState = atom({
-  key: "fishWithDishLevelList",
-  default: getFishWithDishLevelList(FISH_LIST),
+export const fishFilterListState = atom<FishWithDishLevel[]>({
+  key: "fishFilterListState",
+  default: [],
 });
 
-export const fishDetailState = atom({
-  key: "fishDetail",
+export const fishDetailState = atom<FishWithDishLevel>({
+  key: "fishDetailState",
+  default: undefined,
 });

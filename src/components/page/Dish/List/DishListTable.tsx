@@ -1,20 +1,20 @@
 import { ColumnsType } from "antd/es/table";
 import { Dish, DishWithLevel } from "@typings/Dish.ts";
 import { Select, Space, Table } from "antd";
-import { Dispatch, SetStateAction, useCallback } from "react";
+import { useCallback } from "react";
 import { DISH_DETAIL_ROUTE } from "@constants/Route.ts";
 import { useNavigate } from "react-router-dom";
 import { LEVEL_LABEL, LEVEL_OPTION } from "@constants/Level.ts";
-import { getDishWithLevelList, setDishLevelCookie } from "@libs/dishUtil.ts";
 import { getLevel } from "@libs/levelUtil.ts";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { dishFilterListState } from "@services/Dish/DishState.ts";
+import { levelListState } from "@services/Level/LevelState.ts";
 
-interface Props {
-  dishList: DishWithLevel[];
-  setDishList: Dispatch<SetStateAction<DishWithLevel[]>>;
-}
-
-const DishListTable = ({ dishList, setDishList }: Props) => {
+const DishListTable = () => {
   const navigate = useNavigate();
+
+  const dishList = useRecoilValue(dishFilterListState);
+  const [levelList, setLevelListState] = useRecoilState(levelListState);
 
   const columns: ColumnsType<DishWithLevel> = [
     {
@@ -103,10 +103,17 @@ const DishListTable = ({ dishList, setDishList }: Props) => {
 
   const handleChangeDishLevel = useCallback(
     (id: string, selectedLevel: string) => {
-      const newDishList = setDishLevelCookie(id, getLevel(selectedLevel));
-      setDishList(getDishWithLevelList(dishList, newDishList));
+      const newLevelList = levelList.map((level) => {
+        if (level.id === id) {
+          return { ...level, level: getLevel(selectedLevel) };
+        } else {
+          return level;
+        }
+      });
+
+      setLevelListState(newLevelList);
     },
-    [dishList, setDishList],
+    [levelList, setLevelListState],
   );
 
   return <Table columns={columns} dataSource={dishList} pagination={false} />;

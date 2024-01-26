@@ -4,17 +4,18 @@ import { FishWithDishLevel } from "@typings/Fish.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
 import { useRecoilValue } from "recoil";
-import { fishWithDishLevelListState } from "@services/Fish/FishState.ts";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 import { DISH_DETAIL_ROUTE, FISH_DETAIL_ROUTE } from "@constants/Route.ts";
 import { Dish } from "@typings/Dish.ts";
 import { LEVEL_LABEL } from "@constants/Level.ts";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
+import { fishFilterListState } from "@services/Fish/FishState.ts";
 
 const FishListTable = () => {
   const navigate = useNavigate();
-  const fishList = useRecoilValue(fishWithDishLevelListState);
+  const fishFilterList: FishWithDishLevel[] =
+    useRecoilValue(fishFilterListState) || [];
 
   const columns: ColumnsType<FishWithDishLevel> = [
     {
@@ -127,7 +128,9 @@ const FishListTable = () => {
     [navigate],
   );
 
-  return <Table columns={columns} dataSource={fishList} pagination={false} />;
+  return (
+    <Table columns={columns} dataSource={fishFilterList} pagination={false} />
+  );
 };
 
 export default FishListTable;
