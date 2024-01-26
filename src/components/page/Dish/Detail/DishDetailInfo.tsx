@@ -1,6 +1,10 @@
-import { Card } from "antd";
-import { useRecoilValue } from "recoil";
+import { Card, Select } from "antd";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { dishDetailState } from "@services/Dish/DishState.ts";
+import { levelListState } from "@services/Level/LevelState.ts";
+import { useCallback } from "react";
+import { getLevel } from "@libs/levelUtil.ts";
+import { LEVEL_LABEL, LEVEL_OPTION } from "@constants/Level.ts";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -14,6 +18,22 @@ const titleStyle: React.CSSProperties = {
 
 const DishDetailInfo = () => {
   const dishDetail = useRecoilValue(dishDetailState);
+  const [levelList, setLevelListState] = useRecoilState(levelListState);
+
+  const handleChangeDishLevel = useCallback(
+    (id: string, selectedLevel: string) => {
+      const newLevelList = levelList.map((level) => {
+        if (level.id === id) {
+          return { ...level, level: getLevel(selectedLevel) };
+        } else {
+          return level;
+        }
+      });
+
+      setLevelListState(newLevelList);
+    },
+    [levelList, setLevelListState],
+  );
 
   return (
     <Card>
@@ -66,7 +86,17 @@ const DishDetailInfo = () => {
         레벨
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetail?.level}
+        <Select
+          style={{ width: "100%" }}
+          onChange={(selectedLevel) =>
+            handleChangeDishLevel(dishDetail?.id, selectedLevel)
+          }
+          options={LEVEL_OPTION}
+          value={LEVEL_LABEL[dishDetail?.level - 1]}
+          placeholder="레벨"
+          maxTagCount={"responsive"}
+          listHeight={350}
+        />
       </Card.Grid>
     </Card>
   );
