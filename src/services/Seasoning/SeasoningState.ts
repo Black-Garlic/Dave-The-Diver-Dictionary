@@ -1,8 +1,17 @@
 import { atom } from "recoil";
-import { getSeasoningWithDishLevelList } from "@libs/recipeUtil.ts";
-import { SEASONING_LIST } from "@constants/Seasoning.ts";
+import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
 
-export const seasoningWithDishLevelListState = atom({
-  key: "seasoningWithDishLevelList",
-  default: getSeasoningWithDishLevelList(SEASONING_LIST),
+export const seasoningDefaultListState = atom<SeasoningWithDishLevel[]>({
+  key: "seasoningDefaultListState",
+  default: [],
+});
+
+export const seasoningFilterListState = atom<SeasoningWithDishLevel[]>({
+  key: "seasoningFilterListState",
+  default: [],
+});
+
+export const seasoningDetailState = atom<SeasoningWithDishLevel>({
+  key: "seasoningDetailState",
+  default: undefined,
 });

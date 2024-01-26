@@ -1,18 +1,18 @@
-import { useSetRecoilState } from "recoil";
-import { seasoningWithDishLevelListState } from "@services/Seasoning/SeasoningState.ts";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import {
+  seasoningDefaultListState,
+  seasoningFilterListState,
+} from "@services/Seasoning/SeasoningState.ts";
 import { useEffect, useState } from "react";
 import { Col, Flex, Row, Select, Tag } from "antd";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 import Search from "antd/es/input/Search";
-import { getSeasoningWithDishLevelList } from "@libs/recipeUtil.ts";
-import {
-  SEASONING_LIST,
-  SEASONING_SOURCE_OPTIONS,
-} from "@constants/Seasoning.ts";
+import { SEASONING_SOURCE_OPTIONS } from "@constants/Seasoning.ts";
 import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
 
 const SeasoningListFilter = () => {
-  const setSeasoningList = useSetRecoilState(seasoningWithDishLevelListState);
+  const seasoningDefaultList = useRecoilValue(seasoningDefaultListState);
+  const setSeasoningFilterList = useSetRecoilState(seasoningFilterListState);
 
   const [source, setSource] = useState<string[]>([]);
   const [keyword, setKeyword] = useState<string>("");
@@ -47,9 +47,8 @@ const SeasoningListFilter = () => {
   };
 
   useEffect(() => {
-    const seasoningWithDishList = getSeasoningWithDishLevelList(SEASONING_LIST);
     const seasoningFilterSourceList = filterSource(
-      seasoningWithDishList,
+      seasoningDefaultList,
       source,
     );
     const seasoningFilterKeywordList = filterKeyword(
@@ -57,8 +56,8 @@ const SeasoningListFilter = () => {
       keyword,
     );
 
-    setSeasoningList(seasoningFilterKeywordList);
-  }, [keyword, setSeasoningList, source]);
+    setSeasoningFilterList(seasoningFilterKeywordList);
+  }, [keyword, seasoningDefaultList, setSeasoningFilterList, source]);
 
   return (
     <Row>

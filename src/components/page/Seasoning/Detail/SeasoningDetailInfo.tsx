@@ -1,7 +1,8 @@
-import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
 import { useEffect, useState } from "react";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
 import { Card } from "antd";
+import { useRecoilValue } from "recoil";
+import { seasoningDetailState } from "@services/Seasoning/SeasoningState.ts";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -13,16 +14,17 @@ const titleStyle: React.CSSProperties = {
   color: "#FFF",
 };
 
-interface Props {
-  seasoning: SeasoningWithDishLevel;
-}
-
-const SeasoningDetailInfo = ({ seasoning }: Props) => {
+const SeasoningDetailInfo = () => {
+  const seasoningDetail = useRecoilValue(seasoningDetailState);
   const [seasoningNeedCount, setSeasoningNeedCount] = useState<number>(0);
 
   useEffect(() => {
-    setSeasoningNeedCount(getRecipeCountSum(seasoning.id, seasoning.dishList));
-  }, [seasoning]);
+    if (seasoningDetail) {
+      setSeasoningNeedCount(
+        getRecipeCountSum(seasoningDetail.id, seasoningDetail.dishList),
+      );
+    }
+  }, [seasoningDetail]);
 
   return (
     <Card>
@@ -30,13 +32,13 @@ const SeasoningDetailInfo = ({ seasoning }: Props) => {
         이름
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {seasoning.name}
+        {seasoningDetail?.name}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         원산지
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {seasoning.source}
+        {seasoningDetail?.source}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>

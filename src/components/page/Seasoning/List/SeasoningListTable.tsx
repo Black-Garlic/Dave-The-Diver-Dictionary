@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-import { seasoningWithDishLevelListState } from "@services/Seasoning/SeasoningState.ts";
+import { seasoningFilterListState } from "@services/Seasoning/SeasoningState.ts";
 import { useCallback } from "react";
 import { Dish } from "@typings/Dish.ts";
 import { DISH_DETAIL_ROUTE, SEASONING_DETAIL_ROUTE } from "@constants/Route.ts";
@@ -13,7 +13,7 @@ import { LEVEL_LABEL } from "@constants/Level.ts";
 
 const SeasoningListTable = () => {
   const navigate = useNavigate();
-  const seasoningList = useRecoilValue(seasoningWithDishLevelListState);
+  const seasoningFilterList = useRecoilValue(seasoningFilterListState);
 
   const columns: ColumnsType<SeasoningWithDishLevel> = [
     {
@@ -104,7 +104,11 @@ const SeasoningListTable = () => {
   );
 
   return (
-    <Table columns={columns} dataSource={seasoningList} pagination={false} />
+    <Table
+      columns={columns}
+      dataSource={seasoningFilterList}
+      pagination={false}
+    />
   );
 };
 
