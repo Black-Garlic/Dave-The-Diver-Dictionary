@@ -27,9 +27,12 @@ export const getFishWithDishLevelArray = (
   };
 };
 
-export const getFishWithDishLevel = (fish: Fish): FishWithDishLevel => {
+export const getFishWithDishLevel = (
+  fish: Fish,
+  levelList: Level[],
+): FishWithDishLevel => {
   return {
     ...fish,
-    dishList: getDishWithLevelListById(fish.id, RECIPE_TYPE.FISH),
+    dishList: getDishWithLevelListById(fish.id, RECIPE_TYPE.FISH, levelList),
   };
 };

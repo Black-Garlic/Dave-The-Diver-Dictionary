@@ -40,6 +40,7 @@ export const getDishWithLevelListByIdAndLevelList = (
 export const getDishWithLevelListById = (
   id: string,
   recipeType: RECIPE_TYPE,
+  levelList?: Level[],
 ): DishWithLevel[] => {
   const dishRecipeList = RECIPE_LIST.filter((dishRecipe) =>
     dishRecipe.recipe.some(
@@ -51,7 +52,9 @@ export const getDishWithLevelListById = (
     dishRecipeList.some((dishRecipe) => dishRecipe.dishId === dish.id),
   );
 
-  const levelList: Level[] = getDishLevelCookie();
+  if (!levelList) {
+    levelList = getDishLevelCookie();
+  }
 
   return getDishWithLevelList(dishList, levelList);
 };
