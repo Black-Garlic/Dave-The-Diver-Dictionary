@@ -12,6 +12,8 @@ import {
   SEASONING_LIST_ROUTE,
 } from "@constants/Route.ts";
 
+const HomePage = loadable(() => import("@pages/Home/HomePage"));
+
 const FishListPage = loadable(() => import("@pages/Fish/FishListPage"));
 const FishDetailPage = loadable(() => import("@pages/Fish/FishDetailPage"));
 
@@ -31,7 +33,7 @@ const DishDetailPage = loadable(() => import("@pages/Dish/DishDetailPage"));
 export const routerConfig = [
   {
     path: HOME_ROUTE.path,
-    element: <FishListPage />,
+    element: <HomePage />,
   },
   { path: FISH_LIST_ROUTE.path, element: <FishListPage /> },
   { path: FISH_DETAIL_ROUTE.path, element: <FishDetailPage /> },
