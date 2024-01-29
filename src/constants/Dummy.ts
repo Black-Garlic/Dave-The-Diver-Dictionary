@@ -496,7 +496,7 @@ export const LEVEL_DUMMY: Level[] = [
   },
   {
     id: "Alaska_Pollock_Sushi",
-    level: LEVEL.NINE,
+    level: LEVEL.TEN,
   },
   {
     id: "Lumpfish_Sushi",
