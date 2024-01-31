@@ -5,7 +5,7 @@ import {
 } from "@services/Plant/PlantState.ts";
 import { useEffect, useState } from "react";
 import { PlantWithDishLevel } from "@typings/Plant.ts";
-import { PLANT_SOURCE_OPTION } from "@constants/Plant.ts";
+import { PLANT_SOURCE, PLANT_SOURCE_OPTION } from "@constants/Plant.ts";
 import { Col, Flex, Row, Select, Tag } from "antd";
 import Search from "antd/es/input/Search";
 import { getSourceColor } from "@libs/sourceUtil.ts";
@@ -19,12 +19,32 @@ const PlantListFilter = () => {
 
   const filterSource = (
     plantList: PlantWithDishLevel[],
-    source: string[],
+    source: string[]
   ): PlantWithDishLevel[] => {
     if (source.length > 0) {
-      return plantList.filter((plant) =>
-        source.some((sourceOption) => sourceOption === plant.source),
-      );
+      return plantList.filter((plant) => {
+        const filterSourceList: string[] = [];
+
+        source.forEach((sourceOption) => {
+          if (sourceOption === PLANT_SOURCE.BLUE_HOLE) {
+            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE);
+            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE_SHALLOWS);
+            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH);
+          } else if (sourceOption === PLANT_SOURCE.BLUE_HOLE_SHALLOWS) {
+            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE);
+            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE_SHALLOWS);
+          } else if (sourceOption === PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH) {
+            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE);
+            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH);
+          } else {
+            filterSourceList.push(sourceOption);
+          }
+        });
+
+        return filterSourceList.some(
+          (sourceOption) => sourceOption === plant.source
+        );
+      });
     } else {
       return plantList;
     }
@@ -32,14 +52,14 @@ const PlantListFilter = () => {
 
   const filterKeyword = (
     plantList: PlantWithDishLevel[],
-    keyword: string,
+    keyword: string
   ): PlantWithDishLevel[] => {
     if (keyword !== "") {
       return plantList.filter(
         (plant) =>
           plant.name.includes(keyword) ||
           plant.source.includes(keyword) ||
-          plant.dishList.some((dish) => dish.name.includes(keyword)),
+          plant.dishList.some((dish) => dish.name.includes(keyword))
       );
     } else {
       return plantList;
@@ -50,7 +70,7 @@ const PlantListFilter = () => {
     const plantFilterSourceList = filterSource(plantDefaultList, source);
     const plantFilterKeywordList = filterKeyword(
       plantFilterSourceList,
-      keyword,
+      keyword
     );
 
     setPlantFilterList(plantFilterKeywordList);
