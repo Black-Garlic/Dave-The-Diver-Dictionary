@@ -19,32 +19,28 @@ const PlantListFilter = () => {
 
   const filterSource = (
     plantList: PlantWithDishLevel[],
-    source: string[]
+    source: string[],
   ): PlantWithDishLevel[] => {
     if (source.length > 0) {
-      return plantList.filter((plant) => {
-        const filterSourceList: string[] = [];
+      const filterSourceSet: Set<string> = new Set();
 
-        source.forEach((sourceOption) => {
-          if (sourceOption === PLANT_SOURCE.BLUE_HOLE) {
-            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE);
-            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE_SHALLOWS);
-            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH);
-          } else if (sourceOption === PLANT_SOURCE.BLUE_HOLE_SHALLOWS) {
-            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE);
-            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE_SHALLOWS);
-          } else if (sourceOption === PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH) {
-            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE);
-            filterSourceList.push(PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH);
-          } else {
-            filterSourceList.push(sourceOption);
-          }
-        });
-
-        return filterSourceList.some(
-          (sourceOption) => sourceOption === plant.source
-        );
+      source.forEach((sourceOption) => {
+        if (sourceOption === PLANT_SOURCE.BLUE_HOLE) {
+          filterSourceSet.add(PLANT_SOURCE.BLUE_HOLE);
+          filterSourceSet.add(PLANT_SOURCE.BLUE_HOLE_SHALLOWS);
+          filterSourceSet.add(PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH);
+        } else if (sourceOption === PLANT_SOURCE.BLUE_HOLE_SHALLOWS) {
+          filterSourceSet.add(PLANT_SOURCE.BLUE_HOLE);
+          filterSourceSet.add(PLANT_SOURCE.BLUE_HOLE_SHALLOWS);
+        } else if (sourceOption === PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH) {
+          filterSourceSet.add(PLANT_SOURCE.BLUE_HOLE);
+          filterSourceSet.add(PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH);
+        } else {
+          filterSourceSet.add(sourceOption);
+        }
       });
+
+      return plantList.filter((plant) => filterSourceSet.has(plant.source));
     } else {
       return plantList;
     }
@@ -52,14 +48,14 @@ const PlantListFilter = () => {
 
   const filterKeyword = (
     plantList: PlantWithDishLevel[],
-    keyword: string
+    keyword: string,
   ): PlantWithDishLevel[] => {
     if (keyword !== "") {
       return plantList.filter(
         (plant) =>
           plant.name.includes(keyword) ||
           plant.source.includes(keyword) ||
-          plant.dishList.some((dish) => dish.name.includes(keyword))
+          plant.dishList.some((dish) => dish.name.includes(keyword)),
       );
     } else {
       return plantList;
@@ -70,7 +66,7 @@ const PlantListFilter = () => {
     const plantFilterSourceList = filterSource(plantDefaultList, source);
     const plantFilterKeywordList = filterKeyword(
       plantFilterSourceList,
-      keyword
+      keyword,
     );
 
     setPlantFilterList(plantFilterKeywordList);
