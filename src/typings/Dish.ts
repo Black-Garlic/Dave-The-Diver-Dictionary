@@ -8,6 +8,7 @@ export interface Dish {
   maxCost: number;
   maxScore: number;
   maxCount: number;
+  maxLevel: LEVEL;
   flame?: number;
   party?: PARTY[];
 }

@@ -4,8 +4,8 @@ import { Select, Space, Table } from "antd";
 import { useCallback } from "react";
 import { DISH_DETAIL_ROUTE } from "@constants/Route.ts";
 import { useNavigate } from "react-router-dom";
-import { LEVEL_LABEL, LEVEL_OPTION } from "@constants/Level.ts";
-import { getLevel } from "@libs/levelUtil.ts";
+import { LEVEL_LABEL } from "@constants/Level.ts";
+import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { levelListState } from "@services/Level/LevelState.ts";
@@ -80,11 +80,11 @@ const DishListTable = () => {
       dataIndex: "level",
       align: "center",
       width: 250,
-      render: (_, { id, level }) => (
+      render: (_, { id, level, maxLevel }) => (
         <Select
           style={{ width: "100%" }}
           onChange={(selectedLevel) => handleChangeDishLevel(id, selectedLevel)}
-          options={LEVEL_OPTION}
+          options={getLevelOption(maxLevel)}
           value={LEVEL_LABEL[level - 1]}
           placeholder="레벨"
           maxTagCount={"responsive"}

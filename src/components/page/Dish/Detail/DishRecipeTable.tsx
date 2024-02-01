@@ -52,7 +52,9 @@ const DishRecipeTable = () => {
       dataIndex: "need",
       align: "center",
       width: 250,
-      render: (_, { count }) => <>{getRemainCount(count, dishDetail.level)}</>,
+      render: (_, { count }) => (
+        <>{getRemainCount(count, dishDetail.level, dishDetail.maxLevel)}</>
+      ),
     },
   ];
 

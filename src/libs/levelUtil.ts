@@ -1,4 +1,9 @@
-import { LEVEL } from "@constants/Level.ts";
+import { LEVEL, LEVEL_OPTION } from "@constants/Level.ts";
+import { Option } from "@typings/Option.ts";
+
+export const getLevelOption = (level: LEVEL): Option[] => {
+  return LEVEL_OPTION.filter((_, index) => index < level);
+};
 
 export const getLevel = (level: string): LEVEL => {
   switch (parseInt(level)) {

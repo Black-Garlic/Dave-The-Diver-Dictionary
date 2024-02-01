@@ -66,7 +66,7 @@ export const getRecipeCount = (id: string, dish: DishWithLevel): number => {
       }
     });
 
-    return getRemainCount(recipeCount, dish.level);
+    return getRemainCount(recipeCount, dish.level, dish.maxLevel);
   } else {
     return 0;
   }
@@ -76,10 +76,13 @@ export const getDishRecipe = (dishId: string): DishRecipe | undefined => {
   return RECIPE_LIST.find((recipe) => recipe.dishId === dishId);
 };
 
-export const getRemainCount = (count: number, level: LEVEL): number => {
-  const recipeLevelUpList = getRecipeLevelUpList(count);
-
-  return recipeLevelUpList
+export const getRemainCount = (
+  count: number,
+  level: LEVEL,
+  maxLevel: LEVEL,
+): number => {
+  return getRecipeLevelUpList(count)
+    .filter((_, index) => index < maxLevel)
     .filter((_, index) => index >= level)
     .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 };

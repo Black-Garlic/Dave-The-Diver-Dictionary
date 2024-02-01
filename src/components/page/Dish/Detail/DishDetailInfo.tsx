@@ -3,8 +3,8 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { dishDetailState } from "@services/Dish/DishState.ts";
 import { levelListState } from "@services/Level/LevelState.ts";
 import { useCallback } from "react";
-import { getLevel } from "@libs/levelUtil.ts";
-import { LEVEL_LABEL, LEVEL_OPTION } from "@constants/Level.ts";
+import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
+import { LEVEL_LABEL } from "@constants/Level.ts";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -91,7 +91,7 @@ const DishDetailInfo = () => {
           onChange={(selectedLevel) =>
             handleChangeDishLevel(dishDetail?.id, selectedLevel)
           }
-          options={LEVEL_OPTION}
+          options={getLevelOption(dishDetail?.maxLevel)}
           value={LEVEL_LABEL[dishDetail?.level - 1]}
           placeholder="레벨"
           maxTagCount={"responsive"}
