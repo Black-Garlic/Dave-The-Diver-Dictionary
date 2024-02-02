@@ -19,3 +19,5 @@ export const SEASONING_DETAIL_ROUTE: Route = {
 
 export const DISH_LIST_ROUTE: Route = { name: "요리", path: "/dish" };
 export const DISH_DETAIL_ROUTE: Route = { name: "custom", path: "/dish/:id" };
+
+export const SUSHI_ROUTE: Route = { name: "초밥", path: "/sushi" };
