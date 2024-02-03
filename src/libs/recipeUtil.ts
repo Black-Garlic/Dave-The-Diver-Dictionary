@@ -11,18 +11,6 @@ import { Fish } from "@typings/Fish.ts";
 import { Plant } from "@typings/Plant.ts";
 import { Seasoning } from "@typings/Seasoning.ts";
 
-export const getDish = (id: string, recipeType: RECIPE_TYPE): Dish[] => {
-  const dishRecipeList = RECIPE_LIST.filter((dishRecipe) =>
-    dishRecipe.recipe.some(
-      (recipe) => recipe.id === id && recipe.type === recipeType,
-    ),
-  );
-
-  return DISH_LIST.filter((dish) =>
-    dishRecipeList.some((dishRecipe) => dishRecipe.dishId === dish.id),
-  );
-};
-
 export const getDishWithLevelListById = (
   id: string,
   recipeType: RECIPE_TYPE,
