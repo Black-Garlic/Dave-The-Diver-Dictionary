@@ -8,7 +8,7 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { levelListState } from "@services/Level/LevelState.ts";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 
-const DishCountPage = () => {
+const SalesPage = () => {
   const levelList = useRecoilValue(levelListState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
 
@@ -28,4 +28,4 @@ const DishCountPage = () => {
   );
 };
 
-export default DishCountPage;
+export default SalesPage;

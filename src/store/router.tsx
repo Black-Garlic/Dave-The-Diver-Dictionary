@@ -10,7 +10,7 @@ import {
   PLANT_LIST_ROUTE,
   SEASONING_DETAIL_ROUTE,
   SEASONING_LIST_ROUTE,
-  DISH_COUNT_ROUTE,
+  SALES_ROUTE,
 } from "@constants/Route.ts";
 
 const HomePage = loadable(() => import("@pages/Home/HomePage"));
@@ -31,9 +31,7 @@ const SeasoningDetailPage = loadable(
 const DishListPage = loadable(() => import("@pages/Dish/DistListPage"));
 const DishDetailPage = loadable(() => import("@pages/Dish/DishDetailPage"));
 
-const DishCountPage = loadable(
-  () => import("@pages/DishCount/DishCountPage.tsx"),
-);
+const DishCountPage = loadable(() => import("@pages/Sales/SalesPage.tsx"));
 
 export const routerConfig = [
   {
@@ -48,7 +46,7 @@ export const routerConfig = [
   { path: SEASONING_DETAIL_ROUTE.path, element: <SeasoningDetailPage /> },
   { path: DISH_LIST_ROUTE.path, element: <DishListPage /> },
   { path: DISH_DETAIL_ROUTE.path, element: <DishDetailPage /> },
-  { path: DISH_COUNT_ROUTE.path, element: <DishCountPage /> },
+  { path: SALES_ROUTE.path, element: <DishCountPage /> },
 ];
 
 export const router = createBrowserRouter(routerConfig);
