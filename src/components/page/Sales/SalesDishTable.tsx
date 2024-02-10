@@ -7,8 +7,8 @@ import { salesListState } from "@services/Sales/SalesState.ts";
 import { Sales } from "@typings/Sales.ts";
 
 const SalesDishTable = () => {
-  const [dishListState, setDishListState] = useRecoilState(dishFilterListState);
-  const setSalesListState = useSetRecoilState(salesListState);
+  const [dishListValue, setDishList] = useRecoilState(dishFilterListState);
+  const setSalesList = useSetRecoilState(salesListState);
 
   const columns: ColumnsType<DishWithLevel> = [
     {
@@ -80,14 +80,12 @@ const SalesDishTable = () => {
       dish: dishWithLevel,
     };
 
-    setSalesListState((prev) => [...prev, sales]);
-    setDishListState((prev) =>
-      prev.filter((dish) => dish.id !== dishWithLevel.id),
-    );
+    setSalesList((prev) => [...prev, sales]);
+    setDishList((prev) => prev.filter((dish) => dish.id !== dishWithLevel.id));
   };
 
   return (
-    <Table columns={columns} dataSource={dishListState} pagination={false} />
+    <Table columns={columns} dataSource={dishListValue} pagination={false} />
   );
 };
 

@@ -5,13 +5,12 @@ import { useRecoilValue } from "recoil";
 import { salesListState } from "@services/Sales/SalesState.ts";
 
 const SalesInfo = () => {
-  const [cookStar, setCookStar] = useState<string>("0");
-  const salesList = useRecoilValue(salesListState);
+  const salesListValue = useRecoilValue(salesListState);
 
-  console.log(salesList);
+  const [cookStar, setCookStar] = useState<string>("0");
 
   const getSalesCount = () => {
-    return salesList.reduce(
+    return salesListValue.reduce(
       (accumulator, currentValue) =>
         accumulator + currentValue.count * currentValue.dish.maxCount,
       0,

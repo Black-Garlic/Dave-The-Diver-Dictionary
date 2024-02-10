@@ -10,15 +10,15 @@ import { getSeasoningWithDishLevelList } from "@libs/seasoningUtil.ts";
 import { SEASONING_LIST } from "@constants/Seasoning.ts";
 
 const SeasoningListPage = () => {
-  const levelList = useRecoilValue(levelListState);
+  const levelListValue = useRecoilValue(levelListState);
   const setSeasoningDefaultList = useSetRecoilState(seasoningDefaultListState);
 
   useEffect(() => {
     const seasoningWithDishLevelList: SeasoningWithDishLevel[] =
-      getSeasoningWithDishLevelList(SEASONING_LIST, levelList);
+      getSeasoningWithDishLevelList(SEASONING_LIST, levelListValue);
 
     setSeasoningDefaultList(seasoningWithDishLevelList);
-  }, [levelList, setSeasoningDefaultList]);
+  }, [levelListValue, setSeasoningDefaultList]);
 
   return (
     <MainTemplate>

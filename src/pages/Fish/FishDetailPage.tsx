@@ -15,9 +15,9 @@ import { levelListState } from "@services/Level/LevelState.ts";
 const FishDetailPage = () => {
   const params = useParams();
 
-  const levelList = useRecoilValue(levelListState);
-  const setFishDetailState = useSetRecoilState(fishDetailState);
-  const setDishFilterListState = useSetRecoilState(dishFilterListState);
+  const levelListValue = useRecoilValue(levelListState);
+  const setFishDetail = useSetRecoilState(fishDetailState);
+  const setDishFilterList = useSetRecoilState(dishFilterListState);
 
   useEffect(() => {
     const targetFish: Fish | undefined = FISH_LIST.find(
@@ -27,13 +27,13 @@ const FishDetailPage = () => {
     if (targetFish) {
       const fishWithDishLevel: FishWithDishLevel = getFishWithDishLevel(
         targetFish,
-        levelList,
+        levelListValue,
       );
 
-      setFishDetailState(fishWithDishLevel);
-      setDishFilterListState(fishWithDishLevel.dishList);
+      setFishDetail(fishWithDishLevel);
+      setDishFilterList(fishWithDishLevel.dishList);
     }
-  }, [levelList, params, setDishFilterListState, setFishDetailState]);
+  }, [levelListValue, params, setDishFilterList, setFishDetail]);
 
   return (
     <MainTemplate>

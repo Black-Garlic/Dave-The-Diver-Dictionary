@@ -15,9 +15,9 @@ import { getSeasoningWithDishLevel } from "@libs/seasoningUtil.ts";
 const SeasoningDetailPage = () => {
   const params = useParams();
 
-  const levelList = useRecoilValue(levelListState);
-  const setSeasoningDetailState = useSetRecoilState(seasoningDetailState);
-  const setDishFilterListState = useSetRecoilState(dishFilterListState);
+  const levelListValue = useRecoilValue(levelListState);
+  const setSeasoningDetail = useSetRecoilState(seasoningDetailState);
+  const setDishFilterList = useSetRecoilState(dishFilterListState);
 
   useEffect(() => {
     const targetSeasoning: Seasoning | undefined = SEASONING_LIST.find(
@@ -26,12 +26,12 @@ const SeasoningDetailPage = () => {
 
     if (targetSeasoning) {
       const seasoningWithDishLevel: SeasoningWithDishLevel =
-        getSeasoningWithDishLevel(targetSeasoning, levelList);
+        getSeasoningWithDishLevel(targetSeasoning, levelListValue);
 
-      setSeasoningDetailState(seasoningWithDishLevel);
-      setDishFilterListState(seasoningWithDishLevel.dishList);
+      setSeasoningDetail(seasoningWithDishLevel);
+      setDishFilterList(seasoningWithDishLevel.dishList);
     }
-  }, [levelList, params.id, setDishFilterListState, setSeasoningDetailState]);
+  }, [levelListValue, params.id, setDishFilterList, setSeasoningDetail]);
 
   return (
     <MainTemplate>

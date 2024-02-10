@@ -15,16 +15,20 @@ const titleStyle: React.CSSProperties = {
 };
 
 const SeasoningDetailInfo = () => {
-  const seasoningDetail = useRecoilValue(seasoningDetailState);
+  const seasoningDetailValue = useRecoilValue(seasoningDetailState);
+
   const [seasoningNeedCount, setSeasoningNeedCount] = useState<number>(0);
 
   useEffect(() => {
-    if (seasoningDetail) {
+    if (seasoningDetailValue) {
       setSeasoningNeedCount(
-        getRecipeCountSum(seasoningDetail.id, seasoningDetail.dishList),
+        getRecipeCountSum(
+          seasoningDetailValue.id,
+          seasoningDetailValue.dishList,
+        ),
       );
     }
-  }, [seasoningDetail]);
+  }, [seasoningDetailValue]);
 
   return (
     <Card>
@@ -32,13 +36,13 @@ const SeasoningDetailInfo = () => {
         이름
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {seasoningDetail?.name}
+        {seasoningDetailValue?.name}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         원산지
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {seasoningDetail?.source}
+        {seasoningDetailValue?.source}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>

@@ -13,7 +13,8 @@ import { plantFilterListState } from "@services/Plant/PlantState.ts";
 
 const PlantListTable = () => {
   const navigate = useNavigate();
-  const plantFilterList = useRecoilValue(plantFilterListState);
+
+  const plantFilterListValue = useRecoilValue(plantFilterListState);
 
   const columns: ColumnsType<PlantWithDishLevel> = [
     {
@@ -102,7 +103,11 @@ const PlantListTable = () => {
   );
 
   return (
-    <Table columns={columns} dataSource={plantFilterList} pagination={false} />
+    <Table
+      columns={columns}
+      dataSource={plantFilterListValue}
+      pagination={false}
+    />
   );
 };
 

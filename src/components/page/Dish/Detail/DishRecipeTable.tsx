@@ -16,8 +16,8 @@ import { getRemainCount } from "@libs/recipeUtil.ts";
 const DishRecipeTable = () => {
   const navigate = useNavigate();
 
-  const dishDetail = useRecoilValue(dishDetailState);
-  const recipeList = useRecoilValue(recipeListState);
+  const dishDetailValue = useRecoilValue(dishDetailState);
+  const recipeListValue = useRecoilValue(recipeListState);
 
   const columns: ColumnsType<RecipeInfo> = [
     {
@@ -53,7 +53,13 @@ const DishRecipeTable = () => {
       align: "center",
       width: 250,
       render: (_, { count }) => (
-        <>{getRemainCount(count, dishDetail.level, dishDetail.maxLevel)}</>
+        <>
+          {getRemainCount(
+            count,
+            dishDetailValue.level,
+            dishDetailValue.maxLevel,
+          )}
+        </>
       ),
     },
   ];
@@ -78,7 +84,7 @@ const DishRecipeTable = () => {
   return (
     <Table
       columns={columns}
-      dataSource={recipeList}
+      dataSource={recipeListValue}
       pagination={false}
       onRow={(recipeInfo) => ({
         onClick: () => handleClickRow(recipeInfo),

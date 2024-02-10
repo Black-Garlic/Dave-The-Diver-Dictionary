@@ -19,7 +19,7 @@ import {
 } from "@services/Fish/FishState.ts";
 
 const FishListFilter = () => {
-  const fishDefaultList = useRecoilValue(fishDefaultListState);
+  const fishDefaultListValue = useRecoilValue(fishDefaultListState);
   const setFishFilterList = useSetRecoilState(fishFilterListState);
 
   const [sort, setSort] = useState<string>(FISH_SORT_OPTION[0].value);
@@ -110,14 +110,22 @@ const FishListFilter = () => {
   };
 
   useEffect(() => {
-    const fishSortList = sortFish(fishDefaultList, sort);
+    const fishSortList = sortFish(fishDefaultListValue, sort);
     const fishFilterRankList = filterRank(fishSortList, rank);
     const fishFilterRegionList = filterRegion(fishFilterRankList, region);
     const fishFilterTimeList = filterTime(fishFilterRegionList, time);
     const fishFilterKeywordList = filterKeyword(fishFilterTimeList, keyword);
 
     setFishFilterList(fishFilterKeywordList);
-  }, [fishDefaultList, keyword, rank, region, setFishFilterList, sort, time]);
+  }, [
+    fishDefaultListValue,
+    keyword,
+    rank,
+    region,
+    setFishFilterList,
+    sort,
+    time,
+  ]);
 
   return (
     <Row>

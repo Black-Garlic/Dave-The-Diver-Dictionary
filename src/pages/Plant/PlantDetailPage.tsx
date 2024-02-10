@@ -15,9 +15,9 @@ import { getPlantWithDishLevel } from "@libs/plantUtil.ts";
 const PlantDetailPage = () => {
   const params = useParams();
 
-  const levelList = useRecoilValue(levelListState);
-  const setPlantDetailState = useSetRecoilState(plantDetailState);
-  const setDishFilterListState = useSetRecoilState(dishFilterListState);
+  const levelListValue = useRecoilValue(levelListState);
+  const setPlantDetail = useSetRecoilState(plantDetailState);
+  const setDishFilterList = useSetRecoilState(dishFilterListState);
 
   useEffect(() => {
     const targetPlant: Plant | undefined = PLANT_LIST.find(
@@ -27,13 +27,13 @@ const PlantDetailPage = () => {
     if (targetPlant) {
       const plantWithDishLevel: PlantWithDishLevel = getPlantWithDishLevel(
         targetPlant,
-        levelList,
+        levelListValue,
       );
 
-      setPlantDetailState(plantWithDishLevel);
-      setDishFilterListState(plantWithDishLevel.dishList);
+      setPlantDetail(plantWithDishLevel);
+      setDishFilterList(plantWithDishLevel.dishList);
     }
-  }, [levelList, params.id, setDishFilterListState, setPlantDetailState]);
+  }, [levelListValue, params.id, setDishFilterList, setPlantDetail]);
 
   return (
     <MainTemplate>

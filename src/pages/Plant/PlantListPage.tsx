@@ -10,15 +10,15 @@ import { getPlantWithDishLevelList } from "@libs/plantUtil.ts";
 import { PLANT_LIST } from "@constants/Plant.ts";
 
 const PlantListPage = () => {
-  const levelList = useRecoilValue(levelListState);
+  const levelListValue = useRecoilValue(levelListState);
   const setPlantDefaultList = useSetRecoilState(plantDefaultListState);
 
   useEffect(() => {
     const plantWithDishLevelList: PlantWithDishLevel[] =
-      getPlantWithDishLevelList(PLANT_LIST, levelList);
+      getPlantWithDishLevelList(PLANT_LIST, levelListValue);
 
     setPlantDefaultList(plantWithDishLevelList);
-  }, [levelList, setPlantDefaultList]);
+  }, [levelListValue, setPlantDefaultList]);
 
   return (
     <MainTemplate>

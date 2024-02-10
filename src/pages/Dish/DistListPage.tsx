@@ -10,17 +10,17 @@ import { getDishWithLevelList } from "@libs/dishUtil.ts";
 import { DISH_LIST } from "@constants/Dish.ts";
 
 const DistListPage = () => {
-  const levelList = useRecoilValue(levelListState);
+  const levelListValue = useRecoilValue(levelListState);
   const setDishDefaultList = useSetRecoilState(dishDefaultListState);
 
   useEffect(() => {
     const dishWithLevelList: DishWithLevel[] = getDishWithLevelList(
       DISH_LIST,
-      levelList,
+      levelListValue,
     );
 
     setDishDefaultList(dishWithLevelList);
-  }, [levelList, setDishDefaultList]);
+  }, [levelListValue, setDishDefaultList]);
 
   return (
     <MainTemplate>

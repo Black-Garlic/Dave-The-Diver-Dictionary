@@ -13,8 +13,8 @@ import { levelListState } from "@services/Level/LevelState.ts";
 const DishListTable = () => {
   const navigate = useNavigate();
 
-  const dishList = useRecoilValue(dishFilterListState);
-  const [levelList, setLevelListState] = useRecoilState(levelListState);
+  const dishListValue = useRecoilValue(dishFilterListState);
+  const [levelListValue, setLevelList] = useRecoilState(levelListState);
 
   const columns: ColumnsType<DishWithLevel> = [
     {
@@ -103,7 +103,7 @@ const DishListTable = () => {
 
   const handleChangeDishLevel = useCallback(
     (id: string, selectedLevel: string) => {
-      const newLevelList = levelList.map((level) => {
+      const newLevelList = levelListValue.map((level) => {
         if (level.id === id) {
           return { ...level, level: getLevel(selectedLevel) };
         } else {
@@ -111,12 +111,14 @@ const DishListTable = () => {
         }
       });
 
-      setLevelListState(newLevelList);
+      setLevelList(newLevelList);
     },
-    [levelList, setLevelListState],
+    [levelListValue, setLevelList],
   );
 
-  return <Table columns={columns} dataSource={dishList} pagination={false} />;
+  return (
+    <Table columns={columns} dataSource={dishListValue} pagination={false} />
+  );
 };
 
 export default DishListTable;

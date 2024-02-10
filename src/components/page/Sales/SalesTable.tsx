@@ -9,9 +9,9 @@ import {
 } from "@services/Dish/DishState.ts";
 
 const SalesTable = () => {
-  const dishDefaultList = useRecoilValue(dishDefaultListState);
+  const dishDefaultListValue = useRecoilValue(dishDefaultListState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
-  const [salesList, setSalesListState] = useRecoilState(salesListState);
+  const [salesListValue, setSalesList] = useRecoilState(salesListState);
 
   const columns: ColumnsType<Sales> = [
     {
@@ -75,7 +75,7 @@ const SalesTable = () => {
 
   const handleClickCount = (sales: Sales, isAdd: boolean) => {
     if (isAdd) {
-      setSalesListState((prev) =>
+      setSalesList((prev) =>
         prev.map((salesInfo) => {
           if (salesInfo.dish.id === sales.dish.id) {
             return { ...salesInfo, count: sales.count + 1 };
@@ -86,7 +86,7 @@ const SalesTable = () => {
       );
     } else {
       if (sales.count >= 1) {
-        setSalesListState((prev) =>
+        setSalesList((prev) =>
           prev.map((salesInfo) => {
             if (salesInfo.dish.id === sales.dish.id) {
               return { ...salesInfo, count: sales.count - 1 };
@@ -100,20 +100,22 @@ const SalesTable = () => {
   };
 
   const handleClickRemove = (sales: Sales) => {
-    const newSalesList = salesList.filter(
+    const newSalesList = salesListValue.filter(
       (salesInfo) => salesInfo.dish.id !== sales.dish.id,
     );
 
-    setSalesListState(newSalesList);
+    setSalesList(newSalesList);
     setDishFilterList(
-      dishDefaultList.filter(
+      dishDefaultListValue.filter(
         (dish) =>
           !newSalesList.some((salesInfo) => salesInfo.dish.id === dish.id),
       ),
     );
   };
 
-  return <Table columns={columns} dataSource={salesList} pagination={false} />;
+  return (
+    <Table columns={columns} dataSource={salesListValue} pagination={false} />
+  );
 };
 
 export default SalesTable;

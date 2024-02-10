@@ -11,7 +11,7 @@ import Search from "antd/es/input/Search";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 
 const PlantListFilter = () => {
-  const plantDefaultList = useRecoilValue(plantDefaultListState);
+  const plantDefaultListValue = useRecoilValue(plantDefaultListState);
   const setPlantFilterList = useSetRecoilState(plantFilterListState);
 
   const [source, setSource] = useState<string[]>([]);
@@ -63,14 +63,14 @@ const PlantListFilter = () => {
   };
 
   useEffect(() => {
-    const plantFilterSourceList = filterSource(plantDefaultList, source);
+    const plantFilterSourceList = filterSource(plantDefaultListValue, source);
     const plantFilterKeywordList = filterKeyword(
       plantFilterSourceList,
       keyword,
     );
 
     setPlantFilterList(plantFilterKeywordList);
-  }, [keyword, plantDefaultList, setPlantFilterList, source]);
+  }, [keyword, plantDefaultListValue, setPlantFilterList, source]);
 
   return (
     <Row>

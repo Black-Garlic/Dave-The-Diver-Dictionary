@@ -15,16 +15,17 @@ const titleStyle: React.CSSProperties = {
 };
 
 const PlantDetailInfo = () => {
-  const plantDetail = useRecoilValue(plantDetailState);
+  const plantDetailValue = useRecoilValue(plantDetailState);
+
   const [plantNeedCount, setPlantNeedCount] = useState<number>(0);
 
   useEffect(() => {
-    if (plantDetail) {
+    if (plantDetailValue) {
       setPlantNeedCount(
-        getRecipeCountSum(plantDetail.id, plantDetail.dishList),
+        getRecipeCountSum(plantDetailValue.id, plantDetailValue.dishList),
       );
     }
-  }, [plantDetail]);
+  }, [plantDetailValue]);
 
   return (
     <Card>
@@ -32,13 +33,13 @@ const PlantDetailInfo = () => {
         이름
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {plantDetail?.name}
+        {plantDetailValue?.name}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         원산지
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {plantDetail?.source}
+        {plantDetailValue?.source}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>

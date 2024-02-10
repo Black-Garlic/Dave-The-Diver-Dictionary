@@ -15,14 +15,17 @@ const titleStyle: React.CSSProperties = {
 };
 
 const FishDetailInfo = () => {
-  const fishDetail = useRecoilValue(fishDetailState);
+  const fishDetailValue = useRecoilValue(fishDetailState);
+
   const [fishNeedCount, setFishNeedCount] = useState<number>(0);
 
   useEffect(() => {
-    if (fishDetail) {
-      setFishNeedCount(getRecipeCountSum(fishDetail.id, fishDetail.dishList));
+    if (fishDetailValue) {
+      setFishNeedCount(
+        getRecipeCountSum(fishDetailValue.id, fishDetailValue.dishList),
+      );
     }
-  }, [fishDetail]);
+  }, [fishDetailValue]);
 
   return (
     <Card>
@@ -30,26 +33,26 @@ const FishDetailInfo = () => {
         랭크
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {fishDetail?.rank}
+        {fishDetailValue?.rank}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         이름
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {fishDetail?.name}
+        {fishDetailValue?.name}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         지역
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {fishDetail?.region}
+        {fishDetailValue?.region}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         시간대
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {fishDetail?.time}
+        {fishDetailValue?.time}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>

@@ -13,7 +13,8 @@ import { LEVEL_LABEL } from "@constants/Level.ts";
 
 const SeasoningListTable = () => {
   const navigate = useNavigate();
-  const seasoningFilterList = useRecoilValue(seasoningFilterListState);
+
+  const seasoningFilterListValue = useRecoilValue(seasoningFilterListState);
 
   const columns: ColumnsType<SeasoningWithDishLevel> = [
     {
@@ -106,7 +107,7 @@ const SeasoningListTable = () => {
   return (
     <Table
       columns={columns}
-      dataSource={seasoningFilterList}
+      dataSource={seasoningFilterListValue}
       pagination={false}
     />
   );

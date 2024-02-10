@@ -15,19 +15,19 @@ import SalesDishTable from "@components/page/Sales/SalesDishTable.tsx";
 import SalesInfo from "@components/page/Sales/SalesInfo.tsx";
 
 const SalesPage = () => {
-  const levelList = useRecoilValue(levelListState);
+  const levelListValue = useRecoilValue(levelListState);
   const setDishDefaultList = useSetRecoilState(dishDefaultListState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
 
   useEffect(() => {
     const dishWithLevelList: DishWithLevel[] = getDishWithLevelList(
       DISH_LIST,
-      levelList,
+      levelListValue,
     );
 
     setDishDefaultList(dishWithLevelList);
     setDishFilterList(dishWithLevelList);
-  }, [levelList, setDishDefaultList, setDishFilterList]);
+  }, [levelListValue, setDishDefaultList, setDishFilterList]);
 
   return (
     <MainTemplate>

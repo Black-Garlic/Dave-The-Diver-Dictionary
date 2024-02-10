@@ -17,8 +17,8 @@ const DishDetailPage = () => {
   const params = useParams();
 
   const levelList = useRecoilValue(levelListState);
-  const setDishDetailState = useSetRecoilState(dishDetailState);
-  const setRecipeListState = useSetRecoilState(recipeListState);
+  const setDishDetail = useSetRecoilState(dishDetailState);
+  const setRecipeList = useSetRecoilState(recipeListState);
 
   useEffect(() => {
     const targetDish: Dish | undefined = DISH_LIST.find(
@@ -31,7 +31,7 @@ const DishDetailPage = () => {
         levelList,
       );
 
-      setDishDetailState(dishWithLevel);
+      setDishDetail(dishWithLevel);
 
       const dishRecipe: DishRecipe | undefined = getDishRecipe(targetDish.id);
 
@@ -40,10 +40,10 @@ const DishDetailPage = () => {
           dishRecipe?.recipe,
         );
 
-        setRecipeListState(recipeInfoList);
+        setRecipeList(recipeInfoList);
       }
     }
-  }, [levelList, params.id, setDishDetailState, setRecipeListState]);
+  }, [levelList, params.id, setDishDetail, setRecipeList]);
 
   return (
     <MainTemplate>

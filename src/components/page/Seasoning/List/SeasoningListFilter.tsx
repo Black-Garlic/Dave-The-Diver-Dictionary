@@ -11,7 +11,7 @@ import { SEASONING_SOURCE_OPTIONS } from "@constants/Seasoning.ts";
 import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
 
 const SeasoningListFilter = () => {
-  const seasoningDefaultList = useRecoilValue(seasoningDefaultListState);
+  const seasoningDefaultListValue = useRecoilValue(seasoningDefaultListState);
   const setSeasoningFilterList = useSetRecoilState(seasoningFilterListState);
 
   const [source, setSource] = useState<string[]>([]);
@@ -48,7 +48,7 @@ const SeasoningListFilter = () => {
 
   useEffect(() => {
     const seasoningFilterSourceList = filterSource(
-      seasoningDefaultList,
+      seasoningDefaultListValue,
       source,
     );
     const seasoningFilterKeywordList = filterKeyword(
@@ -57,7 +57,7 @@ const SeasoningListFilter = () => {
     );
 
     setSeasoningFilterList(seasoningFilterKeywordList);
-  }, [keyword, seasoningDefaultList, setSeasoningFilterList, source]);
+  }, [keyword, seasoningDefaultListValue, setSeasoningFilterList, source]);
 
   return (
     <Row>

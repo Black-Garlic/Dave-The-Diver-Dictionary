@@ -17,12 +17,12 @@ const titleStyle: React.CSSProperties = {
 };
 
 const DishDetailInfo = () => {
-  const dishDetail = useRecoilValue(dishDetailState);
-  const [levelList, setLevelListState] = useRecoilState(levelListState);
+  const dishDetailValue = useRecoilValue(dishDetailState);
+  const [levelListValue, setLevelList] = useRecoilState(levelListState);
 
   const handleChangeDishLevel = useCallback(
     (id: string, selectedLevel: string) => {
-      const newLevelList = levelList.map((level) => {
+      const newLevelList = levelListValue.map((level) => {
         if (level.id === id) {
           return { ...level, level: getLevel(selectedLevel) };
         } else {
@@ -30,9 +30,9 @@ const DishDetailInfo = () => {
         }
       });
 
-      setLevelListState(newLevelList);
+      setLevelList(newLevelList);
     },
-    [levelList, setLevelListState],
+    [levelListValue, setLevelList],
   );
 
   return (
@@ -41,7 +41,7 @@ const DishDetailInfo = () => {
         이름
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetail?.name}
+        {dishDetailValue?.name}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         랭크
@@ -54,33 +54,33 @@ const DishDetailInfo = () => {
         가격
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetail?.maxCost}
+        {dishDetailValue?.maxCost}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         맛점수
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetail?.maxScore}
+        {dishDetailValue?.maxScore}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         그릇
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetail?.maxCount}
+        {dishDetailValue?.maxCount}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         불꽃
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetail?.flame}
+        {dishDetailValue?.flame}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         파티
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetail?.party?.map((party) => <>{party}</>)}
+        {dishDetailValue?.party?.map((party) => <>{party}</>)}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         레벨
@@ -89,10 +89,10 @@ const DishDetailInfo = () => {
         <Select
           style={{ width: "100%" }}
           onChange={(selectedLevel) =>
-            handleChangeDishLevel(dishDetail?.id, selectedLevel)
+            handleChangeDishLevel(dishDetailValue?.id, selectedLevel)
           }
-          options={getLevelOption(dishDetail?.maxLevel)}
-          value={LEVEL_LABEL[dishDetail?.level - 1]}
+          options={getLevelOption(dishDetailValue?.maxLevel)}
+          value={LEVEL_LABEL[dishDetailValue?.level - 1]}
           placeholder="레벨"
           maxTagCount={"responsive"}
           listHeight={350}
