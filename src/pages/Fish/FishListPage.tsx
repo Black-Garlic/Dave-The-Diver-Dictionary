@@ -8,10 +8,14 @@ import { useEffect } from "react";
 import { FISH_LIST } from "@constants/Fish.ts";
 import { getFishWithDishLevelList } from "@libs/fishUtil.ts";
 import { FishWithDishLevel } from "@typings/Fish.ts";
+import { Breadcrumb } from "antd";
+import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 
 const FishListPage = () => {
   const levelListValue = useRecoilValue(levelListState);
   const setFishDefaultList = useSetRecoilState(fishDefaultListState);
+
+  const breadcrumbItemList = useBreadcrumb();
 
   useEffect(() => {
     const fishWithDishLevelList: FishWithDishLevel[] = getFishWithDishLevelList(
@@ -24,6 +28,8 @@ const FishListPage = () => {
 
   return (
     <MainTemplate>
+      <Breadcrumb items={breadcrumbItemList} />
+
       <FishListFilter />
 
       <FishListTable />

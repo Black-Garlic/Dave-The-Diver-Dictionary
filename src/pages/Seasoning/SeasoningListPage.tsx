@@ -8,10 +8,14 @@ import { useEffect } from "react";
 import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
 import { getSeasoningWithDishLevelList } from "@libs/seasoningUtil.ts";
 import { SEASONING_LIST } from "@constants/Seasoning.ts";
+import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
+import { Breadcrumb } from "antd";
 
 const SeasoningListPage = () => {
   const levelListValue = useRecoilValue(levelListState);
   const setSeasoningDefaultList = useSetRecoilState(seasoningDefaultListState);
+
+  const breadcrumbItemList = useBreadcrumb();
 
   useEffect(() => {
     const seasoningWithDishLevelList: SeasoningWithDishLevel[] =
@@ -22,6 +26,8 @@ const SeasoningListPage = () => {
 
   return (
     <MainTemplate>
+      <Breadcrumb items={breadcrumbItemList} />
+
       <SeasoningListFilter />
 
       <SeasoningListTable />

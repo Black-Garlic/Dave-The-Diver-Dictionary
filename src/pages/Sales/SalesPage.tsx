@@ -9,15 +9,18 @@ import {
   dishDefaultListState,
   dishFilterListState,
 } from "@services/Dish/DishState.ts";
-import { Divider } from "antd";
+import { Breadcrumb, Divider } from "antd";
 import SalesTable from "@components/page/Sales/SalesTable.tsx";
 import SalesDishTable from "@components/page/Sales/SalesDishTable.tsx";
 import SalesInfo from "@components/page/Sales/SalesInfo.tsx";
+import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 
 const SalesPage = () => {
   const levelListValue = useRecoilValue(levelListState);
   const setDishDefaultList = useSetRecoilState(dishDefaultListState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
+
+  const breadcrumbItemList = useBreadcrumb();
 
   useEffect(() => {
     const dishWithLevelList: DishWithLevel[] = getDishWithLevelList(
@@ -31,6 +34,8 @@ const SalesPage = () => {
 
   return (
     <MainTemplate>
+      <Breadcrumb items={breadcrumbItemList} />
+
       <SalesInfo />
 
       <SalesTable />

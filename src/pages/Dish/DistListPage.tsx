@@ -8,10 +8,14 @@ import { useEffect } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import { getDishWithLevelList } from "@libs/dishUtil.ts";
 import { DISH_LIST } from "@constants/Dish.ts";
+import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
+import { Breadcrumb } from "antd";
 
 const DistListPage = () => {
   const levelListValue = useRecoilValue(levelListState);
   const setDishDefaultList = useSetRecoilState(dishDefaultListState);
+
+  const breadcrumbItemList = useBreadcrumb();
 
   useEffect(() => {
     const dishWithLevelList: DishWithLevel[] = getDishWithLevelList(
@@ -24,6 +28,8 @@ const DistListPage = () => {
 
   return (
     <MainTemplate>
+      <Breadcrumb items={breadcrumbItemList} />
+
       <DishListFilter />
 
       <DishListTable />

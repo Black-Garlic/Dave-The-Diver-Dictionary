@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Plant, PlantWithDishLevel } from "@typings/Plant.ts";
 import { PLANT_LIST } from "@constants/Plant.ts";
 import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
-import { Divider } from "antd";
+import { Breadcrumb, Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
 import PlantDetailInfo from "@components/page/Plant/Detail/PlantDetailInfo.tsx";
 import { useRecoilValue, useSetRecoilState } from "recoil";
@@ -11,6 +11,7 @@ import { levelListState } from "@services/Level/LevelState.ts";
 import { plantDetailState } from "@services/Plant/PlantState.ts";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { getPlantWithDishLevel } from "@libs/plantUtil.ts";
+import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 
 const PlantDetailPage = () => {
   const params = useParams();
@@ -18,6 +19,8 @@ const PlantDetailPage = () => {
   const levelListValue = useRecoilValue(levelListState);
   const setPlantDetail = useSetRecoilState(plantDetailState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
+
+  const breadcrumbItemList = useBreadcrumb();
 
   useEffect(() => {
     const targetPlant: Plant | undefined = PLANT_LIST.find(
@@ -37,6 +40,8 @@ const PlantDetailPage = () => {
 
   return (
     <MainTemplate>
+      <Breadcrumb items={breadcrumbItemList} />
+
       <PlantDetailInfo />
 
       <Divider />

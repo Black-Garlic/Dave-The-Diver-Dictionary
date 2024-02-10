@@ -10,8 +10,9 @@ import { DISH_LIST } from "@constants/Dish.ts";
 import { getDishWithLevel } from "@libs/dishUtil.ts";
 import { DishRecipe, RecipeInfo } from "@typings/Recipe.ts";
 import { getDishRecipe, getRecipeInfoList } from "@libs/recipeUtil.ts";
-import { Divider } from "antd";
+import { Breadcrumb, Divider } from "antd";
 import DishRecipeTable from "@components/page/Dish/Detail/DishRecipeTable.tsx";
+import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 
 const DishDetailPage = () => {
   const params = useParams();
@@ -19,6 +20,8 @@ const DishDetailPage = () => {
   const levelList = useRecoilValue(levelListState);
   const setDishDetail = useSetRecoilState(dishDetailState);
   const setRecipeList = useSetRecoilState(recipeListState);
+
+  const breadcrumbItemList = useBreadcrumb();
 
   useEffect(() => {
     const targetDish: Dish | undefined = DISH_LIST.find(
@@ -47,6 +50,8 @@ const DishDetailPage = () => {
 
   return (
     <MainTemplate>
+      <Breadcrumb items={breadcrumbItemList} />
+
       <DishDetailInfo />
 
       <Divider />
