@@ -14,6 +14,7 @@ import SalesTable from "@components/page/Sales/SalesTable.tsx";
 import SalesDishTable from "@components/page/Sales/SalesDishTable.tsx";
 import SalesInfo from "@components/page/Sales/SalesInfo.tsx";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
+import DishListFilter from "@components/page/Dish/List/DishListFilter.tsx";
 
 const SalesPage = () => {
   const levelListValue = useRecoilValue(levelListState);
@@ -41,6 +42,8 @@ const SalesPage = () => {
       <SalesTable />
 
       <Divider />
+
+      <DishListFilter />
 
       <SalesDishTable />
     </MainTemplate>

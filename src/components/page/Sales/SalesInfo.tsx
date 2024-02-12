@@ -46,7 +46,7 @@ const SalesInfo = () => {
   ];
 
   return (
-    <Row style={{ marginBottom: "20px" }}>
+    <Row style={{ marginTop: "10px", marginBottom: "20px" }}>
       <Descriptions
         bordered
         size={"default"}
