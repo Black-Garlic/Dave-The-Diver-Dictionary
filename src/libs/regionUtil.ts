@@ -1,33 +1,34 @@
 import { REGION } from "@constants/Region.ts";
+import { COLOR } from "@constants/Color.ts";
 
 export const getRegionColor = (region: string): string => {
   if (region === REGION.BLUE_HOLE_SHALLOWS) {
-    return "cyan";
+    return COLOR.CYAN;
   }
 
   if (region === REGION.BLUE_HOLE_MEDIUM_DEPTH) {
-    return "blue";
+    return COLOR.BLUE;
   }
 
   if (region === REGION.BLUE_HOLE_DEPTH) {
-    return "geekblue";
+    return COLOR.GEEK_BLUE;
   }
 
   if (region === REGION.GLACIER_PASSAGE) {
-    return "dimgrey";
+    return COLOR.DIM_GREY;
   }
 
   if (region === REGION.GLACIER_ZONE) {
-    return "deepskyblue";
+    return COLOR.DEEP_SKY_BLUE;
   }
 
   if (region === REGION.HYDROTHERMAL_VENTS) {
-    return "volcano";
+    return COLOR.VOLCANO;
   }
 
   if (region === REGION.ETC) {
-    return "black";
+    return COLOR.BLACK;
   }
 
-  return "";
+  return COLOR.NONE;
 };

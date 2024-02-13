@@ -1,13 +1,14 @@
 import { TIME } from "@constants/Time.ts";
+import { COLOR } from "@constants/Color.ts";
 
 export const getTimeColor = (time: string): string => {
   if (time === TIME.DAY) {
-    return "blue";
+    return COLOR.BLUE;
   }
 
   if (time === TIME.NIGHT) {
-    return "black";
+    return COLOR.BLACK;
   }
 
-  return "";
+  return COLOR.NONE;
 };

@@ -3,6 +3,7 @@ import { LEVEL } from "@constants/Level.ts";
 import { Cookies } from "react-cookie";
 import { PARTY } from "@constants/Dish.ts";
 import { LEVEL_DUMMY } from "@constants/Dummy.ts";
+import { COLOR } from "@constants/Color.ts";
 
 export const getDishLevelCookie = (): Level[] => {
   const Cookie = new Cookies();
@@ -61,36 +62,36 @@ export const getDishWithLevel = (dish: Dish, levelList: Level[]) => {
 
 export const getPartyColor = (party: string): string => {
   if (party === PARTY.JELLY_FISH) {
-    return "BlueViolet";
+    return COLOR.BLUE_VIOLET;
   }
 
   if (party === PARTY.TUNA) {
-    return "DodgerBlue";
+    return COLOR.DODGER_BLUE;
   }
 
   if (party === PARTY.MARLIN) {
-    return "DarkBlue";
+    return COLOR.DARK_BLUE;
   }
 
   if (party === PARTY.STORM_SHARK) {
-    return "Black";
+    return COLOR.BLACK;
   }
 
   if (party === PARTY.CUCUMBER) {
-    return "ForestGreen";
+    return COLOR.FOREST_GREEN;
   }
 
   if (party === PARTY.CURRY) {
-    return "GoldenRod";
+    return COLOR.GOLDEN_ROD;
   }
 
   if (party === PARTY.SHRIMP) {
-    return "LightSalmon";
+    return COLOR.LIGHT_SALMON;
   }
 
   if (party === PARTY.LOBSTER) {
-    return "OrangeRed";
+    return COLOR.ORANGE_RED;
   }
 
-  return "";
+  return COLOR.NONE;
 };

@@ -1,33 +1,34 @@
 import { PLANT_SOURCE } from "@constants/Plant.ts";
+import { COLOR } from "@constants/Color.ts";
 
 export const getSourceColor = (region: string): string => {
   if (region === PLANT_SOURCE.FARM) {
-    return "DarkGoldenRod";
+    return COLOR.DARK_GOLDEN_ROD;
   }
 
   if (region === PLANT_SOURCE.BLUE_HOLE) {
-    return "geekblue";
+    return COLOR.GEEK_BLUE;
   }
 
   if (region === PLANT_SOURCE.BLUE_HOLE_SHALLOWS) {
-    return "cyan";
+    return COLOR.CYAN;
   }
 
   if (region === PLANT_SOURCE.BLUE_HOLE_MEDIUM_DEPTH) {
-    return "blue";
+    return COLOR.BLUE;
   }
 
   if (region === PLANT_SOURCE.CAVE) {
-    return "dimgrey";
+    return COLOR.DIM_GREY;
   }
 
   if (region === PLANT_SOURCE.GLACIAL) {
-    return "deepskyblue";
+    return COLOR.DEEP_SKY_BLUE;
   }
 
   if (region === PLANT_SOURCE.GLACIAL_SEAWEED) {
-    return "DodgerBlue";
+    return COLOR.DODGER_BLUE;
   }
 
-  return "";
+  return COLOR.NONE;
 };
