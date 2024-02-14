@@ -1,4 +1,4 @@
-import { Col, Flex, Row, Select, Tag } from "antd";
+import { Button, Col, Flex, Row, Select, Tag } from "antd";
 import { RANK_OPTION } from "@constants/Rank.ts";
 import Search from "antd/es/input/Search";
 import { useEffect, useState } from "react";
@@ -127,6 +127,14 @@ const FishListFilter = () => {
     time,
   ]);
 
+  const handleResetButtonClick = () => {
+    setSort(FISH_SORT_OPTION[0].value);
+    setRank([]);
+    setRegion([]);
+    setTime([]);
+    setKeyword("");
+  };
+
   return (
     <Row>
       <Col flex={"auto"} style={{ margin: "10px 0px" }}>
@@ -134,6 +142,7 @@ const FishListFilter = () => {
           <Select
             allowClear
             style={{ width: "200px" }}
+            value={sort}
             onChange={setSort}
             options={FISH_SORT_OPTION}
             placeholder="정렬"
@@ -144,6 +153,7 @@ const FishListFilter = () => {
             mode="multiple"
             allowClear
             style={{ width: "200px" }}
+            value={rank}
             onChange={setRank}
             options={RANK_OPTION}
             placeholder="랭크"
@@ -154,6 +164,7 @@ const FishListFilter = () => {
             mode="multiple"
             allowClear
             style={{ width: "250px" }}
+            value={region}
             onChange={setRegion}
             options={REGION_OPTION}
             placeholder="지역"
@@ -173,6 +184,7 @@ const FishListFilter = () => {
             mode="multiple"
             allowClear
             style={{ width: "150px" }}
+            value={time}
             onChange={setTime}
             options={TIME_OPTION}
             placeholder="시간대"
@@ -191,12 +203,19 @@ const FishListFilter = () => {
       </Col>
 
       <Col flex={"none"} style={{ margin: "10px 0px" }}>
-        <Search
-          placeholder="검색"
-          allowClear
-          onSearch={setKeyword}
-          style={{ width: 300 }}
-        />
+        <Flex gap={"middle"}>
+          <Search
+            placeholder="검색"
+            allowClear
+            value={keyword}
+            onSearch={setKeyword}
+            style={{ width: 300 }}
+          />
+
+          <Button onClick={handleResetButtonClick} style={{ outline: "none" }}>
+            초기화
+          </Button>
+        </Flex>
       </Col>
     </Row>
   );
