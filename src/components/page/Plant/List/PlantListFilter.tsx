@@ -6,7 +6,7 @@ import {
 import { useEffect, useState } from "react";
 import { PlantWithDishLevel } from "@typings/Plant.ts";
 import { PLANT_SOURCE, PLANT_SOURCE_OPTION } from "@constants/Plant.ts";
-import { Col, Flex, Row, Select, Tag } from "antd";
+import { Button, Col, Flex, Row, Select, Tag } from "antd";
 import Search from "antd/es/input/Search";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 
@@ -72,6 +72,11 @@ const PlantListFilter = () => {
     setPlantFilterList(plantFilterKeywordList);
   }, [keyword, plantDefaultListValue, setPlantFilterList, source]);
 
+  const handleResetButtonClick = () => {
+    setSource([]);
+    setKeyword("");
+  };
+
   return (
     <Row>
       <Col flex={"auto"} style={{ margin: "10px 0px" }}>
@@ -80,6 +85,7 @@ const PlantListFilter = () => {
             mode="multiple"
             allowClear
             style={{ width: "250px" }}
+            value={source}
             onChange={setSource}
             options={PLANT_SOURCE_OPTION}
             placeholder="지역"
@@ -98,12 +104,19 @@ const PlantListFilter = () => {
       </Col>
 
       <Col flex={"none"} style={{ margin: "10px 0px" }}>
-        <Search
-          placeholder="검색"
-          allowClear
-          onSearch={setKeyword}
-          style={{ width: 300 }}
-        />
+        <Flex gap={"middle"}>
+          <Search
+            placeholder="검색"
+            allowClear
+            value={keyword}
+            onSearch={setKeyword}
+            style={{ width: 300 }}
+          />
+
+          <Button onClick={handleResetButtonClick} style={{ outline: "none" }}>
+            초기화
+          </Button>
+        </Flex>
       </Col>
     </Row>
   );
