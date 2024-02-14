@@ -109,7 +109,7 @@ const PlantListFilter = () => {
             placeholder="검색"
             allowClear
             value={keyword}
-            onSearch={setKeyword}
+            onChange={(e) => setKeyword(e.target.value)}
             style={{ width: 300 }}
           />
 
