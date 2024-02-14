@@ -1,4 +1,4 @@
-import { Col, Flex, Row, Select, Tag } from "antd";
+import { Button, Col, Flex, Row, Select, Tag } from "antd";
 import {
   DISH_SORT,
   DISH_SORT_OPTION,
@@ -96,6 +96,12 @@ const DishListFilter = () => {
     setDishFilterList(dishFilterKeywordList);
   }, [keyword, party, setDishFilterList, sort]);
 
+  const handleResetButtonClick = () => {
+    setSort(DISH_SORT_OPTION[0].value);
+    setParty([]);
+    setKeyword("");
+  };
+
   return (
     <Row>
       <Col flex={"auto"} style={{ margin: "10px 0px" }}>
@@ -103,6 +109,7 @@ const DishListFilter = () => {
           <Select
             allowClear
             style={{ width: "200px" }}
+            value={sort}
             onChange={setSort}
             options={DISH_SORT_OPTION}
             placeholder="정렬"
@@ -113,6 +120,7 @@ const DishListFilter = () => {
             mode="multiple"
             allowClear
             style={{ width: "250px" }}
+            value={party}
             onChange={setParty}
             options={PARTY_OPTION}
             placeholder="파티"
@@ -131,12 +139,19 @@ const DishListFilter = () => {
       </Col>
 
       <Col flex={"none"} style={{ margin: "10px 0px" }}>
-        <Search
-          placeholder="검색"
-          allowClear
-          onSearch={setKeyword}
-          style={{ width: 300 }}
-        />
+        <Flex gap={"middle"}>
+          <Search
+            placeholder="검색"
+            allowClear
+            value={keyword}
+            onChange={(e) => setKeyword(e.target.value)}
+            style={{ width: 300 }}
+          />
+
+          <Button onClick={handleResetButtonClick} style={{ outline: "none" }}>
+            초기화
+          </Button>
+        </Flex>
       </Col>
     </Row>
   );
