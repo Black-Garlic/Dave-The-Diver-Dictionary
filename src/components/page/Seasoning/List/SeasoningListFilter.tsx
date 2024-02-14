@@ -4,7 +4,7 @@ import {
   seasoningFilterListState,
 } from "@services/Seasoning/SeasoningState.ts";
 import { useEffect, useState } from "react";
-import { Col, Flex, Row, Select, Tag } from "antd";
+import { Button, Col, Flex, Row, Select, Tag } from "antd";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 import Search from "antd/es/input/Search";
 import { SEASONING_SOURCE_OPTIONS } from "@constants/Seasoning.ts";
@@ -59,6 +59,11 @@ const SeasoningListFilter = () => {
     setSeasoningFilterList(seasoningFilterKeywordList);
   }, [keyword, seasoningDefaultListValue, setSeasoningFilterList, source]);
 
+  const handleResetButtonClick = () => {
+    setSource([]);
+    setKeyword("");
+  };
+
   return (
     <Row>
       <Col flex={"auto"} style={{ margin: "10px 0px" }}>
@@ -67,6 +72,7 @@ const SeasoningListFilter = () => {
             mode="multiple"
             allowClear
             style={{ width: "250px" }}
+            value={source}
             onChange={setSource}
             options={SEASONING_SOURCE_OPTIONS}
             placeholder="지역"
@@ -85,12 +91,19 @@ const SeasoningListFilter = () => {
       </Col>
 
       <Col flex={"none"} style={{ margin: "10px 0px" }}>
-        <Search
-          placeholder="검색"
-          allowClear
-          onSearch={setKeyword}
-          style={{ width: 300 }}
-        />
+        <Flex gap={"middle"}>
+          <Search
+            placeholder="검색"
+            allowClear
+            value={keyword}
+            onChange={(e) => setKeyword(e.target.value)}
+            style={{ width: 300 }}
+          />
+
+          <Button onClick={handleResetButtonClick} style={{ outline: "none" }}>
+            초기화
+          </Button>
+        </Flex>
       </Col>
     </Row>
   );
