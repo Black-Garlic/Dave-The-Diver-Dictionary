@@ -1,6 +1,6 @@
 import { ColumnsType } from "antd/es/table";
 import { Dish, DishWithLevel } from "@typings/Dish.ts";
-import { Select, Space, Table } from "antd";
+import { Select, Space, Table, Tag } from "antd";
 import { useCallback } from "react";
 import { DISH_DETAIL_ROUTE } from "@constants/Route.ts";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,8 @@ import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { levelListState } from "@services/Level/LevelState.ts";
+import { getPartyColor } from "@libs/dishUtil.ts";
+import { PARTY } from "@constants/Dish.ts";
 
 const DishListTable = () => {
   const navigate = useNavigate();
@@ -65,12 +67,13 @@ const DishListTable = () => {
       onCell: (dish) => ({ onClick: () => handleClickRow(dish) }),
       render: (_, { id, party }) => (
         <Space direction={"vertical"} style={{ width: "100%" }}>
-          {party &&
-            party.map((party) => (
-              <Space.Compact key={id + party} style={{ width: "100%" }}>
-                <p style={{ width: "100%", textAlign: "center" }}>{party}</p>
-              </Space.Compact>
-            ))}
+          {party?.map((party: PARTY) => (
+            <Space.Compact key={id + party} style={{ width: "100%" }}>
+              <div style={{ width: "100%" }}>
+                <Tag color={getPartyColor(party)}>{party}</Tag>
+              </div>
+            </Space.Compact>
+          ))}
         </Space>
       ),
     },
