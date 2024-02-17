@@ -1,5 +1,6 @@
 import { PLANT_SOURCE } from "@constants/Plant.ts";
 import { COLOR } from "@constants/Color.ts";
+import { SEASONING_SOURCE } from "@constants/Seasoning.ts";
 
 export const getSourceColor = (region: string): string => {
   if (region === PLANT_SOURCE.FARM) {
@@ -28,6 +29,14 @@ export const getSourceColor = (region: string): string => {
 
   if (region === PLANT_SOURCE.GLACIAL_SEAWEED) {
     return COLOR.DODGER_BLUE;
+  }
+
+  if (region === SEASONING_SOURCE.DISPATCH) {
+    return COLOR.DARK_BLUE;
+  }
+
+  if (region === SEASONING_SOURCE.DJANGO) {
+    return COLOR.BLACK;
   }
 
   return COLOR.NONE;
