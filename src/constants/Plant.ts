@@ -11,6 +11,7 @@ export enum PLANT_SOURCE {
   GLACIAL = "빙하 지역",
   GLACIAL_SEAWEED = "빙하 해초 동굴",
   SEAWEED_FARM = "해초 농장",
+  OTTO = "오토",
   DJANGO = "장고",
 }
 
@@ -36,13 +37,13 @@ export const PLANT_LIST: Plant[] = [
   {
     id: "Grade_A_Egg",
     name: "1등급란",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
     id: "Eggplant",
     name: "가지",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
@@ -60,7 +61,7 @@ export const PLANT_LIST: Plant[] = [
   {
     id: "Egg",
     name: "계란",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
@@ -78,13 +79,13 @@ export const PLANT_LIST: Plant[] = [
   {
     id: "Carrot",
     name: "당근",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
     id: "Garlic",
     name: "마늘",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
@@ -96,7 +97,7 @@ export const PLANT_LIST: Plant[] = [
   {
     id: "Wheat",
     name: "밀",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
@@ -114,13 +115,13 @@ export const PLANT_LIST: Plant[] = [
   {
     id: "Cherry_Tomato",
     name: "방울토마토",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
     id: "Rice",
     name: "백미",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.THREE,
   },
   {
@@ -132,13 +133,13 @@ export const PLANT_LIST: Plant[] = [
   {
     id: "Onion",
     name: "양파",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
     id: "Cucumber",
     name: "오이",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
@@ -150,13 +151,13 @@ export const PLANT_LIST: Plant[] = [
   {
     id: "Bean",
     name: "콩",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {
     id: "Habanero",
     name: "하바네로",
-    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.DJANGO],
+    source: [PLANT_SOURCE.FARM, PLANT_SOURCE.OTTO, PLANT_SOURCE.DJANGO],
     rank: RANK.FOUR,
   },
   {

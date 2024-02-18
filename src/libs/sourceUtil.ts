@@ -39,6 +39,10 @@ export const getSourceColor = (region: string): string => {
     return COLOR.DARK_BLUE;
   }
 
+  if (region === PLANT_SOURCE.OTTO) {
+    return COLOR.GOLDEN_ROD;
+  }
+
   if (region === SEASONING_SOURCE.DJANGO) {
     return COLOR.BLACK;
   }
