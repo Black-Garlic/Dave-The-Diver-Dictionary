@@ -31,6 +31,10 @@ export const getSourceColor = (region: string): string => {
     return COLOR.DODGER_BLUE;
   }
 
+  if (region === PLANT_SOURCE.SEAWEED_FARM) {
+    return COLOR.FOREST_GREEN;
+  }
+
   if (region === SEASONING_SOURCE.DISPATCH) {
     return COLOR.DARK_BLUE;
   }

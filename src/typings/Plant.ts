@@ -5,7 +5,7 @@ import { Dish, DishWithLevel } from "@typings/Dish.ts";
 export interface Plant extends Rank {
   id: string;
   name: string;
-  source: PLANT_SOURCE;
+  source: PLANT_SOURCE[];
 }
 
 export interface PlantWithDish extends Plant {

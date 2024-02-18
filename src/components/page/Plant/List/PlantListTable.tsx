@@ -10,6 +10,7 @@ import { Dish } from "@typings/Dish.ts";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 import { useRecoilValue } from "recoil";
 import { plantFilterListState } from "@services/Plant/PlantState.ts";
+import { PLANT_SOURCE } from "@constants/Plant.ts";
 
 const PlantListTable = () => {
   const navigate = useNavigate();
@@ -35,10 +36,18 @@ const PlantListTable = () => {
       onCell: (plantWithDishLevel) => ({
         onClick: () => handleClickRow(plantWithDishLevel),
       }),
-      render: (_, { source }, index) => (
-        <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
-          {source}
-        </Tag>
+      render: (_, { id, source }, index) => (
+        <Space direction={"vertical"} style={{ width: "100%" }}>
+          {source?.map((source: PLANT_SOURCE) => (
+            <Space.Compact key={id + source} style={{ width: "100%" }}>
+              <div style={{ width: "100%" }}>
+                <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
+                  {source}
+                </Tag>
+              </div>
+            </Space.Compact>
+          ))}
+        </Space>
       ),
     },
     {
