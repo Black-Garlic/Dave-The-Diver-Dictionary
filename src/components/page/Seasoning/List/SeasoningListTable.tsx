@@ -10,6 +10,7 @@ import { ColumnsType } from "antd/es/table";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
 import { LEVEL_LABEL } from "@constants/Level.ts";
+import { SEASONING_SOURCE } from "@constants/Seasoning.ts";
 
 const SeasoningListTable = () => {
   const navigate = useNavigate();
@@ -35,10 +36,18 @@ const SeasoningListTable = () => {
       onCell: (seasoningWithDishLevel) => ({
         onClick: () => handleClickRow(seasoningWithDishLevel),
       }),
-      render: (_, { source }, index) => (
-        <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
-          {source}
-        </Tag>
+      render: (_, { id, source }, index) => (
+        <Space direction={"vertical"} style={{ width: "100%" }}>
+          {source?.map((source: SEASONING_SOURCE) => (
+            <Space.Compact key={id + source} style={{ width: "100%" }}>
+              <div style={{ width: "100%" }}>
+                <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
+                  {source}
+                </Tag>
+              </div>
+            </Space.Compact>
+          ))}
+        </Space>
       ),
     },
     {

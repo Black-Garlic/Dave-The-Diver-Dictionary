@@ -23,7 +23,9 @@ const SeasoningListFilter = () => {
   ): SeasoningWithDishLevel[] => {
     if (source.length > 0) {
       return seasoningList.filter((seasoning) =>
-        source.some((sourceOption) => sourceOption === seasoning.source),
+        seasoning.source.some((seasoningSource) =>
+          source.includes(seasoningSource),
+        ),
       );
     } else {
       return seasoningList;
@@ -38,7 +40,9 @@ const SeasoningListFilter = () => {
       return seasoningList.filter(
         (seasoning) =>
           seasoning.name.includes(keyword) ||
-          seasoning.source.includes(keyword) ||
+          seasoning.source.some((seasoningSource) =>
+            seasoningSource.includes(keyword),
+          ) ||
           seasoning.dishList.some((dish) => dish.name.includes(keyword)),
       );
     } else {

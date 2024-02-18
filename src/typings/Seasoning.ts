@@ -5,7 +5,7 @@ import { DishWithLevel } from "@typings/Dish.ts";
 export interface Seasoning extends Rank {
   id: string;
   name: string;
-  source: SEASONING_SOURCE;
+  source: SEASONING_SOURCE[];
 }
 
 export interface SeasoningWithDishLevel extends Seasoning {
