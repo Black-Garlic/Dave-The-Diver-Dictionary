@@ -1,10 +1,12 @@
-import { Card, Select } from "antd";
+import { Card, Select, Tag } from "antd";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { dishDetailState } from "@services/Dish/DishState.ts";
 import { levelListState } from "@services/Level/LevelState.ts";
 import { useCallback } from "react";
 import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
 import { LEVEL_LABEL } from "@constants/Level.ts";
+import { PARTY } from "@constants/Dish.ts";
+import { getPartyColor } from "@libs/dishUtil.ts";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -80,7 +82,9 @@ const DishDetailInfo = () => {
         파티
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetailValue?.party?.map((party) => <>{party}</>)}
+        {dishDetailValue?.party?.map((party: PARTY) => (
+          <Tag color={getPartyColor(party)}>{party}</Tag>
+        ))}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         레벨
