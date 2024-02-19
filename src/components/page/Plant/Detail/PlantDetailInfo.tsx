@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
-import { Card } from "antd";
+import { Card, Tag } from "antd";
 import { useRecoilValue } from "recoil";
 import { plantDetailState } from "@services/Plant/PlantState.ts";
+import { PLANT_SOURCE } from "@constants/Plant.ts";
+import { getSourceColor } from "@libs/sourceUtil.ts";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -39,7 +41,14 @@ const PlantDetailInfo = () => {
         원산지
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {plantDetailValue?.source}
+        {plantDetailValue?.source &&
+          plantDetailValue?.source?.map(
+            (source: PLANT_SOURCE, index: number) => (
+              <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
+                {source}
+              </Tag>
+            ),
+          )}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
