@@ -1,8 +1,10 @@
-import { Card } from "antd";
+import { Card, Tag } from "antd";
 import { useEffect, useState } from "react";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
 import { useRecoilValue } from "recoil";
 import { fishDetailState } from "@services/Fish/FishState.ts";
+import { getRegionColor } from "@libs/regionUtil.ts";
+import { getTimeColor } from "@libs/timeUtil.ts";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -46,13 +48,21 @@ const FishDetailInfo = () => {
         지역
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {fishDetailValue?.region}
+        {fishDetailValue?.region && (
+          <Tag color={getRegionColor(fishDetailValue?.region)}>
+            {fishDetailValue?.region}
+          </Tag>
+        )}
       </Card.Grid>
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
         시간대
       </Card.Grid>
       <Card.Grid style={gridStyle} hoverable={false}>
-        {fishDetailValue?.time}
+        {fishDetailValue?.time && (
+          <Tag color={getTimeColor(fishDetailValue?.time)}>
+            {fishDetailValue?.time}
+          </Tag>
+        )}
       </Card.Grid>
 
       <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
