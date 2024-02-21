@@ -2,15 +2,17 @@ import { useNavigate } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { seasoningFilterListState } from "@services/Seasoning/SeasoningState.ts";
 import { useCallback } from "react";
-import { Dish } from "@typings/Dish.ts";
-import { DISH_DETAIL_ROUTE, SEASONING_DETAIL_ROUTE } from "@constants/Route.ts";
+import { SEASONING_DETAIL_ROUTE } from "@constants/Route.ts";
 import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
-import { Button, Space, Table, Tag } from "antd";
+import { Table } from "antd";
 import { ColumnsType } from "antd/es/table";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
-import { LEVEL_LABEL } from "@constants/Level.ts";
 import { SEASONING_SOURCE } from "@constants/Seasoning.ts";
+import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
+import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
+import TagColumn from "@components/common/Table/Column/TagColumn.tsx";
+import MultiDishColumn from "@components/common/Table/Column/MultiDishColumn.tsx";
 
 const SeasoningListTable = () => {
   const navigate = useNavigate();
@@ -36,18 +38,16 @@ const SeasoningListTable = () => {
       onCell: (seasoningWithDishLevel) => ({
         onClick: () => handleClickRow(seasoningWithDishLevel),
       }),
-      render: (_, { id, source }, index) => (
-        <Space direction={"vertical"} style={{ width: "100%" }}>
+      render: (_, { id, source }) => (
+        <MultiColumn direction={"vertical"}>
           {source?.map((source: SEASONING_SOURCE) => (
-            <Space.Compact key={id + source} style={{ width: "100%" }}>
-              <div style={{ width: "100%" }}>
-                <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
-                  {source}
-                </Tag>
-              </div>
-            </Space.Compact>
+            <MultiTagColumn
+              key={id + source}
+              color={getSourceColor(source)}
+              value={source}
+            />
           ))}
-        </Space>
+        </MultiColumn>
       ),
     },
     {
@@ -59,16 +59,14 @@ const SeasoningListTable = () => {
       onCell: (seasoningWithDishLevel) => ({
         onClick: () => handleClickRow(seasoningWithDishLevel),
       }),
-      render: (_, { id, dishList }, index) => {
+      render: (_, { id, dishList }) => {
         const seasoningNeedCount = getRecipeCountSum(id, dishList);
 
         return (
-          <Tag
-            key={`${id}-${index}`}
+          <TagColumn
             color={seasoningNeedCount === 0 ? "black" : ""}
-          >
-            {seasoningNeedCount}
-          </Tag>
+            value={seasoningNeedCount}
+          />
         );
       },
     },
@@ -78,22 +76,7 @@ const SeasoningListTable = () => {
       dataIndex: "dish",
       align: "center",
       width: 350,
-      render: (_, { dishList }) => (
-        <Space direction={"vertical"} style={{ width: "100%" }}>
-          {dishList.map((dish) => (
-            <Space.Compact key={dish.id} style={{ width: "100%" }}>
-              <Button
-                style={{ width: "100%", textAlign: "start", display: "flex" }}
-                onClick={() => handleClickDish(dish)}
-              >
-                <div style={{ flex: "1" }}>{dish.name}</div>
-
-                <div>{LEVEL_LABEL[dish.level - 1]}</div>
-              </Button>
-            </Space.Compact>
-          ))}
-        </Space>
-      ),
+      render: (_, { dishList }) => <MultiDishColumn dishList={dishList} />,
     },
   ];
 
@@ -102,13 +85,6 @@ const SeasoningListTable = () => {
       navigate(
         SEASONING_DETAIL_ROUTE.path.replace(":id", seasoningWithDishLevel.id),
       );
-    },
-    [navigate],
-  );
-
-  const handleClickDish = useCallback(
-    (dish: Dish) => {
-      navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.id));
     },
     [navigate],
   );

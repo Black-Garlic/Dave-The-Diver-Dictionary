@@ -1,6 +1,6 @@
 import { ColumnsType } from "antd/es/table";
 import { Dish, DishWithLevel } from "@typings/Dish.ts";
-import { Select, Space, Table, Tag } from "antd";
+import { Select, Table } from "antd";
 import { useCallback } from "react";
 import { DISH_DETAIL_ROUTE } from "@constants/Route.ts";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,8 @@ import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { levelListState } from "@services/Level/LevelState.ts";
 import { getPartyColor } from "@libs/dishUtil.ts";
 import { PARTY } from "@constants/Dish.ts";
+import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
+import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
 
 const DishListTable = () => {
   const navigate = useNavigate();
@@ -66,15 +68,15 @@ const DishListTable = () => {
       width: 250,
       onCell: (dish) => ({ onClick: () => handleClickRow(dish) }),
       render: (_, { id, party }) => (
-        <Space direction={"vertical"} style={{ width: "100%" }}>
+        <MultiColumn direction={"vertical"}>
           {party?.map((party: PARTY) => (
-            <Space.Compact key={id + party} style={{ width: "100%" }}>
-              <div style={{ width: "100%" }}>
-                <Tag color={getPartyColor(party)}>{party}</Tag>
-              </div>
-            </Space.Compact>
+            <MultiTagColumn
+              key={id + party}
+              color={getPartyColor(party)}
+              value={party}
+            />
           ))}
-        </Space>
+        </MultiColumn>
       ),
     },
     {

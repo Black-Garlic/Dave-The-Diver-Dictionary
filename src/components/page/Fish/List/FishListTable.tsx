@@ -1,4 +1,4 @@
-import { Button, Space, Table, Tag } from "antd";
+import { Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { FishWithDishLevel } from "@typings/Fish.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
@@ -6,11 +6,11 @@ import { getTimeColor } from "@libs/timeUtil.ts";
 import { useRecoilValue } from "recoil";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
-import { DISH_DETAIL_ROUTE, FISH_DETAIL_ROUTE } from "@constants/Route.ts";
-import { Dish } from "@typings/Dish.ts";
-import { LEVEL_LABEL } from "@constants/Level.ts";
+import { FISH_DETAIL_ROUTE } from "@constants/Route.ts";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
 import { fishFilterListState } from "@services/Fish/FishState.ts";
+import TagColumn from "@components/common/Table/Column/TagColumn.tsx";
+import MultiDishColumn from "@components/common/Table/Column/MultiDishColumn.tsx";
 
 const FishListTable = () => {
   const navigate = useNavigate();
@@ -46,10 +46,8 @@ const FishListTable = () => {
       onCell: (fishWithDish) => ({
         onClick: () => handleClickRow(fishWithDish),
       }),
-      render: (_, { region }, index) => (
-        <Tag color={getRegionColor(region)} key={`${region}-${index}`}>
-          {region}
-        </Tag>
+      render: (_, { region }) => (
+        <TagColumn color={getRegionColor(region)} value={region} />
       ),
     },
     {
@@ -61,10 +59,8 @@ const FishListTable = () => {
       onCell: (fishWithDish) => ({
         onClick: () => handleClickRow(fishWithDish),
       }),
-      render: (_, { time }, index) => (
-        <Tag color={getTimeColor(time)} key={`${time}-${index}`}>
-          {time}
-        </Tag>
+      render: (_, { time }) => (
+        <TagColumn color={getTimeColor(time)} value={time} />
       ),
     },
     {
@@ -76,16 +72,14 @@ const FishListTable = () => {
       onCell: (fishWithDish) => ({
         onClick: () => handleClickRow(fishWithDish),
       }),
-      render: (_, { id, dishList }, index) => {
+      render: (_, { id, dishList }) => {
         const fishNeedCount = getRecipeCountSum(id, dishList);
 
         return (
-          <Tag
-            key={`${id}-${index}`}
+          <TagColumn
             color={fishNeedCount === 0 ? "black" : ""}
-          >
-            {fishNeedCount}
-          </Tag>
+            value={fishNeedCount}
+          />
         );
       },
     },
@@ -95,35 +89,13 @@ const FishListTable = () => {
       dataIndex: "dish",
       align: "center",
       width: 350,
-      render: (_, { dishList }) => (
-        <Space direction={"vertical"} style={{ width: "100%" }}>
-          {dishList.map((dish) => (
-            <Space.Compact key={dish.id} style={{ width: "100%" }}>
-              <Button
-                style={{ width: "100%", textAlign: "start", display: "flex" }}
-                onClick={() => handleClickDish(dish)}
-              >
-                <div style={{ flex: "1" }}>{dish.name}</div>
-
-                <div>{LEVEL_LABEL[dish.level - 1]}</div>
-              </Button>
-            </Space.Compact>
-          ))}
-        </Space>
-      ),
+      render: (_, { dishList }) => <MultiDishColumn dishList={dishList} />,
     },
   ];
 
   const handleClickRow = useCallback(
     (fishWithDish: FishWithDishLevel) => {
       navigate(FISH_DETAIL_ROUTE.path.replace(":id", fishWithDish.id));
-    },
-    [navigate],
-  );
-
-  const handleClickDish = useCallback(
-    (dish: Dish) => {
-      navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.id));
     },
     [navigate],
   );

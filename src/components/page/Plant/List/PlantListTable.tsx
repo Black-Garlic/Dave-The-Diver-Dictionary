@@ -2,15 +2,17 @@ import { ColumnsType } from "antd/es/table";
 import { PlantWithDishLevel } from "@typings/Plant.ts";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
-import { DISH_DETAIL_ROUTE, PLANT_DETAIL_ROUTE } from "@constants/Route.ts";
-import { Button, Space, Table, Tag } from "antd";
-import { LEVEL_LABEL } from "@constants/Level.ts";
+import { PLANT_DETAIL_ROUTE } from "@constants/Route.ts";
+import { Table } from "antd";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
-import { Dish } from "@typings/Dish.ts";
 import { getSourceColor } from "@libs/sourceUtil.ts";
 import { useRecoilValue } from "recoil";
 import { plantFilterListState } from "@services/Plant/PlantState.ts";
 import { PLANT_SOURCE } from "@constants/Plant.ts";
+import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
+import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
+import TagColumn from "@components/common/Table/Column/TagColumn.tsx";
+import MultiDishColumn from "@components/common/Table/Column/MultiDishColumn.tsx";
 
 const PlantListTable = () => {
   const navigate = useNavigate();
@@ -36,18 +38,16 @@ const PlantListTable = () => {
       onCell: (plantWithDishLevel) => ({
         onClick: () => handleClickRow(plantWithDishLevel),
       }),
-      render: (_, { id, source }, index) => (
-        <Space direction={"vertical"} style={{ width: "100%" }}>
+      render: (_, { id, source }) => (
+        <MultiColumn direction={"vertical"}>
           {source?.map((source: PLANT_SOURCE) => (
-            <Space.Compact key={id + source} style={{ width: "100%" }}>
-              <div style={{ width: "100%" }}>
-                <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
-                  {source}
-                </Tag>
-              </div>
-            </Space.Compact>
+            <MultiTagColumn
+              key={id + source}
+              color={getSourceColor(source)}
+              value={source}
+            />
           ))}
-        </Space>
+        </MultiColumn>
       ),
     },
     {
@@ -59,16 +59,14 @@ const PlantListTable = () => {
       onCell: (plantWithDishLevel) => ({
         onClick: () => handleClickRow(plantWithDishLevel),
       }),
-      render: (_, { id, dishList }, index) => {
+      render: (_, { id, dishList }) => {
         const plantNeedCount = getRecipeCountSum(id, dishList);
 
         return (
-          <Tag
-            key={`${id}-${index}`}
+          <TagColumn
             color={plantNeedCount === 0 ? "black" : ""}
-          >
-            {plantNeedCount}
-          </Tag>
+            value={plantNeedCount}
+          />
         );
       },
     },
@@ -78,35 +76,13 @@ const PlantListTable = () => {
       dataIndex: "dish",
       align: "center",
       width: 350,
-      render: (_, { dishList }) => (
-        <Space direction={"vertical"} style={{ width: "100%" }}>
-          {dishList.map((dish) => (
-            <Space.Compact key={dish.id} style={{ width: "100%" }}>
-              <Button
-                style={{ width: "100%", textAlign: "start", display: "flex" }}
-                onClick={() => handleClickDish(dish)}
-              >
-                <div style={{ flex: "1" }}>{dish.name}</div>
-
-                <div>{LEVEL_LABEL[dish.level - 1]}</div>
-              </Button>
-            </Space.Compact>
-          ))}
-        </Space>
-      ),
+      render: (_, { dishList }) => <MultiDishColumn dishList={dishList} />,
     },
   ];
 
   const handleClickRow = useCallback(
     (plantWithDishLevel: PlantWithDishLevel) => {
       navigate(PLANT_DETAIL_ROUTE.path.replace(":id", plantWithDishLevel.id));
-    },
-    [navigate],
-  );
-
-  const handleClickDish = useCallback(
-    (dish: Dish) => {
-      navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.id));
     },
     [navigate],
   );
