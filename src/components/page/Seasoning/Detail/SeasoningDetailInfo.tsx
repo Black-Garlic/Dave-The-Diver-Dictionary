@@ -5,15 +5,11 @@ import { useRecoilValue } from "recoil";
 import { seasoningDetailState } from "@services/Seasoning/SeasoningState.ts";
 import { SEASONING_SOURCE } from "@constants/Seasoning.ts";
 import { getSourceColor } from "@libs/sourceUtil.ts";
+import DetailTitle from "@components/common/Detail/DetailTitle.tsx";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
   textAlign: "center",
-};
-
-const titleStyle: React.CSSProperties = {
-  background: "#000",
-  color: "#FFF",
 };
 
 const SeasoningDetailInfo = () => {
@@ -34,15 +30,11 @@ const SeasoningDetailInfo = () => {
 
   return (
     <Card>
-      <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
-        이름
-      </Card.Grid>
+      <DetailTitle title={"이름"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         {seasoningDetailValue?.name}
       </Card.Grid>
-      <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
-        원산지
-      </Card.Grid>
+      <DetailTitle title={"원산지"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         {seasoningDetailValue?.source &&
           seasoningDetailValue?.source?.map(
@@ -54,9 +46,7 @@ const SeasoningDetailInfo = () => {
           )}
       </Card.Grid>
 
-      <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
-        필요 개수
-      </Card.Grid>
+      <DetailTitle title={"필요 개수"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         {seasoningNeedCount}
       </Card.Grid>

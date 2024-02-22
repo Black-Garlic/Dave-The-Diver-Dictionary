@@ -5,15 +5,11 @@ import { useRecoilValue } from "recoil";
 import { fishDetailState } from "@services/Fish/FishState.ts";
 import { getRegionColor } from "@libs/regionUtil.ts";
 import { getTimeColor } from "@libs/timeUtil.ts";
+import DetailTitle from "@components/common/Detail/DetailTitle.tsx";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
   textAlign: "center",
-};
-
-const titleStyle: React.CSSProperties = {
-  background: "#000",
-  color: "#FFF",
 };
 
 const FishDetailInfo = () => {
@@ -31,22 +27,16 @@ const FishDetailInfo = () => {
 
   return (
     <Card>
-      <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
-        랭크
-      </Card.Grid>
+      <DetailTitle title={"랭크"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         {fishDetailValue?.rank}
       </Card.Grid>
-      <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
-        이름
-      </Card.Grid>
+      <DetailTitle title={"이름"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         {fishDetailValue?.name}
       </Card.Grid>
 
-      <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
-        지역
-      </Card.Grid>
+      <DetailTitle title={"지역"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         {fishDetailValue?.region && (
           <Tag color={getRegionColor(fishDetailValue?.region)}>
@@ -54,9 +44,7 @@ const FishDetailInfo = () => {
           </Tag>
         )}
       </Card.Grid>
-      <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
-        시간대
-      </Card.Grid>
+      <DetailTitle title={"시간대"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         {fishDetailValue?.time && (
           <Tag color={getTimeColor(fishDetailValue?.time)}>
@@ -65,9 +53,7 @@ const FishDetailInfo = () => {
         )}
       </Card.Grid>
 
-      <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
-        필요 개수
-      </Card.Grid>
+      <DetailTitle title={"필요 개수"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         {fishNeedCount}
       </Card.Grid>
