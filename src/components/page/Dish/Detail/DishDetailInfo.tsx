@@ -7,7 +7,9 @@ import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
 import { LEVEL_LABEL } from "@constants/Level.ts";
 import { PARTY } from "@constants/Dish.ts";
 import { getPartyColor } from "@libs/dishUtil.ts";
-import DetailTitle from "@components/common/Detail/DetailTitle.tsx";
+import DetailInfoItemTitle from "@components/common/DetailInfo/Item/DetailInfoItemTitle.tsx";
+import DetailInfo from "@components/common/DetailInfo/DetailInfo.tsx";
+import DetailInfoItem from "@components/common/DetailInfo/Item/DetailInfoItem.tsx";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -34,41 +36,41 @@ const DishDetailInfo = () => {
   );
 
   return (
-    <Card>
-      <DetailTitle title={"이름"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetailValue?.name}
-      </Card.Grid>
-      <DetailTitle title={"랭크"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        {/*{dish.rank}*/}
-      </Card.Grid>
+    <DetailInfo>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"이름"} />
+        <DetailInfoItem.Text text={dishDetailValue?.name} />
+      </DetailInfoItem>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"랭크"} />
+        <DetailInfoItem.Text text={undefined} />
+      </DetailInfoItem>
 
-      <DetailTitle title={"가격"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetailValue?.maxCost}
-      </Card.Grid>
-      <DetailTitle title={"맛점수"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetailValue?.maxScore}
-      </Card.Grid>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"가격"} />
+        <DetailInfoItem.Text text={dishDetailValue?.maxCost} />
+      </DetailInfoItem>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"맛점수"} />
+        <DetailInfoItem.Text text={dishDetailValue?.maxScore} />
+      </DetailInfoItem>
 
-      <DetailTitle title={"그릇"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetailValue?.maxCount}
-      </Card.Grid>
-      <DetailTitle title={"불꽃"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetailValue?.flame}
-      </Card.Grid>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"그릇"} />
+        <DetailInfoItem.Text text={dishDetailValue?.maxCount} />
+      </DetailInfoItem>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"불꽃"} />
+        <DetailInfoItem.Text text={dishDetailValue?.flame} />
+      </DetailInfoItem>
 
-      <DetailTitle title={"파티"} />
+      <DetailInfoItemTitle title={"파티"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         {dishDetailValue?.party?.map((party: PARTY) => (
           <Tag color={getPartyColor(party)}>{party}</Tag>
         ))}
       </Card.Grid>
-      <DetailTitle title={"레벨"} />
+      <DetailInfoItemTitle title={"레벨"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         <Select
           style={{ width: "100%" }}
@@ -82,7 +84,7 @@ const DishDetailInfo = () => {
           listHeight={350}
         />
       </Card.Grid>
-    </Card>
+    </DetailInfo>
   );
 };
 

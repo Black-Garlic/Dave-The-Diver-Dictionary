@@ -14,7 +14,7 @@ interface Props {
   title: string;
 }
 
-const DetailTitle = ({ title }: Props) => {
+const DetailInfoItemTitle = ({ title }: Props) => {
   return (
     <Card.Grid style={{ ...gridStyle, ...titleStyle }} hoverable={false}>
       {title}
@@ -22,4 +22,4 @@ const DetailTitle = ({ title }: Props) => {
   );
 };
 
-export default DetailTitle;
+export default DetailInfoItemTitle;

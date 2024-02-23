@@ -5,7 +5,9 @@ import { useRecoilValue } from "recoil";
 import { plantDetailState } from "@services/Plant/PlantState.ts";
 import { PLANT_SOURCE } from "@constants/Plant.ts";
 import { getSourceColor } from "@libs/sourceUtil.ts";
-import DetailTitle from "@components/common/Detail/DetailTitle.tsx";
+import DetailInfoItemTitle from "@components/common/DetailInfo/Item/DetailInfoItemTitle.tsx";
+import DetailInfoItem from "@components/common/DetailInfo/Item/DetailInfoItem.tsx";
+import DetailInfo from "@components/common/DetailInfo/DetailInfo.tsx";
 
 const gridStyle: React.CSSProperties = {
   width: "25%",
@@ -26,28 +28,27 @@ const PlantDetailInfo = () => {
   }, [plantDetailValue]);
 
   return (
-    <Card>
-      <DetailTitle title={"이름"} />
+    <DetailInfo>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"이름"} />
+        <DetailInfoItem.Text text={plantDetailValue?.name} />
+      </DetailInfoItem>
+      <DetailInfoItemTitle title={"원산지"} />
       <Card.Grid style={gridStyle} hoverable={false}>
-        {plantDetailValue?.name}
-      </Card.Grid>
-      <DetailTitle title={"원산지"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        {plantDetailValue?.source &&
-          plantDetailValue?.source?.map(
-            (source: PLANT_SOURCE, index: number) => (
-              <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
-                {source}
-              </Tag>
-            ),
-          )}
+        {plantDetailValue?.source?.map(
+          (source: PLANT_SOURCE, index: number) => (
+            <Tag color={getSourceColor(source)} key={`${source}-${index}`}>
+              {source}
+            </Tag>
+          ),
+        )}
       </Card.Grid>
 
-      <DetailTitle title={"필요 개수"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        {plantNeedCount}
-      </Card.Grid>
-    </Card>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"필요 개수"} />
+        <DetailInfoItem.Text text={plantNeedCount} />
+      </DetailInfoItem>
+    </DetailInfo>
   );
 };
 

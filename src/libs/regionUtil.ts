@@ -1,7 +1,7 @@
 import { REGION } from "@constants/Region.ts";
 import { COLOR } from "@constants/Color.ts";
 
-export const getRegionColor = (region: string): string => {
+export const getRegionColor = (region?: string): string => {
   if (region === REGION.BLUE_HOLE_SHALLOWS) {
     return COLOR.CYAN;
   }
