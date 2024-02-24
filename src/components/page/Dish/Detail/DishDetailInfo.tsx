@@ -1,12 +1,11 @@
-import { Card, Select, Tag } from "antd";
+import { Card, Select } from "antd";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { dishDetailState } from "@services/Dish/DishState.ts";
 import { levelListState } from "@services/Level/LevelState.ts";
 import { useCallback } from "react";
 import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
 import { LEVEL_LABEL } from "@constants/Level.ts";
-import { PARTY } from "@constants/Dish.ts";
-import { getPartyColor } from "@libs/dishUtil.ts";
+import { partyListToTagInfoList } from "@libs/dishUtil.ts";
 import DetailInfoItemTitle from "@components/common/DetailInfo/Item/DetailInfoItemTitle.tsx";
 import DetailInfo from "@components/common/DetailInfo/DetailInfo.tsx";
 import DetailInfoItem from "@components/common/DetailInfo/Item/DetailInfoItem.tsx";
@@ -64,12 +63,13 @@ const DishDetailInfo = () => {
         <DetailInfoItem.Text text={dishDetailValue?.flame} />
       </DetailInfoItem>
 
-      <DetailInfoItemTitle title={"파티"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        {dishDetailValue?.party?.map((party: PARTY) => (
-          <Tag color={getPartyColor(party)}>{party}</Tag>
-        ))}
-      </Card.Grid>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"파티"} />
+        <DetailInfoItem.MultiTag
+          tagInfoList={partyListToTagInfoList(dishDetailValue?.party)}
+        />
+      </DetailInfoItem>
+
       <DetailInfoItemTitle title={"레벨"} />
       <Card.Grid style={gridStyle} hoverable={false}>
         <Select

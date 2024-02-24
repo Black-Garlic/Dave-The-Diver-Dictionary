@@ -4,6 +4,7 @@ import { Cookies } from "react-cookie";
 import { PARTY } from "@constants/Dish.ts";
 import { LEVEL_DUMMY } from "@constants/Dummy.ts";
 import { COLOR } from "@constants/Color.ts";
+import { TagInfo } from "@typings/ComponentInfo.ts";
 
 export const getDishLevelCookie = (): Level[] => {
   const Cookie = new Cookies();
@@ -94,4 +95,15 @@ export const getPartyColor = (party: string): string => {
   }
 
   return COLOR.NONE;
+};
+
+export const partyListToTagInfoList = (partyList?: PARTY[]): TagInfo[] => {
+  if (partyList) {
+    return partyList?.map((party: PARTY) => ({
+      color: getPartyColor(party),
+      value: party,
+    }));
+  } else {
+    return [];
+  }
 };
