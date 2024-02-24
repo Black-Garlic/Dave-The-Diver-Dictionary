@@ -35,14 +35,14 @@ const FishDetailInfo = () => {
         <DetailInfoItem.Title title={"지역"} />
         <DetailInfoItem.Tag
           color={getRegionColor(fishDetailValue?.region)}
-          text={fishDetailValue?.region}
+          value={fishDetailValue?.region}
         />
       </DetailInfoItem>
       <DetailInfoItem>
         <DetailInfoItem.Title title={"시간대"} />
         <DetailInfoItem.Tag
           color={getTimeColor(fishDetailValue?.time)}
-          text={fishDetailValue?.time}
+          value={fishDetailValue?.time}
         />
       </DetailInfoItem>
 

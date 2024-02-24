@@ -1,11 +1,7 @@
 import { Tag } from "antd";
+import { TagInfo } from "@typings/ComponentInfo.ts";
 
-interface Props {
-  color: string;
-  value: string | number;
-}
-
-const TagColumn = ({ color, value }: Props) => {
+const TagColumn = ({ color, value }: TagInfo) => {
   return <Tag color={color}>{value}</Tag>;
 };
 

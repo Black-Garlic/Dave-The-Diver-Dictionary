@@ -1,15 +1,11 @@
 import { Tag } from "antd";
 import DetailInfoItemContent from "@components/common/DetailInfo/Item/DetailInfoItemContent.tsx";
+import { TagInfo } from "@typings/ComponentInfo.ts";
 
-interface Props {
-  color: string;
-  text?: string;
-}
-
-const DetailInfoItemTag = ({ color, text }: Props) => {
+const DetailInfoItemTag = ({ color, value }: TagInfo) => {
   return (
     <DetailInfoItemContent>
-      <Tag color={color}>{text}</Tag>
+      <Tag color={color}>{value}</Tag>
     </DetailInfoItemContent>
   );
 };
