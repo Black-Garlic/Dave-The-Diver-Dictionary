@@ -1,4 +1,3 @@
-import { Card, Select } from "antd";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { dishDetailState } from "@services/Dish/DishState.ts";
 import { levelListState } from "@services/Level/LevelState.ts";
@@ -6,14 +5,8 @@ import { useCallback } from "react";
 import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
 import { LEVEL_LABEL } from "@constants/Level.ts";
 import { partyListToTagInfoList } from "@libs/dishUtil.ts";
-import DetailInfoItemTitle from "@components/common/DetailInfo/Item/DetailInfoItemTitle.tsx";
 import DetailInfo from "@components/common/DetailInfo/DetailInfo.tsx";
 import DetailInfoItem from "@components/common/DetailInfo/Item/DetailInfoItem.tsx";
-
-const gridStyle: React.CSSProperties = {
-  width: "25%",
-  textAlign: "center",
-};
 
 const DishDetailInfo = () => {
   const dishDetailValue = useRecoilValue(dishDetailState);
@@ -70,20 +63,17 @@ const DishDetailInfo = () => {
         />
       </DetailInfoItem>
 
-      <DetailInfoItemTitle title={"레벨"} />
-      <Card.Grid style={gridStyle} hoverable={false}>
-        <Select
-          style={{ width: "100%" }}
-          onChange={(selectedLevel) =>
+      <DetailInfoItem>
+        <DetailInfoItem.Title title={"레벨"} />
+        <DetailInfoItem.Select
+          handleChange={(selectedLevel) =>
             handleChangeDishLevel(dishDetailValue?.id, selectedLevel)
           }
-          options={getLevelOption(dishDetailValue?.maxLevel)}
+          optionList={getLevelOption(dishDetailValue?.maxLevel)}
           value={LEVEL_LABEL[dishDetailValue?.level - 1]}
-          placeholder="레벨"
-          maxTagCount={"responsive"}
-          listHeight={350}
+          placeholder={"레벨"}
         />
-      </Card.Grid>
+      </DetailInfoItem>
     </DetailInfo>
   );
 };
