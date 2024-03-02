@@ -2,13 +2,14 @@ import { useRecoilState, useSetRecoilState } from "recoil";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { ColumnsType } from "antd/es/table";
 import { DishWithLevel } from "@typings/Dish.ts";
-import { Button, Table } from "antd";
+import { Table } from "antd";
 import { salesListState } from "@services/Sales/SalesState.ts";
 import { Sales } from "@typings/Sales.ts";
 import { PARTY } from "@constants/Dish.ts";
 import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
 import { getPartyColor } from "@libs/dishUtil.ts";
 import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
+import ButtonColumn from "@components/common/Table/Column/ButtonColumn.tsx";
 
 const SalesDishTable = () => {
   const [dishListValue, setDishList] = useRecoilState(dishFilterListState);
@@ -74,7 +75,10 @@ const SalesDishTable = () => {
       align: "center",
       width: 250,
       render: (_, dishWithLevel) => (
-        <Button onClick={() => handleClickAdd(dishWithLevel)}>추가</Button>
+        <ButtonColumn
+          handleClick={() => handleClickAdd(dishWithLevel)}
+          label={"추가"}
+        />
       ),
     },
   ];
