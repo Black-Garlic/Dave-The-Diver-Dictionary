@@ -20,7 +20,7 @@ export enum UNLOCK_TYPE {
   COOK_STAR_PLATINUM = "쿡스타 플래티넘 달성",
   COOK_STAR_DIA = "쿡스타 다이아몬드 달성",
   PARTY_TUNA = "참치 요트 파티 시작",
-  PARTY_BLUE_FIN = "청새치 파티 시작",
+  PARTY_MARLIN = "청새치 파티 시작",
   PARTY_CUCUMBER = "오이 파티 시작",
   PARTY_LOBSTER = "랍스터 파티 시작",
   SECRET_RECIPE = "비밀 레시피",
@@ -1746,7 +1746,7 @@ export const DISH_LIST: Dish[] = [
   {
     id: "Marlin_And_Soybean_Paste_Roast",
     name: "청새치 된장구이",
-    unlock: UNLOCK_TYPE.PARTY_BLUE_FIN,
+    unlock: UNLOCK_TYPE.PARTY_MARLIN,
     maxCost: 1406,
     maxScore: 272,
     maxCount: 9,
@@ -1757,7 +1757,7 @@ export const DISH_LIST: Dish[] = [
   {
     id: "Boiled_Sailfish_And_Seaweed",
     name: "돛새치 해초조림",
-    unlock: UNLOCK_TYPE.PARTY_BLUE_FIN,
+    unlock: UNLOCK_TYPE.PARTY_MARLIN,
     maxCost: 1572,
     maxScore: 300,
     maxCount: 9,
