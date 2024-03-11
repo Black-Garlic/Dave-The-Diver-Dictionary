@@ -11,10 +11,6 @@ export interface Fish extends Rank {
   dishList?: Dish[];
 }
 
-export interface FishWithDish extends Fish {
-  dishList: Dish[];
-}
-
 export interface FishWithDishLevel extends Fish {
   dishList: DishWithLevel[];
 }
