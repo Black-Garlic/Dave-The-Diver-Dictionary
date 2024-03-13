@@ -3,9 +3,11 @@ import DishDetailInfo from "@components/page/Dish/Detail/DishDetailInfo.tsx";
 import { useParams } from "react-router";
 import { useEffect } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
-import { dishDetailState } from "@services/Dish/DishState.ts";
+import {
+  dishDetailState,
+  dishLevelListState,
+} from "@services/Dish/DishState.ts";
 import { useSetRecoilState } from "recoil";
-import { dishLevelListState } from "@services/Level/LevelState.ts";
 import { getDishWithLevel } from "@libs/dishUtil.ts";
 import { Breadcrumb, Divider } from "antd";
 import DishRecipeTable from "@components/page/Dish/Detail/DishRecipeTable.tsx";

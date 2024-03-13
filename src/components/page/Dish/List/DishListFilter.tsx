@@ -9,12 +9,12 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import {
   dishDefaultListState,
   dishFilterListState,
+  dishLevelListState,
 } from "@services/Dish/DishState.ts";
 import { useEffect, useState } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import { getDishWithLevelList, getPartyColor } from "@libs/dishUtil.ts";
 import { PARTY_OPTION } from "@constants/Dish.ts";
-import { dishLevelListState } from "@services/Level/LevelState.ts";
 
 const DishListFilter = () => {
   const dishDefaultListValue = useRecoilValue(dishDefaultListState);

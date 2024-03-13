@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import { getDishWithLevelList } from "@libs/dishUtil.ts";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { dishLevelListState } from "@services/Level/LevelState.ts";
 import {
   dishDefaultListState,
   dishFilterListState,
+  dishLevelListState,
 } from "@services/Dish/DishState.ts";
 import { Breadcrumb, Divider } from "antd";
 import SalesTable from "@components/page/Sales/SalesTable.tsx";

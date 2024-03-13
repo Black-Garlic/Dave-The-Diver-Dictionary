@@ -7,14 +7,16 @@ import { Breadcrumb, Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
 import { useSetRecoilState } from "recoil";
 import { fishDetailState } from "@services/Fish/FishState.ts";
-import { dishFilterListState } from "@services/Dish/DishState.ts";
+import {
+  dishFilterListState,
+  dishLevelListState,
+} from "@services/Dish/DishState.ts";
 import { getFishWithDishLevel } from "@libs/fishUtil.ts";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { useQuery } from "@tanstack/react-query";
 import { getFishDetail } from "@services/Fish/FishApi.ts";
 import { getDishLevelList } from "@services/Dish/DishApi.ts";
 import { PROFILE_ID } from "@constants/Dish.ts";
-import { dishLevelListState } from "@services/Level/LevelState.ts";
 
 const FishDetailPage = () => {
   const params = useParams();

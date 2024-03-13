@@ -6,9 +6,11 @@ import { Breadcrumb, Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
 import PlantDetailInfo from "@components/page/Plant/Detail/PlantDetailInfo.tsx";
 import { useSetRecoilState } from "recoil";
-import { dishLevelListState } from "@services/Level/LevelState.ts";
 import { plantDetailState } from "@services/Plant/PlantState.ts";
-import { dishFilterListState } from "@services/Dish/DishState.ts";
+import {
+  dishFilterListState,
+  dishLevelListState,
+} from "@services/Dish/DishState.ts";
 import { getPlantWithDishLevel } from "@libs/plantUtil.ts";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { useQuery } from "@tanstack/react-query";

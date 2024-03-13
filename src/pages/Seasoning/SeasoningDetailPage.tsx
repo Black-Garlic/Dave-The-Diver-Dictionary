@@ -6,9 +6,11 @@ import { Breadcrumb, Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
 import SeasoningDetailInfo from "@components/page/Seasoning/Detail/SeasoningDetailInfo.tsx";
 import { useSetRecoilState } from "recoil";
-import { dishLevelListState } from "@services/Level/LevelState.ts";
 import { seasoningDetailState } from "@services/Seasoning/SeasoningState.ts";
-import { dishFilterListState } from "@services/Dish/DishState.ts";
+import {
+  dishFilterListState,
+  dishLevelListState,
+} from "@services/Dish/DishState.ts";
 import { getSeasoningWithDishLevel } from "@libs/seasoningUtil.ts";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { useQuery } from "@tanstack/react-query";
