@@ -16,6 +16,10 @@ export const getFishWithDishLevel = (
 ): FishWithDishLevel => {
   return {
     ...fish,
-    dishList: getDishWithLevelListById(fish.id, RECIPE_TYPE.FISH, levelList),
+    dishList: getDishWithLevelListById(
+      fish.fishId,
+      RECIPE_TYPE.FISH,
+      levelList,
+    ),
   };
 };

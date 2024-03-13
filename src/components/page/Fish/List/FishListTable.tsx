@@ -1,8 +1,6 @@
 import { Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { FishWithDishLevel } from "@typings/Fish.ts";
-import { getRegionColor } from "@libs/regionUtil.ts";
-import { getTimeColor } from "@libs/timeUtil.ts";
 import { useRecoilValue } from "recoil";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
@@ -46,8 +44,8 @@ const FishListTable = () => {
       onCell: (fishWithDish) => ({
         onClick: () => handleClickRow(fishWithDish),
       }),
-      render: (_, { region }) => (
-        <TagColumn color={getRegionColor(region)} value={region} />
+      render: (_, { regionDto }) => (
+        <TagColumn color={regionDto.color} value={regionDto.name} />
       ),
     },
     {
@@ -59,8 +57,8 @@ const FishListTable = () => {
       onCell: (fishWithDish) => ({
         onClick: () => handleClickRow(fishWithDish),
       }),
-      render: (_, { time }) => (
-        <TagColumn color={getTimeColor(time)} value={time} />
+      render: (_, { timeDto }) => (
+        <TagColumn color={timeDto.color} value={timeDto.name} />
       ),
     },
     {
@@ -72,8 +70,8 @@ const FishListTable = () => {
       onCell: (fishWithDish) => ({
         onClick: () => handleClickRow(fishWithDish),
       }),
-      render: (_, { id, dishList }) => {
-        const fishNeedCount = getRecipeCountSum(id, dishList);
+      render: (_, { fishId, dishList }) => {
+        const fishNeedCount = getRecipeCountSum(fishId, dishList);
 
         return (
           <TagColumn
@@ -95,7 +93,7 @@ const FishListTable = () => {
 
   const handleClickRow = useCallback(
     (fishWithDish: FishWithDishLevel) => {
-      navigate(FISH_DETAIL_ROUTE.path.replace(":id", fishWithDish.id));
+      navigate(FISH_DETAIL_ROUTE.path.replace(":id", fishWithDish.fishId));
     },
     [navigate],
   );

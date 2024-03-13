@@ -72,7 +72,7 @@ const FishListFilter = () => {
   ): FishWithDishLevel[] => {
     if (region.length > 0) {
       return fishList.filter((fish) =>
-        region.some((regionOption) => regionOption === fish.region),
+        region.some((regionOption) => regionOption === fish.regionDto.name),
       );
     } else {
       return fishList;
@@ -85,7 +85,7 @@ const FishListFilter = () => {
   ): FishWithDishLevel[] => {
     if (time.length > 0) {
       return fishList.filter((fish) =>
-        time.some((timeOption) => timeOption === fish.time),
+        time.some((timeOption) => timeOption === fish.timeDto.name),
       );
     } else {
       return fishList;
@@ -100,8 +100,8 @@ const FishListFilter = () => {
       return fishList.filter(
         (fish) =>
           fish.name.includes(keyword) ||
-          fish.region.includes(keyword) ||
-          fish.time.includes(keyword) ||
+          fish.regionDto.name.includes(keyword) ||
+          fish.timeDto.name.includes(keyword) ||
           fish.dishList.some((dish) => dish.name.includes(keyword)),
       );
     } else {

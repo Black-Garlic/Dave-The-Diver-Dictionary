@@ -2,8 +2,7 @@ import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
 import FishDetailInfo from "@components/page/Fish/Detail/FishDetailInfo.tsx";
 import { useParams } from "react-router";
 import { useEffect } from "react";
-import { Fish, FishWithDishLevel } from "@typings/Fish.ts";
-import { FISH_LIST } from "@constants/Fish.ts";
+import { FishWithDishLevel } from "@typings/Fish.ts";
 import { Breadcrumb, Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
 import { useRecoilValue, useSetRecoilState } from "recoil";
@@ -12,6 +11,8 @@ import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { getFishWithDishLevel } from "@libs/fishUtil.ts";
 import { levelListState } from "@services/Level/LevelState.ts";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
+import { useQuery } from "@tanstack/react-query";
+import { getFishDetail } from "@services/Fish/FishApi.ts";
 
 const FishDetailPage = () => {
   const params = useParams();
@@ -22,21 +23,22 @@ const FishDetailPage = () => {
 
   const breadcrumbItemList = useBreadcrumb();
 
+  const { data } = useQuery({
+    queryKey: ["fishDetail"],
+    queryFn: () => getFishDetail(params.id || ""),
+  });
+
   useEffect(() => {
-    const targetFish: Fish | undefined = FISH_LIST.find(
-      (fish) => fish.id === params.id,
+    if (!data) return;
+
+    const fishWithDishLevel: FishWithDishLevel = getFishWithDishLevel(
+      data,
+      levelListValue,
     );
 
-    if (targetFish) {
-      const fishWithDishLevel: FishWithDishLevel = getFishWithDishLevel(
-        targetFish,
-        levelListValue,
-      );
-
-      setFishDetail(fishWithDishLevel);
-      setDishFilterList(fishWithDishLevel.dishList);
-    }
-  }, [levelListValue, params, setDishFilterList, setFishDetail]);
+    setFishDetail(fishWithDishLevel);
+    setDishFilterList(fishWithDishLevel.dishList);
+  }, [data, levelListValue, params, setDishFilterList, setFishDetail]);
 
   return (
     <MainTemplate>

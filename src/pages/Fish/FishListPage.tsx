@@ -5,11 +5,12 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { levelListState } from "@services/Level/LevelState.ts";
 import { fishDefaultListState } from "@services/Fish/FishState.ts";
 import { useEffect } from "react";
-import { FISH_LIST } from "@constants/Fish.ts";
 import { getFishWithDishLevelList } from "@libs/fishUtil.ts";
 import { FishWithDishLevel } from "@typings/Fish.ts";
 import { Breadcrumb } from "antd";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
+import { useQuery } from "@tanstack/react-query";
+import { getFishList } from "@services/Fish/FishApi.ts";
 
 const FishListPage = () => {
   const levelListValue = useRecoilValue(levelListState);
@@ -17,14 +18,21 @@ const FishListPage = () => {
 
   const breadcrumbItemList = useBreadcrumb();
 
+  const { data } = useQuery({
+    queryKey: ["fishList"],
+    queryFn: () => getFishList(),
+  });
+
   useEffect(() => {
+    if (!data) return;
+
     const fishWithDishLevelList: FishWithDishLevel[] = getFishWithDishLevelList(
-      FISH_LIST,
+      data,
       levelListValue,
     );
 
     setFishDefaultList(fishWithDishLevelList);
-  }, [levelListValue, setFishDefaultList]);
+  }, [data, levelListValue, setFishDefaultList]);
 
   return (
     <MainTemplate>
