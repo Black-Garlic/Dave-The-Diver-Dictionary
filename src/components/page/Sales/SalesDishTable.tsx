@@ -1,13 +1,11 @@
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { ColumnsType } from "antd/es/table";
-import { DishWithLevel } from "@typings/Dish.ts";
+import { DishWithLevel, Party } from "@typings/Dish.ts";
 import { Table } from "antd";
 import { salesListState } from "@services/Sales/SalesState.ts";
 import { Sales } from "@typings/Sales.ts";
-import { PARTY } from "@constants/Dish.ts";
 import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
-import { getPartyColor } from "@libs/dishUtil.ts";
 import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
 import ButtonColumn from "@components/common/Table/Column/ButtonColumn.tsx";
 
@@ -56,13 +54,13 @@ const SalesDishTable = () => {
       dataIndex: "party",
       align: "center",
       width: 250,
-      render: (_, { id, party }) => (
+      render: (_, { dishId, partyDtoList }) => (
         <MultiColumn direction={"vertical"}>
-          {party?.map((party: PARTY) => (
+          {partyDtoList?.map((party: Party) => (
             <MultiTagColumn
-              key={id + party}
-              color={getPartyColor(party)}
-              value={party}
+              key={dishId + party.partyId}
+              color={party.color}
+              value={party.name}
             />
           ))}
         </MultiColumn>
@@ -90,7 +88,9 @@ const SalesDishTable = () => {
     };
 
     setSalesList((prev) => [...prev, sales]);
-    setDishList((prev) => prev.filter((dish) => dish.id !== dishWithLevel.id));
+    setDishList((prev) =>
+      prev.filter((dish) => dish.dishId !== dishWithLevel.dishId),
+    );
   };
 
   return (

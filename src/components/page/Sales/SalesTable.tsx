@@ -77,7 +77,7 @@ const SalesTable = () => {
     if (isAdd) {
       setSalesList((prev) =>
         prev.map((salesInfo) => {
-          if (salesInfo.dish.id === sales.dish.id) {
+          if (salesInfo.dish.dishId === sales.dish.dishId) {
             return { ...salesInfo, count: sales.count + 1 };
           } else {
             return salesInfo;
@@ -88,7 +88,7 @@ const SalesTable = () => {
       if (sales.count >= 1) {
         setSalesList((prev) =>
           prev.map((salesInfo) => {
-            if (salesInfo.dish.id === sales.dish.id) {
+            if (salesInfo.dish.dishId === sales.dish.dishId) {
               return { ...salesInfo, count: sales.count - 1 };
             } else {
               return salesInfo;
@@ -101,14 +101,16 @@ const SalesTable = () => {
 
   const handleClickRemove = (sales: Sales) => {
     const newSalesList = salesListValue.filter(
-      (salesInfo) => salesInfo.dish.id !== sales.dish.id,
+      (salesInfo) => salesInfo.dish.dishId !== sales.dish.dishId,
     );
 
     setSalesList(newSalesList);
     setDishFilterList(
       dishDefaultListValue.filter(
         (dish) =>
-          !newSalesList.some((salesInfo) => salesInfo.dish.id === dish.id),
+          !newSalesList.some(
+            (salesInfo) => salesInfo.dish.dishId === dish.dishId,
+          ),
       ),
     );
   };

@@ -2,7 +2,6 @@ import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
 import { useEffect } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import { getDishWithLevelList } from "@libs/dishUtil.ts";
-import { DISH_LIST } from "@constants/Dish.ts";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { levelListState } from "@services/Level/LevelState.ts";
 import {
@@ -15,6 +14,8 @@ import SalesDishTable from "@components/page/Sales/SalesDishTable.tsx";
 import SalesInfo from "@components/page/Sales/SalesInfo.tsx";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import DishListFilter from "@components/page/Dish/List/DishListFilter.tsx";
+import { useQuery } from "@tanstack/react-query";
+import { getDishList } from "@services/Dish/DishApi.ts";
 
 const SalesPage = () => {
   const levelListValue = useRecoilValue(levelListState);
@@ -23,15 +24,22 @@ const SalesPage = () => {
 
   const breadcrumbItemList = useBreadcrumb();
 
+  const { data: dishListData } = useQuery({
+    queryKey: ["dishList"],
+    queryFn: () => getDishList(),
+  });
+
   useEffect(() => {
+    if (!dishListData) return;
+
     const dishWithLevelList: DishWithLevel[] = getDishWithLevelList(
-      DISH_LIST,
+      dishListData,
       levelListValue,
     );
 
     setDishDefaultList(dishWithLevelList);
     setDishFilterList(dishWithLevelList);
-  }, [levelListValue, setDishDefaultList, setDishFilterList]);
+  }, [dishListData, levelListValue, setDishDefaultList, setDishFilterList]);
 
   return (
     <MainTemplate>
