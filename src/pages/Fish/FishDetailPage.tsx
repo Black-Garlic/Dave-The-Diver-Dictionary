@@ -37,7 +37,7 @@ const FishDetailPage = () => {
     );
 
     setFishDetail(fishWithDishLevel);
-    setDishFilterList(fishWithDishLevel.dishList);
+    setDishFilterList(fishWithDishLevel.dishWithLevelList);
   }, [data, levelListValue, params, setDishFilterList, setFishDetail]);
 
   return (
