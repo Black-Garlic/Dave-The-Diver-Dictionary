@@ -70,8 +70,8 @@ const FishListTable = () => {
       onCell: (fishWithDish) => ({
         onClick: () => handleClickRow(fishWithDish),
       }),
-      render: (_, { fishId, dishList }) => {
-        const fishNeedCount = getRecipeCountSum(fishId, dishList);
+      render: (_, { fishId, dishWithLevelList }) => {
+        const fishNeedCount = getRecipeCountSum(fishId, dishWithLevelList);
 
         return (
           <TagColumn
@@ -87,7 +87,9 @@ const FishListTable = () => {
       dataIndex: "dish",
       align: "center",
       width: 350,
-      render: (_, { dishList }) => <MultiDishColumn dishList={dishList} />,
+      render: (_, { dishWithLevelList }) => (
+        <MultiDishColumn dishList={dishWithLevelList} />
+      ),
     },
   ];
 

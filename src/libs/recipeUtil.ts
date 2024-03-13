@@ -34,30 +34,27 @@ export const getDishWithLevelListById = (
 };
 
 export const getRecipeCountSum = (
-  id: string,
+  ingredientId: string,
   dishWithLevelList: DishWithLevel[],
 ): number => {
   return dishWithLevelList
-    .map((dish) => getRecipeCount(id, dish))
+    .map((dish) => getRecipeCount(ingredientId, dish))
     .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 };
 
-export const getRecipeCount = (id: string, dish: DishWithLevel): number => {
-  const dishRecipe = getDishRecipe(dish.dishId);
+export const getRecipeCount = (
+  ingredientId: string,
+  dish: DishWithLevel,
+): number => {
+  let recipeCount = 0;
 
-  if (dishRecipe) {
-    let recipeCount = 0;
+  dish.recipeDtoList.forEach((recipe) => {
+    if (recipe.ingredientDto.ingredientId === ingredientId) {
+      recipeCount = recipe.count;
+    }
+  });
 
-    dishRecipe.recipe.forEach((recipe) => {
-      if (recipe.id === id) {
-        recipeCount = recipe.count;
-      }
-    });
-
-    return getRemainCount(recipeCount, dish.level, dish.maxLevel);
-  } else {
-    return 0;
-  }
+  return getRemainCount(recipeCount, dish.level, dish.maxLevel);
 };
 
 export const getDishRecipe = (dishId: string): DishRecipe | undefined => {

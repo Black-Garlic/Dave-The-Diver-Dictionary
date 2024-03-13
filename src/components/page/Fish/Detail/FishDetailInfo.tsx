@@ -13,7 +13,10 @@ const FishDetailInfo = () => {
   useEffect(() => {
     if (fishDetailValue) {
       setFishNeedCount(
-        getRecipeCountSum(fishDetailValue.fishId, fishDetailValue.dishList),
+        getRecipeCountSum(
+          fishDetailValue.fishId,
+          fishDetailValue.dishWithLevelList,
+        ),
       );
     }
   }, [fishDetailValue]);

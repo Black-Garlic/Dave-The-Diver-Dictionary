@@ -1,7 +1,6 @@
 import { Fish, FishWithDishLevel } from "@typings/Fish.ts";
 import { Level } from "@typings/Dish.ts";
-import { RECIPE_TYPE } from "@constants/Dish.ts";
-import { getDishWithLevelListById } from "@libs/recipeUtil.ts";
+import { getDishWithLevelList } from "@libs/dishUtil.ts";
 
 export const getFishWithDishLevelList = (
   fishList: Fish[],
@@ -16,10 +15,6 @@ export const getFishWithDishLevel = (
 ): FishWithDishLevel => {
   return {
     ...fish,
-    dishList: getDishWithLevelListById(
-      fish.fishId,
-      RECIPE_TYPE.FISH,
-      levelList,
-    ),
+    dishWithLevelList: getDishWithLevelList(fish.dishDtoList, levelList),
   };
 };

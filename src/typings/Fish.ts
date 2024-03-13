@@ -7,7 +7,7 @@ export interface Fish extends Rank {
   name: string;
   regionDto: Region;
   timeDto: Time;
-  dishList?: Dish[];
+  dishDtoList: Dish[];
 }
 
 export interface Region extends Tag {
@@ -19,5 +19,5 @@ export interface Time extends Tag {
 }
 
 export interface FishWithDishLevel extends Fish {
-  dishList: DishWithLevel[];
+  dishWithLevelList: DishWithLevel[];
 }

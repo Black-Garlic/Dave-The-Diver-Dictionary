@@ -18,21 +18,21 @@ const FishListPage = () => {
 
   const breadcrumbItemList = useBreadcrumb();
 
-  const { data } = useQuery({
+  const { data: fishListData } = useQuery({
     queryKey: ["fishList"],
     queryFn: () => getFishList(),
   });
 
   useEffect(() => {
-    if (!data) return;
+    if (!fishListData) return;
 
     const fishWithDishLevelList: FishWithDishLevel[] = getFishWithDishLevelList(
-      data,
+      fishListData,
       levelListValue,
     );
 
     setFishDefaultList(fishWithDishLevelList);
-  }, [data, levelListValue, setFishDefaultList]);
+  }, [fishListData, levelListValue, setFishDefaultList]);
 
   return (
     <MainTemplate>

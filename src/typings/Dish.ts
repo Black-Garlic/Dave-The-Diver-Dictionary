@@ -1,5 +1,6 @@
 import { LEVEL } from "@constants/Level.ts";
 import { Tag } from "@typings/Tag.ts";
+import { Recipe } from "@typings/Recipe.ts";
 
 export interface Dish {
   dishId: string;
@@ -11,6 +12,7 @@ export interface Dish {
   flame?: number;
   unlockDto?: Unlock;
   partyDtoList?: Party[];
+  recipeDtoList: Recipe[];
 }
 
 export interface Party extends Tag {
