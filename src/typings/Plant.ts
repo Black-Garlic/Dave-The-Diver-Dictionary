@@ -1,11 +1,11 @@
-import { PLANT_SOURCE } from "@constants/Plant.ts";
 import { Rank } from "@typings/Rank.ts";
 import { DishWithLevel } from "@typings/Dish.ts";
+import { Source } from "@typings/Source.ts";
 
 export interface Plant extends Rank {
-  id: string;
+  plantId: string;
   name: string;
-  source: PLANT_SOURCE[];
+  sourceDtoList: Source[];
 }
 
 export interface PlantWithDishLevel extends Plant {

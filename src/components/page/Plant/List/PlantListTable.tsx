@@ -5,14 +5,13 @@ import { useCallback } from "react";
 import { PLANT_DETAIL_ROUTE } from "@constants/Route.ts";
 import { Table } from "antd";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
-import { getSourceColor } from "@libs/sourceUtil.ts";
 import { useRecoilValue } from "recoil";
 import { plantFilterListState } from "@services/Plant/PlantState.ts";
-import { PLANT_SOURCE } from "@constants/Plant.ts";
 import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
 import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
 import TagColumn from "@components/common/Table/Column/TagColumn.tsx";
 import MultiDishColumn from "@components/common/Table/Column/MultiDishColumn.tsx";
+import { Source } from "@typings/Source.ts";
 
 const PlantListTable = () => {
   const navigate = useNavigate();
@@ -38,13 +37,13 @@ const PlantListTable = () => {
       onCell: (plantWithDishLevel) => ({
         onClick: () => handleClickRow(plantWithDishLevel),
       }),
-      render: (_, { id, source }) => (
+      render: (_, { plantId, sourceDtoList }) => (
         <MultiColumn direction={"vertical"}>
-          {source?.map((source: PLANT_SOURCE) => (
+          {sourceDtoList?.map((source: Source) => (
             <MultiTagColumn
-              key={id + source}
-              color={getSourceColor(source)}
-              value={source}
+              key={plantId + source.name}
+              color={source.color}
+              value={source.name}
             />
           ))}
         </MultiColumn>
@@ -59,8 +58,8 @@ const PlantListTable = () => {
       onCell: (plantWithDishLevel) => ({
         onClick: () => handleClickRow(plantWithDishLevel),
       }),
-      render: (_, { id, dishList }) => {
-        const plantNeedCount = getRecipeCountSum(id, dishList);
+      render: (_, { plantId, dishList }) => {
+        const plantNeedCount = getRecipeCountSum(plantId, dishList);
 
         return (
           <TagColumn
@@ -82,7 +81,9 @@ const PlantListTable = () => {
 
   const handleClickRow = useCallback(
     (plantWithDishLevel: PlantWithDishLevel) => {
-      navigate(PLANT_DETAIL_ROUTE.path.replace(":id", plantWithDishLevel.id));
+      navigate(
+        PLANT_DETAIL_ROUTE.path.replace(":id", plantWithDishLevel.plantId),
+      );
     },
     [navigate],
   );

@@ -14,7 +14,7 @@ const PlantDetailInfo = () => {
   useEffect(() => {
     if (plantDetailValue) {
       setPlantNeedCount(
-        getRecipeCountSum(plantDetailValue.id, plantDetailValue.dishList),
+        getRecipeCountSum(plantDetailValue.plantId, plantDetailValue.dishList),
       );
     }
   }, [plantDetailValue]);
@@ -29,7 +29,7 @@ const PlantDetailInfo = () => {
       <DetailInfoItem>
         <DetailInfoItem.Title title={"원산지"} />
         <DetailInfoItem.MultiTag
-          tagInfoList={sourceListToTagListInfo(plantDetailValue?.source)}
+          tagInfoList={sourceListToTagListInfo(plantDetailValue?.sourceDtoList)}
         />
       </DetailInfoItem>
 

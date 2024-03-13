@@ -41,7 +41,7 @@ const PlantListFilter = () => {
       });
 
       return plantList.filter((plant) =>
-        plant.source.some((source) => filterSourceSet.has(source)),
+        plant.sourceDtoList.some((source) => filterSourceSet.has(source.name)),
       );
     } else {
       return plantList;
@@ -56,7 +56,7 @@ const PlantListFilter = () => {
       return plantList.filter(
         (plant) =>
           plant.name.includes(keyword) ||
-          plant.source.some((source) => source.includes(keyword)) ||
+          plant.sourceDtoList.some((source) => source.name.includes(keyword)) ||
           plant.dishList.some((dish) => dish.name.includes(keyword)),
       );
     } else {

@@ -2,9 +2,8 @@ import { Plant, PlantWithDishLevel } from "@typings/Plant.ts";
 import { RECIPE_TYPE } from "@constants/Dish.ts";
 import { getDishWithLevelListById } from "@libs/recipeUtil.ts";
 import { Level } from "@typings/Dish.ts";
-import { PLANT_SOURCE } from "@constants/Plant.ts";
 import { TagInfo } from "@typings/ComponentInfo.ts";
-import { getSourceColor } from "@libs/sourceUtil.ts";
+import { Source } from "@typings/Source.ts";
 
 export const getPlantWithDishLevelList = (
   plantList: Plant[],
@@ -19,17 +18,21 @@ export const getPlantWithDishLevel = (
 ): PlantWithDishLevel => {
   return {
     ...plant,
-    dishList: getDishWithLevelListById(plant.id, RECIPE_TYPE.PLANT, levelList),
+    dishList: getDishWithLevelListById(
+      plant.plantId,
+      RECIPE_TYPE.PLANT,
+      levelList,
+    ),
   };
 };
 
 export const sourceListToTagListInfo = (
-  sourceList?: PLANT_SOURCE[],
+  sourceDtoList?: Source[],
 ): TagInfo[] => {
-  if (sourceList) {
-    return sourceList.map((source) => ({
-      color: getSourceColor(source),
-      value: source,
+  if (sourceDtoList) {
+    return sourceDtoList.map((source) => ({
+      color: source.color,
+      value: source.name,
     }));
   } else {
     return [];

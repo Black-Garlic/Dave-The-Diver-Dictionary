@@ -7,9 +7,10 @@ import { plantDefaultListState } from "@services/Plant/PlantState.ts";
 import { useEffect } from "react";
 import { PlantWithDishLevel } from "@typings/Plant.ts";
 import { getPlantWithDishLevelList } from "@libs/plantUtil.ts";
-import { PLANT_LIST } from "@constants/Plant.ts";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { Breadcrumb } from "antd";
+import { useQuery } from "@tanstack/react-query";
+import { getPlantList } from "@services/Plant/PlantApi.ts";
 
 const PlantListPage = () => {
   const levelListValue = useRecoilValue(levelListState);
@@ -17,12 +18,19 @@ const PlantListPage = () => {
 
   const breadcrumbItemList = useBreadcrumb();
 
+  const { data } = useQuery({
+    queryKey: ["plantList"],
+    queryFn: () => getPlantList(),
+  });
+
   useEffect(() => {
+    if (!data) return;
+
     const plantWithDishLevelList: PlantWithDishLevel[] =
-      getPlantWithDishLevelList(PLANT_LIST, levelListValue);
+      getPlantWithDishLevelList(data, levelListValue);
 
     setPlantDefaultList(plantWithDishLevelList);
-  }, [levelListValue, setPlantDefaultList]);
+  }, [data, levelListValue, setPlantDefaultList]);
 
   return (
     <MainTemplate>
