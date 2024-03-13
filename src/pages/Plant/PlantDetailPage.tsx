@@ -37,7 +37,7 @@ const PlantDetailPage = () => {
     );
 
     setPlantDetail(plantWithDishLevel);
-    setDishFilterList(plantWithDishLevel.dishList);
+    setDishFilterList(plantWithDishLevel.dishWithLevelList);
   }, [data, levelListValue, params.id, setDishFilterList, setPlantDetail]);
 
   return (

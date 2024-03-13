@@ -14,7 +14,10 @@ const PlantDetailInfo = () => {
   useEffect(() => {
     if (plantDetailValue) {
       setPlantNeedCount(
-        getRecipeCountSum(plantDetailValue.plantId, plantDetailValue.dishList),
+        getRecipeCountSum(
+          plantDetailValue.plantId,
+          plantDetailValue.dishWithLevelList,
+        ),
       );
     }
   }, [plantDetailValue]);

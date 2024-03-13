@@ -57,7 +57,7 @@ const PlantListFilter = () => {
         (plant) =>
           plant.name.includes(keyword) ||
           plant.sourceDtoList.some((source) => source.name.includes(keyword)) ||
-          plant.dishList.some((dish) => dish.name.includes(keyword)),
+          plant.dishDtoList.some((dish) => dish.name.includes(keyword)),
       );
     } else {
       return plantList;

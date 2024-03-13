@@ -18,19 +18,19 @@ const PlantListPage = () => {
 
   const breadcrumbItemList = useBreadcrumb();
 
-  const { data } = useQuery({
+  const { data: plantListData } = useQuery({
     queryKey: ["plantList"],
     queryFn: () => getPlantList(),
   });
 
   useEffect(() => {
-    if (!data) return;
+    if (!plantListData) return;
 
     const plantWithDishLevelList: PlantWithDishLevel[] =
-      getPlantWithDishLevelList(data, levelListValue);
+      getPlantWithDishLevelList(plantListData, levelListValue);
 
     setPlantDefaultList(plantWithDishLevelList);
-  }, [data, levelListValue, setPlantDefaultList]);
+  }, [plantListData, levelListValue, setPlantDefaultList]);
 
   return (
     <MainTemplate>

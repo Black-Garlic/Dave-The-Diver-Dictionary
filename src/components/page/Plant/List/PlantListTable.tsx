@@ -58,8 +58,8 @@ const PlantListTable = () => {
       onCell: (plantWithDishLevel) => ({
         onClick: () => handleClickRow(plantWithDishLevel),
       }),
-      render: (_, { plantId, dishList }) => {
-        const plantNeedCount = getRecipeCountSum(plantId, dishList);
+      render: (_, { plantId, dishWithLevelList }) => {
+        const plantNeedCount = getRecipeCountSum(plantId, dishWithLevelList);
 
         return (
           <TagColumn
@@ -75,7 +75,9 @@ const PlantListTable = () => {
       dataIndex: "dish",
       align: "center",
       width: 350,
-      render: (_, { dishList }) => <MultiDishColumn dishList={dishList} />,
+      render: (_, { dishWithLevelList }) => (
+        <MultiDishColumn dishList={dishWithLevelList} />
+      ),
     },
   ];
 

@@ -1,9 +1,8 @@
 import { Plant, PlantWithDishLevel } from "@typings/Plant.ts";
-import { RECIPE_TYPE } from "@constants/Dish.ts";
-import { getDishWithLevelListById } from "@libs/recipeUtil.ts";
 import { Level } from "@typings/Dish.ts";
 import { Source } from "@typings/Source.ts";
 import { TagInfo } from "@typings/Tag.ts";
+import { getDishWithLevelList } from "@libs/dishUtil.ts";
 
 export const getPlantWithDishLevelList = (
   plantList: Plant[],
@@ -18,11 +17,7 @@ export const getPlantWithDishLevel = (
 ): PlantWithDishLevel => {
   return {
     ...plant,
-    dishList: getDishWithLevelListById(
-      plant.plantId,
-      RECIPE_TYPE.PLANT,
-      levelList,
-    ),
+    dishWithLevelList: getDishWithLevelList(plant.dishDtoList, levelList),
   };
 };
 
