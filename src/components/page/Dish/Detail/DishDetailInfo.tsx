@@ -59,7 +59,7 @@ const DishDetailInfo = () => {
       <DetailInfoItem>
         <DetailInfoItem.Title title={"파티"} />
         <DetailInfoItem.MultiTag
-          tagInfoList={partyListToTagInfoList(dishDetailValue?.party)}
+          tagInfoList={partyListToTagInfoList(dishDetailValue?.partyDtoList)}
         />
       </DetailInfoItem>
 
@@ -67,7 +67,7 @@ const DishDetailInfo = () => {
         <DetailInfoItem.Title title={"레벨"} />
         <DetailInfoItem.Select
           handleChange={(selectedLevel) =>
-            handleChangeDishLevel(dishDetailValue?.id, selectedLevel)
+            handleChangeDishLevel(dishDetailValue?.dishId, selectedLevel)
           }
           optionList={getLevelOption(dishDetailValue?.maxLevel)}
           value={LEVEL_LABEL[dishDetailValue?.level - 1]}

@@ -1,5 +1,5 @@
 import { ColumnsType } from "antd/es/table";
-import { Dish, DishWithLevel } from "@typings/Dish.ts";
+import { Dish, DishWithLevel, Party } from "@typings/Dish.ts";
 import { Select, Table } from "antd";
 import { useCallback } from "react";
 import { DISH_DETAIL_ROUTE } from "@constants/Route.ts";
@@ -9,8 +9,6 @@ import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { levelListState } from "@services/Level/LevelState.ts";
-import { getPartyColor } from "@libs/dishUtil.ts";
-import { PARTY } from "@constants/Dish.ts";
 import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
 import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
 
@@ -67,13 +65,13 @@ const DishListTable = () => {
       align: "center",
       width: 250,
       onCell: (dish) => ({ onClick: () => handleClickRow(dish) }),
-      render: (_, { id, party }) => (
+      render: (_, { dishId, partyDtoList }) => (
         <MultiColumn direction={"vertical"}>
-          {party?.map((party: PARTY) => (
+          {partyDtoList?.map((party: Party) => (
             <MultiTagColumn
-              key={id + party}
-              color={getPartyColor(party)}
-              value={party}
+              key={dishId + party.partyId}
+              color={party.color}
+              value={party.name}
             />
           ))}
         </MultiColumn>
@@ -85,10 +83,12 @@ const DishListTable = () => {
       dataIndex: "level",
       align: "center",
       width: 250,
-      render: (_, { id, level, maxLevel }) => (
+      render: (_, { dishId, level, maxLevel }) => (
         <Select
           style={{ width: "100%" }}
-          onChange={(selectedLevel) => handleChangeDishLevel(id, selectedLevel)}
+          onChange={(selectedLevel) =>
+            handleChangeDishLevel(dishId, selectedLevel)
+          }
           options={getLevelOption(maxLevel)}
           value={LEVEL_LABEL[level - 1]}
           placeholder="레벨"
@@ -101,15 +101,16 @@ const DishListTable = () => {
 
   const handleClickRow = useCallback(
     (dish: Dish) => {
-      navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.id));
+      console.log(dish);
+      navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.dishId));
     },
     [navigate],
   );
 
   const handleChangeDishLevel = useCallback(
-    (id: string, selectedLevel: string) => {
+    (dishId: string, selectedLevel: string) => {
       const newLevelList = levelListValue.map((level) => {
-        if (level.id === id) {
+        if (level.id === dishId) {
           return { ...level, level: getLevel(selectedLevel) };
         } else {
           return level;

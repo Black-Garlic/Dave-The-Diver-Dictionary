@@ -1,4 +1,4 @@
-import { Dish, DishWithLevel, Level } from "@typings/Dish.ts";
+import { Dish, DishWithLevel, Level, Party } from "@typings/Dish.ts";
 import { LEVEL } from "@constants/Level.ts";
 import { Cookies } from "react-cookie";
 import { PARTY } from "@constants/Dish.ts";
@@ -53,7 +53,7 @@ export const getDishWithLevel = (dish: Dish, levelList: Level[]) => {
   let dishLevel: LEVEL = LEVEL.ONE;
 
   levelList.forEach((level) => {
-    if (level.id === dish.id) {
+    if (level.id === dish.dishId) {
       dishLevel = level.level;
     }
   });
@@ -97,11 +97,11 @@ export const getPartyColor = (party: string): string => {
   return COLOR.NONE;
 };
 
-export const partyListToTagInfoList = (partyList?: PARTY[]): TagInfo[] => {
+export const partyListToTagInfoList = (partyList?: Party[]): TagInfo[] => {
   if (partyList) {
-    return partyList?.map((party: PARTY) => ({
-      color: getPartyColor(party),
-      value: party,
+    return partyList?.map((party: Party) => ({
+      color: party.color,
+      value: party.name,
     }));
   } else {
     return [];

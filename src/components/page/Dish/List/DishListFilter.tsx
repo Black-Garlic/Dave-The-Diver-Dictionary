@@ -5,8 +5,11 @@ import {
   SORT_DIRECTION,
 } from "@constants/Sort.ts";
 import Search from "antd/es/input/Search";
-import { useSetRecoilState } from "recoil";
-import { dishFilterListState } from "@services/Dish/DishState.ts";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import {
+  dishDefaultListState,
+  dishFilterListState,
+} from "@services/Dish/DishState.ts";
 import { useEffect, useState } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import {
@@ -14,9 +17,10 @@ import {
   getDishWithLevelList,
   getPartyColor,
 } from "@libs/dishUtil.ts";
-import { DISH_LIST, PARTY, PARTY_OPTION } from "@constants/Dish.ts";
+import { PARTY_OPTION } from "@constants/Dish.ts";
 
 const DishListFilter = () => {
+  const dishDefaultListValue = useRecoilValue(dishDefaultListState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
 
   const [sort, setSort] = useState<string>(DISH_SORT_OPTION[0].value);
@@ -66,7 +70,12 @@ const DishListFilter = () => {
   ): DishWithLevel[] => {
     if (party.length > 0) {
       return dishList.filter((dish) =>
-        party.some((partyOption) => dish.party?.includes(partyOption as PARTY)),
+        party.some(
+          (partyOption) =>
+            dish.partyDtoList?.some((partyDto) =>
+              partyDto.name.includes(partyOption),
+            ),
+        ),
       );
     } else {
       return dishList;
@@ -86,7 +95,7 @@ const DishListFilter = () => {
 
   useEffect(() => {
     const dishWithLevelList = getDishWithLevelList(
-      DISH_LIST,
+      dishDefaultListValue,
       getDishLevelCookie(),
     );
     const dishSortList = sortDish(dishWithLevelList, sort);
@@ -94,7 +103,7 @@ const DishListFilter = () => {
     const dishFilterKeywordList = filterKeyword(dishFilterPartyList, keyword);
 
     setDishFilterList(dishFilterKeywordList);
-  }, [keyword, party, setDishFilterList, sort]);
+  }, [dishDefaultListValue, keyword, party, setDishFilterList, sort]);
 
   const handleResetButtonClick = () => {
     setSort(DISH_SORT_OPTION[0].value);

@@ -1,16 +1,25 @@
-import { PARTY, UNLOCK_TYPE } from "@constants/Dish.ts";
 import { LEVEL } from "@constants/Level.ts";
+import { Tag } from "@typings/Tag.ts";
 
 export interface Dish {
-  id: string;
+  dishId: string;
   name: string;
-  unlock?: UNLOCK_TYPE | string;
   maxCost: number;
   maxScore: number;
   maxCount: number;
   maxLevel: LEVEL;
   flame?: number;
-  party?: PARTY[];
+  unlockDto?: Unlock;
+  partyDtoList?: Party[];
+}
+
+export interface Party extends Tag {
+  partyId: string;
+}
+
+export interface Unlock {
+  unlockId: string;
+  name: string;
 }
 
 export interface DishWithLevel extends Dish {
