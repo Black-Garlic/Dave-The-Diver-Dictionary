@@ -6,13 +6,12 @@ import { SEASONING_DETAIL_ROUTE } from "@constants/Route.ts";
 import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
 import { Table } from "antd";
 import { ColumnsType } from "antd/es/table";
-import { getSourceColor } from "@libs/sourceUtil.ts";
 import { getRecipeCountSum } from "@libs/recipeUtil.ts";
-import { SEASONING_SOURCE } from "@constants/Seasoning.ts";
 import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
 import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
 import TagColumn from "@components/common/Table/Column/TagColumn.tsx";
 import MultiDishColumn from "@components/common/Table/Column/MultiDishColumn.tsx";
+import { Source } from "@typings/Source.ts";
 
 const SeasoningListTable = () => {
   const navigate = useNavigate();
@@ -38,13 +37,13 @@ const SeasoningListTable = () => {
       onCell: (seasoningWithDishLevel) => ({
         onClick: () => handleClickRow(seasoningWithDishLevel),
       }),
-      render: (_, { id, source }) => (
+      render: (_, { seasoningId, sourceDtoList }) => (
         <MultiColumn direction={"vertical"}>
-          {source?.map((source: SEASONING_SOURCE) => (
+          {sourceDtoList?.map((source: Source) => (
             <MultiTagColumn
-              key={id + source}
-              color={getSourceColor(source)}
-              value={source}
+              key={seasoningId + source.sourceId}
+              color={source.color}
+              value={source.name}
             />
           ))}
         </MultiColumn>
@@ -59,8 +58,8 @@ const SeasoningListTable = () => {
       onCell: (seasoningWithDishLevel) => ({
         onClick: () => handleClickRow(seasoningWithDishLevel),
       }),
-      render: (_, { id, dishList }) => {
-        const seasoningNeedCount = getRecipeCountSum(id, dishList);
+      render: (_, { seasoningId, dishList }) => {
+        const seasoningNeedCount = getRecipeCountSum(seasoningId, dishList);
 
         return (
           <TagColumn
@@ -83,7 +82,10 @@ const SeasoningListTable = () => {
   const handleClickRow = useCallback(
     (seasoningWithDishLevel: SeasoningWithDishLevel) => {
       navigate(
-        SEASONING_DETAIL_ROUTE.path.replace(":id", seasoningWithDishLevel.id),
+        SEASONING_DETAIL_ROUTE.path.replace(
+          ":id",
+          seasoningWithDishLevel.seasoningId,
+        ),
       );
     },
     [navigate],

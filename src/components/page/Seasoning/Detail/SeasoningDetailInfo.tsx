@@ -15,7 +15,7 @@ const SeasoningDetailInfo = () => {
     if (seasoningDetailValue) {
       setSeasoningNeedCount(
         getRecipeCountSum(
-          seasoningDetailValue.id,
+          seasoningDetailValue.seasoningId,
           seasoningDetailValue.dishList,
         ),
       );
@@ -32,7 +32,9 @@ const SeasoningDetailInfo = () => {
       <DetailInfoItem>
         <DetailInfoItem.Title title={"원산지"} />
         <DetailInfoItem.MultiTag
-          tagInfoList={sourceListToTagInfoList(seasoningDetailValue?.source)}
+          tagInfoList={sourceListToTagInfoList(
+            seasoningDetailValue?.sourceDtoList,
+          )}
         />
       </DetailInfoItem>
 

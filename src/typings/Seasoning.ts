@@ -1,11 +1,11 @@
-import { SEASONING_SOURCE } from "@constants/Seasoning.ts";
 import { Rank } from "@typings/Rank.ts";
 import { DishWithLevel } from "@typings/Dish.ts";
+import { Source } from "@typings/Source.ts";
 
 export interface Seasoning extends Rank {
-  id: string;
+  seasoningId: string;
   name: string;
-  source: SEASONING_SOURCE[];
+  sourceDtoList: Source[];
 }
 
 export interface SeasoningWithDishLevel extends Seasoning {

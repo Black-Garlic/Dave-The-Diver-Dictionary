@@ -41,7 +41,7 @@ const PlantListTable = () => {
         <MultiColumn direction={"vertical"}>
           {sourceDtoList?.map((source: Source) => (
             <MultiTagColumn
-              key={plantId + source.name}
+              key={plantId + source.sourceId}
               color={source.color}
               value={source.name}
             />

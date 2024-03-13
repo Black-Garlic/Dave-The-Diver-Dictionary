@@ -2,9 +2,8 @@ import { Seasoning, SeasoningWithDishLevel } from "@typings/Seasoning.ts";
 import { RECIPE_TYPE } from "@constants/Dish.ts";
 import { getDishWithLevelListById } from "@libs/recipeUtil.ts";
 import { Level } from "@typings/Dish.ts";
-import { SEASONING_SOURCE } from "@constants/Seasoning.ts";
 import { TagInfo } from "@typings/ComponentInfo.ts";
-import { getSourceColor } from "@libs/sourceUtil.ts";
+import { Source } from "@typings/Source.ts";
 
 export const getSeasoningWithDishLevelList = (
   seasoningList: Seasoning[],
@@ -22,7 +21,7 @@ export const getSeasoningWithDishLevel = (
   return {
     ...seasoning,
     dishList: getDishWithLevelListById(
-      seasoning.id,
+      seasoning.seasoningId,
       RECIPE_TYPE.SEASONING,
       levelList,
     ),
@@ -30,12 +29,12 @@ export const getSeasoningWithDishLevel = (
 };
 
 export const sourceListToTagInfoList = (
-  sourceList?: SEASONING_SOURCE[],
+  sourceDtoList?: Source[],
 ): TagInfo[] => {
-  if (sourceList) {
-    return sourceList.map((source) => ({
-      color: getSourceColor(source),
-      value: source,
+  if (sourceDtoList) {
+    return sourceDtoList.map((source) => ({
+      color: source.color,
+      value: source.name,
     }));
   } else {
     return [];

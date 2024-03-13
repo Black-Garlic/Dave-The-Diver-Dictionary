@@ -1,7 +1,6 @@
 import { useParams } from "react-router";
 import { useEffect } from "react";
-import { Seasoning, SeasoningWithDishLevel } from "@typings/Seasoning.ts";
-import { SEASONING_LIST } from "@constants/Seasoning.ts";
+import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
 import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
 import { Breadcrumb, Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
@@ -12,6 +11,8 @@ import { seasoningDetailState } from "@services/Seasoning/SeasoningState.ts";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { getSeasoningWithDishLevel } from "@libs/seasoningUtil.ts";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
+import { useQuery } from "@tanstack/react-query";
+import { getSeasoningDetail } from "@services/Seasoning/SeasoningApi.ts";
 
 const SeasoningDetailPage = () => {
   const params = useParams();
@@ -22,19 +23,20 @@ const SeasoningDetailPage = () => {
 
   const breadcrumbItemList = useBreadcrumb();
 
+  const { data } = useQuery({
+    queryKey: ["seasoningDetail"],
+    queryFn: () => getSeasoningDetail(params.id || ""),
+  });
+
   useEffect(() => {
-    const targetSeasoning: Seasoning | undefined = SEASONING_LIST.find(
-      (seasoning) => seasoning.id === params.id,
-    );
+    if (!data) return;
 
-    if (targetSeasoning) {
-      const seasoningWithDishLevel: SeasoningWithDishLevel =
-        getSeasoningWithDishLevel(targetSeasoning, levelListValue);
+    const seasoningWithDishLevel: SeasoningWithDishLevel =
+      getSeasoningWithDishLevel(data, levelListValue);
 
-      setSeasoningDetail(seasoningWithDishLevel);
-      setDishFilterList(seasoningWithDishLevel.dishList);
-    }
-  }, [levelListValue, params.id, setDishFilterList, setSeasoningDetail]);
+    setSeasoningDetail(seasoningWithDishLevel);
+    setDishFilterList(seasoningWithDishLevel.dishList);
+  }, [data, levelListValue, params.id, setDishFilterList, setSeasoningDetail]);
 
   return (
     <MainTemplate>
