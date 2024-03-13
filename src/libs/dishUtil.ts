@@ -1,42 +1,26 @@
-import { Dish, DishWithLevel, Level, Party } from "@typings/Dish.ts";
+import { Dish, DishLevel, DishWithLevel, Party } from "@typings/Dish.ts";
 import { LEVEL } from "@constants/Level.ts";
-import { Cookies } from "react-cookie";
 import { PARTY } from "@constants/Dish.ts";
-import { LEVEL_DUMMY } from "@constants/Dummy.ts";
 import { COLOR } from "@constants/Color.ts";
 import { TagInfo } from "@typings/Tag.ts";
 
-export const getDishLevelCookie = (): Level[] => {
-  const Cookie = new Cookies();
-  const dishLevelCookie: Level[] = Cookie.get("dishLevel");
-
-  if (dishLevelCookie) {
-    return dishLevelCookie;
-  } else {
-    const defaultCookie: Level[] = LEVEL_DUMMY;
-    Cookie.set("dishLevel", defaultCookie);
-
-    return defaultCookie;
-  }
-};
-
 export const getDishWithLevelList = (
   dishList: Dish[],
-  levelList: Level[],
+  dishLevelList: DishLevel[],
 ): DishWithLevel[] => {
-  return dishList.map((dish) => getDishWithLevel(dish, levelList));
+  return dishList.map((dish) => getDishWithLevel(dish, dishLevelList));
 };
 
-export const getDishWithLevel = (dish: Dish, levelList: Level[]) => {
+export const getDishWithLevel = (dish: Dish, dishLevelList: DishLevel[]) => {
   let dishLevel: LEVEL = LEVEL.ONE;
 
-  levelList.forEach((level) => {
-    if (level.id === dish.dishId) {
-      dishLevel = level.level;
+  dishLevelList.forEach((dishLevelDto) => {
+    if (dishLevelDto.dishId === dish.dishId) {
+      dishLevel = dishLevelDto.dishLevel;
     }
   });
 
-  return { ...dish, level: dishLevel };
+  return { ...dish, dishLevel: dishLevel };
 };
 
 export const getPartyColor = (party: string): string => {

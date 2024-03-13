@@ -10,7 +10,7 @@ const MultiDishColumn = ({ dishList }: Props) => {
   return (
     <MultiColumn direction={"vertical"}>
       {dishList.map((dish) => (
-        <MultiColumn.Item key={dish.id}>
+        <MultiColumn.Item key={dish.dishId}>
           <DishColumn dish={dish} />
         </MultiColumn.Item>
       ))}

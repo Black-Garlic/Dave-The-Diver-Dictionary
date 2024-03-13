@@ -1,8 +1,7 @@
 import FishListTable from "@components/page/Fish/List/FishListTable.tsx";
 import FishListFilter from "@components/page/Fish/List/FishListFilter.tsx";
 import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
-import { useRecoilValue, useSetRecoilState } from "recoil";
-import { levelListState } from "@services/Level/LevelState.ts";
+import { useSetRecoilState } from "recoil";
 import { fishDefaultListState } from "@services/Fish/FishState.ts";
 import { useEffect } from "react";
 import { getFishWithDishLevelList } from "@libs/fishUtil.ts";
@@ -11,9 +10,10 @@ import { Breadcrumb } from "antd";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { useQuery } from "@tanstack/react-query";
 import { getFishList } from "@services/Fish/FishApi.ts";
+import { getDishLevelList } from "@services/Dish/DishApi.ts";
+import { PROFILE_ID } from "@constants/Dish.ts";
 
 const FishListPage = () => {
-  const levelListValue = useRecoilValue(levelListState);
   const setFishDefaultList = useSetRecoilState(fishDefaultListState);
 
   const breadcrumbItemList = useBreadcrumb();
@@ -23,16 +23,21 @@ const FishListPage = () => {
     queryFn: () => getFishList(),
   });
 
+  const { data: dishLevelListData } = useQuery({
+    queryKey: ["dishLevelList"],
+    queryFn: () => getDishLevelList(PROFILE_ID),
+  });
+
   useEffect(() => {
-    if (!fishListData) return;
+    if (!fishListData || !dishLevelListData) return;
 
     const fishWithDishLevelList: FishWithDishLevel[] = getFishWithDishLevelList(
       fishListData,
-      levelListValue,
+      dishLevelListData,
     );
 
     setFishDefaultList(fishWithDishLevelList);
-  }, [fishListData, levelListValue, setFishDefaultList]);
+  }, [fishListData, dishLevelListData, setFishDefaultList]);
 
   return (
     <MainTemplate>

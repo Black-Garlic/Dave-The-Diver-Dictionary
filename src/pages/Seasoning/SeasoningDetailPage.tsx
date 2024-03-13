@@ -6,7 +6,7 @@ import { Breadcrumb, Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
 import SeasoningDetailInfo from "@components/page/Seasoning/Detail/SeasoningDetailInfo.tsx";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { levelListState } from "@services/Level/LevelState.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 import { seasoningDetailState } from "@services/Seasoning/SeasoningState.ts";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { getSeasoningWithDishLevel } from "@libs/seasoningUtil.ts";
@@ -17,7 +17,7 @@ import { getSeasoningDetail } from "@services/Seasoning/SeasoningApi.ts";
 const SeasoningDetailPage = () => {
   const params = useParams();
 
-  const levelListValue = useRecoilValue(levelListState);
+  const levelListValue = useRecoilValue(dishLevelListState);
   const setSeasoningDetail = useSetRecoilState(seasoningDetailState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
 

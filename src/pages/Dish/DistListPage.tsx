@@ -1,20 +1,21 @@
 import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
 import DishListFilter from "@components/page/Dish/List/DishListFilter.tsx";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { dishDefaultListState } from "@services/Dish/DishState.ts";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
-import { levelListState } from "@services/Level/LevelState.ts";
 import { useEffect } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import { getDishWithLevelList } from "@libs/dishUtil.ts";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { Breadcrumb } from "antd";
 import { useQuery } from "@tanstack/react-query";
-import { getDishList } from "@services/Dish/DishApi.ts";
+import { getDishLevelList, getDishList } from "@services/Dish/DishApi.ts";
+import { PROFILE_ID } from "@constants/Dish.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 
 const DistListPage = () => {
-  const levelListValue = useRecoilValue(levelListState);
   const setDishDefaultList = useSetRecoilState(dishDefaultListState);
+  const setDishLevelList = useSetRecoilState(dishLevelListState);
 
   const breadcrumbItemList = useBreadcrumb();
 
@@ -23,16 +24,22 @@ const DistListPage = () => {
     queryFn: () => getDishList(),
   });
 
+  const { data: dishLevelListData } = useQuery({
+    queryKey: ["dishLevelList"],
+    queryFn: () => getDishLevelList(PROFILE_ID),
+  });
+
   useEffect(() => {
-    if (!dishListData) return;
+    if (!dishListData || !dishLevelListData) return;
 
     const dishWithLevelList: DishWithLevel[] = getDishWithLevelList(
       dishListData,
-      levelListValue,
+      dishLevelListData,
     );
 
     setDishDefaultList(dishWithLevelList);
-  }, [dishListData, levelListValue, setDishDefaultList]);
+    setDishLevelList(dishLevelListData);
+  }, [dishListData, dishLevelListData, setDishDefaultList, setDishLevelList]);
 
   return (
     <MainTemplate>

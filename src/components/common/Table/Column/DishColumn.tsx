@@ -14,7 +14,7 @@ const DishColumn = ({ dish }: Props) => {
 
   const handleClickDish = useCallback(
     (dish: Dish) => {
-      navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.id));
+      navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.dishId));
     },
     [navigate],
   );
@@ -26,7 +26,7 @@ const DishColumn = ({ dish }: Props) => {
     >
       <div style={{ flex: "1" }}>{dish.name}</div>
 
-      <div>{LEVEL_LABEL[dish.level - 1]}</div>
+      <div>{LEVEL_LABEL[dish.dishLevel - 1]}</div>
     </Button>
   );
 };

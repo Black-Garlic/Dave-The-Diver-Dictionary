@@ -12,16 +12,14 @@ import {
 } from "@services/Dish/DishState.ts";
 import { useEffect, useState } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
-import {
-  getDishLevelCookie,
-  getDishWithLevelList,
-  getPartyColor,
-} from "@libs/dishUtil.ts";
+import { getDishWithLevelList, getPartyColor } from "@libs/dishUtil.ts";
 import { PARTY_OPTION } from "@constants/Dish.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 
 const DishListFilter = () => {
   const dishDefaultListValue = useRecoilValue(dishDefaultListState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
+  const levelListValue = useRecoilValue(dishLevelListState);
 
   const [sort, setSort] = useState<string>(DISH_SORT_OPTION[0].value);
   const [party, setParty] = useState<string[]>([]);
@@ -96,14 +94,21 @@ const DishListFilter = () => {
   useEffect(() => {
     const dishWithLevelList = getDishWithLevelList(
       dishDefaultListValue,
-      getDishLevelCookie(),
+      levelListValue,
     );
     const dishSortList = sortDish(dishWithLevelList, sort);
     const dishFilterPartyList = filterParty(dishSortList, party);
     const dishFilterKeywordList = filterKeyword(dishFilterPartyList, keyword);
 
     setDishFilterList(dishFilterKeywordList);
-  }, [dishDefaultListValue, keyword, party, setDishFilterList, sort]);
+  }, [
+    dishDefaultListValue,
+    keyword,
+    levelListValue,
+    party,
+    setDishFilterList,
+    sort,
+  ]);
 
   const handleResetButtonClick = () => {
     setSort(DISH_SORT_OPTION[0].value);

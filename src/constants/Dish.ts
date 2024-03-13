@@ -1,5 +1,7 @@
 import { Option } from "@typings/Option.ts";
 
+export const PROFILE_ID = "test";
+
 export enum UNLOCK_TYPE {
   YOSHIE_VISIT = "요시에 방문",
   ENTER_HYDROTHERMAL_VENTS = "열수 분출 구역 진입",

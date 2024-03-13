@@ -25,10 +25,11 @@ export interface Unlock {
 }
 
 export interface DishWithLevel extends Dish {
-  level: LEVEL;
+  dishLevel: LEVEL;
 }
 
-export interface Level {
-  id: string;
-  level: LEVEL;
+export interface DishLevel {
+  dishLevelId: string;
+  dishId: string;
+  dishLevel: LEVEL;
 }

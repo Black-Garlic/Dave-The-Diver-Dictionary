@@ -1,20 +1,20 @@
 import { Fish, FishWithDishLevel } from "@typings/Fish.ts";
-import { Level } from "@typings/Dish.ts";
+import { DishLevel } from "@typings/Dish.ts";
 import { getDishWithLevelList } from "@libs/dishUtil.ts";
 
 export const getFishWithDishLevelList = (
   fishList: Fish[],
-  levelList: Level[],
+  dishLevelList: DishLevel[],
 ): FishWithDishLevel[] => {
-  return fishList.map((fish) => getFishWithDishLevel(fish, levelList));
+  return fishList.map((fish) => getFishWithDishLevel(fish, dishLevelList));
 };
 
 export const getFishWithDishLevel = (
   fish: Fish,
-  levelList: Level[],
+  dishLevelList: DishLevel[],
 ): FishWithDishLevel => {
   return {
     ...fish,
-    dishWithLevelList: getDishWithLevelList(fish.dishDtoList, levelList),
+    dishWithLevelList: getDishWithLevelList(fish.dishDtoList, dishLevelList),
   };
 };

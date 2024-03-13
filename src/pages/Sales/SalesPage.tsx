@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import { getDishWithLevelList } from "@libs/dishUtil.ts";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { levelListState } from "@services/Level/LevelState.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 import {
   dishDefaultListState,
   dishFilterListState,
@@ -18,7 +18,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getDishList } from "@services/Dish/DishApi.ts";
 
 const SalesPage = () => {
-  const levelListValue = useRecoilValue(levelListState);
+  const levelListValue = useRecoilValue(dishLevelListState);
   const setDishDefaultList = useSetRecoilState(dishDefaultListState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
 

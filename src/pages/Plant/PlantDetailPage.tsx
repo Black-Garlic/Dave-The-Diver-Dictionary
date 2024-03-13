@@ -6,7 +6,7 @@ import { Breadcrumb, Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
 import PlantDetailInfo from "@components/page/Plant/Detail/PlantDetailInfo.tsx";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { levelListState } from "@services/Level/LevelState.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 import { plantDetailState } from "@services/Plant/PlantState.ts";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { getPlantWithDishLevel } from "@libs/plantUtil.ts";
@@ -17,7 +17,7 @@ import { getPlantDetail } from "@services/Plant/PlantApi.ts";
 const PlantDetailPage = () => {
   const params = useParams();
 
-  const levelListValue = useRecoilValue(levelListState);
+  const levelListValue = useRecoilValue(dishLevelListState);
   const setPlantDetail = useSetRecoilState(plantDetailState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
 

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import { dishDetailState } from "@services/Dish/DishState.ts";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { levelListState } from "@services/Level/LevelState.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 import { getDishWithLevel } from "@libs/dishUtil.ts";
 import { Breadcrumb, Divider } from "antd";
 import DishRecipeTable from "@components/page/Dish/Detail/DishRecipeTable.tsx";
@@ -16,7 +16,7 @@ import { getDishDetail } from "@services/Dish/DishApi.ts";
 const DishDetailPage = () => {
   const params = useParams();
 
-  const levelList = useRecoilValue(levelListState);
+  const levelList = useRecoilValue(dishLevelListState);
   const setDishDetail = useSetRecoilState(dishDetailState);
 
   const breadcrumbItemList = useBreadcrumb();

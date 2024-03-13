@@ -23,7 +23,7 @@ export const getRecipeCount = (
     }
   });
 
-  return getRemainCount(recipeCount, dish.level, dish.maxLevel);
+  return getRemainCount(recipeCount, dish.dishLevel, dish.maxLevel);
 };
 
 export const getRemainCount = (

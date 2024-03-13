@@ -1,6 +1,6 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import { dishDetailState } from "@services/Dish/DishState.ts";
-import { levelListState } from "@services/Level/LevelState.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 import { useCallback } from "react";
 import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
 import { LEVEL_LABEL } from "@constants/Level.ts";
@@ -10,7 +10,7 @@ import DetailInfoItem from "@components/common/DetailInfo/Item/DetailInfoItem.ts
 
 const DishDetailInfo = () => {
   const dishDetailValue = useRecoilValue(dishDetailState);
-  const [levelListValue, setLevelList] = useRecoilState(levelListState);
+  const [levelListValue, setLevelList] = useRecoilState(dishLevelListState);
 
   const handleChangeDishLevel = useCallback(
     (id: string, selectedLevel: string) => {

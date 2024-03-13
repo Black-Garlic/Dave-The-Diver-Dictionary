@@ -1,4 +1,3 @@
-import { Rank } from "@typings/Rank.ts";
 import { RANK } from "@constants/Rank.ts";
 
 export interface Recipe {
@@ -13,8 +12,4 @@ export interface Ingredient {
   ingredientId: string;
   name: string;
   rank: RANK;
-}
-
-export interface RecipeInfo extends Rank, Recipe {
-  name: string;
 }

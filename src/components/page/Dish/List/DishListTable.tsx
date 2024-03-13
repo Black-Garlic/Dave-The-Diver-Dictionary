@@ -8,7 +8,7 @@ import { LEVEL_LABEL } from "@constants/Level.ts";
 import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
-import { levelListState } from "@services/Level/LevelState.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
 import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
 
@@ -16,7 +16,9 @@ const DishListTable = () => {
   const navigate = useNavigate();
 
   const dishListValue = useRecoilValue(dishFilterListState);
-  const [levelListValue, setLevelList] = useRecoilState(levelListState);
+  const [levelListValue, setLevelList] = useRecoilState(dishLevelListState);
+
+  console.log(dishListValue);
 
   const columns: ColumnsType<DishWithLevel> = [
     {
@@ -83,14 +85,14 @@ const DishListTable = () => {
       dataIndex: "level",
       align: "center",
       width: 250,
-      render: (_, { dishId, level, maxLevel }) => (
+      render: (_, { dishId, dishLevel, maxLevel }) => (
         <Select
           style={{ width: "100%" }}
           onChange={(selectedLevel) =>
             handleChangeDishLevel(dishId, selectedLevel)
           }
           options={getLevelOption(maxLevel)}
-          value={LEVEL_LABEL[level - 1]}
+          value={LEVEL_LABEL[dishLevel - 1]}
           placeholder="레벨"
           maxTagCount={"responsive"}
           listHeight={350}
@@ -109,11 +111,11 @@ const DishListTable = () => {
 
   const handleChangeDishLevel = useCallback(
     (dishId: string, selectedLevel: string) => {
-      const newLevelList = levelListValue.map((level) => {
-        if (level.id === dishId) {
-          return { ...level, level: getLevel(selectedLevel) };
+      const newLevelList = levelListValue.map((dishLevel) => {
+        if (dishLevel.dishId === dishId) {
+          return { ...dishLevel, level: getLevel(selectedLevel) };
         } else {
-          return level;
+          return dishLevel;
         }
       });
 

@@ -1,8 +1,7 @@
 import { atom } from "recoil";
-import { getDishLevelCookie } from "@libs/dishUtil.ts";
-import { Level } from "@typings/Dish.ts";
+import { DishLevel } from "@typings/Dish.ts";
 
-export const levelListState = atom<Level[]>({
-  key: "levelListState",
-  default: getDishLevelCookie(),
+export const dishLevelListState = atom<DishLevel[]>({
+  key: "dishLevelListState",
+  default: [],
 });

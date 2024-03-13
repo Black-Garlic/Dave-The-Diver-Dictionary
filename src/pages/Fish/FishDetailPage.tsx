@@ -9,7 +9,7 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 import { fishDetailState } from "@services/Fish/FishState.ts";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { getFishWithDishLevel } from "@libs/fishUtil.ts";
-import { levelListState } from "@services/Level/LevelState.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { useQuery } from "@tanstack/react-query";
 import { getFishDetail } from "@services/Fish/FishApi.ts";
@@ -17,7 +17,7 @@ import { getFishDetail } from "@services/Fish/FishApi.ts";
 const FishDetailPage = () => {
   const params = useParams();
 
-  const levelListValue = useRecoilValue(levelListState);
+  const levelListValue = useRecoilValue(dishLevelListState);
   const setFishDetail = useSetRecoilState(fishDetailState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
 

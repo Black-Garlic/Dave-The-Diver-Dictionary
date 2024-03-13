@@ -1,8 +1,7 @@
 import MainTemplate from "@components/common/MainTemplate/MainTemplate.tsx";
 import SeasoningListFilter from "@components/page/Seasoning/List/SeasoningListFilter.tsx";
 import SeasoningListTable from "@components/page/Seasoning/List/SeasoningListTable.tsx";
-import { useRecoilValue, useSetRecoilState } from "recoil";
-import { levelListState } from "@services/Level/LevelState.ts";
+import { useSetRecoilState } from "recoil";
 import { seasoningDefaultListState } from "@services/Seasoning/SeasoningState.ts";
 import { useEffect } from "react";
 import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
@@ -11,9 +10,10 @@ import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { Breadcrumb } from "antd";
 import { useQuery } from "@tanstack/react-query";
 import { getSeasoningList } from "@services/Seasoning/SeasoningApi.ts";
+import { getDishLevelList } from "@services/Dish/DishApi.ts";
+import { PROFILE_ID } from "@constants/Dish.ts";
 
 const SeasoningListPage = () => {
-  const levelListValue = useRecoilValue(levelListState);
   const setSeasoningDefaultList = useSetRecoilState(seasoningDefaultListState);
 
   const breadcrumbItemList = useBreadcrumb();
@@ -23,14 +23,19 @@ const SeasoningListPage = () => {
     queryFn: () => getSeasoningList(),
   });
 
+  const { data: dishLevelListData } = useQuery({
+    queryKey: ["dishLevelList"],
+    queryFn: () => getDishLevelList(PROFILE_ID),
+  });
+
   useEffect(() => {
-    if (!seasoningListData) return;
+    if (!seasoningListData || !dishLevelListData) return;
 
     const seasoningWithDishLevelList: SeasoningWithDishLevel[] =
-      getSeasoningWithDishLevelList(seasoningListData, levelListValue);
+      getSeasoningWithDishLevelList(seasoningListData, dishLevelListData);
 
     setSeasoningDefaultList(seasoningWithDishLevelList);
-  }, [seasoningListData, levelListValue, setSeasoningDefaultList]);
+  }, [seasoningListData, dishLevelListData, setSeasoningDefaultList]);
 
   return (
     <MainTemplate>
