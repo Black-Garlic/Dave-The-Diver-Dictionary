@@ -4,35 +4,51 @@ import { useParams } from "react-router";
 import { useEffect } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import { dishDetailState } from "@services/Dish/DishState.ts";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { dishLevelListState } from "@services/Level/LevelState.ts";
 import { getDishWithLevel } from "@libs/dishUtil.ts";
 import { Breadcrumb, Divider } from "antd";
 import DishRecipeTable from "@components/page/Dish/Detail/DishRecipeTable.tsx";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { useQuery } from "@tanstack/react-query";
-import { getDishDetail } from "@services/Dish/DishApi.ts";
+import { getDishDetail, getDishLevelList } from "@services/Dish/DishApi.ts";
+import { PROFILE_ID } from "@constants/Dish.ts";
 
 const DishDetailPage = () => {
   const params = useParams();
 
-  const levelList = useRecoilValue(dishLevelListState);
   const setDishDetail = useSetRecoilState(dishDetailState);
+  const setDishLevelList = useSetRecoilState(dishLevelListState);
 
   const breadcrumbItemList = useBreadcrumb();
 
-  const { data } = useQuery({
+  const { data: dishDetailData } = useQuery({
     queryKey: ["dishDetail"],
     queryFn: () => getDishDetail(params.id || ""),
   });
 
-  useEffect(() => {
-    if (!data) return;
+  const { data: dishLevelListData } = useQuery({
+    queryKey: ["dishLevelList"],
+    queryFn: () => getDishLevelList(PROFILE_ID),
+  });
 
-    const dishWithLevel: DishWithLevel = getDishWithLevel(data, levelList);
+  useEffect(() => {
+    if (!dishDetailData || !dishLevelListData) return;
+
+    const dishWithLevel: DishWithLevel = getDishWithLevel(
+      dishDetailData,
+      dishLevelListData,
+    );
 
     setDishDetail(dishWithLevel);
-  }, [data, levelList, params.id, setDishDetail]);
+    setDishLevelList(dishLevelListData);
+  }, [
+    dishDetailData,
+    dishLevelListData,
+    params.id,
+    setDishDetail,
+    setDishLevelList,
+  ]);
 
   return (
     <MainTemplate>

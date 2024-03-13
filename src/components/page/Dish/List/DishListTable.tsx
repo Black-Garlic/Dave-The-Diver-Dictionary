@@ -16,9 +16,8 @@ const DishListTable = () => {
   const navigate = useNavigate();
 
   const dishListValue = useRecoilValue(dishFilterListState);
-  const [levelListValue, setLevelList] = useRecoilState(dishLevelListState);
-
-  console.log(dishListValue);
+  const [dishLevelListValue, setDishLevelList] =
+    useRecoilState(dishLevelListState);
 
   const columns: ColumnsType<DishWithLevel> = [
     {
@@ -111,7 +110,7 @@ const DishListTable = () => {
 
   const handleChangeDishLevel = useCallback(
     (dishId: string, selectedLevel: string) => {
-      const newLevelList = levelListValue.map((dishLevel) => {
+      const newLevelList = dishLevelListValue.map((dishLevel) => {
         if (dishLevel.dishId === dishId) {
           return { ...dishLevel, level: getLevel(selectedLevel) };
         } else {
@@ -119,9 +118,9 @@ const DishListTable = () => {
         }
       });
 
-      setLevelList(newLevelList);
+      setDishLevelList(newLevelList);
     },
-    [levelListValue, setLevelList],
+    [dishLevelListValue, setDishLevelList],
   );
 
   return (

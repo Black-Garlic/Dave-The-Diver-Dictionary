@@ -5,40 +5,55 @@ import { useEffect } from "react";
 import { FishWithDishLevel } from "@typings/Fish.ts";
 import { Breadcrumb, Divider } from "antd";
 import DishListTable from "@components/page/Dish/List/DishListTable.tsx";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { fishDetailState } from "@services/Fish/FishState.ts";
 import { dishFilterListState } from "@services/Dish/DishState.ts";
 import { getFishWithDishLevel } from "@libs/fishUtil.ts";
-import { dishLevelListState } from "@services/Level/LevelState.ts";
 import useBreadcrumb from "@hooks/useBreadcrumb.tsx";
 import { useQuery } from "@tanstack/react-query";
 import { getFishDetail } from "@services/Fish/FishApi.ts";
+import { getDishLevelList } from "@services/Dish/DishApi.ts";
+import { PROFILE_ID } from "@constants/Dish.ts";
+import { dishLevelListState } from "@services/Level/LevelState.ts";
 
 const FishDetailPage = () => {
   const params = useParams();
 
-  const levelListValue = useRecoilValue(dishLevelListState);
   const setFishDetail = useSetRecoilState(fishDetailState);
   const setDishFilterList = useSetRecoilState(dishFilterListState);
+  const setDishLevelList = useSetRecoilState(dishLevelListState);
 
   const breadcrumbItemList = useBreadcrumb();
 
-  const { data } = useQuery({
+  const { data: fishDetailData } = useQuery({
     queryKey: ["fishDetail"],
     queryFn: () => getFishDetail(params.id || ""),
   });
 
+  const { data: dishLevelListData } = useQuery({
+    queryKey: ["dishLevelList"],
+    queryFn: () => getDishLevelList(PROFILE_ID),
+  });
+
   useEffect(() => {
-    if (!data) return;
+    if (!fishDetailData || !dishLevelListData) return;
 
     const fishWithDishLevel: FishWithDishLevel = getFishWithDishLevel(
-      data,
-      levelListValue,
+      fishDetailData,
+      dishLevelListData,
     );
 
     setFishDetail(fishWithDishLevel);
     setDishFilterList(fishWithDishLevel.dishWithLevelList);
-  }, [data, levelListValue, params, setDishFilterList, setFishDetail]);
+    setDishLevelList(dishLevelListData);
+  }, [
+    dishLevelListData,
+    fishDetailData,
+    params,
+    setDishFilterList,
+    setDishLevelList,
+    setFishDetail,
+  ]);
 
   return (
     <MainTemplate>

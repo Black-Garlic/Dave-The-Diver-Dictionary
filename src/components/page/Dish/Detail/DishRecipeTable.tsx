@@ -69,7 +69,7 @@ const DishRecipeTable = () => {
         <>
           {getRemainCount(
             count,
-            dishDetailValue.level,
+            dishDetailValue.dishLevel,
             dishDetailValue.maxLevel,
           )}
         </>

@@ -10,21 +10,22 @@ import DetailInfoItem from "@components/common/DetailInfo/Item/DetailInfoItem.ts
 
 const DishDetailInfo = () => {
   const dishDetailValue = useRecoilValue(dishDetailState);
-  const [levelListValue, setLevelList] = useRecoilState(dishLevelListState);
+  const [dishLevelListValue, setDishLevelList] =
+    useRecoilState(dishLevelListState);
 
   const handleChangeDishLevel = useCallback(
     (id: string, selectedLevel: string) => {
-      const newLevelList = levelListValue.map((level) => {
-        if (level.id === id) {
-          return { ...level, level: getLevel(selectedLevel) };
+      const newLevelList = dishLevelListValue.map((dishLevel) => {
+        if (dishLevel.dishId === id) {
+          return { ...dishLevel, dishLevel: getLevel(selectedLevel) };
         } else {
-          return level;
+          return dishLevel;
         }
       });
 
-      setLevelList(newLevelList);
+      setDishLevelList(newLevelList);
     },
-    [levelListValue, setLevelList],
+    [dishLevelListValue, setDishLevelList],
   );
 
   return (
@@ -70,7 +71,7 @@ const DishDetailInfo = () => {
             handleChangeDishLevel(dishDetailValue?.dishId, selectedLevel)
           }
           optionList={getLevelOption(dishDetailValue?.maxLevel)}
-          value={LEVEL_LABEL[dishDetailValue?.level - 1]}
+          value={LEVEL_LABEL[dishDetailValue?.dishLevel - 1]}
           placeholder={"레벨"}
         />
       </DetailInfoItem>
