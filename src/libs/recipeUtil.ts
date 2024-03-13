@@ -23,7 +23,7 @@ export const getDishWithLevelListById = (
   );
 
   const dishList: Dish[] = DISH_LIST.filter((dish) =>
-    dishRecipeList.some((dishRecipe) => dishRecipe.dishId === dish.id),
+    dishRecipeList.some((dishRecipe) => dishRecipe.dishId === dish.dishId),
   );
 
   if (!levelList) {
@@ -43,7 +43,7 @@ export const getRecipeCountSum = (
 };
 
 export const getRecipeCount = (id: string, dish: DishWithLevel): number => {
-  const dishRecipe = getDishRecipe(dish.id);
+  const dishRecipe = getDishRecipe(dish.dishId);
 
   if (dishRecipe) {
     let recipeCount = 0;
@@ -104,15 +104,17 @@ export const getRecipeInfo = (
   recipe: Recipe,
 ): Fish | Plant | Seasoning | undefined => {
   if (recipe.type === RECIPE_TYPE.FISH) {
-    return FISH_LIST.find((fish) => fish.id === recipe.id);
+    return FISH_LIST.find((fish) => fish.fishId === recipe.id);
   }
 
   if (recipe.type === RECIPE_TYPE.PLANT) {
-    return PLANT_LIST.find((plant) => plant.id === recipe.id);
+    return PLANT_LIST.find((plant) => plant.plantId === recipe.id);
   }
 
   if (recipe.type === RECIPE_TYPE.SEASONING) {
-    return SEASONING_LIST.find((seasoning) => seasoning.id === recipe.id);
+    return SEASONING_LIST.find(
+      (seasoning) => seasoning.seasoningId === recipe.id,
+    );
   }
 };
 

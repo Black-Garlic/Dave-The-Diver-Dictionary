@@ -1,6 +1,6 @@
 import { Tag } from "antd";
 import DetailInfoItemContent from "@components/common/DetailInfo/Item/DetailInfoItemContent.tsx";
-import { TagInfo } from "@typings/ComponentInfo.ts";
+import { TagInfo } from "@typings/Tag.ts";
 
 const DetailInfoItemTag = ({ color, value }: TagInfo) => {
   return (

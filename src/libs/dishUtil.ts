@@ -4,7 +4,7 @@ import { Cookies } from "react-cookie";
 import { PARTY } from "@constants/Dish.ts";
 import { LEVEL_DUMMY } from "@constants/Dummy.ts";
 import { COLOR } from "@constants/Color.ts";
-import { TagInfo } from "@typings/ComponentInfo.ts";
+import { TagInfo } from "@typings/Tag.ts";
 
 export const getDishLevelCookie = (): Level[] => {
   const Cookie = new Cookies();
