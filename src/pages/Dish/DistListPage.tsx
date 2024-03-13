@@ -18,21 +18,21 @@ const DistListPage = () => {
 
   const breadcrumbItemList = useBreadcrumb();
 
-  const { data } = useQuery({
+  const { data: dishListData } = useQuery({
     queryKey: ["dishList"],
     queryFn: () => getDishList(),
   });
 
   useEffect(() => {
-    if (!data) return;
+    if (!dishListData) return;
 
     const dishWithLevelList: DishWithLevel[] = getDishWithLevelList(
-      data,
+      dishListData,
       levelListValue,
     );
 
     setDishDefaultList(dishWithLevelList);
-  }, [data, levelListValue, setDishDefaultList]);
+  }, [dishListData, levelListValue, setDishDefaultList]);
 
   return (
     <MainTemplate>

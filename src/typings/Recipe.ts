@@ -1,4 +1,3 @@
-import { RECIPE_TYPE } from "@constants/Dish.ts";
 import { Rank } from "@typings/Rank.ts";
 import { RANK } from "@constants/Rank.ts";
 
@@ -10,7 +9,7 @@ export interface DishRecipe {
 export interface Recipe {
   recipeId: string;
   dishId: string;
-  type: RECIPE_TYPE;
+  type: string;
   count: number;
   ingredientDto: Ingredient;
 }

@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
-import { dishDetailState, recipeListState } from "@services/Dish/DishState.ts";
+import { dishDetailState } from "@services/Dish/DishState.ts";
 import { ColumnsType } from "antd/es/table";
-import { RecipeInfo } from "@typings/Recipe.ts";
+import { Recipe } from "@typings/Recipe.ts";
 import { useCallback } from "react";
 import { Table } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -17,27 +17,40 @@ const DishRecipeTable = () => {
   const navigate = useNavigate();
 
   const dishDetailValue = useRecoilValue(dishDetailState);
-  const recipeListValue = useRecoilValue(recipeListState);
 
-  const columns: ColumnsType<RecipeInfo> = [
+  const columns: ColumnsType<Recipe> = [
     {
       key: "rank",
       title: "랭크",
-      dataIndex: "rank",
+      dataIndex: "ingredientDto.rank",
       align: "center",
       width: 250,
+      render: (_, { ingredientDto }) => <>{ingredientDto.rank}</>,
     },
     {
       key: "name",
       title: "이름",
-      dataIndex: "name",
+      dataIndex: "ingredientDto.name",
       align: "center",
+      render: (_, { ingredientDto }) => <>{ingredientDto.name}</>,
     },
     {
       key: "type",
       title: "타입",
       dataIndex: "type",
       align: "center",
+      render: (_, { type }) => {
+        switch (type) {
+          case "FISH":
+            return RECIPE_TYPE.FISH;
+          case "PLANT":
+            return RECIPE_TYPE.PLANT;
+          case "SEASONING":
+            return RECIPE_TYPE.SEASONING;
+          default:
+            return <></>;
+        }
+      },
     },
     {
       key: "count",
@@ -65,17 +78,32 @@ const DishRecipeTable = () => {
   ];
 
   const handleClickRow = useCallback(
-    (recipeInfo: RecipeInfo) => {
-      if (recipeInfo.type === RECIPE_TYPE.FISH) {
-        navigate(FISH_DETAIL_ROUTE.path.replace(":id", recipeInfo.id));
+    (recipe: Recipe) => {
+      if (recipe.type === RECIPE_TYPE.FISH) {
+        navigate(
+          FISH_DETAIL_ROUTE.path.replace(
+            ":id",
+            recipe.ingredientDto.ingredientId,
+          ),
+        );
       }
 
-      if (recipeInfo.type === RECIPE_TYPE.PLANT) {
-        navigate(PLANT_DETAIL_ROUTE.path.replace(":id", recipeInfo.id));
+      if (recipe.type === RECIPE_TYPE.PLANT) {
+        navigate(
+          PLANT_DETAIL_ROUTE.path.replace(
+            ":id",
+            recipe.ingredientDto.ingredientId,
+          ),
+        );
       }
 
-      if (recipeInfo.type === RECIPE_TYPE.SEASONING) {
-        navigate(SEASONING_DETAIL_ROUTE.path.replace(":id", recipeInfo.id));
+      if (recipe.type === RECIPE_TYPE.SEASONING) {
+        navigate(
+          SEASONING_DETAIL_ROUTE.path.replace(
+            ":id",
+            recipe.ingredientDto.ingredientId,
+          ),
+        );
       }
     },
     [navigate],
@@ -84,10 +112,10 @@ const DishRecipeTable = () => {
   return (
     <Table
       columns={columns}
-      dataSource={recipeListValue}
+      dataSource={dishDetailValue?.recipeDtoList || []}
       pagination={false}
-      onRow={(recipeInfo) => ({
-        onClick: () => handleClickRow(recipeInfo),
+      onRow={(recipe) => ({
+        onClick: () => handleClickRow(recipe),
       })}
     />
   );
