@@ -1,11 +1,6 @@
 import { Rank } from "@typings/Rank.ts";
 import { RANK } from "@constants/Rank.ts";
 
-export interface DishRecipe {
-  dishId: string;
-  recipe: Recipe[];
-}
-
 export interface Recipe {
   recipeId: string;
   dishId: string;
