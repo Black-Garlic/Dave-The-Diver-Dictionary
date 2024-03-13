@@ -102,7 +102,7 @@ const FishListFilter = () => {
           fish.name.includes(keyword) ||
           fish.regionDto.name.includes(keyword) ||
           fish.timeDto.name.includes(keyword) ||
-          fish.dishList.some((dish) => dish.name.includes(keyword)),
+          fish.dishDtoList.some((dish) => dish.name.includes(keyword)),
       );
     } else {
       return fishList;
