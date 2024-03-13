@@ -58,8 +58,11 @@ const SeasoningListTable = () => {
       onCell: (seasoningWithDishLevel) => ({
         onClick: () => handleClickRow(seasoningWithDishLevel),
       }),
-      render: (_, { seasoningId, dishList }) => {
-        const seasoningNeedCount = getRecipeCountSum(seasoningId, dishList);
+      render: (_, { seasoningId, dishWithLevelList }) => {
+        const seasoningNeedCount = getRecipeCountSum(
+          seasoningId,
+          dishWithLevelList,
+        );
 
         return (
           <TagColumn
@@ -75,7 +78,9 @@ const SeasoningListTable = () => {
       dataIndex: "dish",
       align: "center",
       width: 350,
-      render: (_, { dishList }) => <MultiDishColumn dishList={dishList} />,
+      render: (_, { dishWithLevelList }) => (
+        <MultiDishColumn dishList={dishWithLevelList} />
+      ),
     },
   ];
 

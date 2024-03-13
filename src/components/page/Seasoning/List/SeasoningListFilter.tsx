@@ -43,7 +43,7 @@ const SeasoningListFilter = () => {
           seasoning.sourceDtoList.some((seasoningSource) =>
             seasoningSource.name.includes(keyword),
           ) ||
-          seasoning.dishList.some((dish) => dish.name.includes(keyword)),
+          seasoning.dishDtoList.some((dish) => dish.name.includes(keyword)),
       );
     } else {
       return seasoningList;

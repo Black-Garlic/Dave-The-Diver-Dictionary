@@ -1,9 +1,8 @@
 import { Seasoning, SeasoningWithDishLevel } from "@typings/Seasoning.ts";
-import { RECIPE_TYPE } from "@constants/Dish.ts";
-import { getDishWithLevelListById } from "@libs/recipeUtil.ts";
 import { Level } from "@typings/Dish.ts";
 import { Source } from "@typings/Source.ts";
 import { TagInfo } from "@typings/Tag.ts";
+import { getDishWithLevelList } from "@libs/dishUtil.ts";
 
 export const getSeasoningWithDishLevelList = (
   seasoningList: Seasoning[],
@@ -20,11 +19,7 @@ export const getSeasoningWithDishLevel = (
 ): SeasoningWithDishLevel => {
   return {
     ...seasoning,
-    dishList: getDishWithLevelListById(
-      seasoning.seasoningId,
-      RECIPE_TYPE.SEASONING,
-      levelList,
-    ),
+    dishWithLevelList: getDishWithLevelList(seasoning.dishDtoList, levelList),
   };
 };
 

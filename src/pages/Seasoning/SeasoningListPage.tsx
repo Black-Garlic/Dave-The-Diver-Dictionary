@@ -18,19 +18,19 @@ const SeasoningListPage = () => {
 
   const breadcrumbItemList = useBreadcrumb();
 
-  const { data } = useQuery({
+  const { data: seasoningListData } = useQuery({
     queryKey: ["seasoningList"],
     queryFn: () => getSeasoningList(),
   });
 
   useEffect(() => {
-    if (!data) return;
+    if (!seasoningListData) return;
 
     const seasoningWithDishLevelList: SeasoningWithDishLevel[] =
-      getSeasoningWithDishLevelList(data, levelListValue);
+      getSeasoningWithDishLevelList(seasoningListData, levelListValue);
 
     setSeasoningDefaultList(seasoningWithDishLevelList);
-  }, [data, levelListValue, setSeasoningDefaultList]);
+  }, [seasoningListData, levelListValue, setSeasoningDefaultList]);
 
   return (
     <MainTemplate>

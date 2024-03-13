@@ -16,7 +16,7 @@ const SeasoningDetailInfo = () => {
       setSeasoningNeedCount(
         getRecipeCountSum(
           seasoningDetailValue.seasoningId,
-          seasoningDetailValue.dishList,
+          seasoningDetailValue.dishWithLevelList,
         ),
       );
     }

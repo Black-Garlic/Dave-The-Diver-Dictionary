@@ -35,7 +35,7 @@ const SeasoningDetailPage = () => {
       getSeasoningWithDishLevel(data, levelListValue);
 
     setSeasoningDetail(seasoningWithDishLevel);
-    setDishFilterList(seasoningWithDishLevel.dishList);
+    setDishFilterList(seasoningWithDishLevel.dishWithLevelList);
   }, [data, levelListValue, params.id, setDishFilterList, setSeasoningDetail]);
 
   return (
