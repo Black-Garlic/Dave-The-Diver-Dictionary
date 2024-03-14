@@ -33,3 +33,9 @@ export interface DishLevel {
   dishId: string;
   dishLevel: LEVEL;
 }
+
+export interface UpdateDishLevel {
+  profileId: string;
+  dishId: string;
+  dishLevel: number;
+}
