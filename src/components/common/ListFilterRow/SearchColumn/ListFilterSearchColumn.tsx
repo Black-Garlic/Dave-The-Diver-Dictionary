@@ -4,7 +4,7 @@ import ListFilterSearchColumnInput from "@components/common/ListFilterRow/Search
 import ListFilterSearchColumnResetButton from "@components/common/ListFilterRow/SearchColumn/ListFilterSearchColumnResetButton.tsx";
 
 const ListFilterSearchColumnMain = ({ children }: ReactNodeProps) => {
-  return <ListFilterColumn flex={"auto"}>{children}</ListFilterColumn>;
+  return <ListFilterColumn flex={"none"}>{children}</ListFilterColumn>;
 };
 
 const ListFilterSearchColumn = Object.assign(ListFilterSearchColumnMain, {
