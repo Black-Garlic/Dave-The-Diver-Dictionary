@@ -19,7 +19,7 @@ const DishDetailInfo = () => {
       </DetailInfoItem>
 
       <DetailInfoItem title={"랭크"}>
-        <DetailInfoItem.Text text={undefined} />
+        <DetailInfoItem.Text text={dishDetailValue?.rank} />
       </DetailInfoItem>
 
       <DetailInfoItem title={"가격"}>

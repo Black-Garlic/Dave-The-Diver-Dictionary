@@ -13,6 +13,7 @@ export interface Dish {
   unlockDto?: Unlock;
   partyDtoList?: Party[];
   recipeDtoList: Recipe[];
+  rank: number;
 }
 
 export interface Party extends Tag {

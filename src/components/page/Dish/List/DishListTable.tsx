@@ -20,6 +20,14 @@ const DishListTable = () => {
 
   const columns: ColumnsType<DishWithLevel> = [
     {
+      key: "rank",
+      title: "랭크",
+      dataIndex: "rank",
+      align: "center",
+      width: 150,
+      onCell: (dish) => ({ onClick: () => handleClickRow(dish) }),
+    },
+    {
       key: "name",
       title: "이름",
       dataIndex: "name",
