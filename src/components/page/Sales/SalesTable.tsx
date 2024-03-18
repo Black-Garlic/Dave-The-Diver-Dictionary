@@ -116,7 +116,12 @@ const SalesTable = () => {
   };
 
   return (
-    <Table columns={columns} dataSource={salesListValue} pagination={false} />
+    <Table
+      rowKey={(record) => "SalesTable" + record.dish.dishId}
+      columns={columns}
+      dataSource={salesListValue}
+      pagination={false}
+    />
   );
 };
 

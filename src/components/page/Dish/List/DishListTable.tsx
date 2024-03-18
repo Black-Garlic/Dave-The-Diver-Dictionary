@@ -107,7 +107,12 @@ const DishListTable = () => {
   );
 
   return (
-    <Table columns={columns} dataSource={dishListValue} pagination={false} />
+    <Table
+      rowKey={(record) => record.dishId}
+      columns={columns}
+      dataSource={dishListValue}
+      pagination={false}
+    />
   );
 };
 

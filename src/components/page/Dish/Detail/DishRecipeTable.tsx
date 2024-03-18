@@ -111,6 +111,7 @@ const DishRecipeTable = () => {
 
   return (
     <Table
+      rowKey={(record) => record.dishId}
       columns={columns}
       dataSource={dishDetailValue?.recipeDtoList || []}
       pagination={false}

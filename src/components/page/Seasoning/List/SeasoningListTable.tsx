@@ -98,6 +98,7 @@ const SeasoningListTable = () => {
 
   return (
     <Table
+      rowKey={(record) => record.seasoningId}
       columns={columns}
       dataSource={seasoningFilterListValue}
       pagination={false}

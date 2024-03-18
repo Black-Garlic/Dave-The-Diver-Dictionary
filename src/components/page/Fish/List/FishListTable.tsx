@@ -101,7 +101,12 @@ const FishListTable = () => {
   );
 
   return (
-    <Table columns={columns} dataSource={fishFilterList} pagination={false} />
+    <Table
+      rowKey={(record) => record.fishId}
+      columns={columns}
+      dataSource={fishFilterList}
+      pagination={false}
+    />
   );
 };
 

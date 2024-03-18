@@ -92,6 +92,7 @@ const PlantListTable = () => {
 
   return (
     <Table
+      rowKey={(record) => record.plantId}
       columns={columns}
       dataSource={plantFilterListValue}
       pagination={false}

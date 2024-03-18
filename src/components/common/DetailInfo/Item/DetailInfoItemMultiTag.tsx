@@ -10,7 +10,9 @@ const DetailInfoItemMultiTag = ({ tagInfoList }: Props) => {
   return (
     <DetailInfoItemContent>
       {tagInfoList.map((tagInfo: TagInfo) => (
-        <Tag color={tagInfo.color}>{tagInfo.value}</Tag>
+        <Tag key={tagInfo.value} color={tagInfo.color}>
+          {tagInfo.value}
+        </Tag>
       ))}
     </DetailInfoItemContent>
   );
