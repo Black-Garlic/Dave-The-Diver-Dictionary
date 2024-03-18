@@ -24,13 +24,11 @@ const SeasoningDetailInfo = () => {
 
   return (
     <DetailInfo>
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"이름"} />
+      <DetailInfoItem title={"이름"}>
         <DetailInfoItem.Text text={seasoningDetailValue?.name} />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"원산지"} />
+      <DetailInfoItem title={"원산지"}>
         <DetailInfoItem.MultiTag
           tagInfoList={sourceListToTagInfoList(
             seasoningDetailValue?.sourceDtoList,
@@ -38,8 +36,7 @@ const SeasoningDetailInfo = () => {
         />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"필요 개수"} />
+      <DetailInfoItem title={"필요 개수"}>
         <DetailInfoItem.Text text={seasoningNeedCount} />
       </DetailInfoItem>
     </DetailInfo>

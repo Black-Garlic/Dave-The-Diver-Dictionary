@@ -1,5 +1,4 @@
 import { Tag } from "antd";
-import DetailInfoItemContent from "@components/common/DetailInfo/Item/DetailInfoItemContent.tsx";
 import { TagInfo } from "@typings/Tag.ts";
 
 interface Props {
@@ -8,13 +7,13 @@ interface Props {
 
 const DetailInfoItemMultiTag = ({ tagInfoList }: Props) => {
   return (
-    <DetailInfoItemContent>
+    <>
       {tagInfoList.map((tagInfo: TagInfo) => (
         <Tag key={tagInfo.value} color={tagInfo.color}>
           {tagInfo.value}
         </Tag>
       ))}
-    </DetailInfoItemContent>
+    </>
   );
 };
 

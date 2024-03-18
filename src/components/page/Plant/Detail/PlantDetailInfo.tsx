@@ -24,20 +24,17 @@ const PlantDetailInfo = () => {
 
   return (
     <DetailInfo>
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"이름"} />
+      <DetailInfoItem title={"이름"}>
         <DetailInfoItem.Text text={plantDetailValue?.name} />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"원산지"} />
+      <DetailInfoItem title={"원산지"}>
         <DetailInfoItem.MultiTag
           tagInfoList={sourceListToTagListInfo(plantDetailValue?.sourceDtoList)}
         />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"필요 개수"} />
+      <DetailInfoItem title={"필요 개수"}>
         <DetailInfoItem.Text text={plantNeedCount} />
       </DetailInfoItem>
     </DetailInfo>

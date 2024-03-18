@@ -1,5 +1,4 @@
 import { Option } from "@typings/Option.ts";
-import DetailInfoItemContent from "@components/common/DetailInfo/Item/DetailInfoItemContent.tsx";
 import { Select } from "antd";
 
 interface Props {
@@ -16,17 +15,15 @@ const DetailInfoItemSelect = ({
   placeholder,
 }: Props) => {
   return (
-    <DetailInfoItemContent>
-      <Select
-        style={{ width: "100%" }}
-        onChange={(selectedLevel) => handleChange(selectedLevel)}
-        options={optionList}
-        value={value}
-        placeholder={placeholder}
-        maxTagCount={"responsive"}
-        listHeight={350}
-      />
-    </DetailInfoItemContent>
+    <Select
+      style={{ width: "100%" }}
+      onChange={(selectedLevel) => handleChange(selectedLevel)}
+      options={optionList}
+      value={value}
+      placeholder={placeholder}
+      maxTagCount={"responsive"}
+      listHeight={350}
+    />
   );
 };
 

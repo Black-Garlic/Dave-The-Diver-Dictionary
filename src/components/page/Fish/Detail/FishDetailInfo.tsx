@@ -23,32 +23,29 @@ const FishDetailInfo = () => {
 
   return (
     <DetailInfo>
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"랭크"} />
+      <DetailInfoItem title={"랭크"}>
         <DetailInfoItem.Text text={fishDetailValue?.rank} />
       </DetailInfoItem>
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"이름"} />
+
+      <DetailInfoItem title={"이름"}>
         <DetailInfoItem.Text text={fishDetailValue?.name} />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"지역"} />
+      <DetailInfoItem title={"지역"}>
         <DetailInfoItem.Tag
           color={fishDetailValue?.regionDto.color}
           value={fishDetailValue?.regionDto.name}
         />
       </DetailInfoItem>
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"시간대"} />
+
+      <DetailInfoItem title={"시간대"}>
         <DetailInfoItem.Tag
           color={fishDetailValue?.timeDto.color}
           value={fishDetailValue?.timeDto.name}
         />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"필요 개수"} />
+      <DetailInfoItem title={"필요 개수"}>
         <DetailInfoItem.Text text={fishNeedCount} />
       </DetailInfoItem>
     </DetailInfo>

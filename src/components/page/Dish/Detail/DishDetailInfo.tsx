@@ -14,42 +14,37 @@ const DishDetailInfo = () => {
 
   return (
     <DetailInfo>
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"이름"} />
+      <DetailInfoItem title={"이름"}>
         <DetailInfoItem.Text text={dishDetailValue?.name} />
       </DetailInfoItem>
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"랭크"} />
+
+      <DetailInfoItem title={"랭크"}>
         <DetailInfoItem.Text text={undefined} />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"가격"} />
+      <DetailInfoItem title={"가격"}>
         <DetailInfoItem.Text text={dishDetailValue?.maxCost} />
       </DetailInfoItem>
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"맛점수"} />
+
+      <DetailInfoItem title={"맛점수"}>
         <DetailInfoItem.Text text={dishDetailValue?.maxScore} />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"그릇"} />
+      <DetailInfoItem title={"그릇"}>
         <DetailInfoItem.Text text={dishDetailValue?.maxCount} />
       </DetailInfoItem>
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"불꽃"} />
+
+      <DetailInfoItem title={"불꽃"}>
         <DetailInfoItem.Text text={dishDetailValue?.flame} />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"파티"} />
+      <DetailInfoItem title={"파티"}>
         <DetailInfoItem.MultiTag
           tagInfoList={partyListToTagInfoList(dishDetailValue?.partyDtoList)}
         />
       </DetailInfoItem>
 
-      <DetailInfoItem>
-        <DetailInfoItem.Title title={"레벨"} />
+      <DetailInfoItem title={"레벨"}>
         <DetailInfoItem.Select
           handleChange={(selectedLevel) =>
             handleDishLevelChange(dishDetailValue?.dishId, selectedLevel)
