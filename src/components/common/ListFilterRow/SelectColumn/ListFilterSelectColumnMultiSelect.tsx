@@ -1,14 +1,14 @@
+import { MultiSelectProps } from "@typings/Select.ts";
 import { Select } from "antd";
-import { SelectProps } from "@typings/Select.ts";
 
-const ListFilterSelectColumnSelect = ({
+const ListFilterSelectColumnMultiSelect = ({
   mode,
   width,
   value,
   onChange,
   optionList,
   placeholder,
-}: SelectProps) => {
+}: MultiSelectProps) => {
   return (
     <Select
       mode={mode}
@@ -23,4 +23,4 @@ const ListFilterSelectColumnSelect = ({
   );
 };
 
-export default ListFilterSelectColumnSelect;
+export default ListFilterSelectColumnMultiSelect;

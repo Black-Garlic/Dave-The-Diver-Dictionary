@@ -1,14 +1,16 @@
 import ListFilterColumn from "@components/common/ListFilterRow/ListFilterColumn.tsx";
 import { ReactNodeProps } from "@typings/ReactNodeProps.ts";
-import ListFilterSelectColumnSelect from "@components/common/ListFilterRow/SelectColumn/ListFilterSelectColumnSelect.tsx";
+import ListFilterSelectColumnSingleSelect from "@components/common/ListFilterRow/SelectColumn/ListFilterSelectColumnSingleSelect.tsx";
 import ListFilterSelectColumnTagSelect from "@components/common/ListFilterRow/SelectColumn/ListFilterSelectColumnTagSelect.tsx";
+import ListFilterSelectColumnMultiSelect from "@components/common/ListFilterRow/SelectColumn/ListFilterSelectColumnMultiSelect.tsx";
 
 const ListFilterSelectColumnMain = ({ children }: ReactNodeProps) => {
   return <ListFilterColumn flex={"auto"}>{children}</ListFilterColumn>;
 };
 
 const ListFilterSelectColumn = Object.assign(ListFilterSelectColumnMain, {
-  Select: ListFilterSelectColumnSelect,
+  Select: ListFilterSelectColumnSingleSelect,
+  MultiSelect: ListFilterSelectColumnMultiSelect,
   TagSelect: ListFilterSelectColumnTagSelect,
 });
 

@@ -1,14 +1,23 @@
 import { Option } from "@typings/Option.ts";
+import { Dispatch, SetStateAction } from "react";
 
-export interface SelectProps {
+interface SelectProps {
   mode?: "multiple";
   width: number;
-  value: string;
-  onChange: (value: string) => void;
   optionList: Option[];
   placeholder: string;
 }
 
-export interface TagSelectProps extends SelectProps {
+export interface SingleSelectProps extends SelectProps {
+  value: string;
+  onChange: Dispatch<SetStateAction<string>>;
+}
+
+export interface MultiSelectProps extends SelectProps {
+  value: string[];
+  onChange: Dispatch<SetStateAction<string[]>>;
+}
+
+export interface TagSelectProps extends MultiSelectProps {
   getColor: (value: string) => string;
 }
