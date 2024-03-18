@@ -1,34 +1,16 @@
-import { useRecoilState, useRecoilValue } from "recoil";
-import {
-  dishDetailState,
-  dishLevelListState,
-} from "@services/Dish/DishState.ts";
-import { useCallback } from "react";
-import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
+import { useRecoilValue } from "recoil";
+import { dishDetailState } from "@services/Dish/DishState.ts";
+import { getLevelOption } from "@libs/levelUtil.ts";
 import { LEVEL_LABEL } from "@constants/Level.ts";
 import { partyListToTagInfoList } from "@libs/dishUtil.ts";
 import DetailInfo from "@components/common/DetailInfo/DetailInfo.tsx";
 import DetailInfoItem from "@components/common/DetailInfo/Item/DetailInfoItem.tsx";
+import useDishLevel from "@hooks/useDishLevel.tsx";
 
 const DishDetailInfo = () => {
+  const { handleDishLevelChange } = useDishLevel();
+
   const dishDetailValue = useRecoilValue(dishDetailState);
-  const [dishLevelListValue, setDishLevelList] =
-    useRecoilState(dishLevelListState);
-
-  const handleChangeDishLevel = useCallback(
-    (id: string, selectedLevel: string) => {
-      const newLevelList = dishLevelListValue.map((dishLevel) => {
-        if (dishLevel.dishId === id) {
-          return { ...dishLevel, dishLevel: getLevel(selectedLevel) };
-        } else {
-          return dishLevel;
-        }
-      });
-
-      setDishLevelList(newLevelList);
-    },
-    [dishLevelListValue, setDishLevelList],
-  );
 
   return (
     <DetailInfo>
@@ -70,7 +52,7 @@ const DishDetailInfo = () => {
         <DetailInfoItem.Title title={"레벨"} />
         <DetailInfoItem.Select
           handleChange={(selectedLevel) =>
-            handleChangeDishLevel(dishDetailValue?.dishId, selectedLevel)
+            handleDishLevelChange(dishDetailValue?.dishId, selectedLevel)
           }
           optionList={getLevelOption(dishDetailValue?.maxLevel)}
           value={LEVEL_LABEL[dishDetailValue?.dishLevel - 1]}

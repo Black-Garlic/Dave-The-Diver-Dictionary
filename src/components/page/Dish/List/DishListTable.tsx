@@ -5,21 +5,18 @@ import { useCallback } from "react";
 import { DISH_DETAIL_ROUTE } from "@constants/Route.ts";
 import { useNavigate } from "react-router-dom";
 import { LEVEL_LABEL } from "@constants/Level.ts";
-import { getLevel, getLevelOption } from "@libs/levelUtil.ts";
-import { useRecoilState, useRecoilValue } from "recoil";
-import {
-  dishFilterListState,
-  dishLevelListState,
-} from "@services/Dish/DishState.ts";
+import { getLevelOption } from "@libs/levelUtil.ts";
+import { useRecoilValue } from "recoil";
+import { dishFilterListState } from "@services/Dish/DishState.ts";
 import MultiTagColumn from "@components/common/Table/Column/MultiTagColumn.tsx";
 import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
+import useDishLevel from "@hooks/useDishLevel.tsx";
 
 const DishListTable = () => {
   const navigate = useNavigate();
+  const { handleDishLevelChange } = useDishLevel();
 
   const dishListValue = useRecoilValue(dishFilterListState);
-  const [dishLevelListValue, setDishLevelList] =
-    useRecoilState(dishLevelListState);
 
   const columns: ColumnsType<DishWithLevel> = [
     {
@@ -90,7 +87,7 @@ const DishListTable = () => {
         <Select
           style={{ width: "100%" }}
           onChange={(selectedLevel) =>
-            handleChangeDishLevel(dishId, selectedLevel)
+            handleDishLevelChange(dishId, selectedLevel)
           }
           options={getLevelOption(maxLevel)}
           value={LEVEL_LABEL[dishLevel - 1]}
@@ -104,25 +101,9 @@ const DishListTable = () => {
 
   const handleClickRow = useCallback(
     (dish: Dish) => {
-      console.log(dish);
       navigate(DISH_DETAIL_ROUTE.path.replace(":id", dish.dishId));
     },
     [navigate],
-  );
-
-  const handleChangeDishLevel = useCallback(
-    (dishId: string, selectedLevel: string) => {
-      const newLevelList = dishLevelListValue.map((dishLevel) => {
-        if (dishLevel.dishId === dishId) {
-          return { ...dishLevel, level: getLevel(selectedLevel) };
-        } else {
-          return dishLevel;
-        }
-      });
-
-      setDishLevelList(newLevelList);
-    },
-    [dishLevelListValue, setDishLevelList],
   );
 
   return (
