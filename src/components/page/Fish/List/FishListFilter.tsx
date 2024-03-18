@@ -1,6 +1,4 @@
-import { Button, Col, Flex, Row, Select, Tag } from "antd";
 import { RANK_OPTION } from "@constants/Rank.ts";
-import Search from "antd/es/input/Search";
 import { useEffect, useState } from "react";
 import { REGION_OPTION } from "@constants/Region.ts";
 import { TIME_OPTION } from "@constants/Time.ts";
@@ -17,6 +15,9 @@ import {
   fishDefaultListState,
   fishFilterListState,
 } from "@services/Fish/FishState.ts";
+import ListFilterRow from "@components/common/ListFilterRow/ListFilterRow.tsx";
+import ListFilterSelectColumn from "@components/common/ListFilterRow/SelectColumn/ListFilterSelectColumn.tsx";
+import ListFilterSearchColumn from "@components/common/ListFilterRow/SearchColumn/ListFilterSearchColumn.tsx";
 
 const FishListFilter = () => {
   const fishDefaultListValue = useRecoilValue(fishDefaultListState);
@@ -136,88 +137,54 @@ const FishListFilter = () => {
   };
 
   return (
-    <Row>
-      <Col flex={"auto"} style={{ margin: "10px 0px" }}>
-        <Flex gap={"middle"}>
-          <Select
-            allowClear
-            style={{ width: "200px" }}
-            value={sort}
-            onChange={setSort}
-            options={FISH_SORT_OPTION}
-            placeholder="정렬"
-            maxTagCount={"responsive"}
-          />
+    <ListFilterRow>
+      <ListFilterSelectColumn>
+        <ListFilterSelectColumn.Select
+          width={200}
+          value={sort}
+          onChange={setSort}
+          optionList={FISH_SORT_OPTION}
+          placeholder="정렬"
+        />
 
-          <Select
-            mode="multiple"
-            allowClear
-            style={{ width: "200px" }}
-            value={rank}
-            onChange={setRank}
-            options={RANK_OPTION}
-            placeholder="랭크"
-            maxTagCount={"responsive"}
-          />
+        <ListFilterSelectColumn.MultiSelect
+          width={200}
+          value={rank}
+          onChange={setRank}
+          optionList={RANK_OPTION}
+          placeholder="랭크"
+        />
 
-          <Select
-            mode="multiple"
-            allowClear
-            style={{ width: "250px" }}
-            value={region}
-            onChange={setRegion}
-            options={REGION_OPTION}
-            placeholder="지역"
-            maxTagCount={"responsive"}
-            tagRender={({ label, value, closable, onClose }) => (
-              <Tag
-                color={getRegionColor(value)}
-                closable={closable}
-                onClose={onClose}
-              >
-                {label}
-              </Tag>
-            )}
-          />
+        <ListFilterSelectColumn.TagSelect
+          width={250}
+          value={region}
+          onChange={setRegion}
+          optionList={REGION_OPTION}
+          placeholder="지역"
+          getColor={getRegionColor}
+        />
 
-          <Select
-            mode="multiple"
-            allowClear
-            style={{ width: "150px" }}
-            value={time}
-            onChange={setTime}
-            options={TIME_OPTION}
-            placeholder="시간대"
-            maxTagCount={"responsive"}
-            tagRender={({ label, value, closable, onClose }) => (
-              <Tag
-                color={getTimeColor(value)}
-                closable={closable}
-                onClose={onClose}
-              >
-                {label}
-              </Tag>
-            )}
-          />
-        </Flex>
-      </Col>
+        <ListFilterSelectColumn.TagSelect
+          width={150}
+          value={time}
+          onChange={setTime}
+          optionList={TIME_OPTION}
+          placeholder="시간대"
+          getColor={getTimeColor}
+        />
+      </ListFilterSelectColumn>
 
-      <Col flex={"none"} style={{ margin: "10px 0px" }}>
-        <Flex gap={"middle"}>
-          <Search
-            placeholder="검색"
-            allowClear
-            value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-            style={{ width: 300 }}
-          />
+      <ListFilterSearchColumn>
+        <ListFilterSearchColumn.Input
+          keyword={keyword}
+          setKeyword={setKeyword}
+        />
 
-          <Button onClick={handleResetButtonClick} style={{ outline: "none" }}>
-            초기화
-          </Button>
-        </Flex>
-      </Col>
-    </Row>
+        <ListFilterSearchColumn.ResetButton
+          handleResetButtonClick={handleResetButtonClick}
+        />
+      </ListFilterSearchColumn>
+    </ListFilterRow>
   );
 };
 

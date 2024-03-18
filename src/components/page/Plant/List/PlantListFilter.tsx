@@ -6,9 +6,10 @@ import {
 import { useEffect, useState } from "react";
 import { PlantWithDishLevel } from "@typings/Plant.ts";
 import { PLANT_SOURCE, PLANT_SOURCE_OPTION } from "@constants/Plant.ts";
-import { Button, Col, Flex, Row, Select, Tag } from "antd";
-import Search from "antd/es/input/Search";
 import { getSourceColor } from "@libs/sourceUtil.ts";
+import ListFilterSelectColumn from "@components/common/ListFilterRow/SelectColumn/ListFilterSelectColumn.tsx";
+import ListFilterRow from "@components/common/ListFilterRow/ListFilterRow.tsx";
+import ListFilterSearchColumn from "@components/common/ListFilterRow/SearchColumn/ListFilterSearchColumn.tsx";
 
 const PlantListFilter = () => {
   const plantDefaultListValue = useRecoilValue(plantDefaultListState);
@@ -80,48 +81,29 @@ const PlantListFilter = () => {
   };
 
   return (
-    <Row>
-      <Col flex={"auto"} style={{ margin: "10px 0px" }}>
-        <Flex gap={"middle"}>
-          <Select
-            mode="multiple"
-            allowClear
-            style={{ width: "250px" }}
-            listHeight={300}
-            value={source}
-            onChange={setSource}
-            options={PLANT_SOURCE_OPTION}
-            placeholder="지역"
-            maxTagCount={"responsive"}
-            tagRender={({ label, value, closable, onClose }) => (
-              <Tag
-                color={getSourceColor(value)}
-                closable={closable}
-                onClose={onClose}
-              >
-                {label}
-              </Tag>
-            )}
-          />
-        </Flex>
-      </Col>
+    <ListFilterRow>
+      <ListFilterSelectColumn>
+        <ListFilterSelectColumn.TagSelect
+          width={250}
+          value={source}
+          onChange={setSource}
+          optionList={PLANT_SOURCE_OPTION}
+          placeholder="지역"
+          getColor={getSourceColor}
+        />
+      </ListFilterSelectColumn>
 
-      <Col flex={"none"} style={{ margin: "10px 0px" }}>
-        <Flex gap={"middle"}>
-          <Search
-            placeholder="검색"
-            allowClear
-            value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-            style={{ width: 300 }}
-          />
+      <ListFilterSearchColumn>
+        <ListFilterSearchColumn.Input
+          keyword={keyword}
+          setKeyword={setKeyword}
+        />
 
-          <Button onClick={handleResetButtonClick} style={{ outline: "none" }}>
-            초기화
-          </Button>
-        </Flex>
-      </Col>
-    </Row>
+        <ListFilterSearchColumn.ResetButton
+          handleResetButtonClick={handleResetButtonClick}
+        />
+      </ListFilterSearchColumn>
+    </ListFilterRow>
   );
 };
 

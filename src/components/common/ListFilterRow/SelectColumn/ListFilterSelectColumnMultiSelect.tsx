@@ -2,7 +2,6 @@ import { MultiSelectProps } from "@typings/Select.ts";
 import { Select } from "antd";
 
 const ListFilterSelectColumnMultiSelect = ({
-  mode,
   width,
   value,
   onChange,
@@ -11,7 +10,7 @@ const ListFilterSelectColumnMultiSelect = ({
 }: MultiSelectProps) => {
   return (
     <Select
-      mode={mode}
+      mode={"multiple"}
       allowClear
       style={{ width: `${width}px` }}
       value={value}

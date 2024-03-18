@@ -4,11 +4,12 @@ import {
   seasoningFilterListState,
 } from "@services/Seasoning/SeasoningState.ts";
 import { useEffect, useState } from "react";
-import { Button, Col, Flex, Row, Select, Tag } from "antd";
 import { getSourceColor } from "@libs/sourceUtil.ts";
-import Search from "antd/es/input/Search";
 import { SEASONING_SOURCE_OPTIONS } from "@constants/Seasoning.ts";
 import { SeasoningWithDishLevel } from "@typings/Seasoning.ts";
+import ListFilterRow from "@components/common/ListFilterRow/ListFilterRow.tsx";
+import ListFilterSearchColumn from "@components/common/ListFilterRow/SearchColumn/ListFilterSearchColumn.tsx";
+import ListFilterSelectColumn from "@components/common/ListFilterRow/SelectColumn/ListFilterSelectColumn.tsx";
 
 const SeasoningListFilter = () => {
   const seasoningDefaultListValue = useRecoilValue(seasoningDefaultListState);
@@ -69,47 +70,29 @@ const SeasoningListFilter = () => {
   };
 
   return (
-    <Row>
-      <Col flex={"auto"} style={{ margin: "10px 0px" }}>
-        <Flex gap={"middle"}>
-          <Select
-            mode="multiple"
-            allowClear
-            style={{ width: "250px" }}
-            value={source}
-            onChange={setSource}
-            options={SEASONING_SOURCE_OPTIONS}
-            placeholder="지역"
-            maxTagCount={"responsive"}
-            tagRender={({ label, value, closable, onClose }) => (
-              <Tag
-                color={getSourceColor(value)}
-                closable={closable}
-                onClose={onClose}
-              >
-                {label}
-              </Tag>
-            )}
-          />
-        </Flex>
-      </Col>
+    <ListFilterRow>
+      <ListFilterSelectColumn>
+        <ListFilterSelectColumn.TagSelect
+          width={250}
+          value={source}
+          onChange={setSource}
+          optionList={SEASONING_SOURCE_OPTIONS}
+          placeholder="지역"
+          getColor={getSourceColor}
+        />
+      </ListFilterSelectColumn>
 
-      <Col flex={"none"} style={{ margin: "10px 0px" }}>
-        <Flex gap={"middle"}>
-          <Search
-            placeholder="검색"
-            allowClear
-            value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-            style={{ width: 300 }}
-          />
+      <ListFilterSearchColumn>
+        <ListFilterSearchColumn.Input
+          keyword={keyword}
+          setKeyword={setKeyword}
+        />
 
-          <Button onClick={handleResetButtonClick} style={{ outline: "none" }}>
-            초기화
-          </Button>
-        </Flex>
-      </Col>
-    </Row>
+        <ListFilterSearchColumn.ResetButton
+          handleResetButtonClick={handleResetButtonClick}
+        />
+      </ListFilterSearchColumn>
+    </ListFilterRow>
   );
 };
 

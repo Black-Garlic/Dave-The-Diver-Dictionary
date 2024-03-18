@@ -2,7 +2,6 @@ import { TagSelectProps } from "@typings/Select.ts";
 import { Select, Tag } from "antd";
 
 const ListFilterSelectColumnTagSelect = ({
-  mode,
   width,
   value,
   onChange,
@@ -12,9 +11,10 @@ const ListFilterSelectColumnTagSelect = ({
 }: TagSelectProps) => {
   return (
     <Select
-      mode={mode}
+      mode={"multiple"}
       allowClear
       style={{ width: `${width}px` }}
+      listHeight={300}
       value={value}
       onChange={onChange}
       options={optionList}

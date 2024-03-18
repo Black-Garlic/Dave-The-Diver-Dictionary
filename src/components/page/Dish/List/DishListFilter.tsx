@@ -1,10 +1,8 @@
-import { Button, Col, Flex, Row, Select, Tag } from "antd";
 import {
   DISH_SORT,
   DISH_SORT_OPTION,
   SORT_DIRECTION,
 } from "@constants/Sort.ts";
-import Search from "antd/es/input/Search";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import {
   dishDefaultListState,
@@ -15,6 +13,9 @@ import { useEffect, useState } from "react";
 import { DishWithLevel } from "@typings/Dish.ts";
 import { getDishWithLevelList, getPartyColor } from "@libs/dishUtil.ts";
 import { PARTY_OPTION } from "@constants/Dish.ts";
+import ListFilterRow from "@components/common/ListFilterRow/ListFilterRow.tsx";
+import ListFilterSearchColumn from "@components/common/ListFilterRow/SearchColumn/ListFilterSearchColumn.tsx";
+import ListFilterSelectColumn from "@components/common/ListFilterRow/SelectColumn/ListFilterSelectColumn.tsx";
 
 const DishListFilter = () => {
   const dishDefaultListValue = useRecoilValue(dishDefaultListState);
@@ -117,57 +118,37 @@ const DishListFilter = () => {
   };
 
   return (
-    <Row>
-      <Col flex={"auto"} style={{ margin: "10px 0px" }}>
-        <Flex gap={"middle"}>
-          <Select
-            allowClear
-            style={{ width: "200px" }}
-            value={sort}
-            onChange={setSort}
-            options={DISH_SORT_OPTION}
-            placeholder="정렬"
-            maxTagCount={"responsive"}
-          />
+    <ListFilterRow>
+      <ListFilterSelectColumn>
+        <ListFilterSelectColumn.Select
+          width={200}
+          value={sort}
+          onChange={setSort}
+          optionList={DISH_SORT_OPTION}
+          placeholder="정렬"
+        />
 
-          <Select
-            mode="multiple"
-            allowClear
-            style={{ width: "250px" }}
-            value={party}
-            onChange={setParty}
-            options={PARTY_OPTION}
-            placeholder="파티"
-            maxTagCount={"responsive"}
-            tagRender={({ label, value, closable, onClose }) => (
-              <Tag
-                color={getPartyColor(value)}
-                closable={closable}
-                onClose={onClose}
-              >
-                {label}
-              </Tag>
-            )}
-          />
-        </Flex>
-      </Col>
+        <ListFilterSelectColumn.TagSelect
+          width={250}
+          value={party}
+          onChange={setParty}
+          optionList={PARTY_OPTION}
+          placeholder="파티"
+          getColor={getPartyColor}
+        />
+      </ListFilterSelectColumn>
 
-      <Col flex={"none"} style={{ margin: "10px 0px" }}>
-        <Flex gap={"middle"}>
-          <Search
-            placeholder="검색"
-            allowClear
-            value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-            style={{ width: 300 }}
-          />
+      <ListFilterSearchColumn>
+        <ListFilterSearchColumn.Input
+          keyword={keyword}
+          setKeyword={setKeyword}
+        />
 
-          <Button onClick={handleResetButtonClick} style={{ outline: "none" }}>
-            초기화
-          </Button>
-        </Flex>
-      </Col>
-    </Row>
+        <ListFilterSearchColumn.ResetButton
+          handleResetButtonClick={handleResetButtonClick}
+        />
+      </ListFilterSearchColumn>
+    </ListFilterRow>
   );
 };
 

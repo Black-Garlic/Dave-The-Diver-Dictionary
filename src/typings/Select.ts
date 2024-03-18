@@ -2,7 +2,6 @@ import { Option } from "@typings/Option.ts";
 import { Dispatch, SetStateAction } from "react";
 
 interface SelectProps {
-  mode?: "multiple";
   width: number;
   optionList: Option[];
   placeholder: string;

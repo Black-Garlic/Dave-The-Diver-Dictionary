@@ -2,7 +2,6 @@ import { Select } from "antd";
 import { SingleSelectProps } from "@typings/Select.ts";
 
 const ListFilterSelectColumnSingleSelect = ({
-  mode,
   width,
   value,
   onChange,
@@ -11,7 +10,6 @@ const ListFilterSelectColumnSingleSelect = ({
 }: SingleSelectProps) => {
   return (
     <Select
-      mode={mode}
       allowClear
       style={{ width: `${width}px` }}
       value={value}
