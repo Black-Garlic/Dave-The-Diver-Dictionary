@@ -1,6 +1,6 @@
 import MultiColumn from "@components/common/Table/Column/MultiColumn.tsx";
 import TagColumn from "@components/common/Table/Column/TagColumn.tsx";
-import { TagInfo } from "@typings/ComponentInfo.ts";
+import { TagInfo } from "@typings/Tag.ts";
 
 const MultiTagColumn = ({ color, value }: TagInfo) => {
   return (
